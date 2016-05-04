@@ -1,5 +1,13 @@
 #!/usr/bin/env ruby -w
 
+def comment_filter(comment)
+  comment.length <= 10
+end
+
+def split_sentence(comment)
+  comment.split(/(?<=\.)(?<!e\.g\.|i\.e\.)\s++/)
+end
+
 def extract_c_comment(code_string)
   comments = code_string.scan(
     %r{(
@@ -25,46 +33,34 @@ def extract_c_comment(code_string)
     .map { |e| e.sub(/^\/\*+/, '') }  # delete "/*"
     .map { |e| e.sub(/\*+\/$/, '') }  # delete "*/"
     .map { |e| e.sub(/^\/\//,  '') }  # delete "//"
-    .map { |e| e.gsub(/\n\s*+((\*|\/\/)[ \t]*+)?/, ' ') }  # delete "\n" or "\n *"
+    .map { |e| e.gsub(/\n\s*+((\*|\/\/)[ \t]*+)?/, ' ') }  # delete "\n" or "\n //"
     .map(&:strip)
-    .map { |e| e.split(/(?<=\.)(?<!e\.g\.|i\.e\.)\s++/) }
+    .map(&method(:split_sentence))
     .flatten
-    .reject { |e| e.length <= 10 }
+    .reject(&method(:comment_filter))
 end
 
-def extract_python_comment(code_string)
+def extract_sh_comment(code_string)
   comments = code_string.scan(
     %r{(
-      # multi-line comment
-      """  # comment begin
-        (?:
-          [^\\"]++  # general
-          |
-          \\.       # special
-          |
-          "(?!=")   # special
-          |
-          ""(?!=")  # special
-        )*
-      """  # comment end
-      |  # or
       # single line comment
       (?:
         \s++      # extra whitespace
-        #[^\n]++ # comment
+        \#[^\n]++ # comment
       )+
     )}x
   ).flatten
 
+  p comments
+
   comments = comments
     .map(&:strip)
-    .map { |e| e.sub(/^"""/, '') }  # delete '"""'
     .map { |e| e.sub(/^#/,  '') }  # delete "#"
-    .map { |e| e.gsub(/\n\s*+/, ' ') }  # delete "\n"
+    .map { |e| e.gsub(/\n\s*+(\#[ \t]*+)?/, ' ') }  # delete "\n" or "\n #"
     .map(&:strip)
-    .map { |e| e.split(/(?<=\.)(?<!e\.g\.|i\.e\.)\s++/) }
+    .map(&method(:split_sentence))
     .flatten
-    .reject { |e| e.length <= 10 }
+    .reject(&method(:comment_filter))
 end
 
 # --- main ---
@@ -79,7 +75,7 @@ ARGV.each do |arg|
   if arg =~ /\.(c|cpp|h|hpp|java|cs|php|js)$/
     comments = extract_c_comment(code_str)
   elsif arg =~ /\.(sh|py|rb|coffee)$/
-    comments = extract_python_comment(code_str)
+    comments = extract_sh_comment(code_str)
   else
     next
   end
