@@ -9,7 +9,8 @@ target_repo := \
 	https://github.com/facebook/relay \
 	https://github.com/facebook/react-native \
 	https://github.com/facebook/rocksdb \
-	https://github.com/facebook/nuclide
+	https://github.com/facebook/nuclide \
+	https://github.com/facebook/chisel
 target_name := $(notdir $(target_repo))
 
 .PHONY: test install
