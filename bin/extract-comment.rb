@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby -w
 
-def comment_filter(comment)
-  comment.length <= 10
+def comment_reject_filter(comment)
+  (comment.length <= 10 \
+    || comment.count("-+|(){}`/#*%=~;<>\\") / comment.length >= 0.5) # more than 50%
 end
 
 def split_sentence(comment)
@@ -37,7 +38,7 @@ def extract_c_comment(code_string)
     .map(&:strip)
     .map(&method(:split_sentence))
     .flatten
-    .reject(&method(:comment_filter))
+    .reject(&method(:comment_reject_filter))
 end
 
 def extract_sh_comment(code_string)
@@ -51,8 +52,6 @@ def extract_sh_comment(code_string)
     )}x
   ).flatten
 
-  p comments
-
   comments = comments
     .map(&:strip)
     .map { |e| e.sub(/^#/,  '') }  # delete "#"
@@ -60,18 +59,17 @@ def extract_sh_comment(code_string)
     .map(&:strip)
     .map(&method(:split_sentence))
     .flatten
-    .reject(&method(:comment_filter))
+    .reject(&method(:comment_reject_filter))
 end
 
 # --- main ---
 
 ARGV.each do |arg|
-  comments = []
-
   code_str = File.read(arg, encoding: 'UTF-8')
     .encode("UTF-16BE", "UTF-8", :invalid => :replace, :undef => :replace, :replace => '?')
     .encode("UTF-8")
 
+  comments = []
   if arg =~ /\.(c|cpp|h|hpp|java|cs|php|js)$/
     comments = extract_c_comment(code_str)
   elsif arg =~ /\.(sh|py|rb|coffee)$/
