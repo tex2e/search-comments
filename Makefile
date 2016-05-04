@@ -30,7 +30,8 @@ install:
 define EXTRACT_COMMENT
 
 comment-$(1):
-	find $(target_dir)/$(1) -type f -name "*.*" | xargs ./bin/extract-comment.rb \
+	find $(target_dir)/$(1) -type f -name "*.*" -not -path "$(target_dir)/$(1)/.git/*" \
+	| xargs -L 127 ./bin/extract-comment.rb \
 	> $(dist_dir)/$(1)-comments.txt
 
 endef
