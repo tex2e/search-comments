@@ -2,7 +2,7 @@
 
 def comment_reject_filter(comment)
   (comment.length <= 10 \
-    || comment.count("-+|(){}`/#*%=~;<>\\") / comment.length >= 0.5) # more than 50%
+    || comment.count("-+| \t,.(){}[]`/#*%=~;<>\\") / comment.length >= 0.5) # more than 50%
 end
 
 def split_sentence(comment)
