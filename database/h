@@ -6421,6 +6421,7 @@ Copyright 2009-2010 10gen, Inc.
 Copyright 2009-2013 10gen, Inc.
 Copyright 2009-2013.
 Copyright 2009-2013210gen, Inc.
+Copyright 2010-present, Facebook, Inc.
 Copyright 2012 Square Inc.
 Copyright 2013.
 Core registers.
@@ -9896,6 +9897,7 @@ From CoreBluetooth
 From CoreFoundation
 From CoreMedia
 From Foundation
+From folly/Likely.h
 From http://devzone.zend.com/303/
 From parse_date.re
 From parse_iso_intervals.re
@@ -27589,6 +27591,7 @@ Thread-shared, binary ringbuffer.
 ThreadLocal allocates by calling new without parameters and frees by calling delete
 ThreadLocalNode is a node in this list.
 ThreadLocalPtr stores only values of pointer type.
+ThreadLocalSingleton has NoCheck property
 Threads in blockUntilOwn c, s, n, o commands that can skip breakpoints
 Three entries for SmashJccAndJmp, one for each half and one for both together.
 Three-way comparison.

@@ -21,4 +21,5 @@ When a consumer is created, it automatically connects with the server.
 and to restart the connection:
 def away current_user.away end end
 def unsubscribed current_user.disappear end
+needs double arrow
 revival reconnections if things go astray.

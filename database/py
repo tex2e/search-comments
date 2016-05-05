@@ -665,6 +665,7 @@ Copy passed list
 Copy test_dir and its contents to backup so we can restore it later.
 Copying the environment variables into global make variables doesn't work either, because then the .d files will potentially contain spaces after variable expansion, and .d file handling cannot handle spaces.
 Copyright 2013 Google Inc.
+Copyright 2015-present, Facebook, Inc.
 Count non-blank/non-comment lines.
 Count parentheses.
 Count sleep and external thread events.

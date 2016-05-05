@@ -6766,6 +6766,9 @@ CopyOnSuccess values should not have / attached cleanups.
 Copying the block will create an independent reference.
 Copyright 2009-2010 10gen, Inc.
 Copyright 2009-2013 10gen, Inc.
+Copyright 2010-present, Facebook, Inc.
+Copyright 2013-present, Facebook, Inc.
+Copyright 2015-present, Facebook, Inc.
 Correct for over-counting in TC-stats.
 Correctness checks are normally done before adding function to scope.
 Could be one of the following: 1.
@@ -30707,6 +30710,7 @@ TODO: Add support for working around control dependence issues.
 TODO: Add swift_error attribute.
 TODO: Add total count to snapshot header.
 TODO: Allocating new vtable slots for derived methods with different ABIs would invalidate the assumption that the same thunk is correct, as above.
+TODO: Allow customizing recorded events
 TODO: Allow the box to be typed, but for staging purposes, only require it when -sil-enable-typed-boxes is enabled.
 TODO: Although runtime checks are not required, we get them anyway when asking the runtime to perform this cast.
 TODO: Array index overflow
