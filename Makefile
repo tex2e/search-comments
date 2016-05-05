@@ -16,12 +16,20 @@ target_repo := \
 	https://github.com/golang/go \
 	https://github.com/bower/bower \
 	https://github.com/npm/npm \
-	https://github.com/php/php-src
+	https://github.com/php/php-src \
+	https://github.com/bbatsov/rubocop \
+	https://github.com/eslint/eslint
 target_name := $(notdir $(target_repo))
 database_dir := database
 
 .PHONY: FORCE test install
 FORCE:
+
+all:
+	@$(MAKE) install
+	@$(MAKE) -j 10 comments
+	@$(MAKE) database
+
 
 # make install
 #
@@ -34,10 +42,11 @@ install:
 		fi; \
 	)
 
+
 # make comment-<reponame>
 #
 # extract comments from the specified repository
-define EXTRACT_COMMENT
+define COMMENT
 
 comment-$(1):
 	@mkdir -p $(dist_dir)
@@ -47,11 +56,13 @@ comment-$(1):
 
 endef
 
-$(foreach i,$(target_name),$(eval $(call EXTRACT_COMMENT,$(i))))
+$(foreach i,$(target_name),$(eval $(call COMMENT,$(i))))
+
 
 # make comments
 #
 comments: $(patsubst %, comment-%, $(target_name))
+
 
 # make detabase
 #
