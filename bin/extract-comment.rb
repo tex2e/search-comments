@@ -1,8 +1,11 @@
 #!/usr/bin/env ruby -w
 
 def comment_reject_filter(comment)
-  (comment.length <= 10 \
-    || comment.count("-+| \t,.(){}[]`/#*%=~;<>\\") / comment.length >= 0.5) # more than 50%
+  return (
+    comment.length <= 10 ||  # comment's length is less than 10
+    !comment.match(/\A[-a-zA-Z0-9_ ,.:`'"\/]++\z/) ||  # comments isn't consist of [-a-zA-Z0-9_ ,.:`'"\/]
+    comment.count("-_ ,.:`'\"\/") / comment.length.to_f >= 0.4  # more than 40% symbols
+  )
 end
 
 def split_sentence(comment)
@@ -33,7 +36,7 @@ def extract_c_comment(code_string)
     .map(&:strip)
     .map { |e| e.sub(/^\/\*+/, '') }  # delete "/*"
     .map { |e| e.sub(/\*+\/$/, '') }  # delete "*/"
-    .map { |e| e.sub(/^\/\//,  '') }  # delete "//"
+    .map { |e| e.sub(/^\/\/++/, '') }  # delete "//"
     .map { |e| e.gsub(/\n\s*+((\*|\/\/)[ \t]*+)?/, ' ') }  # delete "\n" or "\n //"
     .map(&:strip)
     .map(&method(:split_sentence))
@@ -54,7 +57,7 @@ def extract_sh_comment(code_string)
 
   comments = comments
     .map(&:strip)
-    .map { |e| e.sub(/^#/,  '') }  # delete "#"
+    .map { |e| e.sub(/^#/, '') }  # delete "#"
     .map { |e| e.gsub(/\n\s*+(\#[ \t]*+)?/, ' ') }  # delete "\n" or "\n #"
     .map(&:strip)
     .map(&method(:split_sentence))
@@ -65,12 +68,14 @@ end
 # --- main ---
 
 ARGV.each do |arg|
+  next unless File.exist?(arg)
+
   code_str = File.read(arg, encoding: 'UTF-8')
     .encode("UTF-16BE", "UTF-8", :invalid => :replace, :undef => :replace, :replace => '?')
     .encode("UTF-8")
 
   comments = []
-  if arg =~ /\.(c|cpp|h|hpp|java|cs|php|js)$/
+  if arg =~ /\.(c|cpp|h|hpp|java|cs|php|js|go)$/
     comments = extract_c_comment(code_str)
   elsif arg =~ /\.(sh|py|rb|coffee)$/
     comments = extract_sh_comment(code_str)
