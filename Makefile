@@ -10,26 +10,37 @@ target_repo := \
 	https://github.com/facebook/react-native \
 	https://github.com/facebook/rocksdb \
 	https://github.com/facebook/nuclide \
-	https://github.com/facebook/chisel
+	https://github.com/facebook/chisel \
+	https://github.com/rails/rails \
+	https://github.com/apple/swift \
+	https://github.com/golang/go \
+	https://github.com/bower/bower \
+	https://github.com/npm/npm \
+	https://github.com/php/php-src
 target_name := $(notdir $(target_repo))
+database_dir := database
 
-.PHONY: test install
+.PHONY: FORCE test install
+FORCE:
 
-test:
-	@echo $(target_repo)
-	@echo $(target_name)
-
+# make install
+#
+# git clone repositories
 install:
+	@mkdir -p $(target_dir)
 	@$(foreach repo, $(target_repo), \
 		if [ ! -d             $(target_dir)/$(notdir $(repo)) ]; then \
 			git clone $(repo) $(target_dir)/$(notdir $(repo)); \
 		fi; \
 	)
 
-
+# make comment-<reponame>
+#
+# extract comments from the specified repository
 define EXTRACT_COMMENT
 
 comment-$(1):
+	@mkdir -p $(dist_dir)
 	find $(target_dir)/$(1) -type f -name "*.*" -not -path "$(target_dir)/$(1)/.git/*" \
 	| xargs -L 127 ./bin/extract-comment.rb \
 	> $(dist_dir)/$(1)-comments.txt
@@ -37,3 +48,16 @@ comment-$(1):
 endef
 
 $(foreach i,$(target_name),$(eval $(call EXTRACT_COMMENT,$(i))))
+
+# make comments
+#
+comments: $(patsubst %, comment-%, $(target_name))
+
+# make detabase
+#
+# create database of comments
+database: FORCE
+	-@rm -r $(database_dir)
+	@mkdir $(database_dir)
+	./bin/split-output-of-extract-comment.rb
+	./bin/overwrite-sort-uniq.sh $(database_dir)/*
