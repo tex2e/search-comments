@@ -4,11 +4,26 @@
 //   - CommentTable
 //     - CommentRow
 
+RegExp.escape = function(string) {
+  return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
+};
+
+var MIN_SEARCH_CHARS = 5;
+
 var CommentRow = React.createClass({
   render: function() {
+    var comment = this.props.comment;
+    var searchWords = this.props.match;
+
+    for (var i = 0; i < searchWords.length; i++) {
+      comment = comment.replace(
+        new RegExp(RegExp.escape(searchWords[i].replace('/', '')), "i"),
+        "<b>$&</b>"
+      );
+    }
     return (
       <tr>
-        <td>{this.props.comment}</td>
+        <td dangerouslySetInnerHTML={{__html: comment}}></td>
       </tr>
     );
   }
@@ -17,7 +32,7 @@ var CommentRow = React.createClass({
 function isMatched(str, words) {
   var currentPos = 0;
   for (var i = 0; i < words.length; i++) {
-    currentPos = str.indexOf(words[i], currentPos);
+    currentPos = str.toLowerCase().indexOf(words[i], currentPos);
     if (currentPos === -1) return false;
   }
   return true;
@@ -25,15 +40,16 @@ function isMatched(str, words) {
 
 var CommentTable = React.createClass({
   render: function () {
-    var interactive = (this.props.filterText.length >= 3);
+    var interactive = (this.props.filterText.length >= MIN_SEARCH_CHARS);
+    var searchWords = this.props.filterText.split(" ") || [""];
 
     var rows =
       this.props.comments.filter(function (comment) {
         if (!interactive) return false;
-        return isMatched(comment, this.props.filterText.split(" "));
-      }.bind(this))
+        return isMatched(comment, searchWords);
+      })
       .map(function (comment) {
-        return (<CommentRow comment={comment} key={comment} />);
+        return (<CommentRow comment={comment} key={comment} match={searchWords} />);
       });
 
     return (
