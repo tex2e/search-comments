@@ -1,7 +1,6 @@
 "/' Used when a value is quoted.
 "Convert" the plist so that any weird whitespace changes from the preprocessor do not affect the XML parser in mac_tool.
 "all" is a concatenation of the "all" targets from all the included sub-makefiles.
-"foo/bar" when we're constructing targets for "foo/bar/baz.gyp".
 "git add" the result.
 "gyp_all_modules" is a concatenation of the "gyp_all_modules" targets from all the included sub-makefiles.
 "include" is specified relative to subdict_path, so compute the real path to include by appending the provided "include" to the directory in which subdict_path resides.
@@ -9,7 +8,6 @@
 "isa" isn't in the _properties dictionary, it's an intrinsic property of the class which the object belongs to.
 "ls" sometimes prints on stderr
 "noqa" is used to suppress this warning.
-"out/gypfiles"
 '/' is notably absent from this list, because there's no way for a regular expression to be treated as a path.
 'all' is special cased to mean all the root targets.
 'auto' debugger
@@ -18,10 +16,28 @@
 'pointsize': '10pt', Additional stuff for the LaTeX preamble.
 'target_build_files' keeps track of the keys corresponding to "target" files.
 'truncatingBitPattern' initializer is defined if the conversion is truncating on any platform that Swift supports.
-'type foo string' will make foo a plain struct in the eyes of gdb, circumventing the pretty print triggering.
+(1) the file output should mention the proper .o file.
+(Also in the printed Python Cookbook.)
+(Default all)
+(Default none)
+(Note that --whole-archive is incompatible with the --start-group used in normal linking.) Other shared-object link notes: - Set SONAME to the library filename so our binaries don't reference the local, absolute paths used on the link command-line.
+(Possibly external) members of CLASS_KINDS.
+(char *) "foo" should always be a const_cast (reinterpret_cast won't compile).
+(e.g. const modifier)
+(period), and _ (underscore) is present.
+(using findall here would return strings instead of MatchObjects).
+* Neither the name of Google Inc.
+* Neither the name of ws4py nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* load from the chosen second-level lookup table using the second-level index, which will give you the number of the data block that you should use.
+* load from the data block applying the data offset.
+************* Module copy W0104:427,12:_test.odict.__setitem__: Statement seems to have no effect
 , then it's likely to be owned by the target file.
+- GypPathToNinja translates a gyp path (i.e. relative to the .gyp file) into the equivalent ninja path.
 - If there is no 'make_global_settings' for CC.host/CXX.host or 'CC_host'/'CXX_host' enviroment variable, cc_host/cxx_host should be set to cc/cxx.
 - Make .INTERMEDIATE depend on the intermediate.
+- Non-linkable dependencies (like a rule that generates a file and writes a stamp file): add them to implicit_deps
 - The intermediate file depends on the inputs and executes the actual command.
 - The intermediate recipe will 'touch' the intermediate file.
 - The multi-output rule will have an do-nothing recipe.
@@ -34,6 +50,7 @@
 -- Print body template for printing coverage report for each file.
 -- Print footer
 -- Print header size of separator is determined by 3 column sizes: file name, coverage percentage and lines.
+-- Second line of the file report (with coverage percentage)
 -- the following methods are only used in Python 2.7 --
 -- the following methods do not depend on the internal structure --
 --allow_concurrent_memtable_write with --filter_deletes is not supported.
@@ -43,7 +60,9 @@
 -D on the command line sets variable defaults - D isn't just for define, it's for default.
 ./convert_make_target_to_command.py SlowVM ./convert_make_target_to_command.py QuickRepoJit ./convert_make_target_to_command.py ZendJitIR
 .csr file is intermediate.
+.dylib is plainly wrong, and .bundle is used by loadable_modules in bundle wrappers (com.apple.product-type.bundle).
 .o files are added to Xcode Frameworks phases, but conceptually aren't frameworks, they're more like sources or intermediates.
+.o is conceptually more of a "source" than a "library," but Xcode thinks of "sources" as things to compile and "libraries" (or "frameworks") as things to link with.
 .so seems an odd choice because it's used as the extension on many other systems that don't distinguish between linkable shared libraries and non-linkable loadable modules, but there's precedent: Python loadable modules on Mac OS X use an .so extension.
 /ALLOWISOLATION
 /ASSEMBLYDEBUG
@@ -152,8 +171,15 @@
 /u MSBuild options not found in MSVS.
 /v There is no UI in VisualStudio 2008 to set the following properties.
 /verbose Options that have moved location.
+0: CompletionChunk.Kind("Optional"), 1: CompletionChunk.Kind("TypedText"), 2: CompletionChunk.Kind("Text"), 3: CompletionChunk.Kind("Placeholder"), 4: CompletionChunk.Kind("Informative"), 5 : CompletionChunk.Kind("CurrentParameter"),
 1 means line-buffered.
+1) They need to install to the build dir or "product" dir.
+2) An explanation to insert into each "fixme" comment.
+2) They get shortcuts for building (e.g. "make chrome").
+2) loadable_module, which is generating a module intended for dlopen().
+2) simple files like libraries and stamps have a simple filename.
 25 lines seems like a good cutoff since that's the usual height of terminals, and any class that can't fit in one screen can't really be considered "small".
+3) They are part of "make all".
 6564240 Xcode "custom script" build rules always dump all environment variables.
 6584839 I need a way to declare additional inputs to a custom rule.
 6584932 Need to declare that custom rule outputs should be excluded from compilation.
@@ -175,6 +201,7 @@ A bit hacky.
 A break statement.
 A bundle directory depends on its dependencies such as bundle resources and bundle binary.
 A case statement.
+A catch all for tricky sizeof cases, including 'sizeof expression', 'sizeof(*type)', 'sizeof(const type)', 'sizeof(struct StructName)' requires skipping the next token because we split on ' ' and '*'.
 A character literal.
 A closing punctuation without matching opening punctuations.
 A compound statement
@@ -188,10 +215,12 @@ A few keys that we don't want to propagate.
 A file must be specified when using --list.
 A floating point number literal.
 A for statement.
+A full separation is done here because of flag handing (see below).
 A function may not exist, if these bindings are used with an older or incompatible version of libclang.so.
 A function may not exist, if these bindings are used with an older or incompatible version of sourcekitd.
 A function or method parameter.
 A function.
+A generator can have other lists (in addition to sources) be processed for rules.
 A good enough test.
 A goto statement.
 A labelled statement in a function.
@@ -207,8 +236,12 @@ A map of header name to linenumber and the template entity.
 A mapping from BMP first-level index to BMP data block index.
 A mapping from supp first-level index to an index of the second-level lookup table.
 A minimal memoizing decorator.
+A naive reimplementation of shutil.which() for Python 2.7.
+A new expression for memory allocation and constructor calls, e.g: "new CXXNewExpr(foo)".
+A pack expansion expression contains a pattern (which itself is an expression) followed by an ellipsis.
 A parent of an XCTarget must be a PBXProject object.
 A parent reference is required for a PBXNativeTarget during construction to be able to set up the target defaults for productReference, because a PBXBuildFile object must be created for the target and it must be added to the PBXProject's mainGroup hierarchy.
+A parenthesized expression, e.g. "(1)".
 A particular header is only expanded once, so this script will break if there are multiple inclusions of the same header that are expected to expand differently.
 A pet peeve of mine: no spaces after an if, while, switch, or for
 A piece of text that describes something about the result but should not be inserted into the buffer.
@@ -224,6 +257,7 @@ A regex matching an argument corresponding to the output filename passed to link
 A return statement.
 A set of all intra-cluster edges
 A single unnamed argument for a function tends to look like old style cast.
+A small discourse on paths as used within the Ninja build: All files we produce (both at gyp and at build time) appear in the build directory (e.g. out/Debug).
 A small utility to take the output of a Swift validation test run where some compiler crashers have been fixed, and move them into the "fixed" testsuite, removing the "--crash" in the process.
 A statement whose specific kind is not exposed via this interface.
 A static library should not depend on another static library unless the dependency relationship is "hard," which should only be done when a dependent relies on some side effect other than just the build product, like a rule or action output.
@@ -239,6 +273,7 @@ A warning about missing end of namespace comments will be issued instead.
 A while statement.
 ASM-ATT does not support .S files.
 Absolute paths are in dstSubfolderSpec 0.
+Absolutify() may call normpath, and will strip trailing slashes.
 Abstract base for objects that can be used as the containerPortal property of PBXContainerItemProxy.
 Abstract base for objects that can be used as the fileRef property of PBXBuildFile.
 Abstract base for objects that can be used as the remoteGlobalIDString property of PBXContainerItemProxy.
@@ -263,15 +298,19 @@ Add a dependency to another target in the same project file.
 Add a folder for excluded files.
 Add a new PBXBuildFile to get file_ref into the phase.
 Add a rule that declares it can build each concrete output of a rule source.
+Add a trailing '/' so that _AddSources() can easily build paths.
 Add actions.
 Add all concrete outputs to the project.
 Add all inputs to sources and excluded sources.
 Add all the files to the queue
+Add an alias for each target (if there are any outputs).
 Add an alias from the gyp target name to the Android module name.
 Add any dependencies whose settings should be imported to the list if not already present.
+Add any paths that contain custom static files (such as style sheets) here, relative to this directory.
 Add any paths that contain custom themes here, relative to this directory.
 Add any paths that contain templates here, relative to this directory.
 Add attributes to root element
+Add call before command to ensure that commands can be tied together one after the other without aborting in Incredibuild, since IB makes a bat file out of the raw command string, and some commands (like python) are actually batch files themselves.
 Add children that the schema doesn't know about.
 Add configuration node and its attributes
 Add copies.
@@ -285,6 +324,7 @@ Add disabled warnings.
 Add each rule.
 Add excluded items to the excluded list.
 Add excluded sources into sources for good measure.
+Add extra rules as in (2).
 Add gyp/gypi files to project
 Add header and write it out.
 Add in 'action' inputs and outputs.
@@ -297,6 +337,7 @@ Add in the gyp file.
 Add in the outputs from this rule.
 Add in this configuration.
 Add in this tool.
+Add in tool files (rules).
 Add in user specified msvs_settings.
 Add it there.
 Add it to in_degree_zeros where it will be processed in a future iteration of the outer loop.
@@ -307,6 +348,7 @@ Add or get a PBXFileReference.
 Add or get a PBXGroup corresponding to the outermost path component, and then recurse into it, chopping off that path component.
 Add or get a PBXVariantGroup.
 Add our outputs to the list of targets we read depfiles from.
+Add outputs generated by each rule (if applicable).
 Add precompile if needed
 Add prefix "user.nuclide" to avoid collision.
 Add props files.
@@ -324,10 +366,12 @@ Add the custom build step for one input file.
 Add the filter to the group.
 Add the hashables of the remote PBXProject that it's related to.
 Add the information to the appropriate tool
+Add the information to the appropriate tool TODO(jeanluc) We could optimize and generate these settings only if the corresponding files are found, e.g. don't generate ResourceCompile if you don't have any resources.
 Add the library's directory to LIBRARY_SEARCH_PATHS if necessary.
 Add the new targets.
 Add the path to the dict.
 Add the path to this python here so that if it's not in the path when ninja is run later, python will still be found.
+Add the paths first, because if something's going to raise, the messages provided by _AddPathToDict are more useful owing to its having access to a real pathname and not just an object's Name().
 Add the run target to the project file.
 Add the special "objects" property, which will be caught and handled separately during printing.
 Add them to the dependencies list if they're not already present.
@@ -345,6 +389,7 @@ Adding an object file to an Xcode target's frameworks phase works properly.
 Adds the appropriate environment variable.
 Adds the link flags for extensions.
 Adjust it for calls.
+Adjust the replacement range to match the entire command found by FindEnclosingBracketGroup (since the variable_re probably doesn't match the entire command if it contained nested variables).
 Admittedly not the best name, but it's what Xcode uses.
 Admittedly, this is different than the evaluation order in other contexts.
 After some discussion, hacking around it here seems like the least amount of pain.
@@ -393,6 +438,7 @@ An amalgamation consists of a header that includes the contents of all public he
 An array of BMP data blocks.
 An array of second-level lookup tables.
 An array of supp data blocks.
+An array of tuples (start_code_point, end_code_point, value).
 An else clause should be on the same line as the preceding closing brace.
 An enumeration.
 An enumerator constant.
@@ -457,17 +503,15 @@ At this moment, the port is either open, or we have an existing server running.
 At this point, all that should be left is actual casts.
 At this stage, check that child class types are PBXGroup exactly, instead of using isinstance.
 Atom 1.5.3 for sure, maybe later ones too:
-Atom 1.6.1 for sure:
-Atom 1.6.2 for sure:
 Attach actions to the gyp file if nothing else is there.
 Attempt to make the file writable before deleting it.
 Attempting to unpack a non-sequence.
 Automatically adapt CIndex/ctype pointers to python objects
 Avoid preprocessor lines
 BMP code points are 16-bit values.
+Backport of OrderedDict() class that runs on Python 2.4, 2.5, 2.6, 2.7 and pypy.
 Bad indent.
 Based on http://code.activestate.com/recipes/576694/.
-Be careful to convert "4.2" to "0420":
 Be consistent with the main Nuclide logs.
 Be sure not to return anything and potentially call a destructor on nothing.
 Be sure the script runs in exec, and that if exec fails, the script exits signalling an error.
@@ -475,11 +519,13 @@ Because Xcode's rule engine is not being used, they need to be expanded as they 
 Because only whitespaces are allowed before the keywords, this will also ignore most do-while-loops, since those lines should start with closing brace.
 Because this parser has no nesting state about templates, by the time it saw "class Comparator", it may think that it's a new class.
 Before nixing comments, check if the line is blank for no good reason.
+Before we complain, we check if it is an exception to the rule: The previous non-empty line has the parameters of a function header that are indented 4 spaces (because they did not fit in a 80 column line when placed on the same line as the function name).
 Below is the logic to compute the dependency graph and sort it.
 Benchmarks that are run as part of other benchmarks are excluded.
 Besides these, we don't accept anything else, otherwise we might get false negatives when existing comment is a substring of the expected namespace.
 Better yet, callers can just call AddFile with a pathname and not worry about building their own PBXBuildFile objects.
 Big-O running times for all methods are the same as for regular dictionaries.
+Binary-less frameworks don't seem to contain symlinks (see e.g. chromium's out/Debug/org.chromium.Chromium.manifest/ bundle).
 Block bodies should not be followed by a semicolon.
 Boolean to declare that this target does not want its name mangled.
 Both spellings are acceptable:
@@ -510,6 +556,7 @@ But we still issue warnings for macros that we know are safe to warn, specifical
 By convention, it's called "all".
 By default, it only gets you your Nuclide server processes.
 By doing this we detach the socket from the CherryPy stack avoiding memory leaks
+By picking up this special type and converting it to a dynamic library (com.apple.product-type.library.dynamic) with fix-ups, single-file loadable modules can be produced.
 CFLAGS et al overrides must be target-local.
 CHROMIUM_STRIP_SAVE_FILE is a chromium-specific hack.
 CMAKE_CURRENT_LIST_DIR is where the CMakeLists.txt lives.
@@ -530,6 +577,8 @@ Calculate the population standard deviation
 Call MergeLists, which will make copies of objects that require it.
 Call these "gyp paths".
 Call these paths "ninja paths".
+Callers should use this instead of calling AppendProperty('children', child) directly because this function maintains the group's dicts.
+Callers should use this instead of calling AppendProperty('files', pbxbuildfile) directly because this function maintains the object's dicts.
 Cannot find a pretty printer.
 Capture stderr output such as 'tar: Failed to open ...'.
 Capture these now so we can adjust them later.
@@ -550,6 +599,8 @@ Check for express.
 Check for full.
 Check for non-const references in function parameters.
 Check for people declaring static/global STL strings at the top level.
+Check for potential format string bugs like printf(foo).
+Check for potential memset bugs like memset(buf, sizeof(buf), 0).
 Check for templated parameter that is split across multiple lines
 Check for those first.
 Check for use of unnamed namespaces in header files.
@@ -582,6 +633,7 @@ Chromium uses DXSDK_DIR in include/lib paths, but it may or may not be set.
 Chromium's .gyp files currently have some circular relationships on non-Mac platforms, so this option allows the strict behavior to be used on Macs and the lenient behavior to be used elsewhere.
 Clang 3.8 comes with CXTranslationUnit_CreatePreambleOnFirstParse, which allows us to skip the forced reparse.
 Clang indexes for line and column are 1-based.
+Clang's API expects a list of (src, contents) pairs.
 Class-like cursors.
 Clean up bad processes and old files.
 Clean up by restoring the backup.
@@ -618,6 +670,19 @@ Compile targets are found by searching up from changed targets.
 Compiled XIB files are referred to by .nib.
 Compiled storyboard files are referred to by .storyboardc.
 Complain if this target is already used.
+CompletionChunk.Kind("Colon"),
+CompletionChunk.Kind("Comma"), 15: CompletionChunk.Kind("ResultType"),
+CompletionChunk.Kind("Equal"),
+CompletionChunk.Kind("HorizontalSpace"), 20: CompletionChunk.Kind("VerticalSpace")
+CompletionChunk.Kind("LeftAngle"),
+CompletionChunk.Kind("LeftBrace"),
+CompletionChunk.Kind("LeftBracket"),
+CompletionChunk.Kind("LeftParen"),
+CompletionChunk.Kind("RightAngle"),
+CompletionChunk.Kind("RightBrace"),
+CompletionChunk.Kind("RightBracket"),
+CompletionChunk.Kind("RightParen"),
+CompletionChunk.Kind("SemiColon"),
 Components are:
 Compute an rpath for this output if needed.
 Compute filename extension: the product extension, or a default for the product type.
@@ -629,8 +694,11 @@ Concatenate back into a single string
 Concrete outputs were already added when they were computed.
 Condensed ISO-8601 date/time format
 Conditional processing may have resulted in changes to automatics or the variables dict.
+Configurations (variants)
+Configurations inherit (most) settings from the enclosing target scope.
 Configure the options.
 Consequently, until Xcode rules are made more capable, "rules" input sections will be handled in Xcode output by shell script build phases performed prior to the compilation phase.
+Consider (const char * const)"hello".
 Consider target "t" rule "A_r" and target "t_A" rule "r".
 Construct the set of API dumps we should perform.
 Consume braces or semicolons from what's left of the line
@@ -644,12 +712,15 @@ Convenient functions for printing out information on the build process.
 Conversion to opposite signedness is never truncating.
 Convert Xcode-type variable references to sh-compatible environment variable references.
 Convert all strings that are canonically-represented integers into integers.
+Convert any paths to native form (first element is used directly).
 Convert into a tree of dicts on path.
 Convert it to a string
+Convert most of the signature to GUID form (discard the rest)
 Convert ns to ms
 Convert the macros
 Convert to folders and the right slashes.
 Convert to folders recursively.
+Convert to normalized (and therefore absolute paths).
 Convert to proper windows form.
 Converts a Clang `SourceLocation` into a dict.
 Converts a Clang `SourceRange` into a dict.
@@ -662,8 +733,20 @@ Copy additional generator configuration data from Xcode, which is shared by the 
 Copy additional generator configuration data from Xcode, which is shared by the Mac Ninja generator.
 Copy out only the edges we're interested in from the full edge list.
 Copy passed list
+Copy passed lists (or set to empty lists)
 Copy test_dir and its contents to backup so we can restore it later.
 Copying the environment variables into global make variables doesn't work either, because then the .d files will potentially contain spaces after variable expansion, and .d file handling cannot handle spaces.
+Copyright (c) 2009 Google Inc.
+Copyright (c) 2009 Raymond Hettinger.
+Copyright (c) 2011 Google Inc.
+Copyright (c) 2011 The LevelDB Authors.
+Copyright (c) 2011-present, Facebook, Inc.
+Copyright (c) 2012 Google Inc.
+Copyright (c) 2013 Google Inc.
+Copyright (c) 2014, Facebook, Inc.
+Copyright (c) 2015, Facebook, Inc.
+Copyright (c) 2015-present, Facebook, Inc.
+Copyright (c) 2016, Facebook, Inc.
 Copyright 2013 Google Inc.
 Copyright 2015-present, Facebook, Inc.
 Count non-blank/non-comment lines.
@@ -730,12 +813,15 @@ Deleting an existing item uses self.__map to find the link which is then removed
 Dependencies
 Derived properties
 Descriptions of the compiler options, i.e. VCCLCompilerTool in MSVS and ClCompile in MSBuild.
+Despite the documentation that says this only defaults to on when the subsystem is Vista or greater (which applies to the linker), the IDE defaults it on unless it's explicitly off.
 Destructors should still be visible, so add two of them.
+Detach() might be closer to what Chrome Dev Tools is trying to do.
 Detach/Kill inferior.
 Detect variable-length arrays.
 Detects errors in Nuclide pacakge.json files.
 Determine how much of the prefix the two paths share.
 Determine if different.
+Determine ninja top level build dir (e.g. /path/to/out).
 Determine the SDK root and collect the set of frameworks.
 Determine the default target.
 Determine the output idirectory
@@ -785,6 +871,7 @@ Don't include extension.
 Don't insert a msvs_system_include_dirs key if not needed.
 Don't issue warning for missing namespace comments if there aren't enough lines.
 Don't just insert everything at index 0.
+Don't just use this object's hashables, they're not specific and unique enough on their own (without access to the parent hashables.)  Instead, provide hashables that identify this object by path by getting its hashables as well as the hashables of ancestor XCHierarchicalElement objects.
 Don't leave turds behind.
 Don't merge the 'Name' attribute.
 Don't mutate the caller's copy of the arguments.
@@ -793,6 +880,7 @@ Don't set default value of certs_dir, so that we can just check certs_dir for No
 Don't setup_env every time.
 Don't traverse 'none' targets if explicitly excluded.
 Don't use "elided" lines here, otherwise we can't check commented lines.
+Don't use restart() here, so that we regenerate the certificates.
 Don't warn on any kind of template arguments.
 Don't warn on assignments to function pointers, but keep warnings for unnamed parameters to pure virtual functions.
 Don't warn on function pointer declarations.
@@ -801,10 +889,12 @@ Don't write postbuilds for target's output.
 Done if not processing outputs as sources.
 Drop abstract.
 Drop last 2 NULs, one for list terminator, one for trailing vs.
+Due to circular dependencies between libraries :(, we wrap the special "figure out circular dependencies" flags around the entire input list during linking.
 Dump and load in hex
 Dump and load with WAL disabled
 Dump and load with lots of extra params specified
 Dump and load without any additional params specified
+Dump anything with action 0 (exclude).
 Dump command fails because of typo in params
 Dump each submodule.
 Dump only a portion of the key range
@@ -816,11 +906,15 @@ Dump the async stacktrace.
 Dump the top-level module
 Dump upto max_keys rows
 Dump with count_only
+E.g. "foo/bar" when we're constructing targets for "foo/bar/baz.gyp".
+E.g. "out/gypfiles"
+E.g. 'type foo string' will make foo a plain struct in the eyes of gdb, circumventing the pretty print triggering.
 Each Gyp configuration creates a different CMakeLists.txt file to avoid incompatibilities between Gyp and CMake configurations.
 Each WaitHandle has its own states...
 Each character is 6 bits: 5 of value and the high bit is the continuation.
 Each file will have two lines of report, from which we can extract the file name, total lines and coverage percentage.
 Each item in a conditions list consists of cond_expr, a string expression evaluated as the condition, and true_dict, a dict that will be merged into the_dict if cond_expr evaluates to true.
+Each item in list_actions identifies whether the corresponding item in the_list should be excluded, unconditionally preserved (included), or whether no exclusion or inclusion has been applied.
 Each item is a list of all of the concrete outputs for the rule_source.
 Each of the child benchmarks emit their own line.
 Each second-level lookup table is a mapping from a supp second-level index to supp data block index.
@@ -832,6 +926,7 @@ Emulates the frontend of a -whole-module-optimization compilation.
 Emulates the frontend of an -embed-bitcode job.
 Enable core dump by change ulimit to infinity.
 Enable project in this solution configuration.
+Enable typo-detection (and the corresponding fixits) For some reason this is not enabled by default in libclang.
 Enable v3_req extensions.
 End the object.
 Enter assembly block
@@ -841,6 +936,8 @@ Escape codes should already be removed by ESCAPES.
 Establish the link.
 Evaluate conditions sections, allowing variable expansions within them as well as nested conditionals.
 Even if strip_save_file is empty, explicitly write it.
+Even if the regex matches, nothing will change so continue (regex searches are expensive).
+Even though Breakpoints are registered on SBTarget lldb.SBTarget.EventIsTargetEvent() will return false for breakpoint events so handle them here.
 Even though they may be built by other targets that depend upon them it makes detection of what is going to be built easier.
 Event loop terminates, shutdown chrome server app.
 Eventually we should add some sort of rule_default option to set this per project.
@@ -853,6 +950,8 @@ Ex: BUILD_STATIC_LIBRARY vs.
 Exactly mirror spec's directories We'll only move things we want into 'good'
 Exactly mirror zend's directories incase some tests depend on random crap.
 Example: "main.cc in Sources"
+Except after an opening paren, or after another opening brace (in case of an initializer list, for instance), you should have spaces before your braces.
+Except in if/for/while/switch, there should never be space immediately inside parens (eg "f( 3, 4 )").
 Exclude anything in BUILT_PRODUCTS_DIR.
 Exclude excluded sources coming into the generator.
 Exclude excluded sources from being built.
@@ -867,6 +966,7 @@ Execute the code with our __children__ in scope
 Exhausted all earlier lines and still no matching angle bracket.
 Exhausted all remaining lines and still no matching angle bracket.
 Exit assembly block
+Expand dependencies specified as build_file:*.
 Expand macros in all_system_includes.
 Expand the rules into a matrix.
 Expand variables and nested conditinals in the merge_dict before merging it.
@@ -889,10 +989,12 @@ Extract the list of include dirs from the output, which has this format: ...
 Extract value.
 Extracts the build file from the fully qualified target.
 FIXME Support slice objects.
+FIXME(adonovan): "NOLINT(" is misparsed as NOLINT(*).
 FIXME: Document this assertion in API.
 FIXME: Expose iteration from CIndex, PR6125.
 FIXME: It would be great to support an efficient version of this, one day.
 FIXME: There should just be an isNull method.
+FIXME: doesn't respect strings or comment nesting)
 FIXME: redeclaring qux.php is unnecessary
 FIXME: self.assertRaises context manager is not py2.6 compatible.
 FIXME: sil-opt does not have the '-F' option.
@@ -900,6 +1002,7 @@ Fail: did not receive proper initialization sequence.
 Fallback to reg.exe if we fail to import _winreg.
 False positives include C-style multi-line comments and multi-line strings but those have always been troublesome for cpplint.
 Fetch the generator specific info that gets fed to input, we use getattr so we can default things and the generators only have to provide what they need.
+Fetching the typed text for each result is expensive, so this requires only O(log N) lookups / comparisons.
 Figure out all the projects that will be generated and their guids
 Figure out the pathname that this project needs to use to refer to the other one.
 Figure out the underlying type of the enum to know if it is a signed or unsigned quantity.
@@ -916,6 +1019,7 @@ Filter out those which do not match prefix and suffix and produce the resulting 
 Filter the system libraries, which are added by default by the Android build system.
 Finalize1 is responsible for sorting duty, and once all project files are sorted, Finalize2 can come in and update these references.
 Finalize2 needs to happen in a separate step because the process of updating references to other projects depends on the ordering of targets within remote project files.
+Finally, the .so extension is forcibly applied over the default (.dylib), unless another forced extension is already selected.
 Finally, we use the prett xml function to print the vcproj back to the user.
 Finally, wrap the whole thing in quotes so that the above quote rule applies and whitespace isn't a word break.
 Find Xcode.
@@ -937,7 +1041,9 @@ Find the end of the conditional expression
 Find the ending paren, and re-evaluate the contained string.
 Find the excluded ones, minus the precompiled header related ones.
 Find the file node with the right relative path
+Find the list of targets that derive from the gyp file(s) being built.
 Find the max width for each column
+Find the most recent join().
 Find the name of the binary based on the part before the ".framework".
 Find the path to a CMake executable on the host machine.
 Find the path to a Clang executable on the host machine that is most suitable for building Swift.
@@ -947,6 +1053,7 @@ Find the rightmost space that would obey our width constraint and that's not an 
 Find the starting native frame.
 Find the test targets first.
 Find the upper bound for our PC.
+Finds occurrences of NOLINT or NOLINT(...).
 First create XML content definition
 First element of included_files is the file itself.
 First element that is found is copied to clipboard
@@ -965,19 +1072,26 @@ Fix it up to make it relative to the build file dict that it's going into.
 Fix the filenames to be absolute.
 Fix up command with platform specific workarounds.
 Fix up the path.
+Fixup path as in (1).
 Flag to indicate if there was an error in a child process.
 Flags to make gcc output dependency info.
 Flags with values 16 and 32 are deprecated and intentionally omitted.
 Flatten lists to strings.
 Folder mappings Omit this section if there are no folders
 Folder name
+Folder name (again)
+For Android, the target of these maps is a tuple ('static', 'modulename'), ('dynamic', 'modulename'), or ('path', 'some/path') instead of a string, since we link by module.
 For Emacs's flymake.
 For MSVS 2008 and earlier, we need to process all files before walking the sub folders.
 For a list of options available for each theme, see the documentation.
+For a literal quote, CommandLineToArgv requires an odd number of backslashes preceding it, and it produces half as many literal backslashes (rounded down).
 For a non-literal quote, CommandLineToArgv requires an even number of backslashes preceding it, and it produces half as many literal backslashes.
 For a variant path/to/Language.lproj/MainMenu.nib, put a variant group named MainMenu.nib inside path/to, and give it a variant named Language.
 For any generated source, if it is coming from the shared intermediate directory then we add a Make rule to copy them to the local intermediate directory first.
+For bundles, the .TOC should be produced for the binary, not for FinalOutput().
+For consistency with other builders, put sub-project build output in the sub-project dir (see test/subdirectory/gyptest-subdir-all.py).
 For each dependencies in this project
+For each linkable target, add a "dependencies" entry referring to all of the target's computed list of link dependencies (including static libraries if no such entry is already present.
 For each node, take a copy, and remove it from the list.
 For each remote project file, sort the associated ProductGroup in the same order that the targets are sorted in the remote project file.
 For each source file, write an edge that generates all the outputs.
@@ -987,6 +1101,7 @@ For example, if a method call is suggested, this chunk will be equal to the meth
 For example, this allows unused code to appear as a warning instead of an error.
 For example, to dump the API for all frameworks across OS X, iOS, watchOS, and tvOS, with the Swift 3 rules, use:
 For example:
+For example: (int)f.
 For if/for/while/switch, the left and right parens should be consistent about how many spaces are inside the parens, and there should either be zero or one spaces inside the parens.
 For marking tests as always failing.
 For migration, stop the forever monitor processes of Nuclide server.
@@ -1000,6 +1115,7 @@ For static libraries, no dSYMs are created.
 For supp tables, perform bottom-up deduplication: first, deduplicate data blocks.
 For the next half, try different modes.
 For the rest, work with both comments and strings removed.
+For this we need to check what came before the "(type)" string.
 Force a re-parse, in case the user e.g. changed a header file.
 Force app to exit on Ctrl-C.
 Force ninja to use rsp files.
@@ -1007,6 +1123,7 @@ Format can be a custom python file, or by default the name of a module within gy
 Format upgrade_check_project_version with leading zeros as needed.
 Fortunately, for most symboles, we do not need to perform a function call.
 Fortunately, this logic is very fast, so it doesn't seem like we'll have to make it multi-threaded any time soon, so we can get away with sharing this field.
+Found DISALLOW* macro outside a class declaration, or perhaps it was used inside a function when it should have been part of the class declaration.
 Found an operator, update nesting stack
 Found matching angle bracket
 Found the end of the string, match leading space for this line and resume copying the original lines, and also insert a "" on the last line.
@@ -1022,6 +1139,7 @@ Function signature specialization of a generic specialization.
 Function/method cursor kinds.
 Functions calls through the python interface are rather slow.
 Functions strictly alphabetical order.
+Further (to handle cases like ../cwd), make it relative to cwd)
 Further, if a target has a non-hard dependency, but that dependency exports a hard dependency, the non-hard dependency can safely be removed, but the exported hard dependency must be added to the target to keep the same dependency ordering.
 G will be non-null if any postbuild fails.
 GDB doesn't add the script's dir to sys.path when sourcing.
@@ -1039,6 +1157,7 @@ Gather the targets to shard, and how many pieces.
 General information about the project.
 Generate a key pair and a certificate signing request.
 Generate a list that has all the include dirs.
+Generate all requested formats (use a set in case we got one format request twice)
 Generate certificate authority.
 Generate each project.
 Generate other file names.
@@ -1054,6 +1173,7 @@ Get a list of dependency targets that should be linked into this target.
 Get all the inputs and outputs for this rule for this trigger file.
 Get cert, key and ca.
 Get commands for a given job from the determinator file
+Get default compiler defines (if possible).
 Get defines declared in the gyp files.
 Get directory project file is in.
 Get either the last message in the queue or None.
@@ -1062,6 +1182,7 @@ Get rid of '.ca.key'.
 Get rid of the leading colon.
 Get rid of unnecessary levels of depth in groups like the Source group.
 Get the address and value of `mcg', the global MCGenerator pointer.
+Get the current vmfp().
 Get the entire list of matches as a list of MatchObject instances.
 Get the information for this configuration
 Get the inheritance relationship right by making a copy of the target dict.
@@ -1074,6 +1195,7 @@ Get the property sheets associated with this configuration.
 Get the protocol version of the build.
 Get the type name.
 Get the unique output directories for this rule.
+GetChildAtIndex(idx, use_dynamic, can_create_synthetic)
 Give CMake as little information as possible so that it doesn't mess it up.
 Give a warning.
 Give everything an ID.
@@ -1110,6 +1232,7 @@ Gyp expects the following variables to be expandable by the build system to the 
 Gyp separates the sheep from the goats based on file extensions.
 Gyp source paths are always posix.
 Gyp traditionally names the object resulting from foo.c foo.o.
+Gyp type ("static_library", etc.) of this target.
 GypPathToUniqueOutput generates a path relative to the product dir, so insert product_dir in front if it is provided.
 HACK: This is ugly.
 HTTPConnection is more inner than HTTPRequest so we can leave once we're done here
@@ -1118,6 +1241,7 @@ Hack to remove icu because the diff is too different.
 Handle TEST...
 Handle defaults
 Handle dependent settings of various types.
+Handle external rules (non-native rules).
 Handle rules that use a native rules file.
 Handle the associated variables dict first, so that any variable references within can be resolved prior to using them as variables.
 Handling this case properly would also be problematic because bash allows the history character to be changed with the histchars shell variable.
@@ -1144,6 +1268,7 @@ However it's still important to strip trailing slashes.
 However they are found in CL and other tools.
 However, CMake does provide the command link_directories, which adds link directories to targets defined after it is called.
 However, IncrediBuild BuildConsole will parse the solution file, but then silently skip building the target causing hard to track down errors.
+However, condition processing should occur prior to recursion so that variables (both automatic and "variables" dict type) may be adjusted by conditions sections, merged into the_dict, and have the intended impact on contained dicts.
 However, do apply checks if there is already an end of namespace comment and it's incorrect.
 However, in some cases, especially when multiple projects are open or when Xcode is busy, things don't work so seamlessly.
 However, in that case the system will trigger an error with the level E_NOTICE
@@ -1163,6 +1288,7 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
 INTERMEDIATE_DIR and SHARED_INTERMEDIATE_DIR are used by gyp.generator.xcode.
 INTERMEDIATE_DIR is a place for targets to build up intermediate products.
 Ideally this would modify every non-primary file, but that's harder to infer without actually parsing the arguments.
+Ideally we should fetch the underlying value content and display (key, value) so user does not need to expand one more level to examine content.
 Ideas for the harness improvement and development are welcomed here: rdar://problem/18072938
 If 2nd arg is zero, snprintf is used to calculate size.
 If DISALLOW_EVIL_CONSTRUCTORS, DISALLOW_COPY_AND_ASSIGN, or DISALLOW_IMPLICIT_CONSTRUCTORS is present, then it should be the last thing in the class declaration.
@@ -1170,12 +1296,14 @@ If `idx' is a string, it must be converted to an index via the underlying FixedS
 If a "BSD Dynamic Library" target is added in the Xcode UI, Xcode sets EXECUTABLE_PREFIX.
 If a "name" property was supplied, set "productName" if it is not present.
 If a 'none' target has rules or actions we assume it requires a build.
+If a build file (or any of its included files) is modified we assume all targets in the file are modified.
 If a relative path, parsed_build_file is relative to the directory containing build_file.
 If a rule specifies multiple outputs, each input file that the rule is applied to will have the same number of concrete outputs.
 If a source file gets copied, we still need to add the orginal source directory as header search path, for GCC searches headers in the directory that contains the source file by default.
 If all configurations don't define the 'SYMROOT' attribute, an empty set is returned.
 If all files have dependencies, add the first file as a dependent of root_node so that the cycle can be discovered from root_node.
 If all targets have dependencies, add the first target as a dependent of root_node so that the cycle can be discovered from root_node.
+If an rspfile contains spaces, ninja surrounds the filename with quotes around it and then passes it to open(), creating a file with quotes in its name (and when looking for the rsp file, the name makes it through bash which strips the quotes) :-/
 If another PBXBuildFile references this XCFileLikeElement, there's a problem.
 If any concrete outputs are outdated or missing relative to their corresponding rule_source or to any specified additional input, the rule action must be performed to generate the concrete outputs.
 If any configuration doesn't define the 'SYMROOT' attribute, None is added to the returned set.
@@ -1195,6 +1323,7 @@ If cpplint is invoked from Emacs's flymake, a temporary file is generated by fly
 If current_file is not set, we reach the last line of report, which contains the summarized coverage percentage.
 If depth is set, predefine the DEPTH variable to be a relative path from this build file's directory to the directory identified by depth.
 If explicitly set to preprocess the plist, invoke the C preprocessor and specify any defines as -D flags.
+If extensions (or modules to document with autodoc) are in another directory, add these directories to sys.path here.
 If false, no module index is generated.
 If given port is being used by somebody else, you shall not pass.
 If invoked in non-primary-file mode, it only creates the output file.
@@ -1203,6 +1332,7 @@ If it ever needs to move backwards, CheckNextIncludeOrder will raise an error.
 If it is false, this method returns a path to the symlink.
 If it were me, I would have put a space in there after the opening curly, but I guess this is just another one of those inconsistencies between how Xcode prints PBXFileReference and PBXBuildFile objects as compared to other objects.
 If it's a string, append a text node.
+If it's a wrapper (bundle), set WRAPPER_EXTENSION.
 If it's already a list, make a copy.
 If it's disabled in any config, turn it off in the reference.
 If it's equal, we leave it untouched, otherwise we concatenate it.
@@ -1235,8 +1365,10 @@ If the active build configuration is changed, the project file must be closed an
 If the argument starts with a slash or dash, it's probably a command line switch
 If the attribute was a property sheet attributes, we remove it, since they are useless.
 If the base address is not specifically controlled, DYNAMICBASE should be on by default.
+If the caller didn't provide a path, there can be either multiple paths (PBXVariantGroup) or one.
 If the child is a filter, we want to append all its children to this same list.
 If the closing parenthesis is preceded by only whitespaces, try to give a more descriptive error message.
+If the command already has path elements (either relative or absolute), then assume it is constructed properly.
 If the common names don't match, we restart.
 If the dependencies list is empty, it's not needed, so unhook it.
 If the directory is relative to the documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -1259,17 +1391,21 @@ If the property doesn't exist yet, create a new empty list to receive the item.
 If the resource lives in a .lproj bundle, add that to the destination.
 If the schema indicates that "name" is required, try to access the property even if it doesn't exist.
 If the setting name has the _excluded suffix, then check the root name.
+If the string already contains a "*/", it is turned into "(*)/".
 If the target and include share some initial basename component, it's possible the target is implementing the include, so it's allowed to be first, but we'll never complain if it's not there.
 If the target file and the include we're checking share a basename when we drop common extensions, and the include lives in .
 If the two objects are of the same sort rank, compare their names.
 If the value is the same all configurations, just add one unconditional entry.
 If the variable is already set, don't set it.
 If the websocket was terminated and there are no messages left in the queue, return None immediately otherwise the client will block forever
+If the_dict's parent is not a dict (it could be a list or it could be parentless because it is a root dict), the_dict_key will be None.
 If there are any object files in our input file list, link them into our output.
+If there are n source files matching the rule, and m additional rule inputs, then adding 'inputs' to each build edge written below will write m * n inputs.
 If there is a filter and the target does not match, exclude the target.
 If there is a parent 'src' or 'java' folder, navigate up to it - these are canonical package root names in Chromium.
 If there is a reason for either of those to differ, then this mapping can be overridden after an instance of this class is created.
 If there's a .svn file in the current directory, we recursively look up the directory tree for the top of the SVN checkout
+If there's anything left unvisited, there must be a circular dependency (cycle).
 If there's only one node for this file, simplify the display by making it a box without an internal node.
 If these are present, then we check the second character instead.
 If they generate any extra headers etc., the per-.o file dep tracking will catch the proper rebuilds, so order only is still ok here.
@@ -1277,6 +1413,7 @@ If they're present, Xcode will provide a slight optimization by only running the
 If this entry has been visited, nothing to do.
 If this is a folder, check its entries too.
 If this is a subsequent target and it's linkable, don't look any further for linkable dependencies, as they'll already be linked into this target linkable.
+If this is the first target being examined and it's not linkable, return an empty list of link dependencies, because the link dependencies are intended to apply to the target itself (initial is True) and this target won't be linked.
 If this target already has an explicit 'toolset', and no 'toolsets' list, don't modify it further.
 If this target has a 'run_as' attribute, add its target to the targets, and add it to the test targets.
 If this triggers an AttributeError, the instance was not properly created.
@@ -1320,6 +1457,7 @@ Ignore pointers/references to functions.
 Ignore the interrupt signal so that the parent process catches it and kills all multiprocessing children.
 Ignore toolset specification in the dependency if it is specified.
 Ignore unhandled extensions.
+Implements the GNU __null extension, which is a name for a null pointer constant that has integral type (e.g., int or long) and is the same size and alignment as a pointer.
 Import hashlib if available, avoiding a deprecation warning under 2.6.
 Import md5 otherwise, preserving 2.4 compatibility.
 Import sha otherwise, preserving 2.4 compatibility.
@@ -1357,6 +1495,7 @@ Include the optional message
 Include the standard JRE container and a dummy out folder
 Include them here for completeness, as they are very likely to have the same usage pattern.
 Includes and excludes override previous actions.
+Including the input file as an argument causes index.parse() to fail.
 Indent and print the output.
 Indicates that an unknown error occurred.
 Indicates that errors during translation prevented saving.
@@ -1372,6 +1511,7 @@ Inject system includes from gyp files into INCLUDE.
 Insert after the "All" target, which must exist if there is more than one run_test_target.
 Insert fixme lines bottom up, so that changes don't change line numbers later in the file.
 Insert makefile as 0'th input, so it gets the action attached there, as this is easier to understand from in the IDE.
+Insert synthesized key/value pairs (e.g. BuildMachineOSBuild).
 Insert the nodes in the correct order.
 Insert the test runner after the related target.
 Inside a raw string, look for the end
@@ -1382,8 +1522,10 @@ Instead just save them up...
 Instead of appending to lhs one character at a time, we do another regular expression match to consume several characters at once if possible.
 Instead of sorting alphabetically, sort things in the order of the targets that produce the products.
 Instead of throwing out 64 bits of the digest, xor them into the portion that gets used.
+Instead of using assert() which will crash debugger log an error message and tolerate this non-fatal situation.
 Instead of using the MANIFESTUAC flags, we generate a .manifest to include into the list of manifests.
 Instead, it favors the use of find_library and passing absolute paths to target_link_libraries.
+Instead, we merge all the manifests provided (along with one that includes what would normally be in the linker-generated one, see msvs_emulation.py), and include that into the first and only link.
 Instruct the parser to create a detailed processing record containing metadata not normally retained.
 Instruct the parser to create a pre-compiled preamble for the translation unit.
 IntermediatesGroup is used to collect source-like files that are generated by rules or script phases and are placed in intermediate directories such as DerivedSources.
@@ -1399,13 +1541,16 @@ It does, however, keep a name.
 It gets emptied out every time the script is run
 It has changed, write it
 It includes each non_runtest_target that does not have suppress_wildcard set.
+It is admittedly a little gross to set this as a field rather than threading it through validate_package() or creating a new "Validator" object for each package that has the path to the package.json as a field so it doesn't have to be used as a "global".
 It is based on make.py, the standard makefile generator.
 It is defined below because it uses PBXContainerItemProxy, defined below.
 It is merged with a list that can come from the generator to create non_configuration_keys.
 It is no longer incredibly sucky, but this list needs to be extended.
+It is not sufficient to just rely on Name() to get the XCFileLikeElement's name, because that is not a complete pathname.
 It is not sufficient to just rely on name and parent to build a unique hashable : a node could have two child PBXGroup sharing a common name.
 It is only guaranteed to exist and be constant within the context of a project, corresponding to a single input file.
 It is specific to each build environment.
+It is very heavily advised to keep each target in an entire project (even across multiple project files) using the same set of configuration names.
 It is weird that GET and SCAN raise exception for non-existent key, while delete does not
 It just means that it's going to load a build file that contains targets and is expected to provide a targets dict that contains the targets...
 It just removes the monitor so that we can kill them on upgrade.
@@ -1417,6 +1562,7 @@ It should have one dependency, the parent xcode target.
 It supports https if key_file and cert_file are given.
 It takes into account quoted quotes, and makes sure that the quotes match.
 It will get a default common name like user.nuclide.host
+It will only be called by re.sub with match.group(0) containing a character matched by the the _escaped expression.
 It will raise an exception if not valid.
 It'll blow up if the args aren't immutable, among other "problems".
 It's a source.
@@ -1429,13 +1575,16 @@ It's important to get the "All" target first, though.
 It's ok to have many commands in a switch case that fits in 1 line
 It's preferable to keep dependencies listed first during a link phase so that they can override symbols that would otherwise be provided by libraries, which will usually include system libraries.
 It's stupid to replace and append simultaneously, for example.
+Items for which no exclusion or inclusion has been applied (yet) have value -1, items excluded have value 0, and items included have value 1.
 Iterate over local dict of types to determine if a printer is registered for that type.
 Iterate over rules in the order of increasing priority.
 Iterate using an index so that new values can be assigned into the_list.
+Its input is a set of swift files, containing functions named 'bench_*' that take no arguments and returns Int.
 Just some paranoia
 Keep a dict going from 'subdirectory:target_name' to 'foo.gyp'.
 Keep a dict keyed on filename to speed up access.
 Keep a reference to the originating CompileCommands to prevent garbage collection
+Keep anything with action 1 (include) or -1 (no include or exclude seen for the item).
 Keep it moving.
 Keep reference to original results object alive.
 Keep this legacy behavior for now.
@@ -1455,31 +1604,43 @@ Let CMake know if the 'all' target should depend on this target.
 Let gyp-time envvars win over global settings.
 Let make it concurrent for others to tag along
 Let msbuild-only properties get translated as-is from msvs_settings.
+Let the later compile() call report the error
 Let's avoid unmasking when there is no payload
 Let's copy the include_state so it is only messed up within this function.
 Let's handle IPv4 and IPv6 addresses Simplified from CherryPy's code
 Let's just warn the user.
+Libraries (i.e. -lfoo) These must be included even for static libraries as some of them provide implicit include paths through the build system.
 Libs can have multiple words.
 Libtool on Mac also generates warnings when duplicate basenames are passed into Make generator on Mac.
 Like /bin/touch, but takes a time using the LLVM epoch.
 Like actions, but implicitly depend on the target's output.
 Likewise, an else should never have the else clause on the same line
+Likewise, gMock's MockCallback takes a template parameter of the form return_type(arg_type), which looks much like the cast we're trying to detect.
+Likewise, there should never be a space before a ( when it's a function argument.
 Line too long.
 Link as 'C' if there are no other files
+Link dependencies (i.e. other gyp targets this target depends on) These need not be included for static libraries as within the gyp build we do not use the implicit include path mechanism.
 Linker flags
 Linux lldb has a bug of not emitting stopping event during launch.
+List all (or at least one) concrete output for each rule source as a prerequisite of the "all" target.
 List files this target depends on so that actions/rules/copies/sources can depend on the list.
 List of "official" debug modes, but you can use anything you like.
 List of HandlerDomainSets for the server to respond to reqs with.
 List of patterns, relative to source directory, that match files and directories to ignore when looking for source files.
 List of precompiled header related keys.
+List of tuples (source start file, name, description, authors, manual section).
+List of tuples (source start file, target name, title, author, dir menu entry, description, category)
 List processes for all users.
 List processes from all users.
+Listen for breakpoint/watchpoint events (Added/Removed/Disabled/etc).
+Listen for process events (Start/Stop/Interrupt/etc).
+Lists in dicts can be merged with different policies, depending on how the key in the "from" dict (k, the from-key) is written.
 Literal text
 Load and normalize the manifests.
 Load build files.
 Load into an existing db, create_if_missing is not specified
 Load the data file.
+LocalPathify() calls normpath, stripping trailing slashes.
 Logical and/or operators.
 Look at dependents of the node just added to flat_list.
 Look at each project's target_defaults dict, and merge settings into targets.
@@ -1490,6 +1651,7 @@ Look for any include dirs that were explicitly added via cflags.
 Look for beginning of a raw string.
 Look for dependencies.
 Look for matching comment at end of namespace.
+Look for more matches now that we've replaced some, to deal with expanding local variables (variables defined in the same variables block as this one).
 Look for single-argument constructors that aren't marked explicit.
 Look for the bracket that matches the first bracket seen in a string, and return the start and end as a tuple.
 Look for the pattern that gets expanded into variables
@@ -1500,6 +1662,7 @@ Loop over the entire list of phases and assert if more than one of the desired t
 Loop this way instead of "for dependency in" or "for index in xrange" because the dependencies list will be modified within the loop body.
 Loop through the targets in the other build file, adding them to this target's list of dependencies in place of the removed wildcard.
 Loop to take over the innermost only-child group possible.
+MACH_O_TYPE is changed to mh_bundle to produce the proper file type (as opposed to mh_dylib).
 MSBuild options not found in MSVS.
 MSBuild rules are implemented using three files: an XML file, a .targets file and a .props file.
 MSVC08 and prior version cannot handle duplicate basenames in the same target.
@@ -1534,6 +1697,7 @@ Make sure our dependencies are built first.
 Make sure partial executables don't end up in a bundle or the regular output directory.
 Make sure rule_sources isn't already there.
 Make sure static libraries don't declare dependencies on other static libraries, but that linkables depend on all unlinked static libraries that they need so that their link steps will be correct.
+Make sure that 'TargetPath' matches 'Lib.OutputFile' or 'Link.OutputFile' (depending on the tool used) to avoid MSB8012 warning.
 Make sure that any targets in a.gyp don't contain dependencies in other .gyp files that further depend on a.gyp.
 Make sure that no two objects in the project file have the same ID.
 Make sure that output directories exist before executing the rule action.
@@ -1578,17 +1742,21 @@ Match first brace, semicolon, or closed parenthesis.
 Match group 1 is "DIR", match group 3 is "path" or None.
 Match start of namespace.
 MatchStatus is used indicate if and how a target depends upon the supplied sources.
+Matched closing parenthesis (case 1).
 Matches characters.
 Matches strings.
 Matches the first component of a filename delimited by -s and _s.
+Maybe there's a more elegant way around this, but this is the only case where we need to own objects in a dictionary (that is itself in a list), and three lines for a one-off isn't that big a deal.
 Measure time for one iteration If it's too small, increase number of iteration until it's measurable
 Membership in this set means that the cygwin environment has been set up, and does not need to be set up again.
 Merge buckets until everything is a root entry.
+Merge in configuration (with all its parents first).
 Merge in parents.
 Merge in the included files.
 Merge it into the new config.
 Merge the intermediate one with ours to .assert.manifest, then check that .assert.manifest is identical to ours.
 Merge with stdout if stderr isn't specified.
+MergeLists can recurse back into MergeDicts, although this will be to make copies of dicts (with paths fixed), there will be no subsequent dict "merging" once entering a list because lists are always replaced, appended to, or prepended to.
 Mimic Xcode's behavior here by using an empty string for sep.
 Minor version is the server protocol version
 Missing in many other places too.
@@ -1618,10 +1786,12 @@ NOTE: It does not handle quotes that span more than one line, or cases where an 
 NOTE: Python 2's `map` function returns a list.
 NOTE: This still has the problem that if an absolute path is encountered, including paths with a sourceTree, they'll still inherit their parents' hashables, even though the paths aren't relative to their parents.
 NOTE: Xcode generator DOES NOT take 'verbose-build' into account.
+NOTE: data contains both "target" files (.gyp) and "includes" (.gypi), as well as meta-data (e.g. 'included_files' key).
 NOTE: excluded_sources goes from being a set to a list here.
 NOTE: flat_list is the flattened dependency graph specifying the order that targets may be built.
 NOTE: gyp paths are always posix style.
 NOTE: here are the conditions rob pike used for his tests.
+NOTE: on windows (but not cygwin) rename will not replace an existing file, so it must be preceded with a remove.
 NOTE: rsplit is used to disambiguate the Windows drive letter separator.
 NOTE: setuptools generated console_scripts calls function with no arguments
 NOTE: sources goes from being a set to a list here.
@@ -1652,6 +1822,7 @@ Ninja prefers paths to be known at gyp time.
 Ninja uses out/Debug/gen while make uses out/Debug/obj/gen as the SHARED_INTERMEDIATE_DIR.
 No additions to the schema relative to PBXGroup.
 No additions to the schema relative to XCBuildPhase.
+No body for the function (or evidence of a non-function) was found.
 No copy is necessary here.
 No longer needed.
 No member of that name.
@@ -1664,7 +1835,9 @@ No server on port 9092
 No suffixes provided, default to using empty suffix only
 No value supplied, treat it as a boolean and set it.
 No warning for all other cases, including whitespace or newline, since we have a separate check for semicolons preceded by whitespace.
+No-op, used by tests') Since this target depends on binary and resources which are in nested subfolders, the framework directory will be older than its dependencies usually.
 Nodes in in_degree_zeros have no dependencies not in flat_list, so they can be appended to flat_list.
+Non-bundled loadable_modules are called foo.so for some reason (that is, .so and no prefix) with the xcode build -- match that.
 Non-relational operator
 None is a synonym for 'store'.
 Normalize encoding.
@@ -1680,7 +1853,6 @@ Not exactly the same as disable.
 Not exception type specified.
 Not using urlparse here as it does not handle unknown schemes well.
 Not very inspired, but it's what Xcode uses.
-Note 3rd 's'.
 Note on Dependencies and Libraries: CMake wants to handle link order, resolving the link line up front.
 Note that .tlb is not included in the outputs as it is not always generated depending on the content of the input idl file.
 Note that Python sort is stable.
@@ -1692,18 +1864,21 @@ Note that the _M versions need to come first for substring matching to work.
 Note that the caller is to be expecting a list in return, and not all callers do because not all are working in list context.
 Note that the code below adds actions to this target, so if you move these two lines, move the lines below as well.
 Note that the first argument is assumed to be the command.
+Note that the stock python on SunOS has a bug where fcntl.flock(fd, LOCK_EX) always fails with EBADF, that's why we use this F_SETLK hack instead.
 Note that this does /not/ update the translation unit.
 Note that this must be two directories beneath src/ for unit tests to pass, as they reach into the src/ directory for data with relative paths.
 Note that this only happens with the BuildConsole, and does not occur if IncrediBuild is executed from inside Visual Studio.
 Note that this only scans back one line, since scanning back arbitrary number of lines would be expensive.
 Note that this pattern will also pass on assignments of "0" to function pointers, but the preferred values for those would be "nullptr" or "NULL".
 Note that this relies on the Python dict comparison operator comparing componentwise lexicographically based on the alphabetical ordering of keys.
+Note that we accept C style "/* */" comments for terminating namespaces, so that code that terminate namespaces inside preprocessor macros can be cpplint clean.
 Note that we can't use an assertion because some of the gyp tests depend on this.
 Note that you need to be careful here to use the flags that ccache and distcc can understand.
 Note, if no dot is found, this will give the entire filename as the ext.
 Note, not Iterable because we don't want to handle strings like that.
 Note: OpenBSD has sysutils/flock.
 Note: This flag is a no-op for clang, it only has an effect for gcc.
+Note: This is n_resources * n_outputs_in_rule.
 Note: actool crashes if inputs path are relative, so use os.path.abspath to get absolute path name for inputs.
 Note: because we are scanning forward for opening braces, and outputting warnings for the matching closing brace, if there are nested blocks with trailing semicolons, we will get the error messages in reversed order.
 Note: flat_list is already sorted in the order from dependencies to dependents.
@@ -1719,6 +1894,7 @@ Now comes the plumbing to hook up the C library.
 Now compute number of samples we can take in the given time limit
 Now drop all the abstract ones.
 Now recurse into subdicts and lists that may contain dicts.
+Now split the path into (prefix,maybe.lproj).
 Now that all of the target's configurations have been built, go through the target dict's keys and remove everything that's been moved into a "configurations" section.
 Now that everything is merged, we need to cleanup the xml.
 Now that we have all the vsprops, we need to merge them.
@@ -1741,6 +1917,7 @@ Obviously, we don't want that chunk in spelling.
 Octal-encode to work around that.
 Oddly, Xcode will quote any string with a run of three or more underscores.
 Old method of searching for which VS version is installed We don't use the 2010-encouraged-way because we also want to get the path to the binaries, which it doesn't offer.
+On Windows, incremental linking requires linking against all the .objs that compose a .lib (rather than the .lib itself).
 On Windows, we can't create a relative path to a different drive, so just use the absolute path.
 On mac, products are created in install_path immediately.
 On newer releases of FreeBSD, the default Clang is sufficient.
@@ -1755,6 +1932,7 @@ One can supply multiple SDKs, written as a list.
 Only "grammars" are allowed to be cson.
 Only 3 types of objects are possible: - _ClassInfo: a class or struct.
 Only apply checks if we got all parts of the boolean expression
+Only consider the ones with .d (dependency) info:
 Only create PkgInfo for executable types.
 Only create files for ninja files that actually have contents.
 Only do this if the closing brace is indented by only whitespaces.
@@ -1803,8 +1981,10 @@ Otherwise, raise CalledProcessError with combined stdout and stderr.
 Otherwise, skip version checking.
 Otherwise, sort groups before everything else.
 Otherwise, the standard x86 compiler.
+Otherwise, we have have to force an immediate reparse to generate precompiled headers (necessary for fast autocompletion).
 Otherwise, we try to remove spaces from the right side, if this doesn't work we try on left side but only if there's a non-character on the right.
 Our only solution here is to convert our string to a bytearray.
+Our own rules (for running gyp-win-tool) and other actions in Chromium rely on python being in the path.
 Our root_makefile lives at the source root.
 Our segmentation algorithm works on UTF-16 sequences, so encoding a surrogate would produce an invalid code unit sequence.
 Our segmentation algorithm works on UTF-8 sequences, so encoding a surrogate would produce an invalid code unit sequence.
@@ -1819,9 +1999,11 @@ PBXBuildFile's settings property is represented in the output as a dict, but a h
 PBXReferenceProxy is also an XCFileLikeElement subclass.
 PHP puts a newline in that we don't
 Pack bits into an integer.
+Parameterless conversion functions, such as bool(), are allowed as they are probably a member operator declaration or default constructor.
 Parenthesized operand
 Parse JSON into python object.
 Parse expression so that we can take parentheses into account.
+Parse lines like TestName,NNN,MMM where NNN - performed iterations number, MMM - execution time (in ns)
 Parse the JSON to extract the commands to run
 Parse the keys
 Pass a copy of the variables dict so that subdicts can't influence parents.
@@ -1838,11 +2020,14 @@ Paths within a given .gyp file are always relative to the directory containing t
 Pattern to expect from SST dump.
 Pattern to expect from WAL dump.
 Pattern to expect from manifest_dump.
+Pattern to recognize a (possibly-generic) operator decl.
+Pattern to recognize stdlib identifiers (FIXME: doesn't handle Unicode).
 Patterns for matching call-by-reference parameters.
 Per-target 'xcode_settings' are pushed down into configs earlier by gyp.
 Performs a depth-first search of the project root for package.json files.
 Perhaps it should also remove references from this pbxproject that are no longer present in other_pbxproject.
 Perhaps it should update various properties if they change.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 Pick a random version to start with.
 Pick temporary file.
 Pick where to stick this action.
@@ -1855,13 +2040,17 @@ Point the target alias to the final binary output.
 Pop native frames until we hit our caller's rip.
 Pop the stack for these.
 Populate all the folders.
+Populated lazily by GetExtraPlistItems().
 Populated lazily by GetIOSPostbuilds.
+Populated lazily by XcodeVersion, for efficiency, and to fix an issue when "xcodebuild" is called too quickly (it has been found to return incorrect version number).
+Populated lazily by _SdkPath().
 Port is an optional filter.
 Positional arguments.
 Possible unbalanced tuple unpacking with sequence.
 Postbuild actions.
 Postbuilds expect to be run in the gyp file's directory, so insert an implicit postbuild to cd to there.
 Pre-commit checker
+Pre-compiled header source stubs need a different compiler flag (generate precompiled header) and any source file not of the same kind (i.e. C vs.
 Prefer arguments from JSON.
 Prefer arm64 if available.
 Prefix of the string returned by clang_getClangVersion.
@@ -1894,12 +2083,14 @@ Process a 'conditions' or 'target_conditions' section in the_dict, depending on 
 Process conditions in this dict.
 Process the input specific to this generator.
 Processes toolsets in all the targets.
+Produces an empty string (false) when the commands match.
 ProductGroup is strong.
 Products Directory Other types that can be chosen via the Xcode UI.
 Project GUID
 Project build config for that solution config
 Project entries
 Project files generated by this module will use _intermediate_var as a custom Xcode setting whose value is a DerivedSources-like directory that's project-specific and configuration-specific.
+ProjectRef is weak (it's owned by the mainGroup hierarchy).
 Property data for BMP code points is stored as a one-stage trie.
 Property data for supplementary code points is stored as a two-stage trie.
 Provide a single configuration by default if none exists.
@@ -1913,6 +2104,7 @@ Push a new block onto the stack otherwise.
 Put a generated "All" target first so that people opening up the project for the first time will build everything by default.
 Put build-time support tools next to the root Makefile.
 Put enough ".." components to back up out of relative_to to the common prefix, and then append the part of path_split after the common prefix.
+Put iOS native targets last so that we test them last (it takes a long time).
 Put it into a dict for easy access.
 Put sources_to_index in it's own gyp.
 Put the name in first, ensuring that if TakeOverOnlyChild collapses children into a top-level group like "Source", the name always goes into the list of hashables without interfering with path components.
@@ -1923,6 +2115,7 @@ Python 2.6.1 and below don't parse ws or wss urls properly.
 Python code
 Python documentation recommends objects which do not support hash set this value to None.
 Python doesn't deal well with this circular relationship, and doesn't have a real way to do forward declarations.
+Python doesn't like os.open('.'): no fchdir.
 Python generators must be initialized once.
 Python is dumb: http://bugs.python.org/issue16333.
 Python library objects follow this rule.
@@ -1954,12 +2147,14 @@ Redefine the type of the "target" property.
 Redirect stdout to a stream for capturing.
 Redirect them to show up in one of those other groups.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 Reduces the cpu time usage by skipping lines.
 Refer to documentation for a list of supported languages.
 Regex to remove comments when we're counting braces.
 Regex to remove quoted strings when we're counting braces.
 Regexps would need twice the time of this function.
 Register all convenience functions and CLI commands
+Register all the *Printer classes above.
 Register callback types in common container.
 Regular expression for validating Visual Studio GUIDs.
 Regular expression match.
@@ -1996,6 +2191,7 @@ Remove the .swift file we fed into swift-ide-test
 Remove the final output if any postbuild failed.
 Remove the oldest core dumps first.
 Remove this when we have ParamCoerceMode working for PHP methods
+Remove trigger_file from excluded_sources to let the rule be triggered (e.g. rule trigger ax_enums.idl is added to excluded_sources because it's also in an action's inputs in the same project)
 Remove variable references, but not if they refer to the magic rule variables.
 Rename the new file to the permanent name.
 Reparsing isn't cheap, so skip it if nothing changed.
@@ -2010,6 +2206,8 @@ Represents a unary expression.
 Represents an expression that computes the length of a parameter pack.
 Represents the "self" expression in a ObjC method.
 Request sorted dependencies in the order from dependents to dependencies.
+Require there to be at least one input (call sites will ensure this).
+Required for ffmpeg (no idea why they don't use LIBRARY_SEARCH_PATHS, TODO(thakis): Update ffmpeg.gyp):
 Reset include state across preprocessor directives.
 Reset the object group so old frame variable objects don't linger forever.
 Reset the visited status for _GetBuildTargets.
@@ -2040,6 +2238,7 @@ Returns True if all configurations have a unique 'SYMROOT' attribute.
 Returns a boolean of whether the log directory exists or was successfully created.
 Returns a full path to self relative to the project file, or relative to some other source tree.
 Returns all values for the 'SYMROOT' attribute defined in all configurations for this target.
+Returns len(results) if no such result exists.
 Returns stderr.
 Reuse global functions from make backend.
 Reverse the list of matches so that replacements are done right-to-left.
@@ -2060,6 +2259,7 @@ Run the process silently without stdout and stderr.
 Run through the list and handle variable expansions in it.
 Running it with the copy we just created should pass.
 Runs `hh_client check` asserting the stdout is equal the expected.
+SBFrame.GetVariables(arguments, locals, statics, in_scope_only)
 SHARED_INTERMEDIATE_DIR is the same, except that it is shared among all targets that share the same BUILT_PRODUCTS_DIR.
 SLOW: check every pointer in town
 Sadly there is no way to make the switch atomic.
@@ -2081,6 +2281,7 @@ Section: customized api to get logs in buffer.
 Section: implementation of BufferingHandler api.
 Sections that can be found inside targets or configurations, but that should not be propagated from targets into their configurations.
 Sections that must exist inside targets and not configurations.
+See "Target-specific Variable Values" in the GNU Make manual.""")
 See -h output for instructions
 See LICENSE.TXT for details.
 See PBXTargetDependency._schema above.
@@ -2092,7 +2293,7 @@ See also _AddActions: cygwin's setup_env mustn't be called for every invocation 
 See also clang_defaultEditingTranslationUnitOptions in Index.h.
 See comment a few lines above.
 See comment at cc_command for why there's two .pdb files.
-See crbug.com/314728.
+See docstring of msvs_emulation.GenerateEnvironmentFiles().
 See explanation in WriteActions.
 See http://blogs.msdn.com/b/vcblog/archive/2010/04/21/quick-help-on-vs2010-custom-build-rule.aspx for more details.
 See http://goo.gl/cuFbX and http://goo.gl/dhPnp including the comment threads.
@@ -2114,6 +2315,7 @@ See the documentation for a list of builtin themes.
 See the testBuildClass test in cpplint_unittest.py for an example of this.
 See: https://github.com/Lawouach/WebSocket-for-Python/issues/59
 Select a name for the output file.
+Select project file format version (if unset, default to auto detecting).
 Select stripes across all categories and compute the geomean of these stripes
 Self reference is used in a few places to append to the default value.
 Self references are ignored.
@@ -2123,6 +2325,7 @@ Separate out 'path/to', 'file.gyp' from 'path/to/file.gyp'.
 Separate out 'path/to/file.gyp, 'target_name' from 'path/to/file.gyp:target_name'.
 Separators must be specified to avoid trailing whitespace.
 Server may take some time to kill itself.
+Set GUID from path TODO(rspangler): This is fragile.
 Set LD_LIBRARY_PATH in case the action runs an executable from this build which links to shared libs from this build.
 Set LD_LIBRARY_PATH in case the rule runs an executable from this build which links to shared libs from this build.
 Set LOCAL_ADDITIONAL_DEPENDENCIES so that Android's build rules depend on both our dependency targets and our generated files.
@@ -2134,6 +2337,7 @@ Set all the dependencies, but not if we are using an external builder like ninja
 Set configuration type.
 Set it to None to signal to subprocess.Popen that it should run the command in the current directory.
 Set of non-empty short target names.
+Set project toolset if any (MS build only)
 Set project-level attributes from multiple options
 Set the bounds of the TC.
 Set the explicit PDB path in the appropriate configuration of the original target.
@@ -2194,6 +2398,7 @@ Since this is for MSVS only settings, no translation will happen.
 Skip "variables" and string values, which were already processed if present.
 Skip "variables", which was already processed if present.
 Skip a rule with no action and no inputs.
+Skip abstract configurations (saves work only).
 Skip all the blank line checks if we are immediately inside a namespace body.
 Skip checks if the class is small, where small means 25 lines or less.
 Skip emitting anything if told to with msvs_existing_vcproj option.
@@ -2224,6 +2429,7 @@ Some combinations of merge policies appearing together are meaningless.
 Some editors create broken symlinks as part of their locking scheme, so ignore those.
 Some helpers
 Some more style checks
+Some of the entities in html5 share the same code points (e.g. "midast" and "ast" share 0x42) In zend's php which one to use is chosen by usort, which has undefined behaviour.
 Some of the generation below can add extra output, sources, or link dependencies.
 Some of them may now belong in in_degree_zeros.
 Some path relies on target-specific variables, bail.
@@ -2239,10 +2445,12 @@ Something went wrong.
 Sometimes it prints them with comments, but the majority of the time, it doesn't.
 Sometimes tokenizer errors report a line beyond the last one
 Sometimes, Xcode is able to detect that a project file has changed but can't unload it because something else is referencing it.
+Sort by name then guid (so things are in order on vs2008).
 Sort config guids for easier diffing of solution changes.
 Sort everything else by putting group before files, and going alphabetically by name within sections of groups and files.
 Sort results for fast filtering.
 Sort the PBXReferenceProxy children according to the list of remote products.
+Sort the children of the mainGroup (like "Source" and "Products") according to their defined order.
 Sort the dependencies list in the order from dependents to dependencies.
 Sort the groups nicely.
 Sort the list.
@@ -2253,6 +2461,7 @@ Special case.
 Special handling for function signature specializations of generic specializations.
 Special variables that may be used by gyp 'rule' targets.
 Specify the filter it is part of, if any.
+Split into (path,file).
 Split it the same way sh would split arguments.
 Split on newlines and filter out empty lines.
 Split on whitespace
@@ -2270,8 +2479,10 @@ Start a Nuclide server using default parameters.
 Start a fresh server and monitor.
 Start of a multi-line raw string
 Start the object.
+Start with self, and walk up the chain of parents prepending their paths, if any, until no more parents are available (project-relative path) or until a path relative to some source tree is found.
 Start with the default variables from the command line.
 Starting accessibility server is different for simulator and device
+Stash msvs_version for later (so we don't have to probe the system twice).
 Status when it should be assumed that everything has changed.
 Stop at entry
 Stop existing Nuclide server.
@@ -2282,12 +2493,15 @@ Store DEPTH for later use in generators.
 Store a reference to the TU in the Python object so it won't get GC'd before the Cursor.
 Store the item.
 String ends while still quoted according to VCProj's convention.
+String has no effect (docstring in wrong place).
 String is special -- it is a non-templatized type in STL.
 StringIO import path differs across Python 2 and 3.
 Strings that do not match must be quoted and may be further transformed to be properly encoded.
 Strings that match this pattern are quoted regardless of what _unquoted says.
 Strings that match this pattern may be printed unquoted.
 Strip comments.
+Strip off leading/trailing whitespace so that variable matches are simpler below (and because they are rarely needed).
+Strip out -l, as it is not used on windows (but is needed so we can pass in libraries that are assumed to be in the default library path).
 Structures and Utility Classes
 Stuff the outputs in a variable so we can refer to them later.
 Subclasses must override this by returning a two-element tuple.
@@ -2304,6 +2518,77 @@ Swift_Programming_Language/Expressions.html
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
 TODO fix quoting for qualified variable names
+TODO(bradnelson): include_dirs should really be flexible enough not to require this sort of thing.
+TODO(bradnelson): once the annotator supports a postscript (section for after the build proper that could be used for cumulative failures), use that instead of this.
+TODO(dglazkov) The backslash/forward-slash replacement at the end is a temporary measure.
+TODO(dilip): Not sure what should be passed to WAL.Currently corrupted.
+TODO(evan): don't call this function for 'none' target types, as it doesn't do anything, and we fake out a 'binary' with a stamp file.
+TODO(evan): it is rather confusing which things are lists and which are strings.
+TODO(evan): move all cross-compilation logic to gyp-time so we don't need to replicate this environment fallback in make as well.
+TODO(evanm): just make order_only a list of deps instead of this hack.
+TODO(gspencer): Switch the os.environ calls to be win32api.GetDomainName() and win32api.GetUserName() once the python version in depot_tools has been updated to work on Vista 64-bit.
+TODO(hansonw): remove when this is upstreamed
+TODO(jeanluc) Change the convention to have both a cygwin_dir and a python_dir.
+TODO(jeanluc) File a bug to get rid of runas.
+TODO(jeanluc) We could optimize out the following and do it only if there are actions.
+TODO(jeanluc) _link defines the same value that gets moved to ProjectReference.
+TODO(jgreenwald): Change the gyp files to not abuse cflags for this, and remove this.
+TODO(mark): "Build" is used by gyp.generator.xcode, perhaps the generator should have a way of influencing this list rather than having to hardcode for the generator here.
+TODO(mark): "text" is the default value, but "file" is appropriate for unrecognized files not containing text.
+TODO(mark): A stronger verification mechanism is needed.
+TODO(mark): I don't love this name.
+TODO(mark): Like a lot of other things here, this assumes internal knowledge of PBXProject - in this case, of its "targets" property.
+TODO(mark): Map Xcode variable names to these.
+TODO(mark): Maybe it should try with the original case first and fall back to lowercase, in case there are any instances where case matters.
+TODO(mark): Maybe this should raise an error if more than one child is present with the same name.
+TODO(mark): Optimization: only reload if no changes were made.
+TODO(mark): Perhaps source_extensions and library_extensions can be made a little bit fancier.
+TODO(mark): Remove this option when http://crbug.com/35878 is fixed.
+TODO(mark): Should verify that at most one of these is specified.
+TODO(mark): Signal an error if default_configurations exists but configurations does not.
+TODO(mark): Some build phase types, like PBXShellScriptBuildPhase, don't actually have a "files" list.
+TODO(mark): The usual comment about this knowing too much about gyp.xcodeproj_file internals applies.
+TODO(mark): There's a possibilty for collision here.
+TODO(mark): This is evil because it relies on internal knowledge of PBXProject._other_pbxprojects.
+TODO(mark): This is evil because it relies on internal knowledge of PBXProject._properties.
+TODO(mark): This is the replacement for a replacement for a quick hack.
+TODO(mark): This is wrong for build settings that are lists.
+TODO(mark): This isn't completely correct.
+TODO(mark): This only adds references to products in other_pbxproject when they don't exist in this pbxproject.
+TODO(mark): add destructor that cleans up self.path if created_dir is True and things didn't complete successfully.
+TODO(mark): make additional choices based on file extension.
+TODO(nsylvain): Find a better way to navigate the xml.
+TODO(piman): when everything is cross-compile safe, remove lib.target
+TODO(quote):  regularize quoting path names throughout the module
+TODO(rspangler) This also doesn't handle adding files to an existing filter.
+TODO(rspangler): Need a way to configure this stuff
+TODO(rspangler): Need to be able to handle a mapping of solution config to project config.
+TODO(rspangler): Should be able to configure this stuff too (though I've never seen this be any different)
+TODO(sbaig) Currently, chrome depends on the bug that shared libraries' link_settings are propagated.
+TODO(scottmg) Separate pdb names is a test to see if it works around http://crbug.com/142362.
+TODO(scottmg): Handle OutputDirectory without OutputFile.
+TODO(scottmg): Implement this for other platforms.
+TODO(scottmg): This is a temporary hack to get some specific variables through to actions that are set after gyp-time.
+TODO(scottmg): This is ugly, but needed for goma.
+TODO(scottmg): This should sort of be somewhere else (not really a flag).
+TODO(sky): I don't like hanging this off Target.
+TODO(sugawarayu): Audit cpplint.py to see what places could be profitably rewritten to use _GetTextInside (and use inferior regexp matching today).
+TODO(thakis): It would be nice to have some general mechanism instead.
+TODO(thakis): This copies file attributes like mtime, while the single-file branch below doesn't.
+TODO(tvl): Remove the below hack.
+TODO(ukai): define cmd when only wrapper is specified in make_global_settings.
+TODO(unknown): Do a better job of finding .h files so we are confident that not having the .h file means there isn't one.
+TODO(unknown): Don't complain if line before blank line, and line after, both start with alnums and are indented the same amount.
+TODO(unknown): We always want to check end of namespace comments if a namespace is large, but sometimes we also want to apply the check if a short namespace contained nontrivial things (something other than forward declarations).
+TODO(unknown): check that 1-arg constructors are explicit.
+TODO(unknown): figure out if they're using default arguments in fn proto.
+TODO(unknown): if delimiter is not None here, we might want to emit a warning for unterminated string.
+TODO(unknown): remove this once cpplint has better support for multi-line comments.
+TODO(unknwon): Doesn't account for preprocessor directives.
+TODO(williamsc) - Support add support for pausing on exceptions
+TODO(williamsc) - This is probably setting a one off breakpoint and continuing.
+TODO(williamsc) Add support for sending watchpoint change events.
+TODO(yukawa): Remove this option when these legacy generators are deprecated.
 TODO:  not duplicate this mapping from pylib/gyp/__init__.py
 TODO:  search for the first non-'Default' target.
 TODO: Avoid code duplication with _ValidateSourcesForMSVSProject in msvs.py.
@@ -2328,16 +2613,18 @@ TODO: This is a workaround for testing.
 TODO: This is broken, one cannot generally set properties on files, as other targets may require different properties on the same files.
 TODO: This is exported correctly, but assigning to it is not supported.
 TODO: This should not be hard coded.
+TODO: Undocumented/unsupported (the CMake Java generator depends on it).
 TODO: Verify test_name and iters_computed
 TODO: figure out how to not build extra host objects in the non-cross-compile case when this is enabled, and enable unconditionally.
 TODO: fix me.
 TODO: handle other breakpoint event types.
+TODO: investigate why we need os._exit() to terminate python process.
 TODO: log the error to analytics db.
 TODO: make this configurable.
 TODO: pass environment variables.
 TODO: print interface's methods and dynamic type's func pointers thereof.
 TODO: really support workspace.
-TODO: task 10395133
+TOOD(hansonw): Remove this when these bindings are upstreamed.
 Tail 1-indexes line numbers and starts emitting from the nth line.
 Take a copy of the node and remove it from the list.
 Take care to normpath only the path in the case of 'call ../x.bat' because otherwise the whole thing is incorrectly interpreted as a path and not normalized correctly.
@@ -2347,6 +2634,7 @@ Take the first line, as that's the first found in the PATH.
 Take the output of lit as standard input.
 Take the wildcard out and adjust the index so that the next dependency in the list will be processed the next time through the loop.
 Take these nodes out of in_degree_zeros as work progresses, so that the next node to process from the list can always be accessed at a consistent position.
+Takes two arguments: 1) A Filename, which is the output of `hh_client --json`.
 Target and sources
 Targets that have no dependencies are treated as dependent on root_node.
 Targets that matched.
@@ -2358,6 +2646,8 @@ Tell parent channel is ready.
 Test Subject Alternative Name.
 Test on empty path.
 Test on valid dbPath.
+Test that CMake is installed on this platform, as a means of testing host_cmake().
+Test that Clang is installed on this platform, as a means of testing host_clang().
 Test that the raw invocation of _first_common_executables either returns None or matching paths.
 Test with multiple manifest files in dbPath.
 Test with the default manifest file in dbPath.
@@ -2376,13 +2666,19 @@ That module has a much better description of what's going on and why.
 That would be considered invalid anyway.
 That would prepend the new items to the list in reverse order, which would be an unwelcome surprise.
 That's probably fine.
+That's why the double () below.
+The "-m" argument can be omitted, in which case the script will collect all of the frameworks in the named SDK(s) and dump their APIs.
 The "data" dict that was passed to LoadTargetBuildFileParallel
 The "target" property accepts an XCTarget object, and obviously not NoneType.
 The "whatever/" list is no longer needed, dump it.
+The 'normal' way to do manifests is to have link generate a manifest based on gathering dependencies from the object files, then merge that manifest with other manifests supplied as sources, convert the merged manifest to a resource, and then *relink*, including the compiled version of the manifest resource.
 The 'target_build_files' key is only set when loading target build files in the non-parallel code path, where LoadTargetBuildFile is called recursively.
+The (c) is deprecated, but tolerate it until it's removed from all files.
 The -3 argument indicates that we're using the Swift 3 Clang importer rules.
 The .d checking code below uses these functions: wildcard, sort, foreach, shell, wordlist wildcard can handle spaces, the rest can't.
+The /MANIFEST flag and /ManifestFile are still used, and the intermediate manifest is used to assert that the final manifest we get from merging all the additional manifest files (plus the one we generate here) isn't modified by merging the intermediate into it.
 The Android build system does not allow generation of files into the source tree.
+The CC and CXX from host_clang() should be of the form 'path/to/clang', where 'clang' may have a trailing version number.
 The CLT has no build information, so we return an empty string.
 The GUID needs to be the same each time this builder is invoked, so that we don't need to rebuild the solution when the project changes.
 The LLVM Compiler Infrastructure
@@ -2415,6 +2711,7 @@ The cache key contains the command to be run as well as the directory to run it 
 The caller is interested in the variant group, not the specific variant file.
 The cheap and easy case.
 The child was relative to its parent.
+The children of the main group ("Source", "Products", etc.) is pretty much the only case where this likely to come up.
 The circular doubly linked list starts and ends with a sentinel element.
 The class may have been declared with namespace or classname qualifiers.
 The code below generates a separate .mk file for each target, but all are sourced by the top-level GypAndroid.mk.
@@ -2435,16 +2732,19 @@ The default state of the category filter.
 The definition of PBXTargetDependency can't be moved below XCTarget because XCTarget's own schema references PBXTargetDependency.
 The dependent one or more dependencies not in flat_list.
 The encoding of source files.
+The environment is saved as an "environment block" (see CreateProcess and msvs_emulation for details).
 The errors should be available via the TranslationUnit's diagnostics.
 The files in this directory will be used to set up the initial environment for each test.
 The first "src" component found will be treated as though it were the path used for --depth.
 The first item in a specification is the name of the element.
 The first item in the tuple should be the PBXGroup to which "path" should be added, either as a child or deeper descendant.
+The first level is globally for the configuration (this is what we consider "the" config at the gyp level, which will be something like 'Debug' or 'Release_x64'), and a second target-specific configuration, which is an override for the global one.
 The first line of a dependency list.
 The first line of a project definition.
 The following appears to be as-yet undocumented.
 The following drawing explains how it is implemented:
 The following function is just a speed up, no semantics are changed.
+The following pattern matches decimal, hex integers, strings, and characters (in that order).
 The following problems with Xcode rules were found.
 The following script takes as input a SIL fragment and changes all SSA variables into FileCheck variables.
 The format of PkgInfo is eight characters, representing the bundle type and bundle signature, each four characters.
@@ -2452,9 +2752,11 @@ The full version, including alpha/beta/rc tags.
 The generator flag 'xcode_serialize_all_test_runs' controls the forcing of all tests serially.
 The generators can provide more keys, the two lists are merged into path_sections, but you should call IsPathSection instead of using either list directly.
 The guard should be PATH_FILE_H_, but we also allow PATH_FILE_H__ for backward compatibility.
+The harness chooses a number of iterations for each tests to achieve the best accuracy in the given time limit (in order to do that, it performs several auxiliary test runs).
 The harness makes a separate test from each of these functions, runs all the tests and reports aggregate results.
 The headers phase should come before the resources, sources, and frameworks phases, if any.
 The implicit make rules have it looking for RCS files, among other things.
+The import .lib is the output of a build step, but because dependents only link against the lib (not both the lib and the dll) we keep track of the import library here.
 The include_state object keeps track of the highest type seen, and complains if we see a lower type after that.
 The included_files entries are relative to the dir of the build file that included them, so we have to undo that and then make them relative to the root dir.
 The individual targets need to be merged into the defaults.
@@ -2476,6 +2778,7 @@ The list of targets upon which the 'all' target should depend.
 The log directory exists
 The low bit of the unpacked value is the sign.
 The main benchmark emits its own line.
+The main things we want for sure are (a) simple external access to kinds, (b) a place to hang a description and name, (c) easy to keep in sync with Index.h.
 The make generator does this always.
 The make generator doesn't support it, so forbid it everywhere to keep the generators more interchangable.
 The makefile rules are all relative to the top dir, but the gyp actions are defined relative to their containing dir.
@@ -2487,6 +2790,8 @@ The missing spaces will be flagged by CheckSpacing.
 The msvs specific sections that hold paths
 The multiprocessing pool.
 The name for this set of Sphinx documents.
+The name of an image file (relative to this directory) to place at the top of the title page.
+The name of the Pygments (syntax highlighting) style to use.
 The name of the builddir.
 The name of the current section.
 The need for this setting is explained above where _intermediate_var is defined.
@@ -2509,12 +2814,14 @@ The other intelligent aspects of merge processing won't apply because item is be
 The other option, PROJECT_DERIVED_FILE_DIR, is unsuitable because while it is project-specific, it is not configuration-specific.
 The other project reports its path as relative to the same directory that this project's path is relative to.
 The other project's path is not necessarily already relative to this project.
+The paper size ('letterpaper' or 'a4paper').
 The path of last found header.
 The path type is needed for regenerating, for optparse we can just treat it as a string.
 The paths in build_files were relativized above, so undo that before testing against the non-relativized items in target_list and before calculating the Makefile path.
 The paths were the same.
 The prerequisites for this rule are the rule source itself and the set of additional rule inputs, if any.
 The project-wide settings are only intended to be used in cases where Xcode attempts to resolve variable references in a project context as opposed to a target context, such as when resolving sourceTree references while building up the tree tree view for UI display.
+The reST default role (used for this markup: `text`) to use for all documents.
 The regular expression we use to match compiler-crasher lines.
 The remaining bits point to the next blockable in the chain.
 The remaining elements of an object dictionary are sorted alphabetically.
@@ -2529,6 +2836,7 @@ The same, but for run_test_targets.
 The script wrapper of the library is for testing purpose.
 The second argument is an addition that causes a pylint warning.
 The second item should be a boolean indicating whether files should be added into hierarchical groups or one single flat group.
+The sentinel element never gets deleted (this simplifies the algorithm).
 The set of all build files that have been scheduled, so we don't schedule the same one twice.
 The settings are: filetype : used for explicitFileType in the project file prefix : the prefix for the file name suffix : the suffix for the file name
 The short X.Y version.
@@ -2538,12 +2846,14 @@ The spaces within the variables are valid, so remove the variables before checki
 The spec explicitly defined an external builder, so don't change it.
 The suffix of source filenames.
 The supp tables contain entries for BMP code units to simplify trie implementation, but those BMP entries are filled with the default value, so they compress well.
+The support project also gets the dependencies (in case they are needed for the actions/rules to work).
 The target doesn't contain the source, but the dependent targets have not yet been visited to determine a more specific status yet.
 The target has a dependency on another target that contains one of the supplied paths.
 The target is linkable, add it to the list of link dependencies.
 The target's sources contain one of the supplied paths.
 The target's sources weren't in the supplied paths and none of the target's dependencies depend upon a target that matched.
 The translation unit cursor exists primarily to act as the root cursor for traversing the contents of a translation unit.
+The typedef is a declaration of size_type (CXCursor_TypedefDecl), while the type of the variable "size" is referenced.
 The unique kind objects, index by id.
 The unique kind objects, indexed by id.
 The unquoted segments are at the even-numbered indices.
@@ -2552,6 +2862,7 @@ The value of inherit_unique_symroot decides, if a configuration is assumed to in
 The value of this option must be the base URL from which the finished HTML is served.
 The variable name is the key name in the "variables" dict.
 The variable name is the key name with a "_" character prepended.
+The variant group name is the same as the basename (MainMenu.nib in the example above).
 The version that we will be importing the tests from.
 The whole block is an inline assembly block Match start of assembly blocks
 The workaround is to put a "conditions" section within a "variables" section.
@@ -2566,6 +2877,7 @@ Then write out an edge using the rule.
 Then yield the thing we found.
 There are certain situations we allow one space, notably for section labels
 There are no reparse options available in libclang yet.
+There are three ways we might decide not to print an error message: a "NOLINT(category)" comment appears in the source, the verbosity level isn't high enough, or the filters filter it out.
 There are workarounds for some of its inadequacies, but in aggregate, the workarounds added complexity to the generator, and some workarounds actually require input files to be crafted more carefully than I'd like.
 There currently aren't.
 There is currently no logic on deciding what these nontrivial things are, so this check is triggered by namespace size only, which works most of the time.
@@ -2605,12 +2917,14 @@ These can be valid for both frameworks and static libraries.
 These cannot run on non-Windows as they require a VS installation to correctly handle variable expansion.
 These characters can be put into the argument value by variable substitution."
 These constants define the current inline assembly state
+These constants define types of headers for use with _IncludeState.CheckNextIncludeOrder().
 These files contain a main function with simple arguments parsing, time measurement utilities and a loop in which the bench-functions are called.
 These flags are common for all extensions and provide loader and main function.
 These flags reflect the compilation options used by xcode to compile extensions.
 These groups should appear in the listed order.
 These mappings are contained in the class' _encode_transforms list.
 These must happen before we compile any sources, so compute a list of predependencies for sources while we do it.
+These parameters are passed in order (as opposed to by key) because ActivePython cannot handle key parameters to __import__.
 These pass with a proper proxy setup, which our build machines don't seem to have.
 These per-process dictionaries are used to cache build file data when loading in parallel mode.
 These relationships should not exist, but they've only been observed to be harmful with the Xcode generator.
@@ -2618,11 +2932,14 @@ These semicolons seems far more common than other kinds of redundant semicolons,
 These targets really should just add a product_name setting that doesn't include the prefix.
 These tests use assert with a string argument, which is also basically eval.
 These tests use create_function, which is basically eval.
+These tests use eval(), which is banned in repo mode.
 These variables should just be spit back out as variable references.
+They affect the size of the lookup tables (and thus, lookup time), but do not change the overall structure of the trie.
 They are copied after the builtin static files, so a file named "default.css" will overwrite the builtin "default.css".
 They are ignored by default.
 They are meaningless for type mh_bundle.
 They are used to convert non-url characters into things that look like valid urls -- except that the replacement character for :identifier, '_' isn't valid in a URL either -- oops, hence :rfc1034identifier was born.
+They can be extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 They contain the message and action to perform after resolving input-dependent variables.
 They differ only slightly: In the former case, we want to package all dependent code into the .so.
 They get matched as: -exported_symbols_list file -Wl,exported_symbols_list file -Wl,exported_symbols_list,file
@@ -2633,6 +2950,7 @@ They're pretty large, so don't hog disk space.
 They're products, not sources.
 Things that look like escaped characters shouldn't occur outside of strings and chars.
 Third argument, if non-zero, makes it do POSTBUILDS processing.
+This (target include directories) is what requires CMake 2.8.8
 This AST node is only formed if full location information is requested.
 This RE is a little bit more complicated than one might expect, because we have to take care of space removals tools so we can handle comments inside statements better.
 This adds time to parsing but speeds up code completion.
@@ -2643,6 +2961,7 @@ This arrangement means that a "conditions" section containing a "variables" sect
 This avoids these false positives: - macro that defines a base class - multi-line macro that defines a base class - macro that defines the whole class-head
 This benefits both the "build chrome" case as well as the gyp tests, which expect to be able to run actions and build libraries by their short name.
 This breaks incremental linking, and is generally overly complicated.
+This caches the preamble (included files at top of source file).
 This can go away when we add verification that all targets have the necessary configurations.
 This can happen two ways: - We are at the beginning of the class.
 This catches the special case of a closing brace having something other than just whitespace ahead of it -- we don't want to unindent that until after this line is printed so it stays with the previous indentation level.
@@ -2663,10 +2982,12 @@ This ensures that the item appears at the earliest possible position in the list
 This extra absorption in the regexp facilitates testing the regexp on its own, by preventing the interior of some of these constructs from being treated as literal text.
 This file invokes the runner after parsing arguments.
 This file is distributed under the University of Illinois Open Source License.
+This file is execfile()d with the current directory set to its containing dir.
 This file needs to be here in order for Python to treat the utils/cmpcodesize/cmpcodesize directory as a module.
 This file needs to be here in order for Python to treat the utils/cmpcodesize/tests/ directory as a module.
 This file needs to be here in order for Python to treat the utils/swift_build_support/ directory as a module.
 This file needs to be here in order for Python to treat the utils/swift_build_support/tests/ directory as a module.
+This file should be a Windows icon file (.ico) being 16x16 or 32x32 pixels large.
 This function is called a lot so for maximum performance, avoid involving regexps which would otherwise make the code much shorter.
 This function is considered a friend of XcodeSettings, so let it reach into its implementation details.
 This function is only useful to get children that have names but no paths, which is rare.
@@ -2675,6 +2996,7 @@ This function ported from the logic in Homebrew's CLT version check
 This function resolves a target into a canonical form: - a fully defined build file, either absolute or relative to the current directory - a target name - a toolset
 This function should be used only to compare direct children of the containing PBXProject's mainGroup.
 This function works closely with _EncodeString.
+This functions (and the similar ones below) do not offer complete emulation of all xcode_settings keys.
 This generates makefiles suitable for inclusion into the Android build system via an Android.mk file.
 This gets expanded by Python.
 This gets serialized and sent back to the main process via a pipe.
@@ -2707,6 +3029,7 @@ This is intentional, as we do not want to block autocomplete.
 This is just here to clarify.
 This is meant to silence warnings for conditional includes.
 This is necessary as the other dependencies on them may be static libraries themselves, which are not compile time dependencies.
+This is necessary because we can't always build a relative path to the shim source file (on Windows GYP and the project may be on different drives), and Ninja hates absolute paths (it ends up generating the .obj and .obj.d alongside the source file, polluting GYPs tree).
 This is not currently optimized with a dict as GetChildByPath is because it has few callers.
 This is not expected to be much of a problem in practice.
 This is not infinite-recursion proof.
@@ -2716,6 +3039,7 @@ This is only non-None temporarily during the execution of some methods.
 This is only triggered if both sides are missing spaces, even though technically should flag if at least one side is missing a space.
 This is set by --linelength flag.
 This is set by --root flag.
+This is the dict for copying the source file (part of the GYP tree) to the intermediate directory of the project.
 This is the dict for the PDB generating shim target.
 This is the key corresponding to accessibility label in _accessibilityElementsInContainer:
 This is the sort order used by Xcode.
@@ -2724,6 +3048,9 @@ This is typically used when parsing headers.
 This is useful if the translation unit will be reparsed and you don't want to incur the overhead of reparsing the preamble.
 This is useful if you only care about searching for declarations/definitions.
 This isolates the final return value so that it isn't misattributed to the last stage.
+This item matches an exclude regex, so set its value to 0 (exclude).
+This item matches an include regex, so set its value to 1 (include).
+This item matches the exclude_item, so set its action to 0 (exclude).
 This keeps the file writer from outputting something that would be treated as the end of a comment in the middle of something intended to be entirely a comment.
 This lets us pop a frame at the top of the loop, which makes it easier to include the final frame.
 This list is expanded on demand.
@@ -2742,6 +3069,7 @@ This means the delimiter and the next list item that follow this one in the .vcp
 This means we will not check single-line class definitions.
 This method is a little bit esoteric.
 This method returns True if all configurations in target contain a 'SYMROOT' attribute that is unique for the given target.
+This mimics Xcode behavior by wrapping the comment in "/*" and "*/".
 This module always tracks it as an object, but contains a hack to prevent it from printing the comment in the project file output.
 This must check the unexpanded includes list:
 This needs to be overridden in child classes.
@@ -2758,7 +3086,9 @@ This recurses into condition entries since they can contain toolsets as well.
 This recurses into lists so that it can look for dicts.
 This regex validates that the string looks like a GUID with all uppercase hex letters.
 This remove the ParamCoerceMode checks that is usually in the beginning of the tests.
+This replaces the gyp_* variables for the action rule with an absolute version so that the output goes in the right place.
 This replaces the obj variable for the action rule with an absolute version so that the output goes in the right place.
+This represents the unary-expression's (except sizeof and alignof).
 This requires input file cooperation and it means that process_outputs_as_sources is unusable.
 This script runs and kills db_stress multiple times.
 This should be deleted once Py2.7 is available on all bots, see http://crbug.com/241769.
@@ -2780,32 +3110,41 @@ This test passes "by accident".
 This tests the find open port feature and uses http.
 This tool dumps imported Swift APIs to help validate changes in the Clang importer and its heuristics.
 This typically indicates that I/O failed during save.
+This uses printf instead of echo because printf's behaviour with respect to escape sequences is more portable than echo's across different shells (e.g., dash, bash).
 This validation should not be applied to MSVC2010 and later.
 This value will be replaced dynamically for each configuration.
 This way the work is done before the dependency checks for what should be recompiled.
 This will always be the fallback because we're not sure enough that the header is associated with this file.
+This will be read by link.exe to know which instance of mspdbsrv.exe it should connect to (if it's not set then the default endpoint is used).
 This will break if 'src' or 'java' exists in the package structure.
 This will compute the actual application data size
 This will not help if the comment started before the current line or ended after the current line, but it catches most of the false positives.
 This will process a 'conditions' or 'target_conditions' section, perform appropriate merging and recursive conditional and variable processing, and then remove the conditions section from the_dict if it is present.
 This will result in a KeyError being raised for the property that should be present, which seems more appropriate than NotImplementedError in this case.
 This works around actions/rules which have more inputs than will fit on the command line.
+This works more or less because most programs (including the compiler, etc.) use that function to handle command line arguments.
 Those codes are reserved or plainly forbidden
 Throw something if False.
 To add entropy the hashable is enhanced with the names of all its children.
 To avoid a circular reference the hashables used to compute a child id do not include the child names.
 To avoid unnecessary changes to the project file after Xcode opens it, don't write comments for remoteGlobalIDString.
+To determine processor word size on Windows, in addition to checking PROCESSOR_ARCHITECTURE (which reflects the word size of the current process), it is also necessary to check PROCESSOR_ARCHITEW6432 (which contains the actual word size of the system when running thru WOW64).
+To determine processor word size on Windows, in addition to checking PROCESSOR_ARCHITECTURE (which reflects the word size of the current process), it is also necessary to check PROCESSOR_ARCITEW6432 (which contains the actual word size of the system when running thru WOW64).
 To do this, just build up a new list of products based on the targets.
+To ensure that Nuclide is easy to set up and install, we want to limit our dependencies to built-in Python libraries and libclang (which is provided in ../pythonpath)
 To get serial runs this little bit of python does the same as the linux flock utility to make sure only one runs at a time.
 To help speed things up, pass -j COUNT to make so it does some work in parallel.
 To make things simple, right now we only read gcov report from the input
 To mitigate this problem, and to avoid even having Xcode present the UI sheet when an open project is rewritten for inconsequential changes, the project file is written to a temporary file in the xcodeproj directory first.
+To prevent this rule from executing on every build (expensive, especially with postbuilds), expliclity update the time on the framework directory.
 To print out auto-adjustable column, we need to know the longest length of file names.
 To support making a "test runner" target that will run all the tests that are direct dependents of any given target, we look for xcode_create_dependents_test_runner being set on an Aggregate target, and generate a second target that will run the tests runners found under the marked target.
 To work around this the result of the `map` is explicitly converted to a `list`.
+To work around this, if a target is building anything directly (not type "none"), then a second target is used to run the GYP actions/rules and is made a dependency of this target.
 To work around, the type of the "target" property is reset below, after XCTarget is defined.
 Tool name mapping from MSVS to MSBuild.
-Totals,2,2123,2123,2123,0,0
+Topologically sort, and then reverse, because we used an edge definition that's inverted from the expected result of this function (see comment above).
+Translate the path following this scheme: Input: foo/bar.gyp, target targ, references baz/out.o Output: obj/foo/baz/targ.out.o (if qualified) obj/foo/baz/out.o (otherwise) (and obj.host instead of obj for cross-compiles)
 Treat as primitive build-in types.
 Tricky point: Make has no string-equality test function.
 Trivial benchmark shows that this is more efficient when the operands are longer than a single character, which is generally the case.
@@ -2836,6 +3175,7 @@ Turn on precompiled headers if appropriate.
 Turn the list into a string that can be passed to a shell.
 Turn the object's sourceTree and path properties into a single flat string of a form comparable to the path parameter.
 Turn them into strs.
+Two kinds of dependencies: - Linkable dependencies (like a .a or a .so): add them to the link line.
 Type 2 is used for references to the producs of the other project file's targets.
 URLs can be long too.
 Unconditionally touch the output .a file on the command line if present and the command succeeded.
@@ -2866,13 +3206,16 @@ Update the map now that the config is complete.
 Update the original target to depend on the shim target.
 Update the output file mtime, or create it if necessary.
 Update the translation unit with the latest contents.
+Usage of PCH must only be for the same language (i.e. C vs.
 Use '.' for the current directory '', so that the error messages make more sense.
 Use 0 for linenum since outputting only one error for potentially several lines.
 Use FORCE_DO_CMD to force a target to run.
 Use KILL signal to force the process group to quit.
 Use Popen here.
 Use a banner that looks like the stock Python one and like what code.interact uses by default, but tack on something to indicate what locals are available, and identify gypsh.
+Use a comment.')
 Use clang-cl to cross-compile for x86 or x86_64.
+Use consistent guids for folders (so things don't regenerate).
 Use default
 Use items instead of iteritems because there's no need to try to look at reinserted keys and their associated values.
 Use last layer.
@@ -2881,6 +3224,7 @@ Use of this source code is governed by a BSD-style license that can be found in 
 Use project filename if name not specified
 Use regex_filter to look for regex pattern in ps output.
 Use source file name to set breakpoint.
+Use test_breakpoint_at_line to stop at line 14, the entry to test_function().
 Use the 64-on-64 compiler if we're not using an express edition and we're running on a 64bit OS.
 Use the absolute path so that matching works properly.
 Use the hashables of the weak objects that this object refers to.
@@ -2897,6 +3241,7 @@ Using PHP7 versions of these tests
 Using a list to get ordered output and a set to do fast "is it already added" checks.
 Using manual string matching since that is much faster than the regexp and this can be called hundreds of thousands of times so micro performance matters.
 Using raw_lines here instead of elided to account for leading comments.
+Usually, it's printed without a comment, indicating that it's tracked internally simply as a string, but sometimes it's printed with a comment (usually when the object is initially created), indicating that it's tracked as a project file object at least sometimes.
 Utility type
 VS recognized '' for this value too.
 VS2013 and later, non-Express have a x64-x86 cross that we want to prefer.
@@ -2941,11 +3286,13 @@ We can simply ignore them since they're either empty line or doesn't find execut
 We can then reverse the result of the topological sort at the end.
 We can't access `mcg' for whatever reason.
 We can't be sure that these were actually Nuclide dumps, but they're temporary anyway.
+We can't just use the project filename sans path, since there could be multiple projects with the same base name (for example, foo/unittest.vcproj and bar/unittest.vcproj).
 We can't simply silence the warning on first sight of closing brace, because that would cause false negatives for things that are not initializer lists.
 We can't use displayname as it also includes the arguments.
 We categorize each error message we print.
 We check here rather than inside ProcessLine so that we see raw lines rather than "cleaned" lines.
 We classify each include statement as one of those 5 types using a number of techniques.
+We constrain the pattern not to pick things like DocidForPrintf(foo).
 We convert to a dict here.
 We could issue a warning here, but it probably resulted in a compiler error already.
 We could use some of these to add additional capabilities, I suppose, but they might not have parity with other platforms then.
@@ -2953,11 +3300,13 @@ We create a huge list of all the elements of the file.
 We disable host name validation here so we can ping the server endpoint using localhost.
 We disable this so that the severity can be better reflected in the UI.
 We do not use `tarfile` here because: - We wish to support LZMA2 compression while also supporting Python 2.7.
+We don't actually care about the content of the input file, either, so we actually stick *the new dependencies* in the input file, and copy that over the old dependencies (if present).
 We don't add the "_excluded_files" filter.
 We don't know how to merge.
 We don't know this setting.
 We don't need this filter anymore.
 We don't want such lists to be stringified.
+We don't want to proceed event (click on button for example), so we just skip it
 We first sort by name, if present.
 We generate definitions for these variables on the fly when processing a rule.
 We give up.
@@ -2970,6 +3319,7 @@ We ignored case earlier, but use it as a final ranking basis.
 We implement a whitelist of safe macros instead of a blacklist of unsafe macros, even though the latter appears less frequently in google code and would have been easier to implement.
 We install host executables into shared_intermediate_dir so they can be run by gyp rules that refer to PRODUCT_DIR.
 We instead explicitly write all the rules we care about.
+We keep this code here in case we have to special-case any tests (on a short-term basis) to be run serially after all of the parallel tests have finished.
 We may want to generate unique common name and verify it.
 We may want to validate that they are consistent.
 We must first write out each node within its file grouping before writing out any edges that may refer to those nodes.
@@ -2988,6 +3338,7 @@ We should never be asking for the build_dir if we've provided a VM path.
 We still perform lint checks on these lines, but
 We still tell link to generate a manifest, but we only use that to assert that our simpler process did not miss anything.
 We store a reference to the TU in the instance so the TU won't get collected before the cursor.
+We support two kinds of shared objects (.so): 1) shared_library, which is just bundling together many dependent libraries into a link line.
 We swallow that output with a pipe.
 We translate between these two notions of paths with two helper functions:
 We try to start accessibility server only if we don't have needed method active
@@ -2997,6 +3348,7 @@ We use these names to disambiguate LLDB commands from C-style expressions.
 We used to check for high-bit characters, but after much discussion we decided those were OK, as long as they were in UTF-8 and didn't represent hard-coded international strings, which belong in a separate i18n file.
 We want running the bad tests to still complete.
 We want to create:
+We want to ensure that headers appear in the right order: 1) for foo.cc, foo.h  (preferred location) 2) c system files 3) cpp system files 4) for foo.cc, foo.h  (deprecated location) 5) other google headers
 We want to fix up these paths
 We want to know which chunks are placeholders.
 We want to let any rules apply to files that are resources also.
@@ -3020,11 +3372,14 @@ When expanding a list into string context, turn the list items into a string in 
 When reading from stdin, the extension is unknown, so no cpplint tests should rely on the extension.
 When referencing an item in another project file, containerPortal is a PBXFileReference identifying the other project file.
 When referencing an item in this project file, containerPortal is the PBXProject root object of this project file.
+When serving as a proxy to a PBXFileReference (in another project file), proxyType is 2.
+When serving as a proxy to an XCTarget (in this project file or another), proxyType is 1.
 When snprintf is used, the second argument shouldn't be a literal.
 When the connection is closed, put a StopIteration on the message queue to signal there's nothing left to wait for
 When the iteration number is chosen, the measurement of execution time is actually performed.
 When the need arises, the syntax should be extended to support no caching off a command's output so it is run every time.
 When there are more args than the command has declared, assume the initial args form an expression and combine them into a single arg.
+When we enable nohup logging, the test or any Python script that calls this script via subprocess.Popen will hang on Popen.communicate().
 Where Python 3's `map` function returns an iterator.
 Where the hhi files, socket, etc get extracted
 While less than optimal in terms of build time, attach them to the first input for now.
@@ -3036,7 +3391,9 @@ Windows only.
 With a machine that has 2 quad-core Xeons, a build can quickly run out of processes based on scheduling/other tasks, and randomly failing builds are no good.
 With an input declared but no outputs, the script step should run every time, as desired.
 With inputPaths and outputPaths not supplied, make will always be called, but it knows enough to not do anything when everything is up-to-date.
+Without context they are virtually indistinguishable from int(x) casts.
 Without specifying the port, it will find an open port and start the server.
+Work around this by marshalling object arguments as void**.
 Wraps cindex.CodeCompletionResult
 Wraps cindex.CodeCompletionResults.
 Write a short name to build this target.
@@ -3047,6 +3404,7 @@ Write logs to file using file handler.
 Write out a link step, if needed.
 Write out actions, rules, and copies.
 Write out all: target, including mkdir for each output directory.
+Write out per-gyp (sub-project) Makefiles.
 Write out rules file.
 Write out the compilation steps, if any.
 Write out the file with variables replaced.
@@ -3056,14 +3414,19 @@ Write subninja file containing compile and link commands scoped to a single arch
 Write the actual command.
 Write the project file to a temporary location first.
 Write workspace to file.
+WriteDoCmd() will escape spaces for .d files.
 WriteNewNinjaRule uses unique_name for creating an rsp file on win.
 Writing to a temporary file first also avoids the possible problem of Xcode rereading an incomplete project file.
 Wrong length resets everything, too.
 XCBuildPhase should not have "files" but another abstract subclass of it should provide this, and concrete build phase types that do have "files" lists should be derived from that new abstract subclass.
 XCBuildPhase should only provide buildActionMask and runOnlyForDeploymentPostprocessing, and not files or the various file-related methods and attributes.
 XSL: 'include "prepare.inc"' makes repo mode fail.
+XXX(TooTallNate): disabling this code since we don't want this behavior...
+Xcode 7 started shipping with ".tbd" (text based stubs) files instead of ".dylib" without providing a real support for them.
+Xcode IDs are only 96 bits (24 hex characters), but a SHA-1 digest is is 160 bits.
 Xcode adds the product directory by default.
 Xcode always outputs "isa" as the first element of an object dictionary.
+Xcode does not have a distinct type for loadable modules that are pure BSD targets (not in a bundle wrapper).
 Xcode handles most prefixes based on the target type, however there are exceptions.
 Xcode has some "issues" with checking dependencies for the "Compile sources" step with any source files/headers generated by actions/rules.
 Xcode is weird about remoteGlobalIDString.
@@ -3081,18 +3444,24 @@ Xcode will still handle this as an "absolute path" that starts with the variable
 Xcode's built-in rule support is almost powerful enough to use directly, but there are a few significant deficiencies that render them unusable.
 Xcode's standard set of library directories, which don't need to be duplicated in LIBRARY_SEARCH_PATHS.
 Yield until we get the second header's byte
+Yields a tuple of the current view in the tree and its level (view, level)
 You can't test beyond this because each developer's machines may have a different set of SDKs installed.
+You should always have a space after a comma (either as fn arg or operator)
 You should always have whitespace around binary operators.
 You shouldn't have a space before a semicolon at the end of the line.
 Zend's "run-tests" uses the cgi-fcgi sapi to run tests our implementation is simply different by design
+_AddCustomBuildToolForMSVS() will call _FixPath() on the inputs and outputs, so do the same for our generated command line.
 _configs is the default list of configurations.
+_escape is used with re.sub to backslash anything in _escape's first match group, hence the (parentheses) in the regular expression.
 _quote is a pattern that should match any argument that needs to be quoted with double-quotes by EncodePOSIXShellArgument.
 `SBError.success` denotes no error.
 `obj` is not a view, make sure recursive bordering is not requested
 `obj` is not a view, make sure recursive unbordering is not requested
+`objectGroups` are used by the client to designate remote objects on the server that should stick around (for potential future queries), and eventually released with a `releaseObjectGroup` call.
 `tar` complains about absolute paths, so use a relative path here.
 `value.error` is an `SBError` instance which captures whether the result had an error.
 `xcrun --find` prints to stderr when it fails to find the given tool.
+a ( used for a fn call
 a new process can crop up
 absorb one trailing newline Substitutions
 action, cd_action, and mkdirs get written to a toplevel variable called cmd_foo.
@@ -3127,24 +3496,32 @@ broken on ubuntu 12.04
 buildPhases is overridden in the schema to be able to set defaults.
 build_dir: relative path from source root to our output files.
 build_file is the file relative to which 'target' is defined.
+build_file_dir may be None (see above).
 cause of failure uninvestigated:
 cc and cxx must be set to the correct architecture by overriding with one of cl_x86 or cl_x64 below.
+ccache or distcc lose the path to the target, so we convert a rule of the form: foobar.o: DEP1 DEP2 into path/to/foobar.o: DEP1 DEP2 (2) we want missing files not to cause us to fail to build.
 cd into the directory before running, and adjust paths in the arguments to point to the proper locations.
 check how the old one exited
 check if we have exactly 1 parameter.
 check-filelist-abc.py - Fake build to test driver-produced -filelists.
 check_ouput is not available in Python 2.6.
+cmpcodesize.py - Compare sizes of built products -*- python -*-
+cmpcodesize/main.py - Command-line entry point for cmpcodesize -*- python -*-
 combination of short runtimes and long runtimes, with heavier weight on short runtimes
 command and cd_action get written to a toplevel variable called cmd_foo.
 common case: else not followed by a multi-line if
 compile_depends is the dependencies this target depends on before running any of its compile steps.
 completions may still be None if there was a clang parsing error.
+concrete_outputs_all is a flat list of all concrete outputs that this rule is able to produce, given the known set of input files (rule_sources) that apply to it.
 concurrency issues
 config will be None for packages such as sample packages.
+connect requires the address in tuple format (address, port).
 conscious decision not to match these
 control frames between 3 and 7 as well as above 0xA are currently reserved
 control frames cannot be fragmented
 convert warnings and fatal from the user level error strings to system level error strings
+copytree() will fail if the directory already exists.
+could be multi-line if find the ( after the if
 cross-reference text.
 ctypes doesn't implicitly convert c_void_p to the appropriate wrapper object.
 dSYMs need to build before stripping happens.
@@ -3153,6 +3530,7 @@ delayed import to break circular dependency
 delete stack traces
 dicts are never strong.
 different indentation
+different indentation')
 do work in /tmp...
 do_cmd: run a command via the above cmd_foo names, if necessary.
 does not wait for process to launch.
@@ -3170,17 +3548,16 @@ endif is not allowed.
 ensure all external dependencies are complete before internal dependencies extra_deps currently only depend on their own deps, so otherwise run early
 exclude function body
 extra random files needed for tests...
+fail.py - Just exits with an error code -*- python -*-
 fails because timstamp's length is greater than value's
+fake-build-for-bitcode.py - Fake build with -embed-bitcode -*- python -*-
+fake-build-for-whole-module.py - Optimized fake build -*- python -*-
 fake-ld.py - Fake Darwin linker to test driver-produced -filelists.
 false_dict is merged into the_dict if cond_expr evaluates to false.
 fetch the file name from the first line of the report.
 first check private headers
 fixme.py -- Adds HH_FIXME annotations in your code to clean up after a new check in the typechecker or after an upgrade.
 flaky for various reasons
-flaky on Travis: t4088096
-flaky: t3619770
-flaky: t3817758
-flaky: t3851970
 flat_list is the sorted list of dependencies - actually, the list items are the "ref" attributes of DependencyGraphNodes.
 for gethostname
 for instance, type errors cause hh_single_type_check to produce them
@@ -3189,6 +3566,8 @@ found a non-literal.
 found public header
 function end
 function parameter list
+function::).
+gMock methods are defined using some variant of MOCK_METHODx(name, type) where type may be float(), int(string), etc.
 gcc extensions.
 generator_dir: relative path from pwd to where make puts build files.
 generic parameter list
@@ -3211,7 +3590,6 @@ hashlib is supplied as of Python 2.5 as the replacement interface for sha and ot
 hex has invalid boolean value
 hh should should work with 0 retries.
 hhvm_wrapper emits an extra line to let us know its compiling bytecode.
-http://crbug.com/333738.
 http://python3porting.com/differences.html
 http://stackoverflow.com/questions/1189781/using-make-dir-or-notdir-on-a-path-with-spaces
 http://www.cmake.org/pipermail/cmake/2010-July/038461.html
@@ -3237,8 +3615,12 @@ included file.
 included_file is relative to the current directory, but it needs to be made relative to build_file_path's directory.
 index now identifies the next item to examine.
 indirect access can only be prevented by regular php code, we cannot detect it and throw errors.
+int(V('folly::kMaxVarintLength64'))
+int(pc) will not work.
 interface types can't be recognized by their name, instead we check if they have the expected fields.
+it references a whole directory with *
 just grab the summary, valgrind doesn't clearly distinguish errors from other log messages.
+just in case the file descriptor was reused we actually check the instance (well, this might also have been reused...)
 just the last line
 key should be one of all_dependent_settings, direct_dependent_settings, or link_settings.
 key_suffixes is a list of key suffixes that might appear on key names.
@@ -3252,6 +3634,8 @@ line is a bytes string literal in Python 3.
 line number is inconsistent on stack overflow
 line number of the token in the whole text
 line number where we started tokenizing
+linux-armv6* is canonicalized to 'linux-armv6'
+linux-armv7* is canonicalized to 'linux-armv7'
 literals and symbols get batched together
 lldb.eTypeClassReference,
 lldb.frame is supposed to contain the right frame, but it doesnt :/ so do the dance
@@ -3272,18 +3656,27 @@ map/filter on lambda could be replaced by comprehension.
 max_keys is not applicable for put
 means no copyright line was found
 missing undefined variable notice
+modify-non-primary-files.py - Fake build while modifying files -*- python -*-
 modify-non-primary-files.py simulates a build where the user is modifying the source files during compilation.
 msbuild does not accept an empty folder_name.
 msbuild_use_call provides a way to disable this but I have not seen any adverse effect from doing that for everything.
 mt.exe sometimes removes whitespace, and sometimes doesn't unfortunately.
 must be brace after if
 must be killed on another thread, or else deadlock
+name() returned None.
 netloc is empty.
 next line is where we'd have expect a configuration key somehow
 ninja handles parallelism by itself, don't have the compiler do it too.
 non matching files
 non-existing column family.
 non-space, non-identifier: begins an operator name
+noqa (E402 module level import not at top of file)
+noqa (E402 module level import not at top of file) TODO: This should not be hard coded.
+noqa (E402)
+noqa (E402) FIXME: This doesn't work on non-Darwin platforms.
+noqa (I100 Import statements are in the wrong order.)
+noqa (N802 function name should be lowercase)
+noqa (N802)
 nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 normal run with FIFO compaction mode ops_per_thread is divided by 5 because FIFO compaction style is quite a bit slower on reads with lot of files
 normal run with universal compaction mode
@@ -3295,7 +3688,9 @@ o API support for invalid translation units.
 o At this point everything is ready, and the harness simply reports the results.
 o When all files are compiled, the harness begins to run the tests.
 o When all files are processed, the harness begins to compile them, keeping track of all compile fails for later results reporting.
+o cleanup ctypes wrapping, would be nice to separate the ctypes details more clearly, and hide from the external interface (i.e., help(cindex)).
 o expose code completion APIs.
+o fix memory management issues (currently client must hold on to index and translation unit, or risk crashes).
 o implement additional SourceLocation, SourceRange, and File methods.
 offset between Unix and LLVM epochs
 old bucket not evacuated yet
@@ -3304,18 +3699,25 @@ openssl config file.
 operator definition up to the open brace
 ordinary_targets are ordinary targets that are already in the project file.
 original file
+other than to add MIT license header (as specified on page, but not in code).
 otherwise we matched some non-generic operator Find clusters of protocols that have the same name when underscores are stripped map from potential cluster name to nodes in the cluster
 our build machines have no members in group 0...
 output_dir: relative path from generator_dir to the build directory.
+output_mapping('mappings/8859-15.TXT', 'entity_table_cs_8859_15') output_mapping('mappings/CP866.TXT', 'entity_table_cs_866')
+output_mapping('mappings/ROMAN.TXT', 'entity_table_cs_macroman') table for encoding csjis is esentially empty
 path is not a file in the project tree in this case, but calling normpath is still important for trimming trailing slashes.
 path just provides a new variant that belongs to the group.
 path_tree_to_subfolder maps names of Xcode variables to the associated dstSubfolderSpec property value used in a PBXCopyFilesBuildPhase object.
+perhaps from os.urandom(4)
 php coderz are so l33t
 pkgutil output looks like package-id: com.apple.pkg.CLTools_Executables version: 5.0.1.0.1.1382131676 volume: / location: / install-time: 1382544035 groups: com.apple.FindSystemFiles.pkg-group com.apple.DevToolsBoth.pkg-group com.apple.DevToolsNonRelocatableShared.pkg-group
 platform_name
 plists can contain envvars and substitute them into the file.
 preserves member order iteration in the resulting objects Member order is used by package linting However, this is Python 2.7 only, so we conditionally enable it
+print(self) print(other)
+pull out the one matched key (ignoring internal patterns starting with _)
 punctuations match.
+python2 will not cast pc (type void*) to an int cleanly instead python2 and python3 work with the hex string representation of the void pointer which we can parse back into an int.
 python3 / newer versions of gdb
 re objects used by EncodePOSIXShellArgument.
 read source, stripping all comments
@@ -3335,6 +3737,8 @@ same file first line
 same file last line
 same file name
 same file, in between lines
+search_bucket(key, b).
+see chan.c chanbuf().
 see comment for identify-function
 see if we need to inject a line marker
 segfaults also print on stderr
@@ -3344,6 +3748,7 @@ self._section will move monotonically through this set.
 send stderr to /dev/null to ignore messages when linking directories.
 sentinel node
 sentinel node for doubly linked list
+setuptools expects to be invoked from within the directory of setup.py, but it is nice to allow `python path/to/setup.py install` to work (for scripts, etc.)
 short name of targets that were skipped because they didn't contain anything interesting.
 should have been checked for in SetFilter.
 since we will be killing anyway, use large value for ops_per_thread
@@ -3357,7 +3762,9 @@ start_pattern not found in text.
 stderr_path
 stdout_path
 str is treated as UTF-8-encoded.
+string to int dict storing error counts output format: "emacs" - format that emacs can parse (default) "vs7" - format that Microsoft Visual Studio 7 can parse
 strip trailing spaces
+stylistic only - (like an import/require) adding the ".js" works
 stylistic only - omitting the "./" works
 substitute local variables into the string
 support_targets are the action/rule targets used by GYP file targets, just kept for the assert check.
@@ -3369,6 +3776,7 @@ target_triple
 targets is full list of targets in the project.
 targets_for_all is the list of ordinary_targets that should be listed in this project's "All" target.
 tempfile.mkstemp uses an overly restrictive mode, resulting in a file that can only be read by the owner, regardless of the umask.
+test the --json output because the non-json one doesn't contain the filename, and we are especially interested in testing file paths the doubled curly braces are because this string gets passed through format()
 test_toolchain.py - Unit tests for swift_build_support.toolchain
 tests are really inconsistent about whitespace
 tgt_mac_bundle_resources holds the list of bundle resources so the rule processing can check against it.
@@ -3376,11 +3784,13 @@ the argnum count must be bigger then 2, index 0 for self, index 1 for SEL
 the first match has to be in a try incase there is bad unicode
 the gcov report follows certain pattern.
 the number of processors
+the provisioning profile whose pattern is the longest).
 the_dict_key is the name of the key that accesses the_dict in the_dict's parent dict.
 these all write to temp3.txt.gz
 these hang forever
 these tests use each other's data
 this allows one level of nesting.
+this file is probably generated while running tests :(
 this should start a new server
 this sometimes happens and retrying helps
 time for one db_stress instance to run
@@ -3393,27 +3803,35 @@ toolset is the default toolset for that target.
 total / 4GB
 total / 5GB
 total time for this script to test db_stress
+touch.py - /bin/touch that writes the LLVM epoch -*- python -*-
 trailing comment
 trouble looking up, print something reasonable
 try to do relative paths
+update-dependencies-bad.py - Fails on bad.swift -*- python -*-
+update-dependencies.py - Fake build for dependency analysis -*- python -*-
 use '.' in case relative_path is empty.
 use current db
 use large ops per thread since we will kill it anyway
 using Apple private API to get real value of accessibility string for element.
+utils/apply-fixit-edits.py - Apply edits from .remap files -*- python -*-
 utils/build-script takes arguments for its argument parser, as well as arguments that are meant to be passed directly to utils/build-script-impl.
 utils/profdata_merge/main.py
+utils/sil-opt-verify-all-modules.py - Verifies Swift modules -*- python -*-
 variable expansion may lead to //.
 wait for Hack to catch up with file system changes
 wait for logs to be written
 we create the state in a different dir from the one we run our tests on, to verify that the saved state does not depend on any absolute paths
 we don't care about nonzero exit codes...
+we don't create repo_dir using mkdtemp() because we want to create it with copytree().
 we expect negative retncode if kill option was given
 we expect zero retncode if no kill option
 we need to clean up after ourselves -- only do this on test success
+we run the --json version first because --json --refactor doesn't change any files, but plain --refactor does (i.e. the latter isn't idempotent)
 we shouldn't include a file more than once.
 we skip basic code as they are added explicitly
 we want to upstream this to atom, so do not require nuclide- prefix
 we're only interested if we can find a function parameter of that type
+with WorkingDirectory('/tmp'): ...
 within class or namespace
 won't work.
 working directory

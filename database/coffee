@@ -1,5 +1,7 @@
 An example demonstrates the basic functionality:
 Any channel subscriptions which existed prior to disconnecting will automatically resubscribe.
+App.cable.connect()
+App.cable.disconnect()
 Called when the subscription has been terminated by the server
 Called when the subscription is ready for use on the server
 Called when there's incoming data on the websocket for this channel
@@ -11,6 +13,7 @@ Like iferr, but also catches errors thrown from `succ` and passes to `fail`
 Once established, the ActionCable.ConnectionMonitor will ensure that its properly maintained through heartbeats and checking for stale updates.
 Perform a channel action with the optional data passed as an attribute
 Prints errors when one is passed, or does nothing otherwise ex: thing.save printerr
+Server::Connections::BEAT_INTERVAL * 2 (missed two pings)
 The "AppearanceChannel" name is automatically mapped between the client-side subscription creation and the server-side Ruby class name.
 The following example shows how this can be setup:
 The second parameter is a hash that'll get JSON encoded and made available on the server in the data parameter.

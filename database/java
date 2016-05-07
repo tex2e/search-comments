@@ -1,7 +1,20 @@
+(We shouldn't need to resolve dependencies for libraries loaded from system directories: the dynamic linker is smart enough to do it on its own there.)
+**WARNING:** This method is *experimental* and should only be used when no other option is available.
+*key is a run of 0xffs.
+- Modules that remove all persistent data (temp files, etc) when the catalyst instance is destroyed.
+- Retained (static) in-memory data that may contain user info or content.
 - Update a layout-only view to have non-layout props: before issuing the updateShadowNode call to the native view hierarchy, issue commands to create the view we optimized away move it into the view hierarchy - Manage the children of a view: multiple manageChildren calls for various parent views may be issued to the native view hierarchy depending on where the views being added/removed are attached in the optimized hierarchy
+.setJSMainModuleName()
+/* This code is duplicated in ReactTextInputManager  /* TODO: Factor into a common place they can both use
+/* This code was taken from the method setFontStyle of the class ReactTextShadowNode /* TODO: Factor into a common place they can both use
+/* This code was taken from the method setFontWeight of the class ReactTextShadowNode /* TODO: Factor into a common place they can both use
 0 turns it off.
+1) Sort the views to add and indices to remove by index 2) Iterate the indices being removed from high to low and remove them.
+2) The bridge ended the frame idle (meaning there were no JS nor native module calls still in flight) AND there was no UiManagerModule update enqueued that didn't also finish.
+3) Iterate the views being added by index low to high and add them.
 4 is kinda arbitrary, but the default of 10 seems really high for an average View.
 6 MB in bytes
+6) Launching developers settings view  This class automatically monitors the state of registered views and activities to which they are bound to make sure that we don't display overlay or that we we don't listen for sensor events when app is backgrounded.
 A CSS Node.
 A CompactionFilter allows an application to modify/delete a key-value at the time of compaction.
 A FrameLayout that allows you to access the result of the last time its hierarchy was drawn.
@@ -17,6 +30,7 @@ A context for holding values local to a given instance of layout computation.
 A drawer must have exactly two children 2.
 A event dispatched from a ScrollView scrolling.
 A fragment used to display the dialog.
+A good example is supporting "border", where we have 7 variations of that property ("borderLeft", "borderHorizontal", etc.) and very similar code for handling each of those.
 A good value is the number of cores.
 A higher level API on top of the asynchronous JSC bridge.
 A list of packages used by the app.
@@ -33,6 +47,7 @@ A simple subclass of ScrollView that doesn't dispatch measure and layout to its 
 A simple wrapper around Choreographer that allows us to control the order certain callbacks are executed within a given frame.
 A space efficient index block that is optimized for binary-search-based index.
 A spec for an operation on the native View hierarchy.
+A spec for animation operations (add/remove)
 A spec that allows a test to add additional NativeModules/JS modules to the ReactInstance.
 A special RuntimeException that should be thrown by native code if it has reached an exceptional state due to a, or a sequence of, bad commands.
 A subclass may override this method if it needs to use a custom instance.
@@ -60,6 +75,7 @@ Add merge operand for key/value pair.
 Add option item to dev settings dialog displayed by this manager.
 Add the node and all its children as if we are adding a new nodes
 Add this annotation to a class, method, or field to instruct Proguard to not strip it out.
+Add this annotation to a class, to keep all "void set*(***)" and get* methods.
 Adding this layout-only child could result in adding multiple native views
 Additional data provided by this event: - position - index of page that has been selected
 Adds a child that the native view hierarchy will have at this index in the native view corresponding to this node.
@@ -67,6 +83,7 @@ Adds a idle listener for this Catalyst instance.
 Adjust for the amount of time it took for native to receive the timer registration call
 After reopen the values shall still be in the mem env.
 After the drop the native handle is not valid anymore
+After the text changes inside an EditText, TextView checks if a layout() has been requested.
 Align to baseline by default
 All constants below are fixed by the ELF specification and are the offsets of fields within the elf.h data structures.
 All events for a given view can be coalesced.
@@ -82,6 +99,7 @@ All slide events for a given view can be coalesced.
 All spans will automatically extend to the right of the text, but not the left - except for spans that start at the beginning of the text.
 All switch events for a given view can be coalesced.
 All the subsequent action types are expected to be called after ACTION_DOWN thus target is supposed to be set for them.
+All units are in pixels (not DPs).
 All updateLayout calls are collected and dispatched at the end of a batch because updateLayout calls to layout-only nodes can necessitate multiple updateLayout calls for all its children.
 Allocation-less once it starts listening.
 Allow loadLibrary to implicitly provide the library instead of actually loading it.
@@ -97,11 +115,13 @@ Also remember where the string table for those entries lives.
 Also we recommend to keep BackupEngine alive and not to recreate it every time you need to do a backup.
 Also, a larger write buffer will result in a longer recovery time the next time the database is opened.
 Also, an in-memory merge may result in writing lesser data to storage if there are duplicate records in each of these individual write buffers.
+Also, note measure and layout need to be called *after* all View properties have been updated because of caching and calculation that may occur in onMeasure and onLayout.
 Also, note that all of the children of a view might be optimized away, so this could return the same value for multiple different children.
 Although this might be extended.
 Always called on the UI thread.
 Always return true if we are already focused.
 Always write full keys without any special encoding.
+Amount of data to build up in memory (backed by an unsorted log on disk) before converting to a sorted on-disk file.
 An Exception handler that posts the Exception to be thrown on the given delegate MessageQueueThread.
 An additional grant of patent rights can be found in the PATENTS file in the same directory.
 An class that is used to receive React commands from JS and translate them into a shadow node hierarchy that is then mapped to a native view hierarchy.
@@ -122,11 +142,13 @@ Android's gesture recognizers check eventTime in order to figure out gesture spe
 Animated node that plays a role of value aggregator.
 Animated node that represents view properties.
 Animated node which takes two or more value node as an input and outputs a product of their values
+Animated.js library is based on a concept of a graph where nodes are values or transform operations (such as interpolation, addition, etc) and connection are used to describe how change of the value in one node can affect other nodes.
 Animation engine should call this method for every animation frame passing animation progress value as a parameter.
 Animation engine should call this method when the animation is finished.
 Animation is sub-optimal for perf, but scale transformation can't be use in this case.
 Animation loop performs two BFSes over the graph of animated nodes.
 Animation objects can be "started" and "stopped".
+Animation progress should be within the range 0..1 (the exception here would be a spring animation engine which may slightly exceed start and end progress values).
 Animation responsible for updating opacity of a view.
 Animation responsible for updating size and position of a view.
 Annotates a method that should have restricted visibility but it's required to be public for use in test code only.
@@ -149,12 +171,14 @@ As soon as that fact no longer holds, this method will need to be fixed.
 As this should only be the case in dev mode we leave it as it is.
 Ask the JVM to load for us.
 Assuming no other views have been created, the root view will have tag 1, Text tag 2, and RawText tag 3.
+Asynchronous task that cleans up cache dirs (internal and, if available, external) of cropped image files.
 At the end of the traversal algorithm we expect to reach a special type of the node: PropsAnimatedNode that is then responsible for calculating property map which can be sent to native view hierarchy to update the view.
 At the same time we disallow receiving lifecycle events for this wrapper instances.
 At this point we know the final size and margin of the element.
 At this point we know the final size of the element in the main dimension
 At this point, the directory may be empty or contain obsolete libraries, but that's okay.
 Available compaction styles can be chosen using this enumeration.
+BFS over graph of nodes starting from ones from `mUpdatedNodes` and ones that are attached to active animations (from `mActiveAnimations)`.
 Background task is currently running, queue up most recent init params to recreate context once task completes.
 Backing for a React View.
 Backup process is slower with sync enabled.
@@ -171,7 +195,9 @@ Base class for instrumentation tests that runs React based react application in 
 Base class for slices which will receive direct ByteBuffer based access to the underlying data.
 Base class for various catalyst animation engines.
 Base node class for representing virtual tree of React nodes.
+Based on Fresco's DrawableUtilsTest (https://github.com/facebook/fresco).
 Basically, JS sends us a hierarchy of nodes that, while easy to reason about in JS, are very inefficient to translate directly to native views.
+Because React coordinates are relative to root container, and measure() operates on screen coordinates, we need to offset values using root container location.
 Because of this, we can not use the ReactModalHostView since it sits in the normal React view hierarchy.
 Because react context is created asynchronously, we may have to wait until it is available.
 Because the postprocessor uses a modified bitmap, that would just get cropped in 'cover' mode, so we fall back to Fresco's normal implementation.
@@ -186,8 +212,10 @@ By default all modules return false.
 By default targetFileSizeMultiplier is 1, meaning files in different levels have the same target.
 By default target_file_size_multiplier is 1, meaning files in different levels have the same target.
 By default the method extracts the shared library for loading at java.io.tmpdir, however, you can override this temporary location by setting the environment variable ROCKSDB_SHAREDLIB_DIR.
+By default, all onBackPress() calls should not execute the default backpress handler and should instead propagate it to the JS instance.
 By default, just chooses the one the is more recent.
 By default, this will return null and an empty object will be passed to your top level component as its initial props.
+By not setting a JS module name, we force the bundle to be always loaded from assets, not the devserver, even if dev mode is enabled (such as when testing redboxes).
 By the current implementation, the catalyst instance is going to be immediately dropped, and all JS calls with it.
 ByteBuffer backed slices typically perform better with larger keys and values.
 ByteBuffer based slices perform better when large keys are involved.
@@ -196,6 +224,7 @@ Bytes written / read
 Bytes written during compaction
 Bytes written during flush Number of table's properties loaded directly from file, without creating table reader object.
 CF native handles
+COMPACTION_KEY_DROP_* count the reasons for key drop during compaction There are 3 reasons currently.
 CRC32 Checksum
 CREATE_REACT_CONTEXT_END is in JSCExecutor.cpp
 CSSAlign.FLEX_END
@@ -204,6 +233,7 @@ Calculate the base64 representation for an image.
 Calculate the coordinates for the target view.
 Calculates layouts based on CSS style.
 Call SoLoader.initialize here, this is required for apps that does not use exopackage and does not use SoLoader for loading other native code except from the one used by React Native This way we don't need to require others to have additional initialization code and to subclass android.app.Application.
+Call from a ScrollView in onScrollChanged, returns true if this onScrollChanged is legit (not a duplicate) and should be dispatched.
 Call with the present values in order to re-layout if necessary
 Callback for when we receive the ownership hierarchy in native code.
 Callback function to get histogram values.
@@ -215,10 +245,12 @@ Called in case when animation was cancelled
 Called on the JS thread after a ReactBridge has been created.
 Called once all pending JS calls have resolved via an onBatchComplete call in the bridge and the requested native module calls have also run.
 Called once animation is finished
+Called when a child starts a native gesture (e.g. a scroll in a ScrollView).
 Called when an animation finishes.
 Called when determining the touch area of a view.
 Called when the EventDispatcher is done with an event, either because it was dispatched or because it was coalesced with another Event.
 Called when the bridge was in an idle state and executes a JS call or callback.
+Called when the react context is initialized (all modules registered).
 Called when the system generates a memory warning.
 Callers may wish to set this field to false for bulk scans.
 Calling functions on this interface will result in corresponding methods in JS being called.
@@ -247,6 +279,7 @@ Checksum types used in conjunction with BlockBasedTable.
 Children is a view added from the adapter and always have a correct dimensions specified as they are calculated and set with NativeViewHierarchyManager
 Class corresponding to a JS VM that can call into native modules.
 Class providing children management API for view managers of classes extending ViewGroup.
+Class representing CSS spacing (padding, margin, and borders).
 Class responsible for animation layout changes, if a valid layout animation config has been supplied.
 Class responsible for default layout animation, i.e animation of view creation and deletion.
 Class responsible for dispatching UI events to JS.
@@ -272,6 +305,7 @@ Clears the database.
 Click first visible item
 Close this executor and cleanup any resources that it was using.
 Coalescing move events should probably append historical move data like MotionEvent batching does.
+Code is simplified version of getDetectedVersion() from cts/tests/tests/graphics/src/android/opengl/cts/OpenGlEsVersionTest.java
 Collect histogram data
 Collect ticker data
 ColumnFamilyHandle class to hold handles to underlying rocksdb ColumnFamily Pointers.
@@ -301,6 +335,7 @@ Constructs a WriteBatch instance with a given size.
 Constructs a WriteBatch instance.
 Constructs a slice where the data is taken from a String.
 Consume 'Enter' key events: TextView tries to give focus to the next TextInput, but it can't since we only allow JS to change focus, which in turn causes TextView to crash.
+Container and all of its children receive touch events (like pointerEvents is unspecified).
 Container doesn't get events but all of its children do.
 Container gets events but none of its children do.
 Contains all information necessary to collect statistics from one instance of DB statistics.
@@ -309,6 +344,8 @@ Control locality of bloom filter probes to improve cache miss rate.
 Controls an enclosing ProgressBar.
 Controls the number of shards for the block cache.
 Controls the number of shards for the block compressed cache.
+Convenience class for accessing auto-generated BuildConfig so that a) other modules can just depend on this module instead of having to manually depend on generating their own build config and b) we don't have to deal with IntelliJ getting confused about the autogenerated BuildConfig class all over the place.
+Convert SeekBar's native progress value (e.g. 0..100) to a value passed to JS (e.g. -1.0..2.5).
 Convert from DIP to PX
 Convert from PX to DP
 Convert from SP to PX
@@ -316,6 +353,10 @@ Converts JS resize modes into Android-specific scale type.
 Cookie handler that forwards all cookies to the WebView CookieManager.
 Coordinates in the ViewTag coordinate space
 Copy from an inputstream to a named filesystem file.
+Copyright (C) 2011 the original author or authors.
+Copyright (c) 2011 The LevelDB Authors.
+Copyright (c) 2014-present, Facebook, Inc.
+Copyright (c) 2015-present, Facebook, Inc.
 Crashy crashy exception handler.
 Create Error object to be passed back to the JS callback.
 Create a temporary file in the cache directory on either internal or external storage, whichever is available and has more free space.
@@ -360,7 +401,9 @@ Database supplier of the database used by react native.
 Database with TTL support.
 Debug object that listens to bridge busy/idle events and UiManagerModule dispatches and uses it to calculate whether JS was able to update the UI during a given frame.
 Decode the bitmap.
+Default capacity: for some reason they don't expose a (Comparator) constructor
 Default is 10.
+Default is 4mb, which is reasonable to reduce random IO as well as prevent overallocation for mounts that preallocate large amounts of data (such as xfs's allocsize option).
 Default property values for Views to be shared between Views and ShadowViews.
 Default root view for catalyst apps.
 Default: BytewiseComparator.
@@ -379,6 +422,7 @@ Denoting a finally situation
 Deprecated.
 Destroy this React instance and the attached JS context.
 Destroy this instance, making it unusable.
+Destroys this catalyst instance, waiting for any other threads in ReactQueueConfiguration (besides the UI thread) to finish running.
 Determine how preferred a given ABI is on this system.
 Determine part's content type.
 Determine whether or not an installed app can handle a given URL.
@@ -389,6 +433,7 @@ Determines the location on screen, width, and height of the given view and retur
 Determines the location on screen, width, and height of the given view relative to the device screen and returns the values via an async callback.
 Determines the location on screen, width, and height of the given view relative to the root view and returns the values via an async callback.
 Detour for System.currentTimeMillis and System.nanoTime calls so that they can be mocked out in tests.
+Dialog for displaying JS errors in an eye-catching form (red box).
 DialogRootViewGroup is the ViewGroup which contains all the children of a Modal.
 Disable automatic compactions.
 Disable block cache.
@@ -403,16 +448,21 @@ Do not throw an error in the case animation could not be found.
 Do nothing as we are laid out by UIManager
 Do something to display or log the exception.
 Does not support canceling.
+Does the actual merge of the (key, value) pair with the value stored in the database.
+Doesn't get updated during drag (slider is not a controlled component).
+Doing so will prevent log files from being copied to the backup directory (since flush will delete them).
 Don't apply background color to anchor TextView since it will be applied on the View directly
 Don't intercept ACTION_UP events.
 Don't pass DirectorySoSource.RESOLVE_DEPENDENCIES for directories we find on LD_LIBRARY_PATH: Bionic's dynamic linker is capable of correctly resolving dependencies these libraries have on each other, so doing that ourselves would be a waste.
 Don't send same text changes
 Don't show the dialog if the host is paused.
 Don't use this action identifier
+Don't use webView.getUrl() here, the URL isn't updated to the new value yet in callbacks like onPageFinished
 Drops the column family identified by columnFamilyName.
 Dummy implementation of storage module, used for testing
 END_GENERATED
 Each block may be compressed before being stored in a file.
+Each instruction starts with a type (see PATH_TYPE_*) followed by arguments for that instruction.
 Each log message is checked against the set log level and if the log level is more verbose as the set log level, native allocations will be made and data structures are allocated.
 Each returend SoInfo points to the most preferred version of that library bundled with the given APK: for example, if we're on an armv7-a system and we have both arm and armv7-a versions of libfoo, the returned entry for libfoo points to the armv7-a version of libfoo.
 Each returend SoInfo points to the most preferred version of that library included in our exopackage directory: for example, if we're on an armv7-a system and we have both arm and armv7-a versions of libfoo, the returned entry for libfoo points to the armv7-a version of libfoo.
@@ -436,6 +486,7 @@ Enumeration of Write Batch event actions
 Enumeration of the Write operation that created the record in the Write Batch
 Even if it's a bug in the framework/native code, it was triggered by JS and theoretically since we were able to set up the bridge, JS could change its logic, reload, and not trigger that crash.
 Even if we don't know its exact size yet, we already know the padding, border and margin.
+Even though we have exact dimensions, we still call measure because some platform views (e.g. Switch) assume that method will always be called before onLayout and onDraw.
 Event can be null if it has been coalesced into another event.
 Event emitted by EditText native view when it loses focus.
 Event emitted by EditText native view when it receives focus.
@@ -472,6 +523,7 @@ FIFO compaction option.
 Facebook is using an older version of the support lib internally that doesn't support setDrawerElevation so we invoke it using reflection.
 Facebook reserves all rights not expressly granted.
 Fallback gracefully for cross-platform compat instead of error
+Few examples of the nodes that can be created on the JS side: - Animated.Value is a simplest type of node with a numeric value which can be driven by an animation engine (spring, decay, etc) or by calling setValue on it directly from JS - Animated.add is a type of node that may have two or more input nodes.
 Fill database with some test values
 Fill database with some test values.
 Fill the cache when loading the block-based sst formated db.
@@ -488,11 +540,13 @@ First event for this gesture.
 First, remove the node from its parent.
 Flush has higher priority than compaction.
 Flushes to disk with a maximum delay of 30 seconds.
+Following features are supported through this manager class: 1) Displaying JS errors (aka RedBox) 2) Displaying developers menu (Reload JS, Debug JS) 3) Communication with developer server in order to download updated JS bundle 4) Starting/stopping broadcast receiver for js reload signals 5) Starting/stopping motion sensor listener that recognize shake gestures which in turn may trigger developers menu.
 For Callbacks, you don't have to do anything special -- the framework automatically tags them with the correct ExecutorToken when the are created.
 For Java traces there is no difference.
 For START and END events send only index of the pointer that is associated with that event For MOVE and CANCEL events 'changedIndices' array should contain all the pointers indices
 For TextInlineImageSpan we need to update the Span to know that the window is attached and the TextView that we will set as the callback on the Drawable.
 For ViewGroups, onLayout should be stubbed out to not recursively call layout on its children: React Native already handles doing that.
+For a relative children, we're either using alignItems (parent) or alignSelf (child) in order to determine the position in the cross axis
 For a small helper like this, copying is simpler than adding a dependency on com.facebook.fresco.drawee.
 For consistency, we pretend in JS that the value is 0..1 but set the SeekBar value to 0..100.
 For each animation frame JS provides a value from 0 to 1 that indicates a progress of the animation at that frame.
@@ -502,6 +556,7 @@ For example, if a JS application update changes the background of View A to blue
 For example, if the URL is "https://www.facebook.com", the system browser will be opened, or the "choose application" dialog will be shown.
 For example, if the host is already resumed at creation time, we wouldn't expect an onResume call until we get an onPause call.
 For example, never store the value returned by this method in a member variable.
+For example, to create a line the instruction will be 2 (PATH_LINE_TO), x, y.
 For example, touch move events should only be coalesced within a single gesture so a coalescing key there would be the unique gesture id.
 For example, when rate_bytes_per_sec is set to 10MB/s and refill_period_us is set to 100ms, then 1MB is refilled every 100ms internally.
 For handling node removal from manageChildren.
@@ -517,6 +572,7 @@ For use by perf markers that need to happen immediately after draw
 Forces animation to be playing 10x slower, used for debug purposes.
 Forget about any libraries that are up-to-date already so we don't unpack them below.
 Free instances
+Fresco currently sets drawables' intrinsic size to (-1, -1).
 Fresco has a workaround for this, but it requires knowing the background color.
 General pause poshort
 General resume poshort
@@ -558,6 +614,10 @@ Gets the opacity from a color.
 Gets the view at given path in the UI hierarchy, ignoring modals.
 Gets the view with a given react test ID in the UI hierarchy.
 Give it a name for easier debugging.
+Given a "family" font family the files in the assets/fonts folder need to be family.ttf(.otf) family_bold.ttf(.otf) family_italic.ttf(.otf) and family_bold_italic.ttf(.otf)
+Given a "family" font family the files in the assets/fonts folder need to be family.ttf(.otf) family_bold.ttf(.otf) family_italic.ttf(.otf) and family_bold_italic.ttf(.otf).
+Given an array of (key, value) pairs, this will merge the given values with the stored values of the given keys, if they exist.
+Given an array of keys, this returns a map of (key, value) pairs for the keys found, and (key, null) for the keys that haven't been found.
 Given two events, coalesce them into a single event that will be sent to JS instead of two separate events.
 Going high to low makes sure we remove the correct index when there are multiple to remove.
 Handle enqueued request to re-initialize react context.
@@ -581,9 +641,12 @@ Helper class for obtaining information about local images.
 Helper class that deals with emitting Scroll Events.
 Helper class that provides the necessary methods for creating the RequestBody from a file specification, such as a contentUri.
 Helper class that provides the same OkHttpClient instance that will be used for all networking requests.
+Helper class to get the appropriate Random class instance dependent on the current platform architecture (32bit vs 64bit)
 Helper for database operations.
 Helper for generating JSON for lists and maps.
 Helper for view managers to handle commands like 'scrollTo'.
+Helper method that should be called when a native view starts a native gesture (e.g. a native ScrollView takes control of a gesture stream and starts scrolling).
+Helper to allow this module to work with both the standard FragmentManager and the Support FragmentManager (for apps that need to use it for legacy reasons).
 Holder for the tags that represent that represent views in the following hierarchy: - View rootView - View view0 - View viewWithChildren1 - View childView0 - View childView1 - View view2 - View view3  This hierarchy is used to test move/delete functionality in manageChildren.
 Holds an instance of the current DisplayMetrics so we don't have to thread it through all the classes that need it.
 Holds the current Application Object.
@@ -592,12 +655,14 @@ However, chances are some of the backups are consistent.
 However, if the mutex is hot, we could end up wasting spin time.
 However, the spans on the current text need to be adapted to the new text.
 However, there might be virtual children that can receive pointer events, in which case we still want to return this View and dispatch a pointer event to the virtual element.
+However, we do not perform a layout() after a requestLayout(), so we need to override isLayoutRequested to force EditText to scroll to the end of the new text immediately.
 I'm not sure how strict this format is for returned errors, or what other errors there can be, so this may end up being spammy.
 IMPORTANT: Note that only modules that needs to be accessible from the native code should be listed here.
 IMPORTANT: This class should be accessed only from the UI Thread
 IN NO EVENT SHALL FACEBOOK BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Ideally, we don't need this and JS is fast enough to process all the events each frame, but bad things happen, including load on CPUs from the system, and we should handle this case well.
 Identify the last line of the header
+If "property" is a valid property understood by this DB implementation, fills "*value" with its current value and returns true.
 If 0 or negative, then go as fast as you can.
 If 0, all logs will be written to one log file.
 If 0, then block_cache_compressed is set to null.
@@ -608,13 +673,17 @@ If KeyMayExist returns false, i.e. the key definitely does not exist, then the d
 If LayoutParams sets size explicitly, we can use that.
 If VARIABLE_LENGTH, then it indicates variable-length key.
 If a value has already been set, this method will return immediately.
+If a view transitions from being layout-only to not (or vice-versa) this could result in some number of additional createView and manageChildren calls.
 If all goes well, the success callback will be called with the file:// URI of the new image as the only argument.
+If any of the  writes to the database fails (Put, Delete, Merge, Write), the database will switch to read-only mode and fail all other Write operations.
 If cacheSize is non-positive, then cache will not be used.
 If called from a separate thread, this will block until the thread can be quit and joined.
 If called from this MessageQueueThread, this will be the last thing the thread runs.
+If dispose() function is not called, then comparator object will be GC'd automatically.
 If empty try to detect emulator type and use default hostname for those
 If fails, crash, since the app is potentially in a bad state and could cause a privacy violation.
 If it chooses to, it can just set visible to false on the Modal and the Modal will go away
+If it has, it will not scroll the text to the end of the new text inserted, but wait for the next layout() to be called.
 If it is contained within the child View, the childPoint value will contain the view coordinates relative to the child We need to store the existing X,Y for the viewGroup away as it is possible this child will not actually be the target and so we restore them if not
 If it is empty, the log files will be in the same dir as data, dbname is used as the data dir by default If it is non empty, the log files will be in kept the specified dir.
 If it is empty, the log files will be in the same dir as data.
@@ -625,6 +694,7 @@ If it's set to 0, then each key will be indexed.
 If level-styled compaction is used, then this number determines the total number of levels.
 If need a resize and the size is not yet set, wait until the layout pass provides one
 If no Snapshot is assigned null.
+If no children are optimized away it'd look like this: (0) (1) (2) (3) ...
 If no constants are exported this should do nothing.
 If no view was found, callback will be invoked with no data.
 If not a Segmentation fault happens.
@@ -634,15 +704,18 @@ If not specified, defaults to false.
 If not specified, each "table reader" object will pre-load index/filter block during table initialization.
 If number of entries in one bucket exceeds that setting, log about it.
 If one or more of the pairs cannot be inserted, this will return AsyncLocalStorageFailure, but all other pairs will have been inserted.
+If proper prefix-extractor is not set, then RocksDB will use the default memtable representation (SkipList) instead and post a warning in the LOG.
 If react context is being created in the background, JS application will be started automatically when creation completes, as root view is part of the attached root view list.
 If set to 1, then all write buffers are flushed to L0 as individual files and this increases read amplification because a get request has to check in all of these files.
 If set true, will hint the underlying file system that the file access pattern is random, when a sst file is opened.
 If some custom handling of this method apply for the view, it should be called after the listener returns and only in a case when it returns false.
 If specified with non-zero value, log file will be rolled if it has been active longer than `log_file_time_to_roll`.
+If step is 0 (unset) we default to this total number of steps.
 If that Looper was running on a different Thread than the current Thread, also waits for the last message being processed to finish and the Thread to die.
 If the action is dismiss, year, month and date are undefined.
 If the app uses additional views or modules besides the default ones, add more packages here.
 If the application-supplied configuraiton does not specify an animation definition for this types, or if the animation definition is invalid, returns null.
+If the child is position absolute (without top/left) or relative, we put it at the current accumulated offset.
 If the column family is not known removal will fail.
 If the current log file is larger than `max_log_file_size`, a new info log file will be created.
 If the current log file is larger than this size, a new info log file will be created.
@@ -658,14 +731,17 @@ If the layout is null, the view hasn't been properly laid out yet.
 If the parent hasn't been attached to its parent yet, don't issue commands to the native hierarchy.
 If the path drawn previously is of the same color, there would be a slight white space between borders with anti-alias set to true.
 If the percentage of free space in the current block is less than this specified number and adding a new record to the block will exceed the configured block size, then this block will be closed and the new record will be written to the next block.
+If the react context is currently being (re)-created, or if react context has not been created yet, the JS application associated with the provided root view will be started asynchronously, i.e this method won't block.
 If the right font is not found in the assets folder CustomStyleSpan will fallback on the most appropriate default typeface depending on the style.
 If the same reference of StatisticsCollectorCallback is passed to multiple StatisticsCollector references, then its the responsibility of the user to make StatisticsCollectorCallback's implementation thread-safe.
+If the search does not backtrack, it is possible to follow a branch that cannot be a target (because of pointerEvents).
 If the server error has the expected form, fail with more info.
 If the setting is empty we support and detect two basic configuration that works well for android emulators connectiong to debug server running on emulator's host: - Android stock emulator with standard non-configurable local loopback alias: 10.0.2.2, - Genymotion emulator with default settings: 10.0.3.2
 If the size has changed, and this child has children we need to re-layout this child
 If the status bar is translucent hook into the window insets calculations and consume all the top insets so no padding will be added under the status bar.
 If the switch has a different value than the value sent by JS, we must change it.
 If the touch was intercepted by a child, we've already sent a cancel event to JS for this gesture, so we shouldn't send any more touches related to it.
+If the uri indicates an icon to be somewhere remote (http/https) or on the local filesystem, it uses fresco to load it.
 If the user didn't specify a width or height, and it has not been set by the container, then we set it via the children.
 If the view is layout only, no updateView call will be dispatched to the native hierarchy.
 If there are flexible children in the mix, they are going to fill the remaining space
@@ -681,8 +757,11 @@ If this value is set to zero, then hash table will not be used.
 If true column families be created if missing.
 If true the distrubition of number of entries will be logged.
 If true, all data read from underlying storage will be verified against corresponding checksums.
+If true, an error will be thrown during RocksDB.open() if the database already exists.
+If true, place whole keys in the filter (not just prefixes).
 If true, the database will be created if it is missing.
 If true, the implementation will do aggressive checking of the data it is processing and will stop early if it detects any errors.
+If true, the write will be flushed from the operating system buffer cache (by calling WritableFile::Sync()) before the write is considered complete.
 If true, then the contents of data files are not synced to stable storage.
 If true, writes will not first go to the write ahead log, and the write may got lost after a crash.
 If user doesn't call options dispose explicitly, then this options instance will be GC'd automatically.
@@ -698,6 +777,7 @@ If you implement RootView you need to call handleTouchEvent from onTouchEvent an
 If you manually call dispose on the Java object, the native object will be deleted synchronously on that thread.
 If you need this use GuardedResultAsyncTask instead.
 If you want to builder full filter, it needs to be set to false.
+If you want to control the thread and timing of the destructor, you should call resetNative() explicitly.
 If you want to create new backup, you will first have to delete backups 4 and 5.
 If you want to override this method you should call super.onAfterUpdateTransaction from it as the parent class of the ViewManager may rely on callback being executed.
 If you're increasing this, also consider increasing number of threads in HIGH priority thread pool.
@@ -723,10 +803,12 @@ In JS this is Image.props.loadingIndicatorSource.uri
 In JS this is Image.props.source.uri
 In case of an error JS side expect to get a finish event first, and then get an error event Android WebView does it in the opposite way, so we need to simulate that behavior
 In case the child is absolutely positionned and has a top/left/bottom/right being set, we override all the previously computed positions to set it correctly.
+In case the child is position absolute and has left/top being defined, we override the position to whatever the user said (and margin/border).
 In case when property has been removed from the corresponding react component annotated setter will be called and default value will be provided as a value parameter.
 In case when someone schedule 2 subsequent reloads it may happen that JS thread will start reading first reload output while the second reload starts writing to the same file.
 In case when there is no children interested in handling touch event, we return true from the root view in order to receive subsequent events related to that gesture
 In debug mode, these exceptions are normally shown to developers in a redbox.
+In many cases, a filter can cut down the number of disk seeks form a handful to a single disk seek per DB::Get() call.
 In order to support web workers, a module must be aware that it can be invoked from multiple different JS VMs.
 In particular, it will not be persisted to the SST files.
 In practice, we will not be coalescing over a time range where the most significant bits of that time range matter.
@@ -738,13 +820,17 @@ In that case local JS executor should be used.
 In that case native modules could be in a bad state so we don't want to call anything on them.
 In that case the latter will win i.e. the latter will overwrite the former.
 In that case there is no point in fetching the bundle from device as remote executor will have to do it anyway.
+In that case, no *TextChanged events should be triggered.
+In that case, onLayout for this View type must *not* call layout on its children.
 In that case, the backup will also include log files corresponding to live memtables.
 In that case, the caller is responsible for providing a correct LD_LIBRARY_PATH.
+In that case, virtual and non-virtual (mapping to a View) elements can overlap, and TouchTargetHelper may incorrectly dispatch touch event to a wrong element because it priorities children over parents.
 In the case of removing a layout-only node, we need to instead recursively remove all its children from their native parents.
 In the case of the Toolbar, we don't have access to the widget's internal ImageView, which has width/height set to WRAP_CONTENT, which relies on intrinsic size.
 In this case, callback parameter will be false.
 In this case, initialReactTag corresponds to a virtual/layout-only View, and we already have a parent of that View in reactTag, so we can use it.
 In which case we try to minimize the number of rows we will loop through.
+Incoming charSequence gets mutated before onTextChanged() is invoked
 Increments the coalescing key corresponding to the gesture with this down time.
 Index sparseness determines the index interval for keys inside the same prefix.
 IndexType used in conjunction with BlockBasedTable.
@@ -758,9 +844,11 @@ Initialize all the native modules
 Inline immutable values from the target node to avoid excessive method invocations during the layout calculation.
 Input type password defaults to monospace font, so we need to re-apply the font
 Insertion into a queue
+Inserts multiple (key, value) pairs.
 Inspired by Android ColorDrawable.
 Instead it gets inflated using computed position and size values by CSSNode hierarchy.
 Instead onLayout will be invoked as normal and it is the View instance's responsibility to properly call layout on its children.
+Instead we use dimensions of the child view (dimensions has been set in layouting process) so that size of this view match the size of the view it wraps.
 Instead, the drawing code should apply opacity recursively.
 Integration test for horizontal ScrollView.
 Integration test for vertical ScrollView.
@@ -810,6 +898,7 @@ It controls the total write rate of compaction and flush in bytes per second.
 It creates a Dialog.
 It creates a DialogRootViewGroup.
 It delegates handling touch events for itself and child views and sending those events to JS by using JSTouchDispatcher.
+It determines this by waiting for the bridge to become idle, then waiting for the UI thread to become idle, then checking if the bridge is idle again (if the bridge was idle before and is still idle after running the UI thread to idle, then there are no more events to process in either place).
 It does a number of things: 1.
 It does this the same way as ReactRootView.
 It essentially limits the max number of cache lines each bloom filter check can touch.
@@ -822,16 +911,19 @@ It is also responsible for acting as a RootView and handling touch events.
 It is also responsible for creating and updating CSSNode subclasses used for calculating position and size for the corresponding native view.
 It is also smart during updates if the changed properties can be applied directly to the Dialog or require the recreation of a new Dialog.
 It is called by the manager once all properties are set because we need to know all of them before creating the Dialog.
+It is created by AnimatedImplementation whenever you render Animated.View and stores a mapping from the view properties to the corresponding animated values (so it's actually also a node with connections to the value nodes).
 It is guaranteed that for a given animation, only one of onFinished and onCancel will be called, and it will be called exactly once.
 It is important to visit nodes in that order as they may often use values of their predecessors in order to calculate "next state" of their own.
 It is not an error if "key" did not exist in the database.
 It is only used when dev support is enabled.
+It is possible for this to be called after finish() and should handle that gracefully.
 It is possible that the RootView can't be found because this view is no longer on the screen and has been removed by clipping
 It is possible to expose all kind of information.
 It is possible to get multiple broadcasts for the same connectivity change, so we only update and send an event when the connectivity has indeed changed.
 It is public because it is built by ReactInstanceManager which is in a different package.
 It is required for each memtable to have one such sub-class to allow Java developers to use it.
 It is safe for concurrent access from multiple threads without any external synchronization.
+It is suited for keeping event log data with very low overhead (query log for example).
 It is use by touch event emitter for determining the react tag of the inner-view element that was touched.
 It is used to configure onInterceptTouch event listener which then is used to control touch event flow in cases in which they requested to be intercepted by some parent view based on a JS gesture detector.
 It is used to find the target View of a touch event.
@@ -839,11 +931,15 @@ It is written by RocksDB when BlockBasedTableOptions::checksum is something othe
 It manages the properties that can be set on the drawer and contains some ReactNative-specific functionality.
 It may happen that a NativeModule or or a ViewManager exists in two or more ReactPackages.
 It only makes sense to consider a child flexible if we have a computed dimension for the node.
+It outputs the sum of all the input node values - interpolate - is actually a method you can call on any node and it creates a new node that takes the parent node as an input and outputs its interpolated value (e.g. if you have value that can animate from 0 to 1 you can create interpolated node and set output range to be 0 to 100 and when the input node changes the output of interpolated node will multiply the values by 100)  You can mix and chain nodes however you like and this way create nodes graph with connections between them.
 It provides also a way to start activities using the viewContext to which RN native views belong.
 It provides support for base view properties such as backgroundColor, opacity, etc.
+It should be used for modules that require special integration with other framework parts (e.g. with the list of packages to load view managers from).
 It should ideally use hardware texture to optimize rendering performances.
 It should only be called after an initial call to createReactContextInBackground.
+It supports drawing background color and borders (including rounded borders) by providing a react friendly API (setter for each of those properties).
 It takes two or more value nodes as an input and outputs a sum of values outputted by those nodes.
+It therefore can't be used safely until *after* an image has loaded, and must be replaced when the image is replaced.
 It uses the event coordinates to traverse the view hierarchy and return a suitable view.
 It will also move all log files from archive directory to wal_dir.
 It will basically allow any/all keyboard input whether from physical keyboard or from soft input.
@@ -867,6 +963,8 @@ JS Queue Thread: The thread and Looper that JS is executed on.
 JS bundle will be read from assets directory in native code to save on passing large strings from java to native memory.
 JS can use the returned tag with manageChildren to add/remove children to this view.
 JS module interface - main entry point for launching React application for a given key.
+JS module interface for HMRClient  The HMR(Hot Module Replacement)Client allows for the application to receive updates from the packager server (over a web socket), allowing for injection of JavaScript to the running application (without a refresh).
+JS traces return the full path to the file here, while Java traces only return the file name (the path is not known).
 JSTouchDispatcher handles dispatching touches to JS from RootViews.
 JavaScript ListView implementation rely on getting correct scroll offset.
 JavaScript executor that delegates JS calls processed by native code back to a java version of the native executor interface.
@@ -883,6 +981,7 @@ Larger values increase performance, especially during bulk loads.
 Last "special" elements of the the graph are "animation drivers".
 Last, third argument represent the value that should be set.
 Launch other activities or open URLs.
+Layout operations should also follow the native view hierarchy and go top to bottom for consistency with standard layout passes (some views may depend on this).
 LayoutAnimation API on Android is currently experimental.
 Lazily initialize as FrescoModule have not been initialized yet
 Leave it alone.
@@ -907,6 +1006,7 @@ Logs requests to Systrace
 Longer term, onCatalystInstanceDestroy should probably be executed on the native modules thread as well instead.
 Low-pri requests can get blocked if flush requests come in continuously.
 Main catalyst view is responsible for collecting and sending touch events to JS.
+Main interface for providing additional capabilities to the catalyst framework by couple of different means: 1) Registering new native modules 2) Registering new JS modules that may be accessed from native modules or from other parts of the native code (requiring JS modules from the package doesn't mean it will automatically be included as a part of the JS bundle, so there should be a corresponding piece of code on JS side that will require implementation of that JS module so that it gets bundled) 3) Registering custom native views (view managers) and custom event types 4) Registering natively packaged assets/resources (e.g. images) exposed to JS  TODO(6788500, 6788507): Implement support for adding custom views, events and resources
 Main purpose for this class is to be used in java-only unit tests, but could also be used outside of tests in the code that operates only in java and needs to communicate with RN modules via their JS-exposed API.
 Make a new ApkSoSource that extracts DSOs from our APK instead of relying on the system to do the extraction for us.
 Make a new DirectorySoSource.
@@ -914,6 +1014,7 @@ Make sure TextView has exactly one span and that span has given type.
 Make sure the SoLoaderShim is configured to use our loader for native libraries.
 Make sure the span is removed from existing text, otherwise the spans we set will be ignored or it will cover text that has changed.
 Make sure we do create one more L0 files.
+Make sure you know what you're doing before calling this method :)
 Makes sure replaceExistingNonRootView by replacing a view with a new view that has a background color set.
 Making sure there are some L1 files.
 Making sure there isn't any L0 files.
@@ -942,8 +1043,10 @@ Methods are sorted by name so we can dupe check and have obvious ordering
 Mockito loads this with reflection, so this class might appear unused.
 Module that exposes Android Constants to JS.
 Module that exposes interface for creating and managing animated nodes on the "native" side.
+Module that exposes the URL to the source code map (used for exception stack trace parsing) to JS
 Module that handles global application events.
 Module that monitors and provides information about the connectivity state of the device.
+Module that records debug information during transitions (animated navigation events such as going from one screen to another).
 Module to initialize the Fresco library.
 Moreover, they are not consistent with what iOS returns.
 Multiple implementations are provided by this library.
@@ -952,6 +1055,7 @@ Must be called from the UI thread so that we can fully shut down other threads.
 Must be called from the UI thread.
 NB: All native view management methods listed above must be called from the UI thread.
 NB: For simplicity, we catch and wrap InterruptedException.
+NB: If a font family is used that does not have a style in a certain Android version (ie.
 NB: It is possible on some devices to receive certain connection type changes multiple times.
 NB: JavaScriptModule does not allow method name overloading because JS does not allow method name overloading.
 NB: Requires API 16 for use of FpsDebugFrameCallback.
@@ -959,9 +1063,12 @@ NB: This call can only be called once for a given frame time range because it cl
 NB: This modifies the eventCoords to always be relative to the current viewGroup.
 NB: We write to a temp file instead of returning a String because, depending on the size of the worker script, allocating the full script string on the Java heap can cause an OOM.
 NB: even though down time is a long, we cast as an int using the least significant bits as the identifier.
+NB: for perf reasons this does not apply opacity, as that would mean creating a new canvas layer (which allocates an offscreen bitmap) and having it composited afterwards.
 NB: if the font family is null / unsupported, the default one will be used
+NB: if there was one enqueued that actually finished, we'd have case 1), so effectively we just look for whether one was enqueued.
 NB: moveFrom and removeFrom are both relative to the starting state of the View's children.
 NB: onTransitionToBridgeIdle and onTransitionToBridgeBusy may be called from different threads, and those threads may not be the same thread on which the listener was originally registered.
+NB: the assumption for calling this method is that all corresponding ReactShadowNodes have been updated **but tagsToDelete have NOT been deleted yet**.
 NB: this class should only be used from the UI thread.
 NB: we assume two gestures cannot begin at the same time.
 NB: while onViewHierarchyUpdateFinished will always be called from the UI thread, there are no guarantees what thread onViewHierarchyUpdateEnqueued is called on.
@@ -973,6 +1080,8 @@ NaN will be used if property gets reset
 Name of the JS bundle file to be loaded from application's raw assets.
 Names starting with "rocksdb." are reserved and should not be used.
 Native Modules Queue Thread: The thread and Looper that native modules are invoked on.
+Native children are represented by (N) where N is the no-opt child they came from.
+Native counterpart of style animated node (see AnimatedStyle class in AnimatedImplementation.js)
 Native module for JS timer execution.
 Native module that can asynchronously request the owners hierarchy of a react tag.
 Native module that exposes Geolocation to JS.
@@ -997,17 +1106,24 @@ Not on an Android system.
 Note that since this mem-table representation relies on the key prefix, it is required to invoke one of the usePrefixExtractor functions to specify how to extract key prefix given a key.
 Note that the block size specified here corresponds to uncompressed data.
 Note that the following types of modules do not need to be cleaned here: - Modules whose user data is kept in memory in non-static fields, assuming the app uses a separate instance for each viewer context.
+Note that the slider is _not_ a controlled component (setValue isn't called during dragging).
 Note that the slider is _not_ a controlled component.
+Note that the sync() may not be required but is here of legacy reasons.
 Note that there should be no managerNo2 returned.
 Note that there should be no module2 returned.
+Note that this currently only applies to Nodes/FlatViewGroup as it's the only class that is both a ViewGroup and ReactCompoundView (ReactTextView is a ReactCompoundView but not a ViewGroup).
 Note that this function should be called only after all RocksDB instances referencing the compaction filter are closed.
 Note that this function should be called only after all RocksDB instances referencing the comparator are closed.
 Note that this function should be called only after all RocksDB instances referencing the filter are closed.
 Note that this function should be called only after all RocksDB instances referencing the slice are closed.
+Note that this must be called after getWidth()/getHeight() actually return something.
+Note(prenaux): More than one line, we need to layout the crossAxis according to alignContent.
 Note: Comparator can be set once upon database creation.
 Note: If your application doesn't use web workers, it will only have a single ExecutorToken per instance of React Native.
+Note: The order of executing onBatchComplete handler (especially in terms of onBatchComplete from the UIManagerModule) doesn't matter as we only enqueue operations for the UI thread to be executed from here.
 Note: You should be aware that it is intentionally marked as package-private.
 Note: even though calls can come from multiple JS VMs on multiple threads, calls to this module will still only occur on a single thread.
+Note: this **DOES NOT** consume the source map
 Note: this consumes the map so do not reuse it.
 Nothing in data payload, at least nothing we could understand anyway.
 Notify react instance manager about new JS bundle version downloaded from the server.
@@ -1019,6 +1135,7 @@ Now, if one of its ancestors sets requestDisallowInterceptTouchEvent to false, i
 Number keys updated, if inplace update is enabled
 Number of Keys read,
 Number of Write calls that request WAL
+Number of bytes to preallocate (via fallocate) the manifest files.
 Number of bytes written to WAL Writes can be processed by requesting thread or by the thread at the head of the writers queue.
 Number of deletes records that were not required to be written to storage because key does not exist
 Number of files to trigger level-0 compaction.
@@ -1029,7 +1146,6 @@ Number of times WAL sync is done
 Number of times we had to reseek inside an iteration to skip over large number of keys with same userkey.
 Number of writes ending up with timed-out.
 Offsets above are identical in 32- and 64-bit cases.
-On iOS, the value is 0..1.
 On old versions of Android, Bionic doesn't add our library directory to its internal search path, and the system doesn't resolve dependencies between modules we ship.
 On other systems, Bionic's built-in resolver suffices.
 On these systems, we resolve dependencies ourselves.
@@ -1049,6 +1165,7 @@ Open the database using the Java DirectBytewiseComparator and test the results a
 Open the database using the Java ReverseBytewiseComparator and test the results against another Java ReverseBytewiseComparator
 Operates on the default column family.
 Operation for updating native view's position and size.
+Options instance *should* not be disposed before all DBs using this options instance have been closed.
 Options that control write operations.
 Options to control the behavior of a database.
 Ordered list of sources to consult when trying to load a shared library or one of its dependencies.
@@ -1061,11 +1178,14 @@ Otherwise, a JS runnable enqueued in a previous frame could run while the UI thr
 Otherwise, it continues iterating.
 Otherwise, use update animation.
 Otherwise, when view gets re-attached again, i.e when it re-enters the viewport after scroll, it won't be size and located properly.
+Override this method to make some concrete (quick and harmless) native call.
 Override this method to provide extra native modules to be loaded before the app starts
 POJO to hold the output of the measure function.
 Package defining basic modules and view managers.
+Package defining core framework modules (e.g. UIManager).
 Parse a DebugServerException from the server json string.
 Partial merge will not be called if the list of values to merge is less than min_partial_merge_operands.
+Pass exception to onPostExecute() so it can be handled on the main thread
 Path to the JS bundle file to be loaded from the file system.
 Path to your app's main module on the packager server.
 PerfTestConfig stub.
@@ -1077,12 +1197,15 @@ Possible values for pointer events that a view and its descendants should receiv
 Practically, this means that all UI update code related to a single transaction must be executed as a single code block on the UI thread.
 Pre-allocate disk space for a file if we can do that on this version of the OS.
 Pre-fill cross axis dimensions when the child is using stretch before we call the recursive layout pass
+Pre-fill dimensions when using absolute position and both offsets for the axis are defined (either both left and right or top and bottom).
 Prefetches the given image to the Fresco image disk cache.
 Prefix extractor is used to specify how to extract the prefix given a key.
 Prepend our own SoSource for our own DSOs.
+Pretend at least one op was done in case we are running a benchmark that does not call FinishedSingleOp().
 Prevents the ViewGroup from dispatching the pressed state to it's children.
 Private constructor to disallow instantiation
 Private constructor.
+ProGuard is surprisingly smart in this case and will keep a class if it detects a call to Class.forName() with a static string.
 Processes the shadow hierarchy to dispatch all necessary updateLayout calls to the native hierarchy.
 Props that affect more than just layout
 Provides Checkpoint functionality.
@@ -1092,6 +1215,7 @@ Provides methods for generating touch events and dispatching them directly to a 
 Provides stub implementation of QPL
 Provides the ability to listen for size changes so that a UI manager can re-layout its elements.
 Purge duplicate/deleted keys when a memtable is flushed to storage.
+Put another way, this returns the number of native nodes (nodes not optimized out of the native tree) that are a) to the left (visited before by a DFS) of the given child in the subtree rooted at this node and b) do not have a native parent in this subtree (which means that the given child will be a sibling of theirs in the final native hierarchy since they'll get attached to the same native parent).
 Puts are delayed 0-1 ms when any level has a compaction score that exceeds soft_rate_limit.
 Puts are delayed 1ms at a time when any level has a compaction score that exceeds hard_rate_limit.
 Quits this MessageQueueThread.
@@ -1108,7 +1232,9 @@ ReactProgressBarViewManager manages how this style is applied to the ProgressBar
 Read ELF header.
 Read LOG file contents into String.
 Reads and crops the bitmap.
+Rearranging the text (i.e. changing between singleline and multiline attributes) can also trigger onTextChanged, call the event in JS only when the text actually changed
 Record the number of calls to GetUpadtesSince.
+Records the sonames (e.g., "libdistract.so") of shared libraries we've loaded.
 Recreate debug overlay controller with new CatalystInstance object
 Recreate the react application and context.
 Recursively search class hierarchy
@@ -1122,8 +1248,10 @@ Remove all styling spans we might have previously set
 Remove once bridge is unforked.
 Remove only odd keys
 Remove the content-type header because MultipartBuilder gets it explicitly as an argument and doesn't expect it in the headers array.
+Remove the database entry (if any) for "key".
 Removes all rows of the keys given.
 Removes an existing Animation, canceling it if it was in progress.
+Removes the *last* n items of the array all at once.
 Replaces the View specified by oldTag with the View specified by newTag within oldTag's parent.
 Report an error which wasn't caused by an exception.
 Report an exception with a custom error message.
@@ -1148,6 +1276,7 @@ Results are stored in the given outputBuffer.
 Retrieve assigned options instance.
 Retrieve name of column family.
 Retrieve snapshot from read options
+Return -1 if the input string is not a valid numeric fontWeight (100, 200, ..., 900), otherwise return the weight.
 Return a boolean value indicating if index shall be stored in a file.
 Return an list of ABIs we supported on this device ordered according to preference.
 Return react tag for touched element.
@@ -1155,10 +1284,12 @@ Return size of write buffer size.
 Return the PointerEvents of the View.
 Return the directory into which we put our self-extracted native libraries and make sure it exists.
 Return the directory into which we put our self-extracted native libraries.
+Return the length (in bytes) of the data.
 Return the loggers log level.
 Return true if the create_if_missing flag is set to true.
 Return true if the create_missing_column_families flag is set to true.
 Return true if the length of the data is zero.
+Return true if you intend to override some other native module that was registered e.g. as part of a different package (such as the core one).
 Return true, since DrawerLayout will lay out it's own children.
 Returned only if LOAD_FLAG_ALLOW_IMPLICIT_PROVISION is provided to loadLibrary.
 Returns OK on success, and a non-OK status on error.
@@ -1200,12 +1331,15 @@ Returns the number of buckets that will be used in the memtable created based on
 Returns the number of shard bits used in the block cache.
 Returns the number of updates in the batch.
 Returns the offset within the native children owned by all layout-only nodes in the subtree rooted at this node for the given child.
+Returns the path to the write-ahead-logs (WAL) directory.
 Returns the root view of a given view in a react application.
 Returns the set RocksEnv instance.
 Returns the size value of hugePageTlbSize.
+Returns the time interval for the info log file to roll (in seconds).
 Returns the touch target View of the event given, or null if neither the given View nor any of its descendants are the touch target.
 Returns the touch target View that is either viewGroup or one if its descendants.
 Returns the value of the given key, or null if not found.
+Returns true for the layout to *not* be automatically invoked.
 Returns true if react node responsible for the touch even is flattened into this ViewGroup.
 Returns true on success, false on failure.
 Returns whether dev mode should be enabled.
@@ -1223,6 +1357,7 @@ Runs the given Callable on this Thread.
 Runs the given Runnable on this Thread.
 SQL variable number limit, defined by SQLITE_LIMIT_VARIABLE_NUMBER: https://raw.githubusercontent.com/android/platform_external_sqlite/master/dist/sqlite3.c
 START_GENERATED
+Safe to acquire choreographer here, as initialize() is invoked from UI thread.
 Same as fixed length prefix extractor, except that when slice is shorter than the fixed length, it will use the full key.
 Sanitize content encoding header, supported only when request specify payload as string
 Screen metrics returns the metrics of the entire screen, is consistent with iOS and should be used instead.
@@ -1249,6 +1384,7 @@ Semi-randomly return the next unique key.
 Send property updates to native view manager
 Sends an event to the JS instance that the hardware back has been pressed.
 Sends the given Event to JS, coalescing eligible events if JS is backed up.
+Set a default padding (left/top/right/bottom) for this node.
 Set a default spacing value.
 Set a spacing value.
 Set a table factory and check the names
@@ -1312,6 +1448,7 @@ Shuts down statistics collector.
 Simple Json generator that does no validation.
 Simple spring interpolator
 Simple type conversion methods for use in tests
+Simple utility class for manipulating colors, based on Fresco's DrawableUtils (https://github.com/facebook/fresco).
 Simplified version of constructManageChildrenErrorMessage that only deals with adding children views
 Simplified version of manageChildren that only deals with adding children views
 Since Fresco needs to callback to the TextView that contains this, in the ViewManager, you must tell the Span about the TextView  Note: It borrows code from DynamicDrawableSpan and if that code updates how it computes size or draws, we need to update this as well.
@@ -1319,7 +1456,9 @@ Since css layout step and ui updates can be executed in separate thread apart of
 Since genymotion runs in vbox it use different hostname to refer to adb host.
 Since native methods are invoked from a message queue executed on a single thread, it is save to allocate only one arguments object per method that can be reused across calls
 Since onCatalystInstanceDestroy happens on the UI thread, we don't want to also execute this callback on the native modules thread at the same time.
+Since properties are generated by React framework based on what has been updated each value in this map should either be interpreted as a new value set for a style property or as a "reset this property to default" command in case when value is null (this is a way React communicates change in which the style key that was previously present in a map has been removed).
 Since the two APIs don't share a common interface there's unfortunately some code duplication.
+Since these Exceptions are triggered by JS calls (and can be fixed in JS), a common way to handle one is to show a error dialog and allow the developer to change and reload JS.
 Since those children will then add their native children to this view, we now have ranges of native children that correspond to single unoptimized children.
 Since we only show the first JS error in a succession of JS errors, make sure we only update the error message for that error message.
 Since we override onLayout in our ViewGroups, a layout pass never happens after a call to requestLayout, so we simulate one here.
@@ -1332,29 +1471,37 @@ Slider that behaves more like the iOS one, for consistency.
 Slowly drag the ScrollView to prevent fling
 Snapshot of database
 So for the other modes, we use a postprocessor.
+So if you have a slow filesystem to backup (like HDFS) and you have a lot of backups then restoring can take some time.
 So instead we generate a quasi-dynamic string to confuse it.
 So we expect zero L2 files here.
 Soft limit on number of level-0 files.
 Soft limit on the number of level-0 files.
+Some (general) drawing action has completed
 Some KeyListeners like DigitsKeyListener will display the keyboard but not accept all input from it
 Some error occurred
+Some of these queues *may* be the same but should be coded against as if they are different.
 Sometimes errors cause multiple errors to be thrown in JS in quick succession.
 Sometimes retrieving the database fails.
 Sort by name
 Space on the edges is half of the space between elements
 Spaces and tabs are dropped by IntelliJ logcat integration, so rely on __ instead.
+Spacing type that represents all directions (left, top, right, bottom).
 Spacing type that represents end direction e.g. right in left-to-right, left in right-to-left.
+Spacing type that represents horizontal direction (left and right).
 Spacing type that represents start direction e.g. left in left-to-right, right in right-to-left.
 Spacing type that represents the bottom direction.
 Spacing type that represents the left direction.
 Spacing type that represents the right direction.
 Spacing type that represents the top direction.
+Spacing type that represents vertical direction (top and bottom).
 Spec for creating a MessageQueueThread.
 Spec for creating a ReactQueueConfiguration.
 Specifies the maximum number of concurrent background compaction jobs, submitted to the default LOW priority thread pool.
 Specifies the maximum number of concurrent background flush jobs.
 Specifies the maximum number of info log files to be kept.
 Specifies the maximum size of a info log file.
+Specifies the time interval for the info log file to roll (in seconds).
+Specify to create a tailing iterator -- a special iterator that has a view of the complete database (i.e. it can also be used to read newly added data) and is optimized for sequential reads.
 Start animating for the first addition input node, will have 2 frames only
 Start animating for the first addition input node, will have 6 frames
 Start animating only the first addition input node
@@ -1370,6 +1517,7 @@ Stop listening for shakes.
 Stops tracking a new coalescing key corresponding to the gesture with this down time.
 Store a private linked list of absolutely positioned children so that we can efficiently traverse them later.
 Store a private linked list of flexible children so that we can efficiently traverse them later.
+Store and use in the next loadApplicationScript() call.
 Store eventCoords in array so that they are modified to be relative to the targetView found.
 Store number of visited nodes in `activeNodesCount`.
 Store the current operation queues to dispatch and create new empty ones to continue receiving new operations
@@ -1384,6 +1532,7 @@ Subgroup 1: ABI.
 Subgroup 2: soname.
 Successful termination of the marker
 Successfully resolve the Promise.
+Such mem-table representation contains a fix-sized array of buckets, where each bucket points to a skiplist (or null if the bucket is empty).
 Supply setters for base view layout properties such as width, height, flex properties, borders, etc.
 Support for iterating over the contents of a batch.
 Supports JSON types.
@@ -1395,13 +1544,52 @@ Systrace stub that mostly does nothing but delegates to Trace for beginning/endi
 Systrace stub.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT.
 TIME SPENT IN IO DURING TABLE OPEN
-TODO t8873322
+TODO(5195192) Investigate possible problems related to restarting all tasks at the same moment
+TODO(5279396): Make JS UI library explicitly notify the native UI module of the end of a UI transaction using a standard native call
+TODO(5483031): Only dispatch updates when shadow views have changed
+TODO(5712813): cleanup callback in JS callbacks table in case of an error
+TODO(5815532): Check if consumed on read
+TODO(5966918): Consider extending touchable area for text spans by some DP constant
+TODO(6242243): Make addMeasuredRootView thread safe NB: this method is horribly not-thread-safe, the only reason it works right now is because it's called exactly once and is called before any JS calls are made.
+TODO(6352048): Support gradients etc.
+TODO(6352067): Support dashes
+TODO(6418010): Fix readers-writers problem in debug reload from HTTP server
+TODO(6788889): Use POJO instead of bundle here, apparently we can't just use WritableMap here as it may be deallocated in native after passing via JNI bridge, but we want to reuse it in the case of re-creating the catalyst instance
+TODO(6788898): Refactor test code to use ReactPackage instead of SpecForTest
+TODO(6818138): Solve use-case of native/js modules overriding
+TODO(6845124): Create a test for this
+TODO(7135923): Pooling of operation objects TODO(5694019): Consider a better data structure for operations queue to save on allocations
+TODO(7247021): Replace updateExtraData with generic update props mechanism after D2086999
+TODO(7255985): Use TextureView and pass Surface from the view to draw on it asynchronously instead of passing the bitmap (which is inefficient especially in terms of memory usage)
+TODO(7323049): Remove this workaround once we figure out a way to re-layout some views on request
+TODO(7613721) : callbacks are not supported, this feature will likely be killed.
+TODO(7613721): Invoke success callback at the end of animation and when animation gets cancelled.
+TODO(7613736): Improve spring interpolator with friction and damping variable support
+TODO(7728005): Attach/detach views in batch - once per frame in case when multiple children update their layout.
+TODO(7728153) : animating view deletion is currently not supported.
+TODO(7854667): handle and test proper clipping
+TODO(8624925): Implement removeClippedSubviews support for native ListView
+TODO(8850038): add the stack trace info in, need to figure out way to serialize that
+TODO(9139831) : remove this method once layout animation is fully stable.
+TODO(9577825): This is a bad pattern, we should thread through an Environment object instead.
+TODO(9577825): remove this
+TODO(AR) consider throwing a checked exception, as if it's not direct this can SIGSEGV
+TODO(AR) log a warning message...
+TODO(AR) revisit here when implementing AutoCloseable
+TODO(prenaux): Correctly set the height of items with undefined (auto) crossAxis dimension.
+TODO(t9055065): Fix custom fonts getting applied to text children with different style
+TODO(t9349129) Don't use timeout
+TODO(yhchiang): this option seems to be block-based table only.
+TODO(yhchiang): use (Integer)Flag.perf_level.
+TODO(yhchiang): use the following arguments: (Long)Flag.stats_interval (Integer)Flag.stats_per_interval
 TODO: Call the method directly when this is no longer needed.
 TODO: Remove registered check when source of crash is found.
+TODO: Reuse propsMap and stylesDiffMap objects - note that in subsequent animation steps for a given node most of the time we will be creating the same set of props (just with different values).
 TODO: T7538544 Rename ThemedReactContext to be in alignment with name of ReactApplicationContext
 TODO: T7538796 Check requirement for Override of getSystemService ReactContext
 TODO: Would be great to avoid adding this callback in case there are no active animations and no outstanding tasks on the operations queue.
 TODO: t11041683 Remove this duplicate property name.
+TODO: t6408636 verify if we should schedule a layout after a View does a requestLayout()
 TODO: t7936714 merge these events
 TODO: t9053573 is tracking that this code should be shared
 TODO: tell all APIs to shut down
@@ -1410,6 +1598,7 @@ Tag is 0 because JSResponderHandler doesn't need one in order to clear the respo
 Take care to ensure that we can detect incomplete copies and that the copied bytes make it to stable storage before returning.
 Target sizes of level 1 to 4 are not applicable because they will not be used.
 TargetApi 16 for use of Choreographer.
+Task class responsible for (re)creating react context in the background.
 Temporary map for constructing the individual arrays of timers per ExecutorToken
 Termination of marker due to a cancellation
 Termination of marker due to some failure
@@ -1428,11 +1617,14 @@ Test with many keys, so that it's above the 999 limit per batch imposed by SQLit
 Test with parameter initialization
 Test without column family
 Test without column family but with readOptions
+Tests basic properties, events and switching between spinner modes (which changes the used manager).
 Tests for TextInput.
 Text input type is numbered password, remove text password variation, add numeric one
 TextAlignVertical
+Thanks to ReactChoreographer all the operations from here are going to be executed *after* all the operations enqueued by UIManager as the callback type that we use for ReactChoreographer (CallbackType.NATIVE_ANIMATED_MODULE) is run after callbacks that UIManager use
 That is after user starts the gesture from a touchable view with a given reactTag, or when user drag finger back into the press activation area of a touchable view that have been activated before.
 That is because intercepted touch events are converted into CANCEL events and make all further events to be delivered to the view that intercepted the event.
+That is, nodes that are not mapped into native views (e.g. nested text node).
 That means, depending on when we get updates from JS and what else is happening on the UI thread, we can sometimes try to post this runnable after ViewRootImpl has posted a barrier.
 That table is a pointer, which we translate to an offset below.
 That will fill the entire window of the application.
@@ -1443,18 +1635,22 @@ The "tag" comes from iOS naming.
 The ColumnFamilyHandle is automatically disposed with DB disposal.
 The JavaScript side expects a map with at least the error message.
 The MotionEvent contains the X,Y of the touch in the coordinate space of the root view The TouchEvent contains the X,Y of the touch in the coordinate space of the target view Subtracting them allows us to get the coordinates of the target view's top left corner We then use this when computing the view specific touches below Since only one view is actually handling even multiple touches, the values are all relative to this one target view.
+The Name() value of the prefix extractor will be stored in the file.
 The ReactTextView that holds this ImageSpan is responsible for passing these methods on so that we can do proper lifetime management for Fresco
 The actual size of the unit read from disk may be smaller if compression is enabled.
 The animation will only apply during the current batch operations.
 The application root element is wrapped in a helper view in order to be able to display modals.
 The available operators are "put", "uint64add", "stringappend" and "stringappendtest".
 The backup will always be consistent with the current state of the database regardless of the flushBeforeBackup parameter.
+The blob will NOT consume sequence number(s) and will NOT increase the count of the batch  Example application: add timestamps to the transaction log for use in replication.
 The blob will be stored in the transaction log but not in any other file.
 The bridge may have been destroyed due to an exception during the batch.
 The bridge will not become busy again until a timer, touch event, etc.
 The caller must not use "snapshot" after this call.
 The caller owns the returned value and may mutate it.
+The caller should include the animation stop time in ms (unix time) so that we know when the animation stopped from the JS perspective and we don't count time after as being part of the animation.
 The class that controls the get behavior.
+The config for hash linked list memtable representation Such memtable contains a fix-sized array of buckets, where each bucket points to a sorted singly-linked list (or null if the bucket is empty).
 The config for hash skip-list mem-table representation.
 The config for plain table sst format.
 The config for skip-list memtable representation.
@@ -1488,6 +1684,7 @@ The host IP we use when connecting to the JS bundle server from the emulator is 
 The ideal ratio would be the number of prefixes / the number of hash buckets.
 The implementation accounts for the cases when next index is not necessarily a subsequent number of the cached one.
 The implementation tries to allocate as few objects as possible depending on which properties are set.
+The insertion will replace conflicting (key, value) pairs.
 The internal version of this file has not been opensourced yet.
 The key is obsolete.
 The latest backup must remain.
@@ -1502,6 +1699,7 @@ The maximum size cannot be set below the current size.
 The maximum time interval a put will be stalled when hard_rate_limit is enforced.
 The memory for the corresponding views and data structures should be reclaimed.
 The minimum number of write buffers that will be merged together before writing to storage.
+The motivation behind this is that in case when the updated style diff map doesn't contain a certain style key it means that the corresponding view property shouldn't be updated (whereas in all other cases it should be updated to the new value or the property should be reset).
 The name of the comparator.
 The non flexible children can overflow the container, in this case we should just assume that there is no space available.
 The number of files in level 0 to trigger compaction from level-0 to level-1.
@@ -1517,11 +1715,14 @@ The pointer to the snapshot is released by the database instance.
 The position is set by the parent, but we need to complete it with a delta composed of the margin and left/top/right/bottom
 The private construct used by a set of public static factory method.
 The prominent case where we don't have a Context is barebones dalvikvm instantiations.
+The purpose of this method is to return the index within the native children that corresponds to the **start** of the native children that belong to the given child.
+The real metrics include system decor elements (e.g. soft menu bar).
 The reason that this is a function that returns "this" instead of a constructor is to enable chaining of multiple similar calls in the future.
 The remaining available space that needs to be allocated
 The removeNodeFromParent call will cause all the view's children to be detached from their native parent.
 The returned iterator should be closed before this db is closed.
 The root view always assumes any view that was tapped wants the touch and sends the event to JS as such.
+The second BFS runs in topological order over the sub-graph of *active* nodes.
 The second backup must remain.
 The second child that is added, is the navigationView, which gets panned from the side.
 The set log level influences the underlying native code.
@@ -1529,6 +1730,7 @@ The shared library is extracted to a temp folder and loaded from there.
 The simplified version of get which returns a new byte array storing the value associated with the specified input key if any.
 The size of one block in arena memory allocation.
 The space between the beginning and the first element and the space between each two elements.
+The state right after pause and right before resume are the basically the same so this enum is in terms of the forward lifecycle progression (onResume, etc).
 The supported custom fonts extensions are .ttf and .otf.
 The target file size for compaction.
 The temporary file will be registered for deletion on exit.
@@ -1537,10 +1739,13 @@ The upper-bound of the total size of level-1 files in bytes.
 The value is actually handled in NativeViewHierarchyOptimizer
 The wait time for db mutex.
 The way it's implemented is that we store an additional array of children in view node.
+The wrapper stops the EditText from triggering *TextChanged events, in the case where JS has called this explicitly.
 Their contents remain in the OS buffers till the OS decides to flush them.
 Then Wrapping lists into sets to be order-independent.
 Then it is sufficient to add/subtract height of item at the "last index"
 Then wrapping lists into sets to be order-independent
+There are cases where most lower levels would like to use quick compression algorithms while the higher levels (which have more data) use compression algorithms that have better compression but could be slower.
+There are separate ones for each direction because a JS to Java call can trigger a Java to JS call: this would cause a deadlock with a traditional mutex (maybe we should be using a reader- writer lock but then we'd have to worry about starving the destroy call).
 There are three kind of children, non flexible, flexible and absolute.
 There is a race condition in the ProgressBar constructor that may cause crashes when two ProgressBars are constructed at the same time on two different threads.
 There's a chance that there was already a removeAnimation call enqueued on the main thread when this callback got enqueued on the main thread, but the Animation class should handle only calling one of onFinished and onCancel exactly once.
@@ -1559,11 +1764,14 @@ This SoSource did not load the library, but verified that the system loader will
 This SoSource doesn't know how to provide the given library.
 This SoSource loaded the given library.
 This allows ProGuard to strip that class and its dependencies in release builds.
+This also protects the database from filling up the disk cache and becoming malformed (endTransaction() calls will throw an exception, not rollback, and leave the db malformed).
 This also removes the nasty side effect that EditTexts have, which is that focus is always maintained on one of the EditTexts.
 This annotation is meant to be used for a group of similar properties.
 This approach is easier than maintaining a list of tags for recently created/deleted views.
 This assumes that updateJSError belongs to the most recent showNewJSError
+This avoids lazy-loading some phones (LG) use when we call loadLibrary.
 This builder is reused
+This callback then enqueues a runnable on the JS thread (if one is not already pending) that is responsible for actually dispatch events to JS.
 This can also be used to stub out existing native modules by adding another module with the same name as a built-in module.
 This can either happen when we're scrolling down or if the cached value has never been calculated
 This can return almost immediately if the location is cached or request an update, which might take a while.
@@ -1572,18 +1780,23 @@ This can use a lot of memory
 This can use significantly less memory than decoding the full-resolution bitmap
 This causes the parent to update its native children count.
 This check force a check right when intended.
+This check is potentially lighter-weight than invoking DB::Get().
 This class contains methods to retrieve the name and type of all methods and a way to set these properties without reflection.
 This class doesn't allow doInBackground to return a results.
 This class helps in calculating "real" offset of row at specified index.
 This class is responsible for holding view manager property setters and is used in a process of updating views with the new properties set in JS.
+This class is set as the KeyListener for the underlying TextView It does two things 1) Provides the same answer to getInputType() as the real KeyListener would have which allows the proper keyboard to pop up on screen 2) Permits all keyboard input through
 This class is used to load the RocksDB shared library from within the jar.
 This class is used to verify that some JS integration tests have completed successfully.
 This class relies on CookieManager to persist cookies to disk so cookies may be lost if the application is terminated before it syncs.
+This class will redirect *TextChanged calls to the listeners only in the case where the text is changed by the user, and not explicitly set by JS.
 This class will run all JNI call within separate android looper, thus you don't need to care about starting your own looper.
+This class works around that issue by *not* calling super.onStop on KitKat on lower, as that would erroneously call the OnTimeSetListener when the dialog is dismissed, or call it twice when "OK" is pressed.
 This class works around that issue.
 This class works by installing a Choreographer frame callback on the main thread.
 This code can be removed if using Fresco from Maven rather than from source
 This code is duplicated in ReactTextInputManager  TODO: Factor into a common place they can both use
+This code was taken from the method parseNumericFontWeight of the class ReactTextShadowNode TODO: Factor into a common place they can both use  Return -1 if the input string is not a valid numeric fontWeight (100, 200, ..., 900), otherwise return the weight.
 This component is controlled, so we want it to get focused only when JS ask it to do so.
 This copies the original file from wherever it may be to the external storage pictures directory, so that it can be scanned by the MediaScanner.
 This could reduce context switch when the mutex is not heavily contended.
@@ -1597,6 +1810,7 @@ This exists so that CatalystInstance is able to set Exception handlers on the Me
 This factor controls the probabilistic size ratio between adjacent links in the skip list.
 This fairness parameter grants low-pri requests permission by fairness chance even though high-pri requests exist to avoid starvation.
 This flag is set to true when we set the text of the EditText explicitly.
+This implementation depends on the properties that 1) FrameCallbacks run after UI events have been processed in Choreographer.java 2) when we enqueue a runnable on the JS queue thread, it won't be called until after any previously enqueued JS jobs have finished processing  If JS is taking a long time processing events, then the UI events generated on the  UI thread can be coalesced into fewer events so that when the runnable runs, we don't overload JS with a ton of events and make it get even farther behind.
 This interface should be implemented be native ViewGroup subclasses that can represent more than a single react node.
 This is a programmer error
 This is a recursive DFS since view the entire tree must be parsed until the target is found.
@@ -1624,6 +1838,9 @@ This is not a general purpose ELF library.
 This is not expected to happen very often as it would mean some child View has decided to intercept the touch stream and start a native gesture only upon receiving the UP/CANCEL event.
 This is possible since we don't inflate React views from layout xmls.
 This is registered after JS starts since it makes a JS call
+This is run when the catalyst instance is being destroyed (i.e. app is shutting down) and when the module is instantiated, to handle the case where the app crashed.
+This is so that developers cannot construct their own default DirectSlice objects (at present).
+This is so that developers cannot construct their own default Slice objects (at present).
 This is the absolute position including things like the status bar
 This is the base class for all the classes representing certain native library.
 This is the constant used in the support library for APIs that don't have Choreographer
@@ -1634,6 +1851,7 @@ This is the main recursive call.
 This is to guarantee that scaling is performed correctly.
 This is to include all the setters from parent classes up to ReactShadowNode class
 This is to include all the setters from parent classes.
+This is to make sure that we execute all the JS operation coming from a single batch a single loop of the main (UI) android looper.
 This is to make sure we execute enqueued operations in the order given by JS.
 This is to work around a bug in DatePickerDialog where it doesn't display a title showing the date under certain conditions.
 This is to work around a bug where CookieManager may fail to instantiate if CookieSyncManager has never been created.
@@ -1662,11 +1880,14 @@ This makes sense because we never run the devserver in tests.
 This may happen when app has not been updated since the last time we fetched the bundle.
 This may have unforeseen ramifications: for example, a corruption of one DB entry may cause a large number of entries to become unreadable or for the entire DB to become unopenable.
 This may translate into multiple manageChildren calls for multiple other views.
+This means that during the next hierarchy traversal, new UI will be drawn if needed (good).
 This means that the returned x, y are relative to the origin x, y of the ancestor view.
 This means the gesture has already ended, via some other CANCEL or UP event.
 This means we previously had another child start handling this native gesture and now a different native parent of that child has decided to intercept the touch stream and handle the gesture itself.
 This method also sets the child's mParent to null
+This method fetches the given URL *synchronously* and writes it to the specified temp file.
 This method gets called in the main animation loop with a frame time passed down from the android choreographer callback.
+This method is called by the implementation of JS touchable interface (see Touchable.js for more details) at the moment of touch activation.
 This method is currently used only by Element Inspector DevTool.
 This method is frequently called from the "onScroll" handler of the "RecyclerView" with an index of first visible item of the view.
 This method is idempotent: calls after the first are ignored.
@@ -1683,6 +1904,7 @@ This method will be called before animation starts.
 This method will be run on each node at most once every repetition of the animation loop.
 This method will directly update native views, which means that updates for layout-related propertied won't be handled properly.
 This method will give JS the opportunity to consume the back button event.
+This method will return a long representing the underlying JSGlobalContextRef pointer or 0 (representing NULL) when in Chrome debug mode, and is only useful if passed back through the JNI to native code that will use it with the JavaScriptCore C API.
 This method will return false if the animation has been cancelled.
 This method will write to the output array up to the number of items from the input array.
 This must be used when another object takes over ownership of the native object or both will attempt to delete the underlying object when garbage collected.
@@ -1691,8 +1913,10 @@ This needs to be investigated.
 This needs to fill the entire window.
 This notifies any listening modules so they can do any necessary cleanup.
 This number is equal to the maximum number of linear search required after hash and binary search.
+This number specifies the number of keys (with the same userkey) that will be sequentially skipped before a reseek is issued.
 This occurs when the size of mEventsToDispatch is zero or one.
 This optimization avoids writing the delete to storage when appropriate.
+This optimization is important for view hierarchy depth (which can cause stack overflows during view traversal for complex apps), memory usage, amount of time spent during GCs, and time-to-display.
 This optimization is turned off when set to 0.
 This option can be useful for backing up in-memory databases where log file are persisted, but table files are in memory.
 This option can boost performance for in-memory workload but should use with care since it can cause higher false positive rate.
@@ -1710,8 +1934,10 @@ This should be invoked if JS does not want to handle the back press itself.
 This should be much faster than using regex to verify input and Integer.parseInt
 This should never happen during normal operation, but if we're running in a non-Android environment, fall back to System.loadLibrary.
 This should only be called the first time the application is set up, which is enforced to keep developers from accidentally creating their application multiple times without realizing it.
+This should return bubbling directly-dispatched event types and specify what names should be used to subscribe to either form (bubbling/capturing).
 This should return non-bubbling directly-dispatched event types.
 This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
+This specifies the absolute dir path for write-ahead logs (WAL).
 This specifies the info LOG dir.
 This starts all markers
 This static ctor wrapper protects against that.
@@ -1733,6 +1959,7 @@ This will allow the proper keyboard to be shown on screen but without the actual
 This will be added to the TextView in place of this node.
 This will be the name used to reference this view manager from JavaScript in createReactNativeComponentClass.
 This will be used in order to either set the dimensions of the node if none already exist, or to compute the remaining space left for the flexible children.
+This will draw a line from the last draw point (or 0,0) to x,y.
 This will ensure that there are never more than max_successive_merges merge operations in the memtable.
 This will generally be constructed and filled in native code so you shouldn't construct one yourself.
 This will handle dispatching the appropriate events to JS to make sure the gesture in JS is canceled.
@@ -1741,22 +1968,30 @@ This will then cause the children of the Modal to layout as if they can fill the
 This will throw.
 This will trigger `layout` call on attached wrapper nodes and will let us update dimensions of them through overridden onMeasure method.
 Those are like "pulse generators" for the rest of the nodes graph.
+Those are objects (represented as a graph nodes too) that based on some criteria updates attached values every frame (we have few types of those, e.g., spring, timing, decay).
 Those pulses then propagate along the graph to the children nodes up to the special node type: AnimatedProps which then can be used to calculate property update map for a view.
 Thread safety: StatisticsCollector doesn't make any guarantees about thread safety.
 Throw otherwise as this would mean there is a cycle in animated node graph.
+Thus it is easier to just reuse that field instead of creating another (potentially much more expensive) mapping from view to React tag
 Time system had to wait to do LO-L1 compactions
 Time system had to wait to move memtable to L1.
 Timer that runs every UPDATE_INTERVAL_MS ms and updates the currently displayed FPS.
 Timers fire on frame boundaries.
 Timing module needs to be created on the main thread so that it gets the correct Choreographer.
+To achieve that we call `forceLayout()` on the view modified and on `RecyclerView` instance (which is accessible with `v.getParent().getParent()` if the view is attached).
 To disable auto compaction
 To display a view within a Dialog, that view must have its parent set to the window the Dialog creates.
 To do that, we need to explicitly set the styleWidth and styleHeight on the LayoutShadowNode of the child of this node to be the window size.
+To explicitly delete the instance, call resetNative().
 To get layout to work properly, we need to layout all the elements within the Modal's inner content view as if they can fill the entire window.
 To get that we use information from the WindowManager and default Display.
+To make a RocksDB to use a specific MemTable format, its associated MemTableConfig should be properly set and passed into Options via Options.setMemTableFactory() and open the db using that Options.
+To make a RocksDB to use a specific Table format, its associated TableFormatConfig should be properly set and passed into Options via Options.setTableFormatConfig() and open the db using that Options.
 To map animated node values to view properties there is a special type of a node: AnimatedProps.
+To preserve proper ordering of events, move events should only be coalesced if there has been no up/down event between them (this basically only applies to multitouch since for single touches an up would signal the end of the gesture).
 To retain that style, you have to add it to those nodes explicitly.
 To work around this we have this class which just wraps another Drawable, but returns the correct dimensions in getIntrinsicWidth/Height.
+Touch event can encode multiple concurrent touches (pointers).
 Touch event types that JS module RCTEventEmitter can understand
 TouchEvent coalescing can happen for move events if two move events have the same target view and coalescing key.
 Tracks errors connecting to or received from the debug derver.
@@ -1772,7 +2007,9 @@ Trying to override without returning true from this method is considered an erro
 Turn shared-library loading into a no-op.
 Two events will only ever try to be coalesced if they have the same event name, view id, and coalescing key.
 Type of property that will be send to JS.
+Types of data that should be cleaned: - Persistent data (disk) that may contain user information or content.
 UI Queue Thread: The standard Android main UI thread and Looper.
+Unfortunately we need to use timeouts here in order to wait for scroll animation to happen there is no better way (yet) for waiting for scroll animation to finish
 Unpack library and its dependencies, returning the location of the unpacked library file.
 Unregisters a root node with a given tag.
 Update `mIncomingNodes` attribute for each node during that BFS.
@@ -1781,14 +2018,17 @@ Update layout to some values, this way we can verify it hasn't been updated, bec
 Update layouts since the children of the node were offset by its x/y position previously.
 Update pointer position for current gesture
 Update underlying native SeekBar's values.
+Update value only (optimization in case only value is set).
 Use GPU-accelerated animation, however we loose the ability to resume interrupted animation where it was left off.
 Use KeyMayExist API to filter deletes when this is true.
 Use `post` otherwise the control won't start refreshing if refreshing is true when the component gets mounted.
+Use `webView.loadUrl("about:blank")` to reliably reset the view state and release page resources (including any running JavaScript).
 Use a separate inner class to isolate the version-dependent call where it won't cause the whole class to fail preverification.
 Use adaptive mutex, which spins in the user space before resorting to kernel.
 Use android View id field to store React tag.
 Use instead size of text content within EditText when available
 Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+Use reactTagForTouch() to get its tag.
 Use the default.
 Use the initial line loop to position children in the cross axis for as long as they are relatively positioned with alignment STRETCH or FLEX_START.
 Use the line loop to position children in the main axis for as long as they are using a simple stacking behaviour.
@@ -1808,6 +2048,8 @@ Used by all types of background and for drawing borders
 Used by native animated module to bypass the process of updating the values through the shadow view hierarchy.
 Used for managing children operation.
 Used for rounded border and rounded background
+Used to check for comparator mismatches (i.e., a DB created with one comparator is accessed using a different comparator).
+Used to locate views in end-to-end (UI) tests.
 Used to pass arguments from Java to JS.
 Used to pass parameters from JS to Java.
 Useful in catch-all scenarios where it's unclear why the error occurred.
@@ -1817,7 +2059,9 @@ Uses Java proxy objects to dispatch method calls on JavaScriptModules to the bri
 Uses default provider if null is passed.
 Uses reflection to create DevSupportManagerImpl if it exists.
 Uses this plus total elapsed time to determine FPS.
+Using a Choreographer callback (which runs immediately before traversals), we guarantee we run before the next traversal.
 Using this method will pass the error code "EUNSPECIFIED".
+Utilities for native Views that interpret native gestures (e.g. ScrollView, ViewPager, etc.).
 Utility class constructor
 Utility class for creating maps
 Utility class for creating sets
@@ -1828,14 +2072,19 @@ Utility for interacting with the UI thread.
 Utility method used to help develop web workers on debug builds.
 Value -1 means files opened are always kept open.
 Value at Spacing.ALL index used for rounded borders, whole array used by rectangular borders
+Value sent from JS (setState).
+Value x means that (1 - x) fraction of the page at "position" index is visible, and x fraction of the next page is visible.
 Values must have suffix V2 because of restoring latest backup.
 VectorMemTableConfig constructor
 Verifies removeSubviewsFromContainerWithID works by adding subviews, removing them, and checking that the final number of children is correct.
 Verify backups.
+Verify scheme is set, so that relative uri (used by static resources) are not handled.
 Verify that 'scrollTo' command makes ScrollView start scrolling
 Verify that backups exist
+Verify that we've visited *all* active nodes.
 Verify the database exists and is open.
 Verify the database is open for reads and writes.
+View manager for AndroidViews (plain React Views).
 View manager for ReactRootView components.
 View that automatically monitors and displays the current app frame rate.
 ViewManager for ARTSurfaceView React views.
@@ -1849,20 +2098,26 @@ Wait for flush to finished.
 Wait for the UI to settle.
 Wait up to the timeout time for another Thread to set a value on this future.
 Waits for both the UI thread and bridge to be idle.
+WalTtlSeconds() and walSizeLimitMB() affect how archived logs will be deleted.
 Walk the items in the dynamic section, counting the DT_NEEDED entries.
 Warning : This method will be removed in future version of React Native, and layout animation will be enabled by default, so always check for its existence before invoking it.
 We "execute" active animations as a part of this step.
 We aggregate the total dimensions of the container in those two variables
 We ain't doing no newfangled 64-bit
+We allow ancestor view and measured view to be the same, in which case the position always will be (0, 0) and method will only measure the view dimensions.
 We already have the value cached, let's use it and only add heights of the items starting at the index we have the cached value for
 We also take advantage of the fact that all active nodes are visited in the step above so that all the nodes properties `mActiveIncomingNodes` are set to zero
 We are currently not enabling translation GPU-accelerated animated, as it creates odd artifacts with native react scrollview.
+We are scrolling up, we can either use cached value and subtract heights of rows between mLastRequestPosition and index, or we can calculate the height starting from 0 (this can be quite a frequent case as well, when the list implements "jump to the top" action).
 We are using special source maps for these bundles, so that we can symbolicate stack traces for multiple injected files with a single source map.
 We avoid allocating an array and iterator, and "sorting" if we don't need to.
+We avoid expanding the lower level file set of a compaction if it would make the total compaction cover more than (expanded_compaction_factor * targetFileSizeLevel()) many bytes.
+We avoid picking too many files in the source level so that we do not exceed the total source bytes for compaction to exceed (source_compaction_factor * targetFileSizeLevel()) many bytes.
 We can coalesce move events but not start/end events.
 We can never assign a width smaller than the padding and borders
 We can only proceed forward if we have a Context.
 We can reuse cached sum and calculate the new sum by subtracting heights of the elements between "mLastRequestPosition" and "index"
+We can take advantage on that and optimize the way we allocate property maps (we also know that updating view props doesn't retain a reference to the styles object).
 We can try saving on invalidate call here as the view that we remove is out of visible area therefore invalidation is not necessary.
 We can't easily verify if rounded corner was honored or not, this tests simply verifies we're not crashing..
 We can't specify rounding in XML, so have to do so here
@@ -1879,6 +2134,7 @@ We do not support method overloading since js sees a function as an object regar
 We do that to avoid passing large strings between java and native code and avoid allocating memory in java to fit whole JS bundle in it.
 We don't care about calling this is the view is not currently attached as it would be laid out once added to the recycler.
 We don't have to measure the text within the text input.
+We don't need to do bubbling in native (it's already happening in JS).
 We don't need to handle its layouting here
 We don't use DisplayMetricsHolder because it returns values that include the status bar.
 We don't want to miss any textinput event, as event data is incremental.
@@ -1898,6 +2154,7 @@ We manually strip it here if necessary.
 We mark virtual anchor node as dirty as updated text needs to be re-measured
 We may be able to listen to animation interruption and set the layout manually in this case, so that next animation kicks off smoothly.
 We may have already called/removed it
+We need Intent.FLAG_ACTIVITY_NEW_TASK since getReactApplicationContext() returns the ApplicationContext instead of the Activity context.
 We need this because of clowniness in datepicker that causes it to throw an exception if minDate is greater than the internal timestamp that it generates from the y/m/d passed in the constructor.
 We need to compare using "equals" which means that this value needs to be unique.
 We need to find their position.
@@ -1919,6 +2176,7 @@ We override the KeyListener so that all keys on the soft input keyboard as well 
 We override this to allow developers to determine whether they need offscreen alpha compositing or not.
 We rely on NativeViewHierarchyManager to call `layout` on `RecyclerView` then, which will happen once all the children of `RecyclerView` have their layout updated.
 We reset target tag to -1 and expect no further event associated with this gesture.
+We selectively remove some of the views (detach) from it while still storing them in that additional array.
 We set the User-Agent header by default
 We should also note that we have a unique stance on what 'caused' means: even if there's a bug in the framework/native code, it was triggered by JS and theoretically since we were able to set up the bridge, JS could change its logic, reload, and not trigger that crash.
 We should only hit this slow path when we receive events while the host activity is paused.
@@ -1929,12 +2187,15 @@ We store JS bundle loaded from dev server in a single destination in app's data 
 We store number of visited nodes in this step in `updatedNodesCount`
 We store timers sorted by finish time.
 We treat moves as an add and a delete
+We use a limited amount of data over and over again and ensure that it is larger than the compression window (32KB), and also
 We use a staging data structure so that all UI events generated in a single frame are dispatched at once.
 We use justifyContent to figure out how to allocate the remaining space available
+We use screenX/screenY (which round to integer pixels) at each node in the hierarchy to emulate what the layout would look like if it were actually built with native views which have to have integral top/left/bottom/right values
 We use this Dialog to actually display the Modal in the window.
 We want custom min..max range.
 We want to be consistent across platforms.
 We want to execute the next two loops one per line with flex-wrap
+We want to support both android.app.Activity and the pre-Honeycomb FragmentActivity (for apps that use it for legacy reasons).
 We'll automatically check and adjust the size number to make sure it conforms to the restrictions.
 We'll do that when the parent node actually gets attached somewhere.
 We'll use this partial information, which represents the smallest possible size for the child, to compute the remaining available space.
@@ -1957,11 +2218,13 @@ When set, fills the rest of the scrollview with a color to avoid setting a backg
 When the method returns, it will contain the eventCoords relative to the targetView found.
 When this method exits, the new MessageQueueThreadImpl is ready to receive events.
 When using js proxy, there is no need to fetch JS bundle as proxy executor will do that anyway
+Whenever android requests focus (which it does for random reasons), it will be ignored.
 Whenever the value of the switch changes, we do not allow any other changes to that switch until JS sets a value explicitly.
 While setting the Spans on the final text, we also check whether any of them are images
 Will be abc3 because the next one after abc999 is abc3
 Will be invalid because abc is after abc1
 Will return false after onDestroy until a new initial context has been created.
+Without this, certain calls (e.g. setLogo) only take effect after a second invalidation.
 Without this, the widget never actually changes the selection and doesn't call the appropriate listeners.
 Won't throw
 Wrapper class around Fresco's GenericDraweeView, enabling persisting props across multiple view update and consistent processing of both static and network images.
@@ -1972,6 +2235,7 @@ Writing bb under key
 You can only stretch if the dimension has not already been defined previously.
 You may need to increase this if your database has a large working set.
 You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+You might want to override this method if your view needs to emit events besides basic touch events to JS (e.g. scroll events).
 You must call this each time the layout is generated if the node has a new layout.
 You never want to go smaller than padding
 You probably want to use that instead.
@@ -1989,6 +2253,7 @@ as long as the env is not freed.
 atomic write
 attempt to copy the library from the Jar file to the temp destination
 attempt to read test data back from the WriteBatch by iterating with a handler
+bold) will not be inherited by nested Text nodes.
 by default 'maxBytesForLevelBase' is 10MB.
 by default targetFileSizeBase is 2MB.
 change log level to debug level
@@ -2001,14 +2266,18 @@ close the database
 color is not transparent
 compare the results to the test data
 compute the line's height and find the endIndex
+copy listeners array to avoid ConcurrentModificationException if any of the listeners remove themselves in handleMemoryPressure()
 create column family
 create default UIImplementationProvider if the provided one is null.
 default rocksenv will always return zero for compaction pool no matter what was set via setBackgroundThreads
 default rocksenv will always return zero for flush pool no matter what was set via setBackgroundThreads
+developer should have called close()
 direct access - seek to key offsets
 dismiss redbox if exists
+do *not* call super.onStop() on KitKat on lower, as that would erroneously call the OnDateSetListener when the dialog is dismissed, or call it twice when "OK" is pressed.
 do fast check whether intersect state changed
 do not set state to destroyed, do not send an event.
+does key already exist (avoid duplicates)
 don't do anything, no need to allocate ReactBackgroundDrawable for transparent background
 don't set keys that divide by this magical number, so that we can check that multiGet works, and returns null for missing keys
 don't use Robolectric before initializing mocks
@@ -2068,7 +2337,6 @@ lazy-initialized when a child is added
 load test data to the write batch
 loading possibly necessary libraries.
 locationX,Y values are relative to the target view To compute the values for the view, we subtract that views location from the event X,Y
-make it 0..256
 make sure the default rounding method is used.
 make sure we exclude the View itself because of the PointerEvents.BOX_NONE
 managerNo2 and managerNo3 will share same name, composite should return only the latter one
@@ -2076,7 +2344,9 @@ marginBottom
 marginHorizontal
 marginRight
 marginVertical
+maxLines can only be set in master view (block), doesn't really make sense to set in a span
 measure only the main executor time
+measure() should never be called before setThemedContext()
 memtable related
 merge bb under key
 merge key1 with another value portion
@@ -2085,6 +2355,7 @@ merge yy under cfkey2
 messages shall be received due to previous actions.
 miss in the compressed block cache
 module2 and module3 will share same name, composite should return only the latter one
+monospace bold pre Android 5.0), that style (ie.
 moveTo and addAt are both relative to the final state of the View's children.
 multiple values for the same header
 native exopackage
@@ -2095,6 +2366,7 @@ new Bloom filter
 new context is the same as the old one - do nothing
 no worth marking as dirty if it already rendered..
 no-op: it's here only so that "collapsable" property is exported to JS.
+node or animation not found TODO(5712813): cleanup callback in JS callbacks table in case of an error
 noinspection unchecked
 non-null only for group setters
 not found value
@@ -2104,6 +2376,7 @@ notify JS about layout event if requested
 null if it does not find the specified key.
 null will be returned if the specified key is not found.
 number of iterators currently open Number of MultiGet calls, keys read, and bytes read
+number of times bloom was checked before creating iterator on a file, and the number of times the check was useful in avoiding iterator creation (and thus likely IOPs).
 oldJSON will contain the result of this merge.
 only call reset context when the destroyed context matches the one that is currently set for this manager
 only set up the canvas if we have something to draw
@@ -2143,6 +2416,7 @@ remove k1 and make sure we can read back the write
 remove prefix
 repeat the test with WriteOptions
 required so that drawable callback is cleared before we add the drawable back as a part of LayerDrawable
+resetNative() may be called multiple times safely.
 restore db from first backup
 restore db from latest backup
 restore the backup
@@ -2157,6 +2431,7 @@ setting null to snapshot in ReadOptions leads to no Snapshot being used.
 setup sample properties
 setup test data
 shall throw an exception because db dir does not exist.
+should only be accessed from main thread (UI thread)
 shouldContinue is called by the underlying iterator WriteBatch::Iterate.
 showOrUpdate will display the Dialog.
 since it may be optional, we ignore its loading failure here.
@@ -2199,6 +2474,7 @@ update visibility of FPS debug overlay depending on the settings
 updateProperties will update the properties that do not require us to recreate the dialog Properties that do require us to recreate the dialog should set mPropertyRequiresNewDialog to true when the property changes
 use new color
 user compaction function has dropped the key.
+using LIMIT in the sortOrder is not explicitly supported by the SDK (which does not support setting a limit at all), but it works because this specific ContentProvider is backed by an SQLite DB and forwards parameters to it without doing any parsing / validation.
 using no snapshot the latest db entries will be taken into account
 value "0" is used as an initial color for a new node, using it in BFS may cause some nodes to be skipped.
 verify RequestBodyPart for image
@@ -2206,12 +2482,15 @@ verify body
 verify key/value pairs after flush using MemEnv
 verify otherDb
 verify that X get updated when we update layout properties
+verify that the layout doesn't get updated when we update style property not affecting the position (e.g., background-color)
 verify url, method, headers
 we currently don't have an onCreate callback so we call onResume for both transitions
 we need a bigger timeout for CI builds because they run on a slow emulator
 we set the checked change listener to null and then restore it so that we don't fire an onChange event to JS when JS itself is updating the value of the switch
+we skipped an image because we couldn't get its details (e.g. width/height), so we decrement i in order to correctly reach the limit, if the cursor has enough rows
 when non-default Options is used, keeping an Options reference in RocksDB can prevent Java to GC during the life-time of the currently-created RocksDB.
 when the iterator is deleted it will also delete the baseIterator
+wrapper.getParent() points to the recycler if the view is currently attached (it could be in "scrape" state when it is attached to recyclable wrapper but not to the recycler)
 write batch test
 write key/value pairs using MemEnv
 write key/value pairs using MemEnv to db and to otherDb.
