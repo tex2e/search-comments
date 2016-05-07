@@ -18,7 +18,10 @@ target_repo := \
 	https://github.com/npm/npm \
 	https://github.com/php/php-src \
 	https://github.com/bbatsov/rubocop \
-	https://github.com/eslint/eslint
+	https://github.com/eslint/eslint \
+	https://github.com/FreeCodeCamp/FreeCodeCamp \
+	https://github.com/mbostock/d3 \
+	https://github.com/vuejs/vue/
 target_name := $(notdir $(target_repo))
 database_dir := database
 
