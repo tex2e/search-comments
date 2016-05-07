@@ -3,8 +3,8 @@
 def comment_reject_filter(comment)
   return (
     comment.length <= 10 ||  # comment's length is less than 10
-    !comment.match(/\A[-a-zA-Z0-9_ ,.:`'"\/*(){}]++\z/) ||  # comments isn't composed of
-    comment.count("-_ ,.:`'\"\/") / comment.length.to_f >= 0.4  # more than 40% symbols
+    !comment.match(/\A[-a-zA-Z0-9_ ,.:`'"\/*()]++\z/) ||  # comments isn't composed of
+    comment.count("-0-9_ ,.:`'\"\/") / comment.length.to_f >= 0.4  # more than 40% symbols
   )
 end
 
