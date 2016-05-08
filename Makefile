@@ -53,9 +53,7 @@ define COMMENT
 
 comment-$(1):
 	@mkdir -p $(dist_dir)
-	find $(target_dir)/$(1) -type f -name "*.*" -not -path "$(target_dir)/$(1)/.git/*" \
-	| xargs -L 127 ./bin/extract-comment.rb \
-	> $(dist_dir)/$(1)-comments.txt
+	ruby ./bin/extract-comment.rb "$(target_dir)/$(1)" > "$(dist_dir)/$(1)-comments.txt"
 
 endef
 

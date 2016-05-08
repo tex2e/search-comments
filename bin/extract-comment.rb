@@ -67,9 +67,12 @@ end
 
 # --- main ---
 
-ARGV.each do |arg|
-  next unless File.exist?(arg)
+target_dir = ARGV[0] || 'target-data'
+target_files = Dir.glob("#{target_dir}/**/*.*").reject do |path|
+  File.directory?(path) || !File.exist?(path)
+end
 
+target_files.each do |arg|
   code_str = File.read(arg, encoding: 'UTF-8')
     .encode("UTF-16BE", "UTF-8", :invalid => :replace, :undef => :replace, :replace => '?')
     .encode("UTF-8")
