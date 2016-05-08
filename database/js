@@ -2393,7 +2393,6 @@ CPU PROFILER API
 CSS color specification match
 CSS color specification type (e.g., rgb)
 CSS properties which accept numbers but are not in units of "px".
-CUSTOM RULES the second argument of warning/invariant should be a literal string
 Cache a maximum of 20 nesting level indents.
 Cache aliases for a project because invoking buck just to list aliases that are highly unlikely to change is wasteful.
 Cache definitions by the resolved file path they were loaded from.
@@ -9356,7 +9355,6 @@ It's better to have it running at faster speed than jumping to the end.
 It's better to just leave the existing outline visible until the new results come in.
 It's better to use .match().
 It's common for client code to pass the same options into both recast.parse and recast.print, but the Printer doesn't need (and can be confused by) options.sourceFileName, so we null it out.
-It's easier to test some things this way
 It's expected DOT arrows.
 It's false route.
 It's fast, but is of unspecified quality.
@@ -17985,7 +17983,6 @@ This isn't ideal but realistically iterating through even a few hundred editors 
 This isn't quite as efficient as Q's implementation of denodeify, but it's considerably less code.
 This isn't strictly necessary (since all the information can be derived from the original event), but it makes our dashboard a little easier to process.
 This isn't strictly necessary, but keeps the cache as small as possible.
-This isn't useful in our test code
 This just makes things easier to debug for us.
 This kind of test is performed by the .containsDir() method.
 This kind of test is performed by the .containsFile() method.
@@ -19721,7 +19718,6 @@ We deal with groups in the next pass
 We decided not to allow and simply throw an error.
 We decided to go with this for now since it's fairly understandable behavior for the end-user and easy to "correct" (by dragging and dropping) if it's not the desired result.
 We define a connection between a faction and its ships.
-We define multiple components in test files
 We define our basic ship type.
 We define our faction type, which implements the node interface.
 We delete this global property so the window mouse listener gets recreated.
@@ -19748,7 +19744,6 @@ We do not support content retrieval for WebSockets at the moment.
 We do not want to emit a warning for this, though, as this will already be reported as resource loading failure.
 We do the first update...
 We don't actually have a store here, we're just using the actions/dispatcher as a roundabout way of calling methods on the server so we can just merge that stuff into this class (after removing extra logic, etc).
-We don't care to do this
 We don't control this item's serialization so no use in storing the size on it.
 We don't currently support accessors nor proxies.
 We don't have `all` collection in NodeJS
@@ -20068,7 +20063,6 @@ We'll just create it.
 We'll just report that the repository state changed, which should trigger a full client refresh.
 We'll need a version of findHgRepository which is aware of remote paths.
 We'll normalize this here so that /bla/ passes PropTypes.object.
-We'll override a few rules and then enable some React specific ones.
 We'll use this to ensure that an old version is not cached when it is reallocated again.
 We're already fetching or have all the elements so noop
 We're assuming that snapshots can only be added.
@@ -20080,7 +20074,6 @@ We're probably calling from enqueueCallback.
 We're recursing automatically into (real or virtual) child nodes without changing binding contexts.
 We're running in a browser.
 We're specifically looking for exports.
-We're stricter than the default config, mostly.
 We're too late and there's a new generation of tiles being loaded.
 We're using a lockfile with an artificially old date, so make it use that instead of ctime.
 We're using the "flipnegate" flag here, which tells minimatch to set the "negate" for our information, but still report whether the core pattern was a hit or a miss.
