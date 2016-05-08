@@ -72,15 +72,15 @@ target_files = Dir.glob("#{target_dir}/**/*.*").reject do |path|
   File.directory?(path) || !File.exist?(path)
 end
 
-target_files.each do |arg|
-  code_str = File.read(arg, encoding: 'UTF-8')
+target_files.each do |file|
+  code_str = File.read(file, encoding: 'UTF-8')
     .encode("UTF-16BE", "UTF-8", :invalid => :replace, :undef => :replace, :replace => '?')
     .encode("UTF-8")
 
   comments = []
-  if arg =~ /\.(c|cpp|h|hpp|java|cs|php|js|go)$/
+  if file =~ /\.(c|cpp|h|hpp|java|cs|php|js|go)$/
     comments = extract_c_comment(code_str)
-  elsif arg =~ /\.(sh|py|rb|coffee)$/
+  elsif file =~ /\.(sh|py|rb|coffee)$/
     comments = extract_sh_comment(code_str)
   else
     next
@@ -89,6 +89,6 @@ target_files.each do |arg|
   next if comments.empty?
 
   # write result to stdin
-  puts "  =====#{arg}=====\n"
+  puts "  =====#{file}=====\n"
   puts "#{comments.join("\n")}\n"
 end
