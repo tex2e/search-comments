@@ -8,12 +8,12 @@ RegExp.escape = function(string) {
   return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
 };
 
-var MIN_SEARCH_CHARS = 5;
+var MIN_SEARCH_CHARS = 1;
 
 var CommentRow = React.createClass({
   render: function() {
     var comment = this.props.comment;
-    var searchWords = this.props.match;
+    var searchWords = this.props.match || [];
 
     for (var i = 0; i < searchWords.length; i++) {
       comment = comment.replace(
@@ -39,18 +39,35 @@ function isMatched(str, words) {
 }
 
 var CommentTable = React.createClass({
+  addRowNum: function () {
+    this.props.changeRowNum(
+      this.props.maxRowNum + 100
+    );
+  },
   render: function () {
-    var interactive = (this.props.filterText.length >= MIN_SEARCH_CHARS);
-    var searchWords = this.props.filterText.split(" ") || [""];
+    var filterText = this.props.filterText
+      .replace(/\s+/g, ' ') // squeeze whitespace
+      .trim();              // strip
+    if (filterText.length < MIN_SEARCH_CHARS) return (<table></table>);
 
+    var searchWords = filterText.split(" ");
+    var maxRowNum = this.props.maxRowNum;
     var rows =
       this.props.comments.filter(function (comment) {
-        if (!interactive) return false;
         return isMatched(comment, searchWords);
       })
+      .slice(0, maxRowNum)
       .map(function (comment) {
         return (<CommentRow comment={comment} key={comment} match={searchWords} />);
       });
+
+    if (rows.length >= maxRowNum) {
+      rows.push(
+        <tr>
+          <td><button onClick={this.addRowNum} key={'more...'}>more...</button></td>
+        </tr>
+      );
+    }
 
     return (
       <table>
@@ -85,10 +102,16 @@ var SearchBar = React.createClass({
 
 var FilterableCommentTable = React.createClass({
   getInitialState: function () {
-    return { filterText: '' };
+    return {
+      filterText: '',
+      maxRowNum: 100
+    };
   },
   handleUserInput: function (filterText) {
-    this.setState({ filterText: filterText });
+    this.setState({ filterText: filterText, maxRowNum: 100 });
+  },
+  changeMaxRowNum: function (maxRowNum) {
+    this.setState({ maxRowNum: maxRowNum });
   },
   render: function () {
     return (
@@ -100,6 +123,8 @@ var FilterableCommentTable = React.createClass({
         <CommentTable
           comments={this.props.comments}
           filterText={this.state.filterText}
+          maxRowNum={this.state.maxRowNum}
+          changeRowNum={this.changeMaxRowNum}
         />
       </div>
     );
