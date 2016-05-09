@@ -54,15 +54,30 @@ def extract_c_comment(code_string):
     comments = list(map(split_sentence, comments))
     comments = flatten(comments)
     comments = list(filter(comment_select_filter, comments))
-
     return comments
 
 def extract_sh_comment(code_string):
-    pass
+    comment_pattern = re.compile(r"""
+        # single line comment
+        (?:
+            \s+      # extra whitespace
+            \#[^\n]+ # comment
+        )+
+    """, re.X)
+    comments = comment_pattern.findall(code_string)
+    comments = [x.strip() for x in comments]
+    comments = [re.sub(r"^#+", "", x) for x in comments] # remove "#"
+    comments = [re.sub(r"\n\s*(\#[ \t]*)?", " ", x) for x in comments] # remove "\n" or "\n #"
+    comments = [x.strip() for x in comments]
+    comments = list(map(split_sentence, comments))
+    comments = flatten(comments)
+    comments = list(filter(comment_select_filter, comments))
+    return comments
 
 for filename in glob.iglob('%s/**/*.*' % target_dir, recursive=True):
     with open(filename, 'r') as f:
-        code_str = f.read()
+        code_str = str(f.read())
+
         comments = []
         c_lang_ext = re.compile(r"\.(c|cpp|h|hpp|java|cs|php|js|go)$")
         sh_lang_ext = re.compile(r"\.(sh|py|rb|coffee)$")
