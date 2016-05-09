@@ -63,8 +63,8 @@ var CommentTable = React.createClass({
 
     if (rows.length >= maxRowNum) {
       rows.push(
-        <tr>
-          <td><button onClick={this.addRowNum} key={'more...'}>more...</button></td>
+        <tr key="more...">
+          <td><button className="btn btn-default" onClick={this.addRowNum}>more...</button></td>
         </tr>
       );
     }
