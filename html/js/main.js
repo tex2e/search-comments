@@ -8,19 +8,30 @@ RegExp.escape = function(string) {
   return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
 };
 
+String.prototype.splice = function(idx, rem, str) {
+    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+};
+
 var MIN_SEARCH_CHARS = 1;
 
 var CommentRow = React.createClass({
   render: function() {
     var comment = this.props.comment;
     var searchWords = this.props.match || [];
+    var currentPos = 0;
+    var boldBegin = "<b>";
+    var boldEnd = "</b>";
 
+    // change words into bold
     for (var i = 0; i < searchWords.length; i++) {
-      comment = comment.replace(
-        new RegExp(RegExp.escape(searchWords[i].replace('/', '')), "i"),
-        "<b>$&</b>"
-      );
+      var searchWord = searchWords[i];
+      var pos = comment.toLowerCase().indexOf(searchWord, currentPos);
+      comment = comment
+        .splice(pos, 0, boldBegin) // insert <b>
+        .splice(pos + boldBegin.length + searchWord.length, 0, boldEnd); // insert </b>
+      currentPos = pos + boldBegin.length + searchWord.length + boldEnd.length; // update currentPos
     }
+
     return (
       <tr>
         <td dangerouslySetInnerHTML={{__html: comment}}></td>
