@@ -70,7 +70,7 @@ var CommentTable = React.createClass({
     }
 
     return (
-      <table>
+      <table className={"table"}>
         <tbody>
           {rows}
         </tbody>
@@ -87,7 +87,7 @@ var SearchBar = React.createClass({
   },
   render: function () {
     return (
-      <form>
+      <form className={"form-inline"}>
         <input
           type="text"
           placeholder="Search..."
