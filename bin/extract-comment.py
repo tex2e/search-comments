@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import os
 import glob
 import re
 from itertools import chain
@@ -75,8 +76,16 @@ def extract_sh_comment(code_string):
     return comments
 
 for filename in glob.iglob('%s/**/*.*' % target_dir, recursive=True):
-    with open(filename, 'r') as f:
-        code_str = str(f.read())
+    if os.path.isdir(filename):
+        continue
+    if not os.path.isfile(filename):
+        continue
+
+    with open(filename, 'r', encoding='utf-8') as f:
+        try:
+            code_str = f.read()
+        except Exception as e:
+            pass
 
         comments = []
         c_lang_ext = re.compile(r"\.(c|cpp|h|hpp|java|cs|php|js|go)$")
