@@ -1,29 +1,27 @@
-An example demonstrates the basic functionality:
-Any channel subscriptions which existed prior to disconnecting will automatically resubscribe.
-App.cable.connect()
 App.cable.disconnect()
-Called when the subscription has been terminated by the server
-Called when the subscription is ready for use on the server
-Called when there's incoming data on the websocket for this channel
-Encapsulate the cable connection held by the consumer.
-For more details on how you'd configure an actual channel subscription, see ActionCable.Subscription.
-Internal class, not intended for direct user manipulation.
-It provides a number of callbacks and a method for calling remote procedure calls on the corresponding Channel instance on the server side.
-Like iferr, but also catches errors thrown from `succ` and passes to `fail`
-Once established, the ActionCable.ConnectionMonitor will ensure that its properly maintained through heartbeats and checking for stale updates.
-Perform a channel action with the optional data passed as an attribute
-Prints errors when one is passed, or does nothing otherwise ex: thing.save printerr
-Server::Connections::BEAT_INTERVAL * 2 (missed two pings)
-The "AppearanceChannel" name is automatically mapped between the client-side subscription creation and the server-side Ruby class name.
-The following example shows how this can be setup:
-The object will have an `willAttemptReconnect` property which says whether the client has the intention of attempting to reconnect.
-The second parameter is a hash that'll get JSON encoded and made available on the server in the data parameter.
-This is an internal class not intended for direct user manipulation.
-This is how the server component would look:
-To disconnect from the server, call
-When a consumer is created, it automatically connects with the server.
 and to restart the connection:
 def away current_user.away end end
-def unsubscribed current_user.disappear end
-needs double arrow
+To disconnect from the server, call
 revival reconnections if things go astray.
+def unsubscribed current_user.disappear end
+This is how the server component would look:
+An example demonstrates the basic functionality:
+The following example shows how this can be setup:
+Encapsulate the cable connection held by the consumer.
+Server::Connections::BEAT_INTERVAL * 2 (missed two pings)
+Internal class, not intended for direct user manipulation.
+Called when the subscription is ready for use on the server
+Called when the subscription has been terminated by the server
+Called when there's incoming data on the websocket for this channel
+This is an internal class not intended for direct user manipulation.
+Perform a channel action with the optional data passed as an attribute
+When a consumer is created, it automatically connects with the server.
+Like iferr, but also catches errors thrown from `succ` and passes to `fail`
+Prints errors when one is passed, or does nothing otherwise ex: thing.save printerr
+Any channel subscriptions which existed prior to disconnecting will automatically resubscribe.
+For more details on how you'd configure an actual channel subscription, see ActionCable.Subscription.
+The second parameter is a hash that'll get JSON encoded and made available on the server in the data parameter.
+The object will have an `willAttemptReconnect` property which says whether the client has the intention of attempting to reconnect.
+The "AppearanceChannel" name is automatically mapped between the client-side subscription creation and the server-side Ruby class name.
+It provides a number of callbacks and a method for calling remote procedure calls on the corresponding Channel instance on the server side.
+Once established, the ActionCable.ConnectionMonitor will ensure that its properly maintained through heartbeats and checking for stale updates.
