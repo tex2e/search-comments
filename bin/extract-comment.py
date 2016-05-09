@@ -5,6 +5,9 @@ import glob
 import re
 from itertools import chain
 
+if sys.version_info < (3, 5):
+    raise RuntimeError("must use python 3.5")
+
 target_dir = sys.argv[1]
 
 def count_chars(text, chars):
