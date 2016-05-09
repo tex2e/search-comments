@@ -1,5 +1,4 @@
 (We shouldn't need to resolve dependencies for libraries loaded from system directories: the dynamic linker is smart enough to do it on its own there.)
-**WARNING:** This method is *experimental* and should only be used when no other option is available.
 *key is a run of 0xffs.
 - Modules that remove all persistent data (temp files, etc) when the catalyst instance is destroyed.
 - Retained (static) in-memory data that may contain user info or content.
@@ -15,6 +14,278 @@
 4 is kinda arbitrary, but the default of 10 seems really high for an average View.
 6 MB in bytes
 6) Launching developers settings view  This class automatically monitors the state of registered views and activities to which they are bound to make sure that we don't display overlay or that we we don't listen for sensor events when app is backgrounded.
+@deprecated Prefer passing a module-specific error code to JS.
+@param array the array to convert.
+@param bf the probabilistic size ratio between adjacent link lists in the skip list.
+@param bitsPerKey the number of bits per key for bloom filer.
+@param blob binary object to be inserted
+@param blockCacheCompressedNumShardBits the number of shard bits.
+@param blockCacheCompressedSize of compressed block cache.
+@param blockCacheNumShardBits the number of shard bits.
+@param bridge the ReactBridge instance that has just been created
+@param bundleEntry The path to the bundle entry file (e.g. index.ios.bundle).
+@param cacheIndexAndFilterBlocks and filter blocks should be put in block cache.
+@param canvas the canvas to restore
+@param canvas the canvas to set up
+@param columnFamilyDescriptor column family to be created.
+@param columnFamilyOptions options to be used with column family.
+@param compactionStyle Compaction style.
+@param comparator java instance.
+@param compressionType Compression Type.
+@param config the configuration of the animation for view addition/removal/update.
+@param config the mem-table config.
+@param config the table format config.
+@param context - application context.
+@param context Application context
+@param context the ReactContext of the application
+@param count the number of hash buckets used in the hash skiplist memtable.
+@param count the number of hash buckets.
+@param db_path Path to store data to.
+@param db_path path to database.
+@param enabled whether layout animation is enabled or not
+@param error will be called if there was an error processing the animation
+@param expandedCompactionFactor the maximum number of bytes in all compacted files.
+@param fairness RateLimiter accepts high-pri requests and low-pri requests.
+@param file File or directory to delete
+@param flag a boolean flag to specify whether to disable write-ahead-log on writes.
+@param fullScanMode boolean value indicating if full scan mode shall be enabled.
+@param handle The address of the underlying native object.
+@param height height to set.
+@param histData Histogram data.
+@param histType Histogram type.
+@param host The host that the HMRClient should communicate with.
+@param inplaceUpdateNumLocks the number of locks used for inplace updates.
+@param inplaceUpdateSupport true if thread-safe inplace updates are allowed.
+@param isNativeExopackageEnabled - whether native exopackage feature is enabled in the build.
+@param key the key retrieve the value.
+@param key the key to retrieve the value.
+@param key the specified key to be inserted.
+@param key the specified key to be merged.
+@param keys List of keys for which values need to be retrieved.
+@param keys of keys for which values need to be retrieved.
+@param keysAndValues keys and values, interleaved
+@param logDistribution - boolean parameter indicating if number of entry distribution shall be logged.
+@param maxBytesForLevelBase maximum bytes for level base.
+@param maxGrandparentOverlapFactor maximum bytes of overlaps in "grandparent" level.
+@param maxLogFileSize the maximum size of a info log file.
+@param maxManifestFileSize the size limit of a manifest file.
+@param maxMemCompactionLevel Unused.
+@param maxTableFilesSize the size limit of the total sum of table files.
+@param memtablePrefixBloomBits the number of bits used in the prefix bloom filter.
+@param memtablePrefixBloomProbes the number of hash probes per key.
+@param mimeType the MIME type of the file to create (image/*)
+@param msg the specified error message.
+@param multiplier the size ratio between a level-(L+1) file and level-L file.
+@param n use the first n bytes of a key as its prefix.
+@param nativeHandle The native handle of the C++ RocksDB object
+@param numFiles soft limit on number of level-0 files.
+@param numFiles the hard limit of the number of level-0 files.
+@param numLevels the number of levels.
+@param offset offset within the byte array.
+@param opt Read options.
+@param options a map containing options.
+@param options map containing optional arguments: highAccuracy (boolean)
+@param options map containing optional arguments: timeout (millis), maximumAge (millis) and highAccuracy (boolean)
+@param outClippingRect output clipping rect should be written to this object.
+@param path the path to the RocksDB.
+@param path the path to the rocksdb.
+@param paths a list of strings where each describes a directory of a library.
+@param platform The platform in which HMR updates will be enabled.
+@param port The port that the HMRClient should communicate with on the host.
+@param position the position of the selected item
+@param ratio the hash table ratio.
+@param reactContext
+@param readOnly boolean value indicating if database if db is opened read-only.
+@param refillPeriodMicros this controls how often tokens are refilled.
+@param reserved_bytes reserved size for WriteBatch
+@param shortName Name of library to find, without "lib" prefix or ".so" suffix
+@param shutdownTimeout Time in milli-seconds to wait for shutdown before killing the collection process.
+@param size the initial size of the vector.
+@param sourceCompactionFactor the maximum number of bytes in all source files to be compacted in a single compaction run.
+@param sparseness the index sparseness.
+@param statistics Reference of DB statistics.
+@param statsCallback Reference of statistics callback interface.
+@param statsCollectionIntervalInMilliSeconds Statistics collection time period (specified in milliseconds).
+@param statsCollectorInputList List of statistics collector input.
+@param str The string
+@param success will be called when the animation completes, or when the animation get interrupted.
+@param targetFileSizeBase the target size of a level-0 file.
+@param threshold - number of entries in a single bucket before logging starts.
+@param threshold maximum number of entries before SkipList is used.
+@param tickerCount Value of ticker type.
+@param tickerType Ticker type.
+@param timeout value of 0 results in no timeout
+@param ttl TTL to set for this column family.
+@param ttl time to live for new entries.
+@param uiViewOperationQueue interface for enqueueing UI operations
+@param url the URL to open
+@param value byte representation of InfoLogLevel.
+@param value the out-value to receive the retrieved value.
+@param value the value associated with the specified key.
+@param value the value to be merged with the current value for the specified key.
+@param view view that will be animated
+@param view view to update property
+@param waitForFlush boolean value indicating if the flush operations waits for termination of the flush process.
+@return Always returns 0.
+@return An iterator for the Write Batch contents
+@return Compaction style.
+@return Compression type.
+@return CompressionType instance.
+@return Java typed access to the data.
+@return LOG file contents as String.
+@return Map where key of map is the key passed by user and value for map entry is the corresponding value in DB.
+@return One of the LOAD_RESULT_XXX constants.
+@return Options instance assigned to this instance.
+@return Ordered array of supported ABIs
+@return Return true to steal motion event from the children and have the dispatched to this view, or return false to allow motion event to be delivered to children view
+@return The hash code for the Write Entry
+@return The length in bytes.
+@return The name of this comparator implementation
+@return The slice data.
+@return The string representation of the data.
+@return The unique id of this event.
+@return TtlDB instance.
+@return Whether JS bundle should be minified.
+@return Whether debug information about transitions should be displayed.
+@return Whether dev mode should be enabled in JS bundles.
+@return Whether element inspector is enabled.
+@return a CatalystInstance mock that has a default working ReactQueueConfiguration.
+@return a Checkpoint instance.
+@return a MessageQueueThreadImpl corresponding to Android's main UI thread.
+@return a boolean indicating whether paranoid-check is on.
+@return a byte array storing the value associated with the input key if any.
+@return a key used to determine which other events of this type this event can be coalesced with.
+@return a map of constants this module exports to JS.
+@return block cache size in bytes
+@return block restart interval
+@return block size in bytes
+@return boolean value indicating if WAL is disabled.
+@return boolean value indicating if key does not exist or might exist.
+@return boolean value indicating if sync is active.
+@return boolean value indicating if the flush operation waits for termination of the flush process.
+@return boolean value indicating if the iteration is halted.
+@return branching factor, the probabilistic size ratio between adjacent links in the skip list.
+@return column family name.
+@return currently set value for store index in file.
+@return entries per bucket threshold before SkipList is used.
+@return false if this Event can *never* be coalesced
+@return handle to the specified JS module for the CatalystInstance associated with this Context
+@return height corrected for rounding to pixels.
+@return if L0 index and filter blocks should be pinned to the block cache.
+@return if block cache is disabled
+@return if distrubtion of number of entries shall be logged.
+@return if index and filter blocks should be put in block cache.
+@return if true, an error is raised when the specified database already exists before open.
+@return if true, then data-sync is disabled.
+@return if whole key filtering is enabled
+@return instance of current FlushOptions.
+@return instance of iterator object.
+@return list of JS modules to register with the newly created catalyst instance.
+@return lookahead value
+@return map of string to int mapping of the expected commands
+@return maximum bytes of overlaps in "grandparent" level.
+@return maximum number of entries in one bucket before logging starts.
+@return maximum number of write buffers.
+@return methods callable from JS on this module
+@return numShardBits the number of shard bits.
+@return number of items in WriteBatch
+@return numerical property value.
+@return opacity expressed by one of PixelFormat constants
+@return size in bytes.
+@return size of compressed block cache.
+@return size of write buffer.
+@return the MessageQueueThread that owns the current Thread.
+@return the Snapshot assigned to this instance.
+@return the backup id.
+@return the current instance of SkipListMemTableConfig
+@return the currently configured format version.
+@return the currently set checksum type
+@return the currently set index type
+@return the hard limit of the number of level-0 file.
+@return the hash table ratio.
+@return the height of the skip list.
+@return the host to use when connecting to the bundle server from the host itself.
+@return the host to use when connecting to the bundle server.
+@return the hugePageTlbSize.
+@return the index of the given child, or -1 if the child doesn't exist in this node.
+@return the index sparseness.
+@return the initial size of the vector.
+@return the instance of the current Object.
+@return the instance of the current Options
+@return the instance of the current Options.
+@return the instance of the current WriteOptions.
+@return the instance of the specified module interface associated with this ReactContext.
+@return the maximum number of bytes in all compacted files.
+@return the maximum number of bytes in all source files to be compactedo.
+@return the maximum number of open files.
+@return the maximum size of the info log file.
+@return the name of the currently used table factory.
+@return the name of the currently-used memtable factory.
+@return the name of this event as registered in JS
+@return the name of this module.
+@return the name of this view manager.
+@return the number of bits per key used for the bloom filter.
+@return the number of bloom-bits.
+@return the number of buckets
+@return the number of files of this backup.
+@return the number of hash buckets
+@return the number of hash probes per key.
+@return the number of levels.
+@return the number of locks used for inplace update.
+@return the number of shard bits used in the block cache.
+@return the number of shards used for table cache.
+@return the path to the info log directory
+@return the reference of the current Options.
+@return the reference to the current HashLinkedListMemTableConfig.
+@return the reference to the current HashSkipListMemTableConfig.
+@return the reference to the current ReadOptions.
+@return the reference to the current comparator options.
+@return the reference to the current config.
+@return the reference to the current option.
+@return the size limit of a manifest file.
+@return the size limit of the total sum of table files.
+@return the size of the backup
+@return the size ratio between a level-(L+1) file and level-L file.
+@return the soft limit on the number of level-0 files.
+@return the specified size of the user key.
+@return the target size of a level-0 file.
+@return the thread pool queue length.
+@return the timestamp of the backup.
+@return the upper-bound of the total size of level-1 files in bytes.
+@return the view id for the view that generated this event
+@return the x position of the corresponding view on the screen, rounded to pixels
+@return the y position of the corresponding view on the screen, rounded to pixels
+@return true if missing column families shall be created automatically on open.
+@return true if the createIfMissing option is set to true.
+@return true if the createMissingColumnFamilies is set to true.
+@return true if there is no data, false otherwise.
+@return true if thread-safe inplace updates are allowed.
+@return whether an overlay showing current FPS should be shown.
+@return whether createReactContextInBackground has been called.
+@return whether the current Thread is also the Thread associated with this MessageQueueThread.
+@return whether this module supports web workers.
+@return whether we should enable dev mode when requesting JS bundles.
+@return whether we should enabled HMR when requesting JS bundles.
+@return whether we should request minified JS bundles.
+@return width corrected for rounding to pixels.
+@see IllegalArgumentException
+@see Options
+@see RateLimiterConfig
+@see ReactSyncHook
+@see org.rocksdb.RocksObject
+@throws IOException if file is not found.
+@throws IllegalArgumentException thrown if the size of passed keys is not equal to the amount of passed column family handles.
+@throws RocksDBException if an error happens in the underlying native code.
+@throws RocksDBException thrown if an error occurs within the native part of the library.
+@throws RocksDBException thrown if error happens in underlying native library.
+@throws RocksDBException thrown if operation was not performed successfully.
+@throws UnsatisfiedLinkError if there was an error loading native library
+@throws java.io.IOException if a filesystem operation fails.
+@throws java.lang.IllegalArgumentException if an invalid value is provided.
+@throws java.lang.IllegalArgumentException thrown on 32-Bit platforms while overflowing the underlying platform specific value.
+@throws java.lang.IllegalArgumentException when there is not a ttl value per given column family handle.
+@throws java.lang.InterruptedException thrown if Threads are interrupted.
+@throws org.rocksdb.RocksDBException if iterator cannot be retrieved from native-side.
 A CSS Node.
 A CompactionFilter allows an application to modify/delete a key-value at the time of compaction.
 A FrameLayout that allows you to access the result of the last time its hierarchy was drawn.
@@ -129,6 +400,8 @@ An event representing the start, end or movement of a touch.
 An example of this would be installing custom functionality into the JavaScriptCore context.
 An exception caused by JS requesting the UI manager to perform an illegal view operation.
 An illegal argument Exception caused by an argument passed from JS.
+An immutable reference to the value of the C++ pointer pointing to some underlying native RocksDB C++ object.
+An mutable reference to the value of the C++ pointer pointing to some underlying native RocksDB C++ object.
 An optimized version of manageChildren that is used for initial setting of child views.
 And we apply the position
 And we recursively call the layout algorithm for this child
@@ -167,11 +440,13 @@ As InfoLogLevel is set to FATAL_LEVEL, here we expect the log content to be empt
 As a result, incorrect use of this function may cause a memory leak.
 As a result, this approach is inefficient because of layout passes occurring on every frame.
 As all batches are executed as a single runnable on the event queue this should always be empty, but that calling architecture is an implementation detail.
+As developers cannot construct their own DirectSlice objects through this, they are not creating underlying C++ DirectSlice objects, and so there is nothing to free (dispose) from Java.
 As soon as that fact no longer holds, this method will need to be fixed.
 As this should only be the case in dev mode we leave it as it is.
 Ask the JVM to load for us.
 Assuming no other views have been created, the root view will have tag 1, Text tag 2, and RawText tag 3.
 Asynchronous task that cleans up cache dirs (internal and, if available, external) of cropped image files.
+At present we just permit an overriding Java class to wrap a C++ implementation
 At the end of the traversal algorithm we expect to reach a special type of the node: PropsAnimatedNode that is then responsible for calculating property map which can be sent to native view hierarchy to update the view.
 At the same time we disallow receiving lifecycle events for this wrapper instances.
 At this point we know the final size and margin of the element.
@@ -186,8 +461,10 @@ BackupEngine allows you to backup and restore the database  Be aware, that `new 
 Base APK has not been updated since we donwloaded JS, but if app is using exopackage it may only be a single dex that has been updated.
 Base Activity for React Native applications.
 Base class for Catalyst native modules whose implementations are written in Java.
+Base class for a Map whose keys and values are stored in native code (C++).
 Base class for all Animated.js library node types that can be created on the "native" side.
 Base class for all Env implementations in RocksDB.
+Base class for an array whose members are stored in native code (C++).
 Base class for comparators which will receive ByteBuffer based access via org.rocksdb.DirectSlice in their compare method implementation.
 Base class for different types of animation drivers.
 Base class for inline image spans.
@@ -239,6 +516,7 @@ Callback for when we receive the ownership hierarchy in native code.
 Callback function to get histogram values.
 Callback function to get ticker values.
 Callback interface provided to StatisticsCollector.
+Called from JNI to construct a new Java DirectSlice without an underlying C++ object set at creation time.
 Called from UI thread.
 Called from the main thread after a UI batch has been applied to all root views.
 Called in case when animation was cancelled
@@ -418,6 +696,12 @@ Delete everything except the latest backup
 Delete files in libsDir that we don't provide or that are out of date.
 Delete the first backup
 Delete the old libs directory if we don't need it.
+Deletes underlying C++ compaction pointer.
+Deletes underlying C++ comparator pointer.
+Deletes underlying C++ filter pointer.
+Deletes underlying C++ handler pointer.
+Deletes underlying C++ object pointer.
+Deletes underlying C++ slice pointer.
 Denoting a finally situation
 Deprecated.
 Destroy this React instance and the attached JS context.
@@ -458,6 +742,7 @@ Don't send same text changes
 Don't show the dialog if the host is paused.
 Don't use this action identifier
 Don't use webView.getUrl() here, the URL isn't updated to the new value yet in callbacks like onPageFinished
+Dont release C++ Snapshot pointer.
 Drops the column family identified by columnFamilyName.
 Dummy implementation of storage module, used for testing
 END_GENERATED
@@ -602,6 +887,8 @@ Get this node's flex direction, as defined by style.
 Get this node's flex, as defined by style.
 Get this node's height, as defined in the style.
 Get this node's justify content, as defined by style.
+Get this node's margin, as defined by style + default margin.
+Get this node's padding, as defined by style + default padding.
 Get this node's position bottom, as defined by style.
 Get this node's position left, as defined by style.
 Get this node's position right, as defined by style.
@@ -712,6 +999,7 @@ If some custom handling of this method apply for the view, it should be called a
 If specified with non-zero value, log file will be rolled if it has been active longer than `log_file_time_to_roll`.
 If step is 0 (unset) we default to this total number of steps.
 If that Looper was running on a different Thread than the current Thread, also waits for the last message being processed to finish and the Thread to die.
+If the C++ instance is referenced after this is called, a NullPointerException will be thrown.
 If the action is dismiss, year, month and date are undefined.
 If the app uses additional views or modules besides the default ones, add more packages here.
 If the application-supplied configuraiton does not specify an animation definition for this types, or if the animation definition is invalid, returns null.
@@ -721,6 +1009,7 @@ If the current log file is larger than `max_log_file_size`, a new info log file 
 If the current log file is larger than this size, a new info log file will be created.
 If the current timeout does not equal the passed in timeout, we need to clone the existing client and set the timeout explicitly on the clone.
 If the existing Dialog is currently up, we may need to redraw it or we may be able to update the property without having to recreate the dialog
+If the file name of a stack frame is numeric (+ ".js"), we assume it's a lazily injected module coming from a "random access bundle".
 If the flex share of remaining space doesn't meet min/max bounds, remove this child from flex calculations.
 If the format is invalid, this method will return null.
 If the host activity is paused, the frame callback may not be currently posted.
@@ -775,6 +1064,7 @@ If we're in the middle of a batch, the change will automatically be dispatched a
 If you add new data to the DB and try creating a new backup now, the database will diverge from backups 4 and 5 and the new backup will fail.
 If you implement RootView you need to call handleTouchEvent from onTouchEvent and onInterceptTouchEvent.
 If you manually call dispose on the Java object, the native object will be deleted synchronously on that thread.
+If you manually call resetNative() on the Java object, the C++ object will be deleted synchronously on that thread.
 If you need this use GuardedResultAsyncTask instead.
 If you want to builder full filter, it needs to be set to false.
 If you want to control the thread and timing of the destructor, you should call resetNative() explicitly.
@@ -820,7 +1110,7 @@ In that case local JS executor should be used.
 In that case native modules could be in a bad state so we don't want to call anything on them.
 In that case the latter will win i.e. the latter will overwrite the former.
 In that case there is no point in fetching the bundle from device as remote executor will have to do it anyway.
-In that case, no *TextChanged events should be triggered.
+In that case, no TextChanged events should be triggered.
 In that case, onLayout for this View type must *not* call layout on its children.
 In that case, the backup will also include log files corresponding to live memtables.
 In that case, the caller is responsible for providing a correct LD_LIBRARY_PATH.
@@ -846,6 +1136,7 @@ Input type password defaults to monospace font, so we need to re-apply the font
 Insertion into a queue
 Inserts multiple (key, value) pairs.
 Inspired by Android ColorDrawable.
+Instantiating CookieManager in KitKat+ will load the Chromium task taking a 100ish ms so we do it lazily to make sure it's done on a background thread as needed.
 Instead it gets inflated using computed position and size values by CSSNode hierarchy.
 Instead onLayout will be invoked as normal and it is the View instance's responsibility to properly call layout on its children.
 Instead we use dimensions of the child view (dimensions has been set in layouting process) so that size of this view match the size of the view it wraps.
@@ -968,6 +1259,7 @@ JS traces return the full path to the file here, while Java traces only return t
 JSTouchDispatcher handles dispatching touches to JS from RootViews.
 JavaScript ListView implementation rely on getting correct scroll offset.
 JavaScript executor that delegates JS calls processed by native code back to a java version of the native executor interface.
+Just a Java wrapper around EmptyValueCompactionFilter implemented in C++
 Just keep the messages from one thread
 Keep in mind that all JS remote method calls and script load calls are asynchronous and you should not expect them to return results immediately.
 Keep in sync with ReactIOSTagHandles JS module - see that file for an explanation on why the increment here is 10
@@ -1103,6 +1395,9 @@ Normally value will be from 0..1 range, but for spring animation it can slightly
 Not configurable.
 Not implemented yet.
 Not on an Android system.
+Note that developers should call WriteOptions.dispose() to release the c++ side memory before a WriteOptions instance runs out of scope.
+Note that dispose() must be called before an Options instance become out-of-scope to release the allocated memory in c++.
+Note that dispose() must be called before this instance become out-of-scope to release the allocated memory in c++.
 Note that since this mem-table representation relies on the key prefix, it is required to invoke one of the usePrefixExtractor functions to specify how to extract key prefix given a key.
 Note that the block size specified here corresponds to uncompressed data.
 Note that the following types of modules do not need to be cleaned here: - Modules whose user data is kept in memory in non-static fields, assuming the app uses a separate instance for each viewer context.
@@ -1159,7 +1454,11 @@ Only set the text if it is up to date.
 Only show the first and most actionable one.
 Open database again.
 Open empty database.
+Open the database using a C++ Comparator
 Open the database using a Java Comparator
+Open the database using the C++ BytewiseComparatorImpl and test the results against our Java BytewiseComparator
+Open the database using the C++ BytewiseComparatorImpl and test the results against our Java DirectBytewiseComparator
+Open the database using the C++ ReverseBytewiseComparatorImpl and test the results against our Java ReverseBytewiseComparator
 Open the database using the Java BytewiseComparator and test the results against another Java BytewiseComparator
 Open the database using the Java DirectBytewiseComparator and test the results against another Java DirectBytewiseComparator
 Open the database using the Java ReverseBytewiseComparator and test the results against another Java ReverseBytewiseComparator
@@ -1183,6 +1482,7 @@ Override this method to provide extra native modules to be loaded before the app
 POJO to hold the output of the measure function.
 Package defining basic modules and view managers.
 Package defining core framework modules (e.g. UIManager).
+Package-private class which provides java api to access c++ WriteBatchInternal.
 Parse a DebugServerException from the server json string.
 Partial merge will not be called if the list of values to merge is less than min_partial_merge_operands.
 Pass exception to onPostExecute() so it can be handled on the main thread
@@ -1202,7 +1502,9 @@ Prefetches the given image to the Fresco image disk cache.
 Prefix extractor is used to specify how to extract the prefix given a key.
 Prepend our own SoSource for our own DSOs.
 Pretend at least one op was done in case we are running a benchmark that does not call FinishedSingleOp().
+Prevent the RocksDB object from attempting to delete the underly C++ DB object.
 Prevents the ViewGroup from dispatching the pressed state to it's children.
+Private C++ instance
 Private constructor to disallow instantiation
 Private constructor.
 ProGuard is surprisingly smart in this case and will keep a class if it detects a call to Class.forName() with a static string.
@@ -1451,12 +1753,14 @@ Simple type conversion methods for use in tests
 Simple utility class for manipulating colors, based on Fresco's DrawableUtils (https://github.com/facebook/fresco).
 Simplified version of constructManageChildrenErrorMessage that only deals with adding children views
 Simplified version of manageChildren that only deals with adding children views
+Since "wrapper" view position +dimensions are not managed by NativeViewHierarchyManager we need to ensure that the wrapper view is properly layed out as it dimension should be updated if the wrapped view dimensions are changed.
 Since Fresco needs to callback to the TextView that contains this, in the ViewManager, you must tell the Span about the TextView  Note: It borrows code from DynamicDrawableSpan and if that code updates how it computes size or draws, we need to update this as well.
 Since css layout step and ui updates can be executed in separate thread apart of setting x/y/width/height this is the recommended and thread-safe way of passing extra data from css node to the native view counterpart.
 Since genymotion runs in vbox it use different hostname to refer to adb host.
 Since native methods are invoked from a message queue executed on a single thread, it is save to allocate only one arguments object per method that can be reused across calls
 Since onCatalystInstanceDestroy happens on the UI thread, we don't want to also execute this callback on the native modules thread at the same time.
 Since properties are generated by React framework based on what has been updated each value in this map should either be interpreted as a new value set for a style property or as a "reset this property to default" command in case when value is null (this is a way React communicates change in which the style key that was previously present in a map has been removed).
+Since react-native only supports API level 16+ we don't have to worry about other cases.
 Since the two APIs don't share a common interface there's unfortunately some code duplication.
 Since these Exceptions are triggered by JS calls (and can be fixed in JS), a common way to handle one is to show a error dialog and allow the developer to change and reload JS.
 Since those children will then add their native children to this view, we now have ranges of native children that correspond to single unoptimized children.
@@ -1620,6 +1924,7 @@ Test without column family but with readOptions
 Tests basic properties, events and switching between spinner modes (which changes the used manager).
 Tests for TextInput.
 Text input type is numbered password, remove text password variation, add numeric one
+TextAlign + TextAlignVertical
 TextAlignVertical
 Thanks to ReactChoreographer all the operations from here are going to be executed *after* all the operations enqueued by UIManager as the callback type that we use for ReactChoreographer (CallbackType.NATIVE_ANIMATED_MODULE) is run after callbacks that UIManager use
 That is after user starts the gesture from a touchable view with a given reactTag, or when user drag finger back into the press activation area of a touchable view that have been activated before.
@@ -1716,9 +2021,11 @@ The position is set by the parent, but we need to complete it with a delta compo
 The private construct used by a set of public static factory method.
 The prominent case where we don't have a Context is barebones dalvikvm instantiations.
 The purpose of this method is to return the index within the native children that corresponds to the **start** of the native children that belong to the given child.
+The ratio between the total size of level-(L+1) files and the total size of level-L files for all L.
 The real metrics include system decor elements (e.g. soft menu bar).
 The reason that this is a function that returns "this" instead of a constructor is to enable chaining of multiple similar calls in the future.
 The remaining available space that needs to be allocated
+The remaining space between the parent dimensions+padding and child dimensions+margin.
 The removeNodeFromParent call will cause all the view's children to be detached from their native parent.
 The returned iterator should be closed before this db is closed.
 The root view always assumes any view that was tapped wants the touch and sends the event to JS as such.
@@ -1730,10 +2037,12 @@ The shared library is extracted to a temp folder and loaded from there.
 The simplified version of get which returns a new byte array storing the value associated with the specified input key if any.
 The size of one block in arena memory allocation.
 The space between the beginning and the first element and the space between each two elements.
+The spinner relies on a measure + layout pass happening after it calls requestLayout().
 The state right after pause and right before resume are the basically the same so this enum is in terms of the forward lifecycle progression (onResume, etc).
 The supported custom fonts extensions are .ttf and .otf.
 The target file size for compaction.
 The temporary file will be registered for deletion on exit.
+The toolbar relies on a measure + layout pass happening after it calls requestLayout().
 The updates are applied in the order in which they are added to the WriteBatch.
 The upper-bound of the total size of level-1 files in bytes.
 The value is actually handled in NativeViewHierarchyOptimizer
@@ -1744,6 +2053,7 @@ Their contents remain in the OS buffers till the OS decides to flush them.
 Then Wrapping lists into sets to be order-independent.
 Then it is sufficient to add/subtract height of item at the "last index"
 Then wrapping lists into sets to be order-independent
+There are a 2 cases that we optimize for: 1) The visible item doesn't change between subsequent "onScroll" calls, in that case we don't need to calculate anything, just return the cached value 2) The next visible item will be the one that is adjacent to the item that we store the cached value for: index + 1 when scrolling down or index - 1 when scrolling up.
 There are cases where most lower levels would like to use quick compression algorithms while the higher levels (which have more data) use compression algorithms that have better compression but could be slower.
 There are separate ones for each direction because a JS to Java call can trigger a Java to JS call: this would cause a deadlock with a traditional mutex (maybe we should be using a reader- writer lock but then we'd have to worry about starving the destroy call).
 There are three kind of children, non flexible, flexible and absolute.
@@ -1764,6 +2074,7 @@ This SoSource did not load the library, but verified that the system loader will
 This SoSource doesn't know how to provide the given library.
 This SoSource loaded the given library.
 This allows ProGuard to strip that class and its dependencies in release builds.
+This allows to use the rocksjni default Options instead of the c++ one.
 This also protects the database from filling up the disk cache and becoming malformed (endTransaction() calls will throw an exception, not rollback, and leave the db malformed).
 This also removes the nasty side effect that EditTexts have, which is that focus is always maintained on one of the EditTexts.
 This annotation is meant to be used for a group of similar properties.
@@ -1782,12 +2093,14 @@ This causes the parent to update its native children count.
 This check force a check right when intended.
 This check is potentially lighter-weight than invoking DB::Get().
 This class contains methods to retrieve the name and type of all methods and a way to set these properties without reflection.
+This class controls the behaviour of Java implementations of AbstractComparator  Note that dispose() must be called before a ComparatorOptions instance becomes out-of-scope to release the allocated memory in C++.
 This class doesn't allow doInBackground to return a results.
 This class helps in calculating "real" offset of row at specified index.
 This class is responsible for holding view manager property setters and is used in a process of updating views with the new properties set in JS.
 This class is set as the KeyListener for the underlying TextView It does two things 1) Provides the same answer to getInputType() as the real KeyListener would have which allows the proper keyboard to pop up on screen 2) Permits all keyboard input through
 This class is used to load the RocksDB shared library from within the jar.
 This class is used to verify that some JS integration tests have completed successfully.
+This class mimics the db/write_batch_test.cc in the c++ rocksdb library.
 This class relies on CookieManager to persist cookies to disk so cookies may be lost if the application is terminated before it syncs.
 This class will redirect *TextChanged calls to the listeners only in the case where the text is changed by the user, and not explicitly set by JS.
 This class will run all JNI call within separate android looper, thus you don't need to care about starting your own looper.
@@ -1806,12 +2119,15 @@ This drawable uses the size of a loaded image to determine the intrinsic size.
 This enables e.g. the dev menu.
 This enables incremental backups and avoids unnecessary data copies.
 This exception represents that error.
+This exception type is used to describe an internal error from the c++ rocksdb library.
 This exists so that CatalystInstance is able to set Exception handlers on the MessageQueueThreads it uses and it would not be super clean if the threads were configured, then passed to CatalystInstance where they are configured more.
 This factor controls the probabilistic size ratio between adjacent links in the skip list.
 This fairness parameter grants low-pri requests permission by fairness chance even though high-pri requests exist to avoid starvation.
 This flag is set to true when we set the text of the EditText explicitly.
+This function should only be called by Options.setMemTableConfig(), which will create a c++ shared-pointer to the c++ MemTableRepFactory that associated with the Java MemTableConfig.
 This implementation depends on the properties that 1) FrameCallbacks run after UI events have been processed in Choreographer.java 2) when we enqueue a runnable on the JS queue thread, it won't be called until after any previously enqueued JS jobs have finished processing  If JS is taking a long time processing events, then the UI events generated on the  UI thread can be coalesced into fewer events so that when the runnable runs, we don't overload JS with a ton of events and make it get even farther behind.
 This interface should be implemented be native ViewGroup subclasses that can represent more than a single react node.
+This is a direct port of various C++ tests from db/comparator_db_test.cc and some code to adapt it to RocksJava
 This is a programmer error
 This is a recursive DFS since view the entire tree must be parsed until the target is found.
 This is a sane limit to protect the user from the app storing too much data in the database.
@@ -1829,6 +2145,7 @@ This is cheap as everything else is shared under the hood.
 This is class represents java version of native js executor interface.
 This is different from the FPS above since JS rendering is async.
 This is done by adding node to the BFS queue only if all its "predecessors" have already been visited.
+This is exposed from Java only because we don't want to add a C++ networking library dependency  NB: The caller is responsible for deleting the file specified by outFileName when they're done with it.
 This is handled automatically in js by checking if there is a listener on the momentum events.
 This is left as an exercise for the reader.
 This is less expensive than removing the text listeners and adding them back again after the text change is completed.
@@ -1859,6 +2176,7 @@ This is unlike all other calls on this class where we assume all operations on t
 This is unsafe since we reuse the native memory so the underlying array/map is no longer valid.
 This is used as a fallback when no spacing has been set for a particular direction.
 This is used by android in certain places, such as text selection.
+This is used by disposeInternal to avoid double-free issues with the underlying C++ object.
 This is used in cases the bundle should be loaded from a custom path.
 This is used privately by the layout engine as a more efficient way to fetch direction-aware values by avoid extra method invocations.
 This is used so we don't get an event when changing the selection ourselves.
@@ -1914,6 +2232,7 @@ This needs to fill the entire window.
 This notifies any listening modules so they can do any necessary cleanup.
 This number is equal to the maximum number of linear search required after hash and binary search.
 This number specifies the number of keys (with the same userkey) that will be sequentially skipped before a reseek is issued.
+This object holds a native C++ member for hybrid Java/C++ objects.
 This occurs when the size of mEventsToDispatch is zero or one.
 This optimization avoids writing the delete to storage when appropriate.
 This optimization is important for view hierarchy depth (which can cause stack overflows during view traversal for complex apps), memory usage, amount of time spent during GCs, and time-to-display.
@@ -2092,6 +2411,7 @@ ViewManager for all shadowed ART views: Group, Shape and Text.
 Views will not be automatically recycled but they will be detached from native view hierarchy when scrolled offscreen.
 VisibleForTesting
 WARNING: Java APIs do not let us distinguish directories from symbolic links to directories.
+WARNING:** This method is *experimental* and should only be used when no other option is available.
 Wait before retrying.
 Wait for collectStatistics runnable to finish so that disposal of statistics does not cause any exceptions to be thrown.
 Wait for flush to finished.
@@ -2250,6 +2570,7 @@ add put records
 add zero byte value
 animation has completed, no more frames left
 as long as the env is not freed.
+as the scope of a static member equals to the scope of the problem, we let its c++ pointer to be disposed in its finalizer.
 atomic write
 attempt to copy the library from the Jar file to the temp destination
 attempt to read test data back from the WriteBatch by iterating with a handler
@@ -2425,6 +2746,7 @@ retrieve key value pair
 retrieve key value pair created before the snapshot was made
 reverse iterative access
 see reasoning for this check a few lines above
+set LIMIT to first + 1 so that we know how to populate page_info
 set or setException must only be called once.
 set snapshot in ReadOptions
 setting null to snapshot in ReadOptions leads to no Snapshot being used.
@@ -2447,6 +2769,8 @@ submit the callables
 swallow, no need to handle it here
 switchview because switch is a keyword
 taken from Libraries/Utilities/MessageQueue.js
+targetFileSizeMultiplier defines the size ratio between a level-(L+1) file and level-L file.
+targetFileSizeMultiplier defines the size ratio between a level-L file and level-(L+1) file.
 technically, width should never be negative, but there is currently a bug in
 test colors
 test param init
@@ -2456,6 +2780,7 @@ test same method with ReadOptions
 test that put fails in readonly mode
 test the round-tripability of keys written and read with the Comparator
 test the round-tripability of keys written and read with the DirectComparator
+the latest sequence number is 10 because (5 + 5) puts were written beforehand
 the latest sequence number is 5 because 5 puts were written beforehand
 then it's not successful, the output will indicate this
 there should be more than zero received log messages in debug level.

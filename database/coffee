@@ -16,6 +16,7 @@ Prints errors when one is passed, or does nothing otherwise ex: thing.save print
 Server::Connections::BEAT_INTERVAL * 2 (missed two pings)
 The "AppearanceChannel" name is automatically mapped between the client-side subscription creation and the server-side Ruby class name.
 The following example shows how this can be setup:
+The object will have an `willAttemptReconnect` property which says whether the client has the intention of attempting to reconnect.
 The second parameter is a hash that'll get JSON encoded and made available on the server in the data parameter.
 This is an internal class not intended for direct user manipulation.
 This is how the server component would look:

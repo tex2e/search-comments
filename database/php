@@ -30,7 +30,18 @@
 '" listed for update is not installed.
 '' as linkname
 '*' means to return all mailboxes.
-'**a ***b / **** *****
+'**a ***b / ****
+'ANGSTROM SIGN' (U+212B)
+'COMBINING RING ABOVE' (U+030A)
+'GREEK CAPITAL LETTER OMEGA' (U+03A9)
+'LATIN CAPITAL LETTER A WITH RING ABOVE' (U+00C5)
+'LATIN CAPITAL LETTER O WITH DIAERESIS' (U+00D6)
+'LATIN SMALL LETTER A WITH DIAERESIS' (U+00E4)
+'LATIN SMALL LETTER A WITH RING ABOVE' (U+00E5)
+'LATIN SMALL LETTER LONG S WITH DOT ABOVE' (U+1E9B)
+'LATIN SMALL LETTER LONG S WITH DOT ABOVE' (U+1E9B) the word 'hindi' using Devanagari characters:
+'LATIN SMALL LETTER O WITH DIAERESIS' (U+00F6)
+'LATIN SMALL LIGATURE FI' (U+FB01)
 'a' gzdeflated
 'e' is the base of the natural system of logarithms, or approximately 2.718282.
 'false' sets the parser to strictly parse strings into dates.
@@ -624,17 +635,11 @@
 (minimum normal double)
 (not implemented yet).
 * Boolean operand with all kinds of operands, swapping them over to make LHS/RHS order is irrelevent.
-* Create sample arrays * Test alpha, numeric (decimal, hex, octal) and special data * *
 * Include Point.inc to get at the Point class type
-* Language tags (and thus locale identifiers) are case insensitive.
 * My Doc Comment for B::privf
-* Neither the name of Google Inc.
 * Numeric strings with all kinds of operands, swapping them over to make LHS/RHS order is irrelevent.
-* Pollute the heap.
-* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 * See arrays.php for array creation and initialization This set of tests deals only with array-element access
-* The null or empty string obtains the "root" locale.
 * Two array types
 * Two non-numeric strings
 * a simple example of passing by reference
@@ -649,18 +654,17 @@
 * show that a new array is created and that the operand-arrays are unchanged
 * single-quote string literals
 * take an undefined parameter passed byRef, and pass it byRef where the underlying value is modified.
-** ************************************************************************** * Please change html_tables/html_table_gen.php instead and then         ** * run it in order to generate this file                                 ** **************************************************************************
 ** Doc comment for G
 ** Only valid on systems supporting the st_blksize type - other systems (e.g. Windows) return -1.
 ** has higher precedence than * and /
 ** has higher precedence than unary -
-******************** Private functions ********************
-******************** Private getters ********************
-******************** Private setters ********************
-******************** Protected functions ******************** This function should only be called once for framework (assuming you don't delete the framework from your repo).
-******************** Protected getters ********************
-******************** Public functions ******************** We may have to special case frameworks that don't use phpunit for their testing (e.g. ThinkUp)
-******************** Public setters ******************** ******************** Public getters ********************
+******************** Private functions
+******************** Private getters
+******************** Private setters
+******************** Protected functions  This function should only be called once for framework (assuming you don't delete the framework from your repo).
+******************** Protected getters
+******************** Public functions  We may have to special case frameworks that don't use phpunit for their testing (e.g. ThinkUp)
+******************** Public setters   Public getters
 *********************************************************** Base echoBase64
 *********************************************************** Base echoBoolean
 *********************************************************** Base echoDate
@@ -675,8 +679,8 @@
 *********************************************************** Base echoStruct
 *********************************************************** Base echoStructArray
 *********************************************************** Base echoVoid
-*********************************************************** GROUP B *********************************************************** GroupB echoStructAsSimpleTypes
-*********************************************************** GROUP C header tests *********************************************************** echoMeStringRequest echoMeStringRequest with endpoint as header destination, doesn't have to understand
+*********************************************************** GROUP B  GroupB echoStructAsSimpleTypes
+*********************************************************** GROUP C header tests  echoMeStringRequest echoMeStringRequest with endpoint as header destination, doesn't have to understand
 *********************************************************** GroupB echo2DStringArray
 *********************************************************** GroupB echoNestedArray
 *********************************************************** GroupB echoNestedStruct
@@ -684,7 +688,6 @@
 *********************************************************** echoMeStructRequest echoMeStructRequest with endpoint as header destination, doesn't have to understand
 *********************************************************** echoMeUnknown echoMeUnknown with endpoint as header destination, doesn't have to understand
 *********************************************************** output functions
-************************************************************************** *        THIS FILE IS AUTOMATICALLY GENERATED.
 - 1: RegexIterator::USE_KEY
 - Blacklist tests that are causing problems with this script running.
 - Decide whether proxy-based code needs to be solidified better or whether we should just add the frameworks to our repo officially.
@@ -751,12 +754,13 @@
 .tmp", "fileperms_variation3/fileperms*.tmp",  /* Testing Binary safe
 .tmp", "is_file_variation4/is_file*.tmp",  /* Testing Binary safe
 /* Boolean operand with all kinds of operands
-/* IEEE special values */ /* leading and trailing whitespace
+/* IEEE special values / /* leading and trailing whitespace
 /* NULL operand
 /* NULL operand with all kinds of operands
 /* NULL operand with all kinds of operands, swapping them over to make LHS/RHS order is irrelevent.
 /* Note: As opposed to defining constants using define(), constants defined using the const keyword must be declared at the top-level scope because they are defined at compile-time.
 /* Numeric strings with all kinds of operands
+/* See if return is allowed in any form in a generator function also yield on its own + yield in an expression
 /* Test all kinds of values to see which can be converted
 /* Two array types
 /* Two non-numeric strings
@@ -792,6 +796,7 @@
 0 will be considered as FALSE and removed in default callback
 0, 0 is the top left corner of the image.
 0: Do nothing
+0x95+0x5c in script, not somewhere else "
 1 - same as 0 but only byte-values with a frequency greater than zero are listed.
 1 Driver specific error code.
 1 Driver-specific error code.
@@ -815,6 +820,7 @@
 13 chunk, random
 14 Three should match
 15 Two should match
+16 + 4 (dynamic properties - always string)
 16 Four should match
 17 Should match
 18 Two should match
@@ -881,6 +887,1641 @@
 7: Closures et al
 8 Should not match
 9 Should not match
+@ is to suppress 'Property access is not allowed yet'
+@access public
+@accessible mixed   TRUE to allow accessibility, or FALSE.
+@add_empty  mixed   Add missing keys as NULL to the return value.
+@alias      mixed   A shorthand string that this archive can be referred to in phar stream wrapper access.
+@alias      mixed   Alias with which this Phar archive should be referred to in calls to stream functionality.
+@alias idn_to_utf8
+@allowable_tags mixed   Optional parameter to specify tags which should not be stripped.
+@args       mixed   The parameters to be passed to the class constructor as an array.
+@args       mixed   The parameters to be passed to the function, as an array.
+@args       mixed   The passed arguments to the function as an array, much like call_user_func_array() works.
+@array      mixed   The array or object to be iterated on.
+@author AlexanderC
+@class_name mixed   Name of an SplFileInfo derived class to use.
+@class_name mixed   The class name to use when openFile() is called.
+@class_name mixed   The class name to use.
+@cls        mixed   Classname or object (instance of the class) that contains the type constant.
+@cls        mixed   The class name being checked against.
+@cls        mixed   The class name, that contains the property.
+@cls        mixed   The interface name.
+@cls        mixed   The reflection to export.
+@cls_or_obj    mixed    An instance of a class or the name of a class.
+@cmp_function mixed   Function cmp_function should accept two parameters which will be filled by pairs of entries.
+@cmp_function mixed   The callback comparison function.
+@cmp_function mixed   The compare function used for the sort.
+@code       mixed   The Exception code.
+@compression mixed   Compression must be one of Phar::GZ, Phar::BZ2 to add compression, or Phar::NONE to remove compression.
+@compression mixed   This should be one of Phar::NONE for no whole-archive compression, Phar::GZ for zlib-based compression, and Phar::BZ2 for bzip-based compression.
+@compression_type mixed   One of Phar::GZ or Phar::BZ2, defaults to any compression.
+@constructor
+@context    mixed   A valid context resource created with stream_context_create().
+@copydoc Iterator::current
+@copydoc Iterator::key
+@copydoc Iterator::next
+@copydoc Iterator::rewind
+@copydoc Iterator::valid
+@count      mixed   Optional count of the limit.
+@data       mixed   An array with string keys containing the data to filter.
+@data       mixed   The data to associate with the current iterator entry.
+@data       mixed   The data to associate with the object.
+@dataProvider quickTestsProvider
+@defgroup Examples Example classes  The classes and interfaces in this group are contained as PHP code in the examples subdirectory of ext/SPL.
+@defgroup SPL Internal classes  The classes and interfaces in this group are contained in the c-code of ext/SPL.
+@defgroup ZendEngine Zend engine classes  The classes and interfaces in this group are contained in the c-code of PHP's Zend engine.
+@definition mixed   An array defining the arguments.
+@delimiter  mixed   The field delimiter (one character only).
+@delimiter  mixed   The optional delimiter parameter sets the field delimiter (one character only).
+@enclosure  mixed   The field enclosure character (one character only).
+@enclosure  mixed   The optional enclosure parameter sets the field enclosure (one character only).
+@entry      mixed   Path within an archive to the file to delete.
+@escape     mixed   The escape character (one character only).
+@escape     mixed   The field escape character (one character only).
+@expectedException RuntimeException
+@extension  mixed   By default, the extension is .tar.gz or .tar.bz2 for compressing a tar, and .tar for decompressing.
+@extension  mixed   For decompressing, the default file extension is .phar.tar.
+@extension  mixed   This parameter is used to override the default file extension for a converted archive.
+@fields     mixed   An array of values.
+@file_name  mixed   Path to the file.
+@filename   mixed   The file to read.
+@filename   mixed   The filename where the exception is thrown.
+@filename   mixed   The full url to retrieve a file.
+@filter     mixed   Filter the results to include only methods with certain attributes.
+@filter     mixed   The ID of the filter to apply.
+@filter     mixed   The optional filter, for filtering desired property types.
+@flags      mixed   Bit mask of the flags to set.
+@flags      mixed   Flags may be provided which will affect the behavior of some methods.
+@flags      mixed   Optional flag.
+@flags      mixed   Special flags, see RegexIterator::setFlags() for a list of available flags.
+@flags      mixed   The flags.
+@flags      mixed   The handling flags to set.
+@flags      mixed   The new ArrayObject behavior.
+@format     mixed   One of the file format constants available within the Phar class.
+@format     mixed   The specified format as described in the sprintf() documentation.
+@format     mixed   This should be one of Phar::TAR or Phar::ZIP.
+@func       mixed   The function name.
+@func       mixed   The function to reflect parameters from.
+@generated by docskel.php
+@guide /hack/callables/special-functions
+@guide /hack/collections/examples
+@guide /hack/generics/constraints
+@idx herp derp
+@index      mixed   An offset to check for.
+@index      mixed   The index being checked.
+@index      mixed   The index being set.
+@index      mixed   The index being unset.
+@index      mixed   The index to set for.
+@index      mixed   The index with the value.
+@index      mixed   The offset being checked.
+@index      mixed   The offset to assign the value to.
+@index      mixed   The offset to get the value from.
+@index      mixed   The offset to retrieve.
+@index      mixed   The offset to unset.
+@input      mixed   The input parameter accepts an array or an Object.
+@input      mixed   The new array or object to exchange with the current array.
+@internal  Abstract class
+@internal  An iterator implementation for iterating over a Pair.
+@internal  AsyncMysqlClient objects cannot be directly created.
+@it         mixed   The iterator that is being filtered.
+@it         mixed   The iterator to append.
+@iterator   mixed   The Iterator to limit.
+@iterator   mixed   The RecursiveIterator to be filtered.
+@iterator   mixed   The iterator being constructed from.
+@iterator   mixed   The iterator being used.
+@iterator   mixed   The recursive iterator to apply this regex filter to.
+@iterator   mixed   The traversable iterator.
+@iterator_class mixed   The classname of the array iterator to use when iterating over this object.
+@iterator_class string   Specify the class that will be used for iteration of the ArrayObject object.
+@length     mixed   If the length argument is given, writing will stop after length bytes have been written or the end of string is reached, whichever comes first.
+@line_pos   mixed   The zero-based line number to seek to.
+@lineno     mixed   The line number where the exception is thrown.
+@localname  mixed   Path that the file will be stored in the archive.
+@mainpage SPL - Standard PHP Library  SPL - Standard PHP Library  SPL is a collection of interfaces and classes that are meant to solve standard problems and implements some efficient data access interfaces and classes.
+@maxMemory  mixed   The maximum amount of memory (in bytes, default is 2 MB) for the temporary file to use.
+@max_len    mixed   The maximum length of a line.
+@maxlifetime mixed   Sessions that have not updated for the last maxlifetime seconds will be removed.
+@message    mixed   The Exception message to throw.
+@mode       mixed   Operation mode, see RegexIterator::setMode() for a list of modes.
+@mode       mixed   Optional mode.
+@mode       mixed   The mode for opening the file.
+@modifiers  mixed   The modifiers to get, which is from a numeric value.
+@name       mixed   Either a string containing the name of the class to reflect, or an object.
+@name       mixed   Name of the constant.
+@name       mixed   Name of the extension.
+@name       mixed   Name of the method being checked for.
+@name       mixed   Property name.
+@name       mixed   The method name to reflect.
+@name       mixed   The name of the constant being checked for.
+@name       mixed   The name of the function to reflect or a closure.
+@name       mixed   The name of the method.
+@name       mixed   The name of the property being reflected.
+@name       mixed   The name of the static property for which to return a value.
+@name       mixed   The property name.
+@name       mixed   The reflection to export.
+@name       mixed   The session name.
+@name       mixed  Name of the property being checked for.
+@name       string  Name of the method.
+@name       string  Name of the type constant.
+@name      string  Name of the type alias.
+@newval     mixed   The new value for the index.
+@newval     mixed   The new value to store at the index.
+@newvalue   mixed   The value to set.
+@note Internal classes that implement this interface can be used in a foreach construct and do not need to implement IteratorAggregate or Iterator.
+@note This is an engine internal interface which cannot be implemented in PHP scripts.
+@note This is an engine internal interface.
+@obj        mixed   If the property is non-static an object must be provided to change the property on.
+@obj        mixed   If the property is non-static an object must be provided to fetch the property from.
+@obj        mixed   The object being compared to.
+@obj        mixed   The object to add.
+@obj        mixed   The object to invoke the method on.
+@obj        mixed   The object to look for.
+@obj        mixed   The object to remove.
+@obj        mixed   The reflection to export.
+@object     mixed   The object to associate data with.
+@object     mixed   The object to look for.
+@object     mixed   The object to remove.
+@object     mixed   The object whose identifier is to be calculated.
+@observer   mixed   The SplObserver to attach.
+@observer   mixed   The SplObserver to detach.
+@offset     mixed   Optional offset of the limit.
+@offset     mixed   The filename (relative path) to modify in a tar or zip archive.
+@offset     mixed   The filename (relative path) to modify in the tar/zip archive.
+@offset     mixed   The offset.
+@open_mode  mixed   The mode in which to open the file.
+@operation  mixed   operation is one of the following: LOCK_SH to acquire a shared lock (reader).
+@options    mixed   Associative array of options or bitwise disjunction of flags.
+@param      mixed   The parameter name.
+@param      mixed   The parameter.
+@param    array   Array to look for an index in.
+@param    mixed   Default value to return if index is not found.
+@param    scalar  Index to check for.
+@param bool cut - If the cut is set to true, the string is always wrapped at or before the specified width.
+@param class_name name of class used with getFileInfo(), getPathInfo().
+@param class_name name of class used with openFile().
+@param cleanup - If true, code coverage collected information is destroyed.
+@param count : The total size of the container.
+@param getKeyAndValue : This is a function that, given the current index, returns the current key and value.
+@param int crypto_type - Setup encryption on the stream.
+@param int divisor - Number which divides the numerator.
+@param int numerator - Number to be divided.
+@param map The autoload map.
+@param mixed ...
+@param options - This is a bitmask that xdebug uses for options XDEBUG_CC_UNUSED and XDEBUG_CC_DEAD_CODE.
+@param root Root to be prepended to all paths in the map.
+@param throw              whether to throw or issue an error on failure.
+@param token : This is used to make sure that the iterator stops working once the container has been modified.
+@path       mixed   The path of the directory to be iterated over.
+@path       mixed   The path of the directory to traverse.
+@path       mixed   The path of the filesystem item to be iterated over.
+@pathto     mixed   Path within an archive to the file to delete.
+@position   mixed   The position to seek to.
+@position   mixed   The zero-based numeric position to seek to.
+@preg_flags mixed   The regular expression flags.
+@previous   mixed   The previous exception used for the exception chaining.
+@priority   mixed   The associated priority.
+@priority1  mixed   The priority of the first node being compared.
+@priority2  mixed   The priority of the second node being compared.
+@refl       mixed   The reflection to export.
+@regex      mixed   The regular expression to match.
+@ret        mixed   Setting to TRUE will return the export, as opposed to emitting it.
+@return        array    The resolved type structure for either a type constant or a type alias.
+@return     RecursiveIterator
+@return     array   An array of constants.
+@return     array  The parameters, as a ReflectionParameter object.
+@return     bool
+@return     bool    Returns TRUE on success or FALSE on failure.
+@return     bool    TRUE if it has the method, otherwise FALSE
+@return     bool   If parameters default value is constant, or NULL if a default value does not exist.
+@return     bool   Returns TRUE if the class is cloneable, FALSE otherwise.
+@return     bool   Returns TRUE if this is a trait, FALSE otherwise.
+@return     bool   Returns TRUE if this is an enum, FALSE otherwise.
+@return     bool   Returns TRUE on success or FALSE on failure.
+@return     bool   TRUE if a type is specified, FALSE otherwise.
+@return     bool   TRUE if it has the property, otherwise FALSE
+@return     bool   TRUE if it's a closure, otherwise FALSE
+@return     bool   TRUE if it's disable, otherwise FALSE
+@return     bool   TRUE if the constant is defined, otherwise FALSE.
+@return     bool   TRUE if the function is async, otherwise FALSE.
+@return     bool   TRUE if the function is generator, otherwise FALSE.
+@return     bool   TRUE if the function is variadic, otherwise FALSE
+@return     bool   TRUE if the method is a constructor, otherwise FALSE
+@return     bool   TRUE if the method is a destructor, otherwise FALSE
+@return     bool   TRUE if the method is abstract, otherwise FALSE
+@return     bool   TRUE if the method is final, otherwise FALSE
+@return     bool   TRUE if the method is private, otherwise FALSE
+@return     bool   TRUE if the method is protected, otherwise FALSE
+@return     bool   TRUE if the method is public, otherwise FALSE
+@return     bool   TRUE if the method is static, otherwise FALSE
+@return     bool   TRUE if the parameter is optional, otherwise FALSE
+@return     bool   TRUE if the parameter is variadic, otherwise FALSE
+@return     int     The current depth of the recursive iteration.
+@return     int     The maximum accepted depth, or FALSE if any depth is allowed.
+@return     int   A numeric representation of the modifiers.
+@return     int   Returns bitmask of modifier constants.
+@return     int   The ending line number of the user defined class, or FALSE if unknown.
+@return     int   The starting line number, as an integer.
+@return     mixed   A NoRewindIterator() based on the passed in iterator.
+@return     mixed   A PharData object is returned.
+@return     mixed   A ReflectionClass object.
+@return     mixed   A ReflectionClass, or false.
+@return     mixed   A ReflectionExtension object representing the extension which defined the class, or NULL for user-defined classes.
+@return     mixed   A ReflectionExtension object.
+@return     mixed   A ReflectionFunction object.
+@return     mixed   A ReflectionMethod object reflecting the class' constructor, or NULL if the class has no constructor.
+@return     mixed   A ReflectionMethod.
+@return     mixed   A ReflectionProperty.
+@return     mixed   A copy of the array, or array of public properties if ArrayIterator refers to an object.
+@return     mixed   A numeric representation of the modifiers.
+@return     mixed   A numerical array with interface names as the values.
+@return     mixed   A string describing the SoapFault.
+@return     mixed   A string representing the storage.
+@return     mixed   A string representing the type of the entry.
+@return     mixed   A string with the calculated identifier.
+@return     mixed   An ArrayIterator object.
+@return     mixed   An SplFileInfo object created for the file.
+@return     mixed   An array containing the values of the requested variables on success, or FALSE on failure.
+@return     mixed   An array of ReflectionClass objects, one for each class within the extension.
+@return     mixed   An array of ReflectionMethod objects reflecting each method.
+@return     mixed   An array of ReflectionProperty objects.
+@return     mixed   An array of class names, as defined in the extension.
+@return     mixed   An array of default properties, with the key being the name of the property and the value being the default value of the property or NULL if the property doesn't have a default value.
+@return     mixed   An array of modifier names.
+@return     mixed   An array of static variables.
+@return     mixed   An associative array of ReflectionFunction objects, for each function defined in the extension with the keys being the function names.
+@return     mixed   An associative array of interfaces, with keys as interface names and the array values as ReflectionClass objects.
+@return     mixed   An associative array with constant names as keys.
+@return     mixed   An associative array with the ini entries as keys, with their defined values as values.
+@return     mixed   An instance of an object implementing Iterator or Traversable
+@return     mixed   An iterator for the current entry, if it can be iterated over by the inner iterator.
+@return     mixed   An iterator for the current entry, if it is an array or object.
+@return     mixed   An iterator for the current entry.
+@return     mixed   An iterator from an ArrayObject.
+@return     mixed   Any returned value is ignored.
+@return     mixed   Can return all value types.
+@return     mixed   Can return any type.
+@return     mixed   Description...
+@return     mixed   FALSE
+@return     mixed   If only one parameter is passed to this method, the values parsed will be returned as an array.
+@return     mixed   If the return parameter is set to TRUE, then the export is returned as a string, otherwise NULL is returned.
+@return     mixed   Information about the extension.
+@return     mixed   No return values.
+@return     mixed   No value is returned.
+@return     mixed   Result of the comparison, positive integer if priority1 is greater than priority2, 0 if they are equal, negative integer otherwise.
+@return     mixed   Result of the comparison, positive integer if value1 is greater than value2, 0 if they are equal, negative integer otherwise.
+@return     mixed   Result of the comparison, positive integer if value1 is lower than value2, 0 if they are equal, negative integer otherwise.
+@return     mixed   Retrieves the current line of the file.
+@return     mixed   Returns 0 if the seek was successful, -1 otherwise.
+@return     mixed   Returns FALSE
+@return     mixed   Returns FALSE if no metadata is set or is NULL, TRUE if metadata is not NULL
+@return     mixed   Returns TRUE if a directory, FALSE otherwise.
+@return     mixed   Returns TRUE if an entry referenced by the offset exists, FALSE otherwise.
+@return     mixed   Returns TRUE if an iterator can be obtained for the current entry, otherwise returns FALSE.
+@return     mixed   Returns TRUE if executable, FALSE otherwise.
+@return     mixed   Returns TRUE if not reached EOF, FALSE otherwise.
+@return     mixed   Returns TRUE if readable, FALSE otherwise.
+@return     mixed   Returns TRUE if successful, FALSE if the entry had no metadata.
+@return     mixed   Returns TRUE if the array contains any more elements, FALSE otherwise.
+@return     mixed   Returns TRUE if the current entry can be iterated over, otherwise returns FALSE.
+@return     mixed   Returns TRUE if the current entry is an array or an object, otherwise FALSE is returned.
+@return     mixed   Returns TRUE if the current iteration is valid, FALSE otherwise.
+@return     mixed   Returns TRUE if the doubly linked list contains any more nodes, FALSE otherwise.
+@return     mixed   Returns TRUE if the file exists and is a regular file (not a link), FALSE otherwise.
+@return     mixed   Returns TRUE if the file is a link, FALSE otherwise.
+@return     mixed   Returns TRUE if the heap contains any more nodes, FALSE otherwise.
+@return     mixed   Returns TRUE if the iterator entry is valid, FALSE otherwise.
+@return     mixed   Returns TRUE if the iterator is valid, otherwise FALSE
+@return     mixed   Returns TRUE if the object exists in the storage, and FALSE otherwise.
+@return     mixed   Returns TRUE if the object is in the storage, FALSE otherwise.
+@return     mixed   Returns TRUE if the parameter can be passed by value, FALSE otherwise.
+@return     mixed   Returns TRUE if the parameter is callable, FALSE if it is not or NULL on failure.
+@return     mixed   Returns TRUE if the position is valid, otherwise FALSE
+@return     mixed   Returns TRUE if the queue contains any more nodes, FALSE otherwise.
+@return     mixed   Returns TRUE if the tar/zip archive can be modified
+@return     mixed   Returns TRUE on success or FALSE on failure.
+@return     mixed   Returns a PHP array, similar to the fixed array.
+@return     mixed   Returns a RecursiveFilterIterator containing the inner iterator's children.
+@return     mixed   Returns a copy of the array.
+@return     mixed   Returns a new instance of the class.
+@return     mixed   Returns a string containing a single character read from the file or FALSE on EOF.
+@return     mixed   Returns a string containing the file extension, or an empty string if the file has no extension.
+@return     mixed   Returns a string containing the next line from the file, or FALSE on error.
+@return     mixed   Returns a string containing the next line of the file with HTML and PHP code stripped, or FALSE on error.
+@return     mixed   Returns an ArrayIterator containing the appended iterators.
+@return     mixed   Returns an ArrayObject object on success.
+@return     mixed   Returns an SplFileInfo object for the parent path of the file.
+@return     mixed   Returns an array with new method names in keys and original names (in the format "TraitName::original") in values.
+@return     mixed   Returns an array with trait names in keys and instances of trait's ReflectionClass in values.
+@return     mixed   Returns an array with trait names in values.
+@return     mixed   Returns an encoded of the read data.
+@return     mixed   Returns an indexed array containing the delimiter and enclosure character.
+@return     mixed   Returns an indexed array containing the fields read, or FALSE on error.
+@return     mixed   Returns an instance of SplFixedArray containing the array content.
+@return     mixed   Returns an integer representing the flags.
+@return     mixed   Returns an integer, which is the zero-based index of the current inner iterator.
+@return     mixed   Returns scalar on success, or NULL on failure.
+@return     mixed   Returns the Exception message as a string.
+@return     mixed   Returns the Exception stack trace as a string.
+@return     mixed   Returns the Exception stack trace as an array.
+@return     mixed   Returns the base name without path information.
+@return     mixed   Returns the behavior flags of the ArrayObject.
+@return     mixed   Returns the current line number.
+@return     mixed   Returns the data, or info, associated with the object pointed by the current iterator position.
+@return     mixed   Returns the exception code as integer in Exception but possibly as other type in Exception descendants (for example as string in PDOException).
+@return     mixed   Returns the exported extension as a string, in the same way as the ReflectionExtension::export().
+@return     mixed   Returns the file name of the current DirectoryIterator item.
+@return     mixed   Returns the file permissions.
+@return     mixed   Returns the filename in which the exception was created.
+@return     mixed   Returns the filename of the file in which the class has been defined.
+@return     mixed   Returns the inode number for the filesystem object.
+@return     mixed   Returns the iterator class name that is used to iterate over this object.
+@return     mixed   Returns the last modified time for the file, in a Unix timestamp.
+@return     mixed   Returns the length of the written string or FALSE on failure.
+@return     mixed   Returns the line number where the exception was created.
+@return     mixed   Returns the maximum line length if one has been set with SplFileObject::setMaxLineLen(), default is 0.
+@return     mixed   Returns the method result.
+@return     mixed   Returns the newly created RecursiveDirectoryIterator.
+@return     mixed   Returns the number of bytes written, or NULL on error.
+@return     mixed   Returns the number of characters read from handle and passed through to the output.
+@return     mixed   Returns the offset position after seeking.
+@return     mixed   Returns the old array.
+@return     mixed   Returns the path to the file.
+@return     mixed   Returns the position of the file pointer as an integer, or FALSE on error.
+@return     mixed   Returns the previous Exception if available or NULL otherwise.
+@return     mixed   Returns the result of the invoked function
+@return     mixed   Returns the result of the invoked function call.
+@return     mixed   Returns the severity level of the exception.
+@return     mixed   Returns the size of the array, as an integer.
+@return     mixed   Returns the size of the array.
+@return     mixed   Returns the string representation of the exception.
+@return     mixed   Returns the string representation of the object or NULL
+@return     mixed   Returns the target of the filesystem link.
+@return     mixed   Returns the time the file was last accessed.
+@return     mixed   Setting to TRUE will return the export, as opposed to emitting it.
+@return     mixed   TRUE if NULL is allowed, otherwise FALSE
+@return     mixed   TRUE if a default value is available, otherwise FALSE
+@return     mixed   TRUE if an array is expected, FALSE otherwise.
+@return     mixed   TRUE if it returns a reference, otherwise FALSE
+@return     mixed   TRUE if it's internal, otherwise FALSE
+@return     mixed   TRUE if the current element is acceptable, otherwise FALSE.
+@return     mixed   TRUE if the entry is .
+@return     mixed   TRUE if the file has had its CRC verified, FALSE if not.
+@return     mixed   TRUE if the file is compressed within the Phar archive, FALSE if not.
+@return     mixed   TRUE if the inner iterator has children, otherwise FALSE
+@return     mixed   TRUE if the offset exists, otherwise FALSE
+@return     mixed   TRUE if the parameter is passed in by reference, otherwise FALSE
+@return     mixed   TRUE if the property is private, FALSE otherwise.
+@return     mixed   TRUE if the property is protected, FALSE otherwise.
+@return     mixed   TRUE if the property is public, FALSE otherwise.
+@return     mixed   TRUE if the property is static, FALSE otherwise.
+@return     mixed   TRUE if the property was declared at compile-time, or FALSE if it was created at run-time.
+@return     mixed   TRUE if the requested index exists, otherwise FALSE
+@return     mixed   The FilterIterator.
+@return     mixed   The Phar flags (always 0 in the current implementation)
+@return     mixed   The RecursiveCachingIterator.
+@return     mixed   The crc32() checksum of the file within the Phar archive.
+@return     mixed   The current DirectoryIterator item.
+@return     mixed   The current active sub iterator.
+@return     mixed   The current array entry.
+@return     mixed   The current array index.
+@return     mixed   The current element value.
+@return     mixed   The current flags.
+@return     mixed   The current inner iterator, or NULL if there is not one.
+@return     mixed   The current key if it is valid or NULL otherwise.
+@return     mixed   The current key.
+@return     mixed   The current node value.
+@return     mixed   The current position.
+@return     mixed   The current value if it is valid or NULL otherwise.
+@return     mixed   The current value of the property.
+@return     mixed   The current value.
+@return     mixed   The custom count as an integer.
+@return     mixed   The data previously associated with the object in the storage.
+@return     mixed   The doc comment if it exists, otherwise FALSE
+@return     mixed   The doc comment string if it exists, otherwise FALSE
+@return     mixed   The doc comment.
+@return     mixed   The ending line number of the user defined function, or FALSE if unknown.
+@return     mixed   The exported reflection.
+@return     mixed   The extensions name.
+@return     mixed   The file name.
+@return     mixed   The filename.
+@return     mixed   The filesize in bytes.
+@return     mixed   The group id in numerical format.
+@return     mixed   The index corresponding to the position of the iterator.
+@return     mixed   The inner iterator as passed to IteratorIterator::__construct().
+@return     mixed   The inner iterator for the current entry.
+@return     mixed   The integer value of the set flags.
+@return     mixed   The key for the current DirectoryIterator item.
+@return     mixed   The key of the current element.
+@return     mixed   The last change time, in a Unix timestamp.
+@return     mixed   The method returns a Phar object on success and throws an exception on failure.
+@return     mixed   The method returns a PharData object on success and throws an exception on failure.
+@return     mixed   The name of the extension which defined the class, or FALSE for user-defined classes.
+@return     mixed   The name of the reflected parameter.
+@return     mixed   The name of the reflected property.
+@return     mixed   The new LimitIterator.
+@return     mixed   The number of elements or public properties in the associated array or object, respectively.
+@return     mixed   The number of objects in the storage.
+@return     mixed   The number of public properties in the ArrayObject.
+@return     mixed   The number of required parameters.
+@return     mixed   The object at the current iterator position.
+@return     mixed   The opened file as an SplFileObject object.
+@return     mixed   The owner id in numerical format.
+@return     mixed   The parameters default value.
+@return     mixed   The path to the file.
+@return     mixed   The return value (usually TRUE on success, FALSE on failure).
+@return     mixed   The return value from this method is ignored.
+@return     mixed   The return value will be casted to boolean and then evaluated.
+@return     mixed   The serialized representation of the ArrayObject.
+@return     mixed   The serialized string.
+@return     mixed   The starting line number.
+@return     mixed   The static properties, as an array.
+@return     mixed   The sub path (sub directory) and filename.
+@return     mixed   The sub path (sub directory).
+@return     mixed   The unserialized ArrayObject.
+@return     mixed   The value at offset index.
+@return     mixed   The value at the specified index or NULL.
+@return     mixed   The value at the specified index.
+@return     mixed   The value of the current element.
+@return     mixed   The value of the dequeued node.
+@return     mixed   The value or priority (or both) of the current node, depending on the extract flag.
+@return     mixed   The version of the extension.
+@return     mixed   Value of the constant, or FALSE if it doesn't exist
+@return     mixed   Value of the requested variable on success, FALSE if the filter fails, or NULL if the variable_name variable is not set.
+@return     mixed   any PHP variable that can be serialized and is stored as meta-data for the file, or NULL if no meta-data is stored.
+@return     mixed   returns TRUE on success, but it is better to check for thrown exception, and assume success if none is thrown.
+@return     object   A ReflectionMethod instance of the method prototype.
+@return     string   The name of the function.
+@return     string   The name of the type constant.
+@return     string   The namespace name.
+@return     string  The short name of the function.
+@return    array  The resolved type structure of the type alias.
+@return    array  The type structure of the type alias.
+@return    string  The name of the type alias
+@return    string The assigned type.
+@return   The passed value.
+@return   mixed   Value at array index if it exists, or the default value if not.
+@return  - Returns an ImagickPixel object on success, throwing ImagickPixelException on failure.
+@return  int  Error code returned by the last Collator method call.
+@return - 0
+@return - 2
+@return - A `KeyedIterator` that allows you to traverse the current `Pair`.
+@return - A `Vector` of `AsyncMysqlQueryResult` objects for each result produced by a successful query statement.
+@return - A `Vector` of `AsyncMysqlRowBlock` objects, the total number of which represent the full result of the query.
+@return - A `Vector` of `Map` objects, where the `Vector` elements are the rows and the `Map` elements are the column names and values associated with that row.
+@return - A `Vector` of `Vector` objects, where the outer `Vector` represents the rows and each inner `Vector` represent the column values for each row.
+@return - A `Vector` of `Vector` objects, where the outer `Vector` represents the rows and each inner `Vector` represent the typed column values for each row.
+@return - A `float` representing the average callback dealy on this MySQL client.
+@return - A `float` representing the average for an event to happen on this MySQL client.
+@return - A `float` representing the the number of seconds ago since epoch that we had successful activity on the current connection.
+@return - An `AsyncMysqlConnectResult` object or `null` if the `AsyncMysqlConnection` was not created in the MySQL client.
+@return - An `AsyncMysqlConnection` instance.
+@return - An `AsyncMysqlRowBlockIterator` to iterate over the current row block.
+@return - An `AsyncMysqlRowIterator` to iterate over the current row.
+@return - An `ImmVector` containing the first `n` values of the current `Pair`.
+@return - An `ImmVector` that contains the values of the current `Pair` starting after the callback returns `true`.
+@return - An `ImmVector` that contains the values of the current `Pair` up until the callback returns `false`.
+@return - An `ImmVector` that contains values after the specified `n`-th element in the current `Pair`.
+@return - An `InvariantException`.
+@return - The `AsyncMysqlErrorResult` that underlies the current exception.
+@return - The `AsyncMysqlRow` associated with the current iterator position.
+@return - The `AsyncMysqlRow` representing one specific row in the current row block.
+@return - The `ImmVector` that combines the values of the current `Pair` with the provided `Traversable`.
+@return - The `Iterable` view of the current `Pair`.
+@return - The `int` count of errors, warnings, etc.
+@return - The `string` "Pair".
+@return - The `string` value of the field (column).
+@return - The column name associated with the current iterator position.
+@return - The column number associated with the current iterator position.
+@return - The concatenated `ImmVector`.
+@return - The error number as an `int`.
+@return - The error string.
+@return - The escaped string.
+@return - The exception thrown during the `Awaitable` operation.
+@return - The first value in the current `Pair`.
+@return - The flags of the column as an `int`.
+@return - The hostname as a `string`.
+@return - The last insert id, or 0 if none existed.
+@return - The last value in the current `Pair`.
+@return - The name of the column as a `string`.
+@return - The normalized error string.
+@return - The number of columns in the current row block.
+@return - The number of columns in the current row.
+@return - The number of rows affected as an `int`.
+@return - The number of rows in the current result as an `int`.
+@return - The number of rows in the current row block.
+@return - The number of successful queries before the error as an `int`.
+@return - The port as an `int`.
+@return - The result of the `Awaitable` operation.
+@return - The server version as a `string`.
+@return - The type of the field as an `int`.
+@return - The value of the field (column) at the given row.
+@return - The value of the field (column).
+@return - `Awaitable` of `void`.
+@return - `false`
+@return - `false`.
+@return - `true`.
+@return - a `Set` with the current values of the current `Pair`.
+@return - a `Vector` with the elements of the current `Pair`.
+@return - an `AsyncMysqlClientStats` object to query about event and callback timing to the MySQL client for the connection.
+@return - an `AsyncMysqlClientStats` object to query about event and callback timing to the MySQL client for the query.
+@return - an `AsyncMysqlClientStats` object to query about event and callback timing to the MySQL client for the specific result.
+@return - an `AsyncMysqlClientStats` object to query about event and callback timing to the MySQL client for whatever caused the error.
+@return - an `Awaitable` representing an `AsyncMysqlConnection`.
+@return - an `Awaitable` representing the result of your mutli-query.
+@return - an `Awaitable` representing the result of your query.
+@return - an `ImmMap` with the values of the current `Pair`.
+@return - an `ImmSet` with the current values of the current `Pair`.
+@return - an `ImmVector` containing the integer keys of the current `Pair` as values.
+@return - an `ImmVector` containing the values after a user-specified condition is applied to the keys and values of the current `Pair`.
+@return - an `ImmVector` containing the values after a user-specified condition is applied.
+@return - an `ImmVector` containing the values after a user-specified operation is applied.
+@return - an `ImmVector` containing the values after a user-specified operation on the current `Pair`'s keys and values is applied.
+@return - an `ImmVector` containing the values of the current `Pair`.
+@return - an `ImmVector` with the elements of the current `Pair`.
+@return - an `array` containing the values from the current `Pair`.
+@return - an `array` with the integer keys from the current `Pair`.
+@return - an integer-keyed KeyedIterable representing the lazy view into the current `Pair`.
+@return - an integer-keyed `Map` with the values of the current `Pair`.
+@return - the `Awaitable` of `ResultOrExceptionWrapper`.
+@return - the end time as `float` seconds since epoch.
+@return - the start time as `float` seconds since epoch.
+@return - the total error producing time as `int` microseconds.
+@return - the total establishing connection time as `int` microseconds.
+@return - the total operation time as `int` microseconds.
+@return - the total successful result producing time as `int` microseconds.
+@return - the type of failure, either `'TimedOut'` or `'Failed'`.
+@return - this `Pair`
+@return Boolean TRUE if successful, FALSE otherwise.
+@return Collator      Newly created Collator instance, or null on error.
+@return Collator     New instance of Collator object.
+@return Collator  New instance of Collator object, or null on error.
+@return Collator - Return new instance of Collator object, or NULL on error.
+@return DateInterval - Returns a new DateInterval instance.
+@return DateTime - Returns the DateTime object for method chaining
+@return DateTime - Returns the modified DateTime object or FALSE on failure.
+@return Imagick -
+@return Imagick - Extracts a region of the image and returns it as a new wand.
+@return Imagick - Returns Imagick instance on success.
+@return Imagick - This method returns a new Imagick object on success.
+@return ImagickPixel -
+@return ImagickPixelIterator - Returns an ImagickPixelIterator for an image section.
+@return IntlDateFormatter - The created IntlDateFormatter or FALSE in case of failure.
+@return IntlDatePatternGenerator
+@return IntlIterator - Contains all the base skeletons (in canonical form).
+@return IntlIterator - Contains all the skeletons (in canonical form).
+@return MessageFormatter - The formatter object
+@return Node
+@return NumberFormatter - Returns NumberFormatter object or FALSE on error.
+@return ReflectionClass   A ReflectionClass object of the class that the reflected method is part of.
+@return ReflectionClass   A ReflectionClass object of the class that the reflected type constant is part of.
+@return ResourceBundle - Returns ResourceBundle object or FALSE on error.
+@return Returns TRUE on success or FALSE on failure.
+@return The current entries path and file name.
+@return The current entry's file type.
+@return The current entry's group name.
+@return The current entry's inode.
+@return The current entry's last access time.
+@return The current entry's last change time.
+@return The current entry's last modification time.
+@return The current entry's owner name.
+@return The current entry's permissions.
+@return The current entry's size in bytes .
+@return The resolved path
+@return Whether the current entry is .
+@return Whether the current entry is a directory.
+@return Whether the current entry is either '.' or '..'.
+@return Whether the current entry is executable.
+@return Whether the current entry is readable.
+@return Whether the current entry is writeable.
+@return a RecursiveDirectoryIterator for the current entry.
+@return a SimpleXMLIterator for the current node.
+@return an Iterator for the implementing object.
+@return array
+@return array -
+@return array - An array containing items extracted, or FALSE on error
+@return array - An array containing the file, one line per cell.
+@return array - An array of available cipher methods.
+@return array - An array of available digest methods.
+@return array - An array of token identifiers.
+@return array - Array consisting of new_wand and distortion.
+@return array - Array of all I/O so far for current thread.
+@return array - Array of thread statuses.
+@return array - Current Unicode database version
+@return array - Localtime compatible array of integers : contains 24 hour clock value in tm_hour field
+@return array - PDO::errorInfo() returns an array of error information about the last operation performed by this database handle.
+@return array - PDO::getAvailableDrivers() returns an array of PDO driver names.
+@return array - PDOStatement::errorInfo() returns an array of error information about the last operation performed by this statement handle.
+@return array - Returns a numerically indexed array.
+@return array - Returns a two-dimensional associative array of server statistics or FALSE on failure.
+@return array - Returns an array containing a list of key-value pairs, where the keys identify the particular locale ID subtags, and the values are the associated subtag values.
+@return array - Returns an array containing substrings of subject split along boundaries matched by pattern.
+@return array - Returns an array containing the currently available SPL classes.
+@return array - Returns an array containing the entry details.
+@return array - Returns an array indexed using the keys from the input array.
+@return array - Returns an array of IPv4 addresses or FALSE if hostname could not be resolved.
+@return array - Returns an array of associative arrays with the following keys for each recipient: display The recipient name, for display purpose.
+@return array - Returns an array of associative arrays.
+@return array - Returns an array of strings that corresponds to the fetched row, or FALSE if there are no more rows.
+@return array - Returns an array of strings, each of which is a substring of string formed by splitting it on boundaries formed by the case insensitive regular expression pattern.
+@return array - Returns an array of strings, each of which is a substring of string formed by splitting it on boundaries formed by the case-sensitive regular expression pattern.
+@return array - Returns an array with all the parsed meta tags.
+@return array - Returns an array with all the supported algorithms.
+@return array - Returns an array with all the supported modes.
+@return array - Returns an array with the key details in success or FALSE in failure.
+@return array - Returns an array with the key sizes supported by the algorithm specified by the encryption descriptor.
+@return array - Returns an array with the key sizes supported by the specified algorithm.
+@return array - Returns an array with three samples (last 1, 5 and 15 minutes).
+@return array - Returns an associative array of defined object accessible non-static properties for the specified object in scope.
+@return array - Returns an associative array of server statistics or FALSE on failure.
+@return array - Returns an associative array that holds a whole set of MIME header fields specified by encoded_headers on success, or FALSE if an error occurs during the decoding.
+@return array - Returns an associative array with the keys "versionString" and "versionNumber".
+@return array - Returns an associative array, with the error code in the errno entry, and the error message in the errstr entry.
+@return array - Returns an associative array.
+@return array - Returns an indexed array containing the name of all stream wrappers available on the running system.
+@return array - Returns an indexed array of socket transports names.
+@return array - Returns an indexed or associative array with the headers, or FALSE on failure.
+@return array - Returns array on success or FALSE on failure.
+@return array - Returns code coverage information
+@return array - Returns information about the stack
+@return array - Returns numerically indexed array containing associative array with all transitions on success or FALSE on failure.
+@return array - Returns the array of found items.
+@return array - Returns the declared variables
+@return array - Returns the list of locales supported by the bundle.
+@return array - Returns the output array with all the variables added to it.
+@return array - Returns the translation table as an array.
+@return array - This function returns an array of associative arrays, .
+@return array - This will return an array with the output handlers in use (if any).
+@return array - Two elements, 0 is a bool whether function was invoked, 1 is the return value if invoked.
+@return array - an array with the following keys: 'time' - unixtime when the snapshot was taken 'phpStack' - array with the following keys: 'function', 'file', 'line' 'ioWaitSample' - the snapshot occurred while request was in asio scheduler  It is possible for the output of this function to change in the future.
+@return array - var_dump() compat output helper.
+@return array Array with the opened archive's signature in hash key and MD5, SHA-1, SHA-256, SHA-512, or OpenSSL in hash_type.
+@return array an array containing any of MD5, SHA-1, SHA-256, SHA-512, or OpenSSL.
+@return array an array containing any of Phar::GZ or Phar::BZ2, depending on the availability of the zlib extension or the bz2 extension.
+@return array localtime compatible array of integers  - uses 24 hour clock in tm_hour field
+@return bool
+@return bool                - Returns TRUE on success or FALSE on failure.
+@return bool           - Returns TRUE on success or FALSE on failure.
+@return bool       - Without the OnOff parameter, this function returns auto-commit status for connection_id.
+@return bool     true on success or false on failure.
+@return bool     true on success, false otherwise.
+@return bool    true on success or false on failure.
+@return bool    true on success, false otherwise.
+@return bool -
+@return bool - Bad formatstrings are usually the cause of the failure.
+@return bool - Has the connection finished (either successfully or with error).
+@return bool - If a debugger is attached.
+@return bool - If filename is not a valid upload file, then no action will occur, and move_uploaded_file() will return FALSE.
+@return bool - No value is returned.
+@return bool - Return TRUE if namespaceURI is the default namespace, FALSE otherwise.
+@return bool - Returns 1 on success or FALSE on failure.
+@return bool - Returns FALSE if the first statement failed.
+@return bool - Returns TRUE
+@return bool - Returns TRUE if a transaction is currently active, and FALSE if not.
+@return bool - Returns TRUE if all options were successfully set.
+@return bool - Returns TRUE if class_name is a defined class, FALSE otherwise.
+@return bool - Returns TRUE if every character in text creates some sort of white space, FALSE otherwise.
+@return bool - Returns TRUE if every character in text is a control character from the current locale, FALSE otherwise.
+@return bool - Returns TRUE if every character in text is a letter from the current locale, FALSE otherwise.
+@return bool - Returns TRUE if every character in text is a lowercase letter in the current locale.
+@return bool - Returns TRUE if every character in text is an uppercase letter in the current locale.
+@return bool - Returns TRUE if every character in text is either a letter or a digit, FALSE otherwise.
+@return bool - Returns TRUE if every character in text is printable and actually creates visible output (no white space), FALSE otherwise.
+@return bool - Returns TRUE if every character in text is printable, but neither letter, digit or blank, FALSE otherwise.
+@return bool - Returns TRUE if every character in text will actually create output (including blanks).
+@return bool - Returns TRUE if every character in the string text is a decimal digit, FALSE otherwise.
+@return bool - Returns TRUE if fd is an open descriptor connected to a terminal and FALSE otherwise.
+@return bool - Returns TRUE if function_name exists and is a function, FALSE otherwise.
+@return bool - Returns TRUE if key is the private key that corresponds to cert, or FALSE otherwise.
+@return bool - Returns TRUE if needle is found in the array, FALSE otherwise.
+@return bool - Returns TRUE if the algorithm is a block algorithm or FALSE if it is a stream one.
+@return bool - Returns TRUE if the child process exited because of a signal which was not caught, FALSE otherwise.
+@return bool - Returns TRUE if the child process which caused the return is currently stopped, FALSE otherwise.
+@return bool - Returns TRUE if the child status code represents a normal exit, FALSE otherwise.
+@return bool - Returns TRUE if the entry exists, otherwise FALSE
+@return bool - Returns TRUE if the extension is successfully loaded, FALSE on failure.
+@return bool - Returns TRUE if the file or directory specified by filename exists and is readable, FALSE otherwise.
+@return bool - Returns TRUE if the filename exists and is a directory, FALSE otherwise.
+@return bool - Returns TRUE if the filename exists and is a regular file, FALSE otherwise.
+@return bool - Returns TRUE if the filename exists and is a symbolic link, FALSE otherwise.
+@return bool - Returns TRUE if the filename exists and is executable, or FALSE on error.
+@return bool - Returns TRUE if the filename exists and is writable.
+@return bool - Returns TRUE if the interface given by interface_name has been defined, FALSE otherwise.
+@return bool - Returns TRUE if the mail was successfully accepted for delivery, FALSE otherwise.
+@return bool - Returns TRUE if the mode is for use with block algorithms, otherwise it returns FALSE.
+@return bool - Returns TRUE if the mode outputs blocks of bytes, or FALSE if it outputs just bytes.
+@return bool - Returns TRUE if the named constant given by name has been defined, FALSE otherwise.
+@return bool - Returns TRUE if the object is of this class or has this class as one of its parents, FALSE otherwise.
+@return bool - Returns TRUE if the parameter is bound to the statement variable, FALSE on failure.
+@return bool - Returns TRUE if the query succeeded, FALSE on failure.
+@return bool - Returns TRUE if the specified color was set, FALSE otherwise.
+@return bool - Returns TRUE if the statement is successfully reset, FALSE on failure.
+@return bool - Returns TRUE if the stream is still alive, FALSE otherwise.
+@return bool - Returns TRUE if the string has possible security or spoofing issues, FALSE otherwise.
+@return bool - Returns TRUE if the two strings are confusable, FALSE otherwise.
+@return bool - Returns TRUE if the value is bound to the statement variable, FALSE on failure.
+@return bool - Returns TRUE if there is a match, FALSE otherwise.
+@return bool - Returns TRUE on success or FALSE on failure.
+@return bool - Returns TRUE on success, FALSE on failure
+@return bool - Returns TRUE on success, FALSE on failure.
+@return bool - Returns TRUE on successful clearing of bound parameters, FALSE on failure.
+@return bool - Returns TRUE upon successful creation of the aggregate, FALSE on failure.
+@return bool - Returns TRUE upon successful creation of the function, FALSE on failure.
+@return bool - Returns TRUE.
+@return bool - Returns the termination status of the process that was run.
+@return bool - Returns true if Memcache instance uses a persistent connection, false otherwise.
+@return bool - Returns whether code coverage is active.
+@return bool - Sanitized string.
+@return bool - TRUE if a debugger is attached, FALSE if not.
+@return bool - TRUE if finished, FALSE otherwise.
+@return bool - TRUE if it's enabled, FALSE otherwise.
+@return bool - TRUE if normalized, FALSE otherwise or if there an error
+@return bool - TRUE if parser is lenient, FALSE if parser is strict.
+@return bool - TRUE if successful, FALSE otherwise.
+@return bool - TRUE if the query can properly be prepared and queued on the network.
+@return bool - TRUE if the refresh was a success, otherwise FALSE
+@return bool - The Memcached::getResultCode will return Memcached::RES_NOTFOUND if the key does not exist.
+@return bool - The Memcached::getResultCode will return Memcached::RES_NOTSTORED if the key does not exist.
+@return bool - The function returns TRUE if the self test succeeds, or FALSE when it fails.
+@return bool - The old value.
+@return bool - This function always returns TRUE value.
+@return bool - This function returns FALSE if parser does not refer to a valid parser, or else it frees the parser and returns TRUE.
+@return bool - This function returns FALSE if parser does not refer to a valid parser, or if the option could not be set.
+@return bool - This function returns FALSE if the timezone_identifier isn't valid, or TRUE otherwise.
+@return bool - This function returns FALSE if wrong error_type is specified, TRUE otherwise.
+@return bool - This function returns TRUE if the mode is for use with block algorithms, otherwise it returns FALSE.
+@return bool - This function returns TRUE if the mode outputs blocks of bytes or FALSE if it outputs just bytes.
+@return bool - This function returns TRUE if the object object, belongs to a class which is a subclass of class_name, FALSE otherwise.
+@return bool - This function returns TRUE if the specified algorithm is a block algorithm, or FALSE if it is a stream one.
+@return bool - This will return TRUE on error, and FALSE otherwise.
+@return bool - True if server is going to stop soon, False if server is not running, or is running without a schedule to stop.
+@return bool - True if the the query has completed (i.e., either all rows have been returned or an error occurred).
+@return bool - True if there is at least one more item in the result set.
+@return bool - True on success, false on failure
+@return bool - Unlike fopen() and other similar functions, the return value of zip_entry_open() only indicates the result of the operation and is not needed for reading or closing the directory entry.
+@return bool - headers_sent() will return FALSE if no HTTP headers have already been sent or TRUE otherwise.
+@return bool - true if the match succeeded, false otherwise
+@return bool TRUE on success or FALSE on failure
+@return bool true if it the code indicates some failure, and false in case of success or a warning.
+@return bool true on success or false on failure.
+@return boolean         false if formatter pattern could not be set, true otherwise
+@return boolean 'true' if successful, 'false' if an error occurred or if the calendar was not recognized
+@return boolean 'true' on successful setting of the time zone, 'false' if an error occurred (such as the time zone wasn't recognized).
+@return boolean TRUE if a match, FALSE otherwise.
+@return boolean false if formatter pattern could not be set, true otherwise
+@return callable - Returns the name of the previously defined exception handler, or NULL on error.
+@return class used in getIterator()
+@return comma separated list of file extensions to use in default autoload function.
+@return current flags
+@return current flags MIT_*
+@return double currency number
+@return false if no sub Iterator is attached and an array of all registered Iterator instances current() result.
+@return false if no sub Iterator is attached and an array of all registered Iterator instances key() result.
+@return float
+@return float -
+@return float - A pseudo random float value in the range of (0, 1)
+@return float - Returns the current time index
+@return float - Returns the distortion metric used on the image (or the best guess thereof).
+@return float - The logarithm of arg to base, if given, or the natural logarithm.
+@return float - The parsed numeric value or FALSE on error.
+@return float - The value of pi as float.
+@return float - The value of the channel, as a normalized floating-point number, throwing ImagickPixelException on error.
+@return getFilename()
+@return getFilename() or getFileInfo() depending on flags
+@return getPathname()
+@return getPathname() or getFilename() depending on flags
+@return index of entry
+@return int
+@return int          Returns the position as an integer.
+@return int      Attribute value, or false on error.
+@return int     Current collation strength, or false on error.
+@return int     Error code returned by the last API function call.
+@return int     Error code returned by the last Collator API function call.
+@return int - 0 - Query succeeded, more results coming.
+@return int - 100 if the server is very healthy, and 0 if the server should not receive any more request.
+@return int - A cURL code defined in the cURL Predefined Constants.
+@return int - Actual number of bytes added to the hashing context from handle.
+@return int - Always returns the line number where the node was defined in.
+@return int - Attribute value, or boolean FALSE on error.
+@return int - Currently accumulated count.
+@return int - Epoch representing the datetime object
+@return int - Error code returned by the last API function call.
+@return int - Error code returned by the last Collator API function call.
+@return int - If the self test succeeds it returns FALSE.
+@return int - Low level ObjectData pointer.
+@return int - Number of pagelet tasks started.
+@return int - On success the return value will be the created key value, otherwise -1 is returned.
+@return int - On success, returns the number of descriptors contained in the descriptor sets.
+@return int - On success, the PID of the child process is returned in the parent's thread of execution, and a 0 is returned in the child's thread of execution.
+@return int - PAGELET_NOT_READY if there is no data available, PAGELET_READY if (partial) data is available from pagelet_server_flush(), and PAGELET_DONE if the pagelet request is done.
+@return int - Previous security preferences.
+@return int - Response code following HTTP's responses.
+@return int - Return attribute value on success, or FALSE on error.
+@return int - Return the LDAP error number of the last LDAP command for this link.
+@return int - Returns 0 if the two operands are equal, 1 if the left_operand is larger than the right_operand, -1 otherwise.
+@return int - Returns 0 on success, or EOF if the request cannot be honored.
+@return int - Returns 1 if client disconnected, 0 otherwise.
+@return int - Returns 1 if the script timed out, 0 otherwise.
+@return int - Returns 1 on success or 0 on failure.
+@return int - Returns FALSE if the attribute is not found, otherwise returns the value of the attribute.
+@return int - Returns a the servers status.
+@return int - Returns an integer of the effective group ID.
+@return int - Returns an integer value corresponding to the number of database rows changed (or inserted or deleted) by the most recent SQL statement.
+@return int - Returns an integer value representing the numeric result code of the most recent failed SQLite request.
+@return int - Returns current collation strength, or boolean FALSE on error.
+@return int - Returns error code from last bundle object call.
+@return int - Returns error code from last formatter call.
+@return int - Returns item's new value on success.
+@return int - Returns number of elements in the bundle.
+@return int - Returns number of entries in the result or FALSE on error.
+@return int - Returns number of ready connections upon success, FALSE otherwise.
+@return int - Returns the ASCII value as an integer.
+@return int - Returns the IPv4 address or FALSE if ip_address is invalid.
+@return int - Returns the block size of the algorithm specified in bytes.
+@return int - Returns the block size of the specified algorithm in bytes.
+@return int - Returns the calling line
+@return int - Returns the character count of str, as an integer.
+@return int - Returns the connection status bitfield, which can be used against the CONNECTION_XXX constants to determine the connection status.
+@return int - Returns the count of code points if valid UTF-8 else byte count.
+@return int - Returns the crc32 checksum of str as an integer.
+@return int - Returns the current instruction counter value.
+@return int - Returns the current memory usage
+@return int - Returns the current setting of session.cache_expire.
+@return int - Returns the current stack depth level
+@return int - Returns the data type index of the column identified by column_number (one of SQLITE3_INTEGER, SQLITE3_FLOAT, SQLITE3_TEXT, SQLITE3_BLOB, or SQLITE3_NULL).
+@return int - Returns the errno (error number) set by the last posix function that failed.
+@return int - Returns the error number as an integer.
+@return int - Returns the identifier, as an integer.
+@return int - Returns the length of the matched string if a match for pattern was found in string, or FALSE if no matches were found or an error occurred.
+@return int - Returns the length of the output buffer contents or FALSE if no buffering is active.
+@return int - Returns the level of nested output buffering handlers or zero if output buffering is not active.
+@return int - Returns the maximum random value returned by mt_rand()
+@return int - Returns the maximum supported key size of the algorithm in bytes.
+@return int - Returns the number of (uncompressed) bytes read from the file.
+@return int - Returns the number of (uncompressed) bytes written to the given gz-file stream.
+@return int - Returns the number of code points interpreting string as UTF-8.
+@return int - Returns the number of columns in the result set represented by the PDOStatement object.
+@return int - Returns the number of columns in the result set.
+@return int - Returns the number of elements in var, which is typically an array, since anything else will have one element.
+@return int - Returns the number of elements of an element.
+@return int - Returns the number of full pattern matches (which might be zero), or FALSE if an error occurred.
+@return int - Returns the number of matching chars in both strings.
+@return int - Returns the number of parameters within the prepared statement.
+@return int - Returns the number of rows.
+@return int - Returns the number of warnings from the last MySQL function, or 0 (zero) if no warnings occurred.
+@return int - Returns the numeric position of the first occurrence of needle in haystack.
+@return int - Returns the numeric position of the last occurrence of needle in haystack.
+@return int - Returns the old error_reporting level or the current level if no level parameter is given.
+@return int - Returns the peak memory usage
+@return int - Returns the port number, or FALSE if service or protocol is not found.
+@return int - Returns the position as an integer.
+@return int - Returns the previous setting, as an integer.
+@return int - Returns the protocol number, .
+@return int - Returns the real group id, as an integer.
+@return int - Returns the return code, as an integer.
+@return int - Returns the row ID of the most recent INSERT into the database
+@return int - Returns the session id, or -1 on errors.
+@return int - Returns the signal number, as an integer.
+@return int - Returns the signal number.
+@return int - Returns the size of the IV, or 0 if the IV is ignored by the algorithm.
+@return int - Returns the size of the Initialization Vector (IV) in bytes.
+@return int - Returns the size of the http request.
+@return int - Returns the specified resource limit in megabytes.
+@return int - Returns the specified resource's memory usage in megabytes.
+@return int - Returns the termination status of the process that was run.
+@return int - Returns the time in seconds that any previously scheduled alarm had remaining before it was to be delivered, or 0 if there was no previously scheduled alarm.
+@return int - Returns the timezone offset in seconds from UTC on success or FALSE on failure.
+@return int - Returns the user id, as an integer
+@return int - Returns zero on success, or FALSE on errors.
+@return int - Security preferences.
+@return int - TRUE if the refresh was a success, otherwise FALSE
+@return int - The compressed size.
+@return int - The crypto-secure random integer.
+@return int - The current date type value of the formatter.
+@return int - The current response code.
+@return int - The current timeout (maximum duration).
+@return int - The error code, one of UErrorCode values.
+@return int - The function returns a negative value on error: -3 when the key length was incorrect, -4 when there was a memory allocation problem and any other return value is an unknown error.
+@return int - The hash value of addr.
+@return int - The largest possible random value returned by rand()
+@return int - The length of the string on success, and 0 if the string is empty.
+@return int - The number of uncompressed characters read from gz and passed through to the input, or FALSE on error.
+@return int - The position of the file pointer or FALSE if an error occurs.
+@return int - The pthread_self() return.
+@return int - The size of the directory entry.
+@return int - The tid of the current running thread.
+@return int - The time that the current xbox thread has been running without a reset.
+@return int - This function returns FALSE if parser does not refer to a valid parser, or else it returns one of the error codes listed in the error codes section.
+@return int - This function returns FALSE if parser does not refer to a valid parser, or else it returns which byte index the parser is currently at in its data buffer (starting at 0).
+@return int - This function returns FALSE if parser does not refer to a valid parser, or else it returns which column on the current line (as given by xml_get_current_line_number()) the parser is currently at.
+@return int - This function returns FALSE if parser does not refer to a valid parser, or else it returns which line the parser is currently at in its data buffer.
+@return int - This function returns a socket error code.
+@return int - This function returns the Levenshtein-Distance between the two argument strings or -1, if one of the argument strings is longer than the limit of 255 characters.
+@return int - This function returns the maximum supported key size of the algorithm specified in bytes.
+@return int - This will return the active soap version.
+@return int - Total number of bytes flushed since last flush
+@return int - mb_ereg_search_getpos() returns the point to start regular expression match for mb_ereg_search(), mb_ereg_search_pos(), mb_ereg_search_regs().
+@return int - number of seconds the server has been running.
+@return int - pattern conflict status (see constants)
+@return int - pcntl_wait() returns the process ID of the child which exited, -1 on error or zero if WNOHANG was provided as an option (on wait3-available systems) and no child was available.
+@return int - pcntl_waitpid() returns the process ID of the child which exited, -1 on error or zero if WNOHANG was used and no child was available
+@return int - thread type.
+@return int - timestamp parsed value, or FALSE if value can't be parsed.
+@return int - umask() without arguments simply returns the current umask otherwise the old umask is returned.
+@return int - xml_parse_into_struct() returns 0 for failure and 1 for success.
+@return integer
+@return integer the error code, one of UErrorCode values.
+@return integer timestamp  parsed value
+@return key() since that is the name we need
+@return mixed
+@return mixed                   - Returns an ODBC result identifier if the SQL command was executed successfully, or FALSE on error.
+@return mixed            - Returns an array that corresponds to the fetched row, or FALSE if there are no more rows.
+@return mixed            - Returns the number of rows in an ODBC result.
+@return mixed -
+@return mixed -  Returns TRUE if name is callable, FALSE otherwise.
+@return mixed - A case folded version of string converted in the way specified by mode.
+@return mixed - A converted version of the string represented in ASCII.
+@return mixed - A new DOMDocument object.
+@return mixed - A new DOMDocumentType node with its ownerDocument set to NULL.
+@return mixed - A new DOMNodeList object containing all the matched elements.
+@return mixed - A node (of any type) with the specified local name and namespace URI, or NULL if no node is found.
+@return mixed - A node (of any type) with the specified nodeName, or NULL if no node is found.
+@return mixed - A stream context resource.
+@return mixed - A string token.
+@return mixed - Always returns NULL.
+@return mixed - An array containing the elements of the iterator.
+@return mixed - An array including the position of a matched part for a multibyte regular expression.
+@return mixed - An array including the sub-string of matched part by last mb_ereg_search(), mb_ereg_search_pos(), mb_ereg_search_regs().
+@return mixed - An array of all registered __autoload functions.
+@return mixed - An array of global state.
+@return mixed - An array of hardware counters
+@return mixed - An array of the defined functions.
+@return mixed - An array of type information if type is not specified, otherwise a specific type.
+@return mixed - An array of values resulted from merging the arguments together.
+@return mixed - An array on success, or FALSE on error.
+@return mixed - Array of cached data (and meta-data) or FALSE on failure apc_cache_info() will raise a warning if it is unable to retrieve APC cache data.
+@return mixed - By default an array is returned.
+@return mixed - Depending on mode count_chars() returns one of the following: 0 - an array with the byte-value as key and the frequency of every byte as value.
+@return mixed - Domain name encoded in ASCII-compatible form.
+@return mixed - Domain name in unicode
+@return mixed - Executes the regular expression match with multibyte support, and returns 1 if matches are found.
+@return mixed - ID of a filter on success or FALSE if filter doesn't exist.
+@return mixed - Identical to PDO::errorCode(), except that PDOStatement::errorCode() only retrieves error codes for operations performed with PDOStatement objects.
+@return mixed - If a sequence name was not specified for the name parameter, PDO::lastInsertId() returns a string representing the row ID of the last row that was inserted into the database.
+@return mixed - If an error occurs, fpassthru() returns FALSE.
+@return mixed - If callbackfunc is not NULL returns TRUE on success.
+@return mixed - If encoding is omitted, mb_http_output() returns the current HTTP output character encoding.
+@return mixed - If encoding is set, then Returns TRUE on success or FALSE on failure.
+@return mixed - If language is set and language is valid, it returns TRUE.
+@return mixed - If needle is not found, stripos() will return boolean FALSE.
+@return mixed - If only two parameters were passed to this function, the values parsed will be returned as an array.
+@return mixed - If opt is given, returns its value.
+@return mixed - If the child could be removed the functions returns the old child.
+@return mixed - If the database server successfully prepares the statement, PDO::prepare() returns a PDOStatement object.
+@return mixed - If the open fails, bzopen() returns FALSE, otherwise it returns a pointer to the newly opened file.
+@return mixed - If the optional split_length parameter is specified, the returned array will be broken down into chunks with each being split_length in length, otherwise each chunk will be one character in length.
+@return mixed - If the timeout parameter is set, this function returns TRUE on success and FALSE on failure.
+@return mixed - If tracing was started, the file the trace was saved to.
+@return mixed - If you are picking only one entry, array_rand() returns the key for a random entry.
+@return mixed - If you opened the writer in memory, this function returns the generated XML buffer, Else, if using URI, this function will write the buffer and return the number of written bytes.
+@return mixed - Initiate an asynchronous mysql connection.
+@return mixed - No value is returned.
+@return mixed - Number of years, months, days, hours, minutes, seconds, or total days for DateInterval, or true/false for date inversion.
+@return mixed - On seriously malformed URLs, parse_url() may return FALSE.
+@return mixed - On success a stream resource is returned which may be used together with the other file functions (such as fgets(), fgetss(), fwrite(), fclose(), and feof()), FALSE on failure.
+@return mixed - On success an array with the following elements is returned, else FALSE is returned: The user information array Element Description name The name element contains the username of the user.
+@return mixed - On success stream_select() returns the number of stream resources contained in the modified arrays, which may be zero if the timeout expires before anything interesting happens.
+@return mixed - On success, returns a string of the absolute path of the fd.
+@return mixed - On success, the resolved absolute filename is returned.
+@return mixed - PDO::exec() returns the number of rows that were modified or deleted by the SQL statement you issued.
+@return mixed - PDO::query() returns a PDOStatement object, or FALSE on failure.
+@return mixed - PDOStatement::fetchAll() returns an array containing all of the remaining rows in the result set.
+@return mixed - PDOStatement::fetchColumn() returns a single column in the next row of a result set.
+@return mixed - Profile result.
+@return mixed - Return attribute value on success, or FALSE on error.
+@return mixed - Return the number of messages in the current mailbox, as an integer.
+@return mixed - Return the numeric position of the first occurrence of needle in the haystack string, or FALSE if needle is not found.
+@return mixed - Return the numeric position of the last occurrence of needle in the haystack string, or FALSE if needle is not found.
+@return mixed - Returns 0 on success, or one of the CURLM_XXX errors code.
+@return mixed - Returns 1 if the signature is correct, 0 if it is incorrect, and -1 on error.
+@return mixed - Returns FALSE on failure.
+@return mixed - Returns TRUE if the certificate can be used for the intended purpose, FALSE if it cannot, or -1 on error.
+@return mixed - Returns TRUE if the signature is verified, FALSE if it is not correct (the message has been tampered with, or the signing certificate is invalid), or -1 on error.
+@return mixed - Returns TRUE if value matches otherwise returns FALSE.
+@return mixed - Returns TRUE on success or FALSE on
+@return mixed - Returns TRUE on success or FALSE on failure and an array with error keys if passed an array.
+@return mixed - Returns TRUE on success or FALSE on failure.
+@return mixed - Returns TRUE on success, FALSE on failure and an array with error keys if passed an array.
+@return mixed - Returns a DOMNodeList containing all nodes matching the given XPath expression.
+@return mixed - Returns a DateTimeZone object on success or FALSE on failure.
+@return mixed - Returns a JSON encoded string on success .
+@return mixed - Returns a MIME resource representing the structure, or FALSE on error.
+@return mixed - Returns a SimpleXMLElement or FALSE on failure.
+@return mixed - Returns a copy of the input padded to size specified by pad_size with value pad_value.
+@return mixed - Returns a directory handle resource on success, or FALSE on failure.
+@return mixed - Returns a file handle, similar to the one returned by fopen(), for the new file or FALSE on failure.
+@return mixed - Returns a file pointer resource on success, or FALSE on error.
+@return mixed - Returns a formatted date string.
+@return mixed - Returns a hash of strings with information about the current process CPU usage.
+@return mixed - Returns a hash of strings with information about the system.
+@return mixed - Returns a integer Unix timestamp.
+@return mixed - Returns a new instance of class DOMElement or FALSE if an error occurred.
+@return mixed - Returns a new socket resource on success, or FALSE on error.
+@return mixed - Returns a new xmlwriter resource for later use with the xmlwriter functions on success, FALSE on error.
+@return mixed - Returns a numerically indexed array of encoding aliases on success, or FALSE on failure.
+@return mixed - Returns a particular section of the body of the specified messages as a text string.
+@return mixed - Returns a positive LDAP link identifier on success, or FALSE on error.
+@return mixed - Returns a positive key resource identifier on success, or FALSE on error.
+@return mixed - Returns a positive semaphore identifier on success, or FALSE on error.
+@return mixed - Returns a quoted string that is theoretically safe to pass into an SQL statement.
+@return mixed - Returns a resource handle that can be used to access the System V message queue.
+@return mixed - Returns a resource or a boolean
+@return mixed - Returns a result code, as an integer.
+@return mixed - Returns a search result identifier or FALSE on error.
+@return mixed - Returns a shared memory segment identifier.
+@return mixed - Returns a stream to the accepted socket connection or FALSE on failure.
+@return mixed - Returns a string containing a single character read from the file pointed to by handle.
+@return mixed - Returns a string containing the previously defined error handler (if any).
+@return mixed - Returns a string formatted according format using the given timestamp or the current local time if no timestamp is given.
+@return mixed - Returns a string of server version number or FALSE on failure.
+@return mixed - Returns a string of up to length - 1 bytes read from the file pointed to by handle, with all HTML and PHP code stripped.
+@return mixed - Returns a string of up to length - 1 bytes read from the file pointed to by handle.
+@return mixed - Returns a string of up to length bytes read from the file pointed to by handle.
+@return mixed - Returns a string on success, FALSE otherwise.
+@return mixed - Returns a string or FALSE on failure.
+@return mixed - Returns a string or an array of replacements.
+@return mixed - Returns a string starting from the character found, or FALSE if it is not found.
+@return mixed - Returns a timestamp on success, FALSE otherwise.
+@return mixed - Returns a typed result if possible or a DOMNodeList containing all nodes matching the given XPath expression.
+@return mixed - Returns an SQLSTATE, a five characters alphanumeric identifier defined in the ANSI SQL-92 standard.
+@return mixed - Returns an SQLite3Result object if the query returns results.
+@return mixed - Returns an SQLite3Result object on successful execution of the prepared statement, FALSE on failure.
+@return mixed - Returns an SQLite3Stmt object on success or FALSE on failure.
+@return mixed - Returns an array containing all of the values in container1 whose values exist in all of the parameters.
+@return mixed - Returns an array containing all the elements of arr1 after applying the callback function to each one.
+@return mixed - Returns an array containing all the entries of container1 which have keys that are present in all arguments.
+@return mixed - Returns an array containing all the values from array1 that are not present in any of the other arguments.
+@return mixed - Returns an array containing all the values of array1 that are not present in any of the other arguments.
+@return mixed - Returns an array containing all the values of array1 that are present in all the arguments.
+@return mixed - Returns an array containing the matched files/directories, an empty array if no file matched or FALSE on error.
+@return mixed - Returns an array containing the names of the mailboxes.
+@return mixed - Returns an array of all DN components.
+@return mixed - Returns an array of all of the IMAP alert messages generated or FALSE if no alert messages are available.
+@return mixed - Returns an array of all the keys in input.
+@return mixed - Returns an array of associative arrays listing filename information.
+@return mixed - Returns an array of associative or numeric arrays holding result rows.
+@return mixed - Returns an array of elements from low to high, inclusive.
+@return mixed - Returns an array of filenames on success, or FALSE on failure.
+@return mixed - Returns an array of integers containing the numeric group ids of the group set of the current process.
+@return mixed - Returns an array of objects describing one message header each.
+@return mixed - Returns an array of strings created by splitting the string parameter on boundaries formed by the delimiter.
+@return mixed - Returns an array of strings that corresponds to the fetched row or NULL if there are no more rows in resultset.
+@return mixed - Returns an array or FALSE on failure.
+@return mixed - Returns an array, or NULL if an error occurs.
+@return mixed - Returns an associative array containing all the values in array1 that are present in all of the arguments.
+@return mixed - Returns an associative array containing the following values representing the metadata for a single column: Column metadata Name Value native_type The PHP native type used to represent the column value.
+@return mixed - Returns an associative array containing unpacked elements of binary string.
+@return mixed - Returns an associative array of elements for each limit that is defined.
+@return mixed - Returns an associative array with the following elements: The user information array Element Description name The name element contains the username of the user.
+@return mixed - Returns an error message string, or FALSE if there are no more error messages to return.
+@return mixed - Returns an indexed array containing the fields read.
+@return mixed - Returns an indexed array of values.
+@return mixed - Returns an instance of the required class with property names that correspond to the column names or FALSE on failure.
+@return mixed - Returns an integer.
+@return mixed - Returns an x509 certificate resource on success, FALSE on failure.
+@return mixed - Returns array on success or FALSE on failure.
+@return mixed - Returns array with information about the parsed date on success or FALSE on failure.
+@return mixed - Returns input entries that are now ready for action (such as a connection has completed or rows are available).
+@return mixed - Returns item's new value on success or FALSE on failure.
+@return mixed - Returns item's new value on success.
+@return mixed - Returns new item's value on success.
+@return mixed - Returns new items value on success or FALSE on failure.
+@return mixed - Returns old node if the attribute has been replaced or NULL.
+@return mixed - Returns one of the character encodings supported by the mbstring module.
+@return mixed - Returns the CSR.
+@return mixed - Returns the DOMElement or NULL if the element is not found.
+@return mixed - Returns the HTML, or FALSE if an error occurred.
+@return mixed - Returns the XML, or FALSE if an error occurred.
+@return mixed - Returns the array consisting of the extracted elements.
+@return mixed - Returns the array of found items.
+@return mixed - Returns the array value in the next place that's pointed to by the internal array pointer, or FALSE if there are no more elements.
+@return mixed - Returns the array value in the previous place that's pointed to by the internal array pointer, or FALSE if there are no more elements.
+@return mixed - Returns the binary representation of the given hexidecimal string or FALSE on failure.
+@return mixed - Returns the body of the specified message, as a string.
+@return mixed - Returns the calling class or false if called at the top level
+@return mixed - Returns the canonicalized absolute pathname on success.
+@return mixed - Returns the character encoding used by multibyte regex functions.
+@return mixed - Returns the chunked string.
+@return mixed - Returns the contents of the output buffer and end output buffering.
+@return mixed - Returns the contents of the symbolic link path or FALSE on error.
+@return mixed - Returns the current key and value pair from the array array.
+@return mixed - Returns the current value of key's value on success, or FALSE on failure
+@return mixed - Returns the current working directory on success, or FALSE on failure.
+@return mixed - Returns the data located at the index or NULL on error.
+@return mixed - Returns the decoded data as a string.
+@return mixed - Returns the default stream context.
+@return mixed - Returns the deserialized value which can be a string, a number or an array.
+@return mixed - Returns the digested hash value on success or FALSE on failure.
+@return mixed - Returns the encrypted string on success or FALSE on failure.
+@return mixed - Returns the filename on success or FALSE on failure.
+@return mixed - Returns the filtered array.
+@return mixed - Returns the flipped array on success and NULL on failure.
+@return mixed - Returns the formatted string.
+@return mixed - Returns the full text of the last IMAP error message that occurred on the current page.
+@return mixed - Returns the function result, or FALSE on error.
+@return mixed - Returns the given string wrapped at the specified length.
+@return mixed - Returns the group ID of the file, or FALSE in case of an error.
+@return mixed - Returns the identifier, as an integer.
+@return mixed - Returns the information in an object with following properties: Mailbox properties Date date of last change (current datetime) Driver driver Mailbox name of the mailbox Nmsgs number of messages Recent number of recent messages Unread number of unread messages Deleted number of deleted messages Size mailbox size  Returns FALSE on failure.
+@return mixed - Returns the inode number of the file, or FALSE on failure.
+@return mixed - Returns the iteration count.
+@return mixed - Returns the iv length of a cipher, or FALSE on failure.
+@return mixed - Returns the key for needle if it is found in the array, FALSE otherwise.
+@return mixed - Returns the last value of array.
+@return mixed - Returns the length of the initial segment of str1 which consists entirely of characters in str2.
+@return mixed - Returns the length of the segment as an integer.
+@return mixed - Returns the length of the string written.
+@return mixed - Returns the length of the written string or FALSE on failure.
+@return mixed - Returns the login name of the user, as a string.
+@return mixed - Returns the matched substring.
+@return mixed - Returns the metaphone key as a string, or FALSE on failure.
+@return mixed - Returns the name of the function trace file or false if tracing isn't enabled.
+@return mixed - Returns the new current locale, or FALSE if the locale functionality is not implemented on your platform, the specified locale does not exist or the category name is invalid.
+@return mixed - Returns the new number of elements in the array.
+@return mixed - Returns the new number of elements in the container.
+@return mixed - Returns the new temporary filename, or FALSE on failure.
+@return mixed - Returns the number of XIncludes in the document, -1 if some processing failed, or FALSE if there were no substitutions.
+@return mixed - Returns the number of available bytes as a float or FALSE on failure.
+@return mixed - Returns the number of bytes read from the file.
+@return mixed - Returns the number of bytes successfully written to the socket or FALSE on failure.
+@return mixed - Returns the number of bytes written or FALSE if an error occurred.
+@return mixed - Returns the number of characters in string str having character encoding encoding.
+@return mixed - Returns the number of recent messages in the current mailbox, as an integer.
+@return mixed - Returns the numeric position of the first occurrence of needle in the haystack string.
+@return mixed - Returns the numeric position of the last occurrence of needle in the haystack string.
+@return mixed - Returns the numerical position of the last occurrence of needle.
+@return mixed - Returns the old node if the attribute has been replaced.
+@return mixed - Returns the output buffer or FALSE if no buffering is active.
+@return mixed - Returns the permissions on the file, or FALSE on failure.
+@return mixed - Returns the portion of haystack, or FALSE if needle is not found.
+@return mixed - Returns the portion of haystack.
+@return mixed - Returns the portion of string, or FALSE if needle is not found.
+@return mixed - Returns the position as an integer.
+@return mixed - Returns the position where the needle exists.
+@return mixed - Returns the profile information filename or false if profiling is disabled.
+@return mixed - Returns the read data, as a string
+@return mixed - Returns the read string or FALSE on failure.
+@return mixed - Returns the resulting array.
+@return mixed - Returns the resulting value.
+@return mixed - Returns the return value of the callback, or FALSE on error.
+@return mixed - Returns the return value of the closure.
+@return mixed - Returns the reversed array.
+@return mixed - Returns the shifted value, or NULL if array is empty or is not an array.
+@return mixed - Returns the size of the file in bytes, or FALSE (and generates an error of level E_WARNING) in case of an error.
+@return mixed - Returns the slice.
+@return mixed - Returns the soundex key as a string.
+@return mixed - Returns the specified argument, or FALSE on error.
+@return mixed - Returns the string associated with the key or FALSE on failure or if such key was not found.
+@return mixed - Returns the sunrise time in a specified format on success or FALSE on failure.
+@return mixed - Returns the sunset time in a specified format on success or FALSE on failure.
+@return mixed - Returns the termination status of the process that was run.
+@return mixed - Returns the time the file was last accessed, or FALSE on failure.
+@return mixed - Returns the time the file was last changed, or FALSE on failure.
+@return mixed - Returns the time the file was last modified, or FALSE on failure.
+@return mixed - Returns the total number of bytes as a float or FALSE on failure.
+@return mixed - Returns the translated string.
+@return mixed - Returns the type of the file.
+@return mixed - Returns the uncompressed data, or FALSE on error.
+@return mixed - Returns the user ID of the owner of the file, or FALSE on failure.
+@return mixed - Returns the user friendly name.
+@return mixed - Returns the uuencoded data.
+@return mixed - Returns the value at 'key' in 'search' or 'def' if it is not found.
+@return mixed - Returns the value of the constant, or NULL if the constant is not defined.
+@return mixed - Returns the value of the first array element, or FALSE if the array is empty.
+@return mixed - Returns the value of the first column of results or an array of the entire first row (if entire_row is TRUE), otherwise FALSE on failure.
+@return mixed - Returns the value of the given option, or FALSE on errors.
+@return mixed - Returns the value of the last element or FALSE for empty array.
+@return mixed - Returns the value of the requested option, or FALSE on error.
+@return mixed - Returns the value stored in the cache or FALSE otherwise.
+@return mixed - Returns the values of array1 whose keys exist in all the arguments.
+@return mixed - Returns the values of array1 whose values exist in all of the arguments.
+@return mixed - Returns the variable with the given key.
+@return mixed - Returns time zone name on success or FALSE on failure.
+@return mixed - Same format as the normal php lstat() function.
+@return mixed - See the manual page for stat() for information on the structure of the array that lstat() returns.
+@return mixed - Serialized data.
+@return mixed - TRUE if the key exists, otherwise FALSE.
+@return mixed - The DOMElement node added or FALSE if any errors occur.
+@return mixed - The MIME charset string for character encoding encoding.
+@return mixed - The UID of the given message.
+@return mixed - The array elements returned are: The group information array Element Description name The name element contains the name of the group.
+@return mixed - The attribute node.
+@return mixed - The character encoding before conversion for success, or FALSE for failure.
+@return mixed - The character encoding name, as per the type.
+@return mixed - The cloned node.
+@return mixed - The compressed string, or an error number if an error occurred.
+@return mixed - The converted string.
+@return mixed - The current() function simply returns the value of the array element that's currently being pointed to by the internal pointer.
+@return mixed - The decoded string in internal character encoding.
+@return mixed - The decompressed string, or an error number if an error occurred.
+@return mixed - The decrypted string on success or FALSE on failure.
+@return mixed - The detected character encoding or FALSE if the encoding cannot be detected from the given string.
+@return mixed - The encoded string.
+@return mixed - The filename returned by xdebug_get_tracefile_name() or false on failure.
+@return mixed - The following associative array elements are returned: dirname, basename, extension (if any), and filename.
+@return mixed - The function returns the number of bytes that were written to the file, or FALSE on failure.
+@return mixed - The function returns the read data or FALSE on failure.
+@return mixed - The inserted node.
+@return mixed - The integer division of numerator by divisor.
+@return mixed - The key() function simply returns the key of the array element that's currently being pointed to by the internal pointer.
+@return mixed - The length of the string on success, and 0 if the string is empty.
+@return mixed - The max of two operands.
+@return mixed - The min of two operands.
+@return mixed - The name of the socket.
+@return mixed - The namespace URI of the node.
+@return mixed - The new DOMAttr or FALSE if an error occurred.
+@return mixed - The new DOMCDATASection or FALSE if an error occurred.
+@return mixed - The new DOMComment or FALSE if an error occurred.
+@return mixed - The new DOMDocumentFragment or FALSE if an error occurred.
+@return mixed - The new DOMElement or FALSE if an error occurred.
+@return mixed - The new DOMEntityReference or FALSE if an error occurred.
+@return mixed - The new DOMProcessingInstruction or FALSE if an error occurred.
+@return mixed - The new DOMText or FALSE if an error occurred.
+@return mixed - The new node of the same type, which contains all the content at and after the offset.
+@return mixed - The node added.
+@return mixed - The node at the indexth position in the DOMNodeList, or NULL if that is not a valid index.
+@return mixed - The node at the indexth position in the map, or NULL if that is not a valid index (greater than or equal to the number of nodes in this map).
+@return mixed - The number of elements in iterator.
+@return mixed - The number of times the needle substring occurs in the haystack string.
+@return mixed - The old node or FALSE if an error occur.
+@return mixed - The output from the executed command.
+@return mixed - The prefix of the namespace.
+@return mixed - The result array contains the following items:  timed_out (bool) - TRUE if the stream timed out while waiting for data on the last call to fread() or fgets().
+@return mixed - The result as an array.
+@return mixed - The result of the function call if defined, otherwise default.
+@return mixed - The result of the invoked function.
+@return mixed - The result of the invoked method.
+@return mixed - The result of the transformation as a string or FALSE on error.
+@return mixed - The result string is returned.
+@return mixed - The resultant string on success, or FALSE on error.
+@return mixed - The resultant string or FALSE on error.
+@return mixed - The resulting DOMDocument or FALSE on error.
+@return mixed - The return value of the xbox call task.
+@return mixed - The return value of this function on success depends on the fetch type.
+@return mixed - The rounded value
+@return mixed - The settings are returned as an associative array on success, and FALSE on failure.
+@return mixed - The structure of the returned data is (deliberately) not yet documented, as it is still subject to change.
+@return mixed - The truncated string.
+@return mixed - The value of the parameter (as a string), or FALSE if it's not set.
+@return mixed - The value of the parsed number or FALSE on error.
+@return mixed - The value of the property.
+@return mixed - The width of string str.
+@return mixed - This function returns FALSE if parser does not refer to a valid parser or if option isn't valid (generates also a E_WARNING).
+@return mixed - This function returns a string or an array with the replaced values.
+@return mixed - This function returns an array of all of the IMAP error messages generated since the last imap_errors() call, or the beginning of the page.
+@return mixed - This function returns the portion of string, or FALSE if needle is not found.
+@return mixed - This functions returns an integer.
+@return mixed - This is a fb specific query so behaviour is a little random at the moment.
+@return mixed - This object.
+@return mixed - This will return the contents of the output buffer or FALSE, if output buffering isn't active.
+@return mixed - Unserialized data.
+@return mixed - array_udiff_assoc() returns an array containing all the values from array1 that are not present in any of the other arguments.
+@return mixed - fwrite() returns the number of bytes written, or FALSE on error.
+@return mixed - linkinfo() returns the st_dev field of the Unix C stat structure returned by the lstat system call.
+@return mixed - max() returns the numerically highest of the parameter values.
+@return mixed - mb_ereg_search() returns TRUE if the multibyte string matches with the regular expression, or FALSE otherwise.
+@return mixed - mb_ereg_search_regs() executes the multibyte regular expression match, and if there are some matched part, it returns an array including substring of matched part as first element, the first grouped part with brackets as second element, the second grouped part as third element, and so on.
+@return mixed - mb_strcut() returns the portion of str specified by the start and length parameters.
+@return mixed - mb_substr() returns the portion of str specified by the start and length parameters.
+@return mixed - min() returns the numerically lowest of the parameter values.
+@return mixed - mktime() returns the Unix timestamp of the arguments given.
+@return mixed - pcntl_getpriority() returns the priority of the process or FALSE on error.
+@return mixed - preg_filter() returns an array if the subject parameter is an array, or a string otherwise.
+@return mixed - preg_replace() returns an array if the subject parameter is an array, or a string otherwise.
+@return mixed - preg_replace_callback() returns an array if the subject parameter is an array, or a string otherwise.
+@return mixed - preg_replace_callback_array() returns an array if the subject parameter is an array, or a string otherwise.
+@return mixed - socket_create() returns a socket resource on success, or FALSE on error.
+@return mixed - socket_create_listen() returns a new socket resource on success or FALSE on error.
+@return mixed - socket_read() returns the data as a string on success, or FALSE on error (including if the remote host has closed the connection).
+@return mixed - socket_recv() returns the number of bytes received, or FALSE if there was an error.
+@return mixed - socket_recvfrom() returns the number of bytes received, or FALSE if there was an error.
+@return mixed - socket_send() returns the number of bytes sent, or FALSE on error.
+@return mixed - socket_sendto() returns the number of bytes sent to the remote host, or FALSE if an error occurred.
+@return mixed - stat() and fstat() result format Numeric Associative (since PHP 4.0.6) Description 0 dev device number 1 ino inode number * 2 mode inode protection mode 3 nlink number of links 4 uid userid of owner * 5 gid groupid of owner * 6 rdev device type, if inode device 7 size size in bytes 8 atime time of last access (Unix timestamp) 9 mtime time of last modification (Unix timestamp) 10 ctime time of last inode change (Unix timestamp) 11 blksize blocksize of filesystem IO ** 12 blocks number of 512-byte blocks allocated ** * On Windows this will always be 0.
+@return mixed - str with all alphabetic characters converted to lowercase.
+@return mixed - str with all alphabetic characters converted to uppercase.
+@return mixed- Returns the calling function/method or false if called at the top level
+@return mized - Returns the number of bytes written, or FALSE on error.
+@return mysqli_stmt - mysqli_prepare() returns a statement object or FALSE if an error occurred.
+@return num - Returns the product as an integer or float.
+@return num - Returns the sum of values as an integer or float.
+@return number of attached Iterator instances.
+@return number of elements/attributes seen with foreach()
+@return object
+@return object - Returns a SimpleXMLElement element, whether the node has children or not.
+@return object - Returns an object containing field information.
+@return object - Returns an object which contains field definition information or FALSE if no field information for specified fieldnr is available.
+@return object - Returns an object with string properties that correspond to the fetched row, or FALSE if there are no more rows.
+@return object - Returns an object with string properties that corresponds to the fetched row or NULL if there are no more rows in resultset.
+@return object - The attribute node.
+@return object - The newly created object
+@return object - This function returns a new instance of the class DOMNodeList of all matched elements in the order in which they are encountered in a preorder traversal of this element tree.
+@return object - This function returns a new instance of the class DOMNodeList of all matched elements.
+@return object EncodingMatch
+@return resource - (Procedural style only) Returns a magic database resource on success.
+@return resource - A mysql result object, or null if one isn't ready yet.
+@return resource - A task handle xbox_task_status() and xbox_task_result() can use.
+@return resource - An object that can be used with pagelet_server_task_status() or pagelet_server_task_result().
+@return resource - Normally it returns an encryption descriptor, or FALSE on error.
+@return resource - Returns a MySQL link identifier on success.
+@return resource - Returns a MySQL persistent link identifier on success, or FALSE on failure.
+@return resource - Returns a cURL handle on success, FALSE on errors.
+@return resource - Returns a copy of Hashing Context resource.
+@return resource - Returns a directory entry resource for later use with the zip_entry_...
+@return resource - Returns a file pointer (resource) on success.
+@return resource - Returns a file pointer to the file opened, after that, everything you read from this file descriptor will be transparently decompressed and what you write gets compressed.
+@return resource - Returns a handle that can be used to parse a message.
+@return resource - Returns a packet ID for use in later functions, or FALSE on error.
+@return resource - Returns a resource handle for later use with zip_read() and zip_close() or returns the number of error if filename does not exist or in case of other error.
+@return resource - Returns a resource handle for the new XML parser.
+@return resource - Returns a resource identifier for the pkey on success, or FALSE on error.
+@return resource - fsockopen() returns a file pointer which may be used together with the other file functions (such as fgets(), fgetss(), fwrite(), fclose(), and feof()).
+@return resrouce - Returns a Hashing Context resource for use with hash_update(), hash_update_stream(), hash_update_file(), and hash_final().
+@return scalar
+@return string
+@return string        Real locale name from which the collation data comes.
+@return string       Returns the portion of string, or FALSE if needle is not found.
+@return string     - If connection_id is specified, the last state of that connection is returned, else the last state of any connection is returned.
+@return string     the locale of this formatter  or 'false' if error
+@return string    Error code name.
+@return string  Description of an error occurred in the last API function call.
+@return string  Description of an error occurred in the last Collator API function call.
+@return string  Real locale name from which the collation data comes.
+@return string  response body
+@return string -
+@return string - A comma delimited list of default file extensions for spl_autoload().
+@return string - A formatted version of number.
+@return string - A string containing the derived key as lowercase hexits unless raw_output is set to TRUE in which case the raw binary representation of the derived key is returned.
+@return string - A string that is unique for each currently existing object and is always the same for each object.
+@return string - Append item format for the given pattern field
+@return string - Append item name for the given pattern field
+@return string - Description of an error occurred in the last API function call.
+@return string - Description of an error occurred in the last Collator API function call.
+@return string - Description of the last error.
+@return string - HTTP response from the pagelet.
+@return string - ID string for the time zone used by this formatter.
+@return string - If called with one argument, it returns the current value of note note_name.
+@return string - If the server appears to be warmed up, returns the empty string.
+@return string - One of timezones.
+@return string - Pattern adjusted to match the skeleton fields widths and subtypes.
+@return string - Pattern string that is used by the formatter, or FALSE if an error happens.
+@return string - Real locale name from which the collation data comes.
+@return string - Real path of the file.
+@return string - Return attribute value on success, or FALSE on error.
+@return string - Returns a URL-encoded string.
+@return string - Returns a decoded MIME field on success, or FALSE if an error occurs during the decoding.
+@return string - Returns a properly escaped string that may be used safely in an SQL statement.
+@return string - Returns a single string from the user.
+@return string - Returns a string containing a string representation of all the array elements in the same order, with the glue string between each element.
+@return string - Returns a string containing the calculated message digest as lowercase hexits unless raw_output is set to true in which case the raw binary representation of the message digest is returned.
+@return string - Returns a string containing the error message.
+@return string - Returns a string containing the image profile.
+@return string - Returns a string formatted according to the given format string using the given timestamp or the current local time if no timestamp is given.
+@return string - Returns a string in which all non-alphanumeric characters except -_.
+@return string - Returns a string representation of the address.
+@return string - Returns a string with a textual description of the error code, or FALSE if no description was found.
+@return string - Returns a string with backslashes stripped off.
+@return string - Returns a string.
+@return string - Returns a textual description of the contents of the filename argument, or FALSE if an error occurred.
+@return string - Returns a unique function name as a string, or FALSE on error.
+@return string - Returns a valid regular expression which will match string, ignoring case.
+@return string - Returns an English string describing the most recent failed SQLite request.
+@return string - Returns an escaped string.
+@return string - Returns error message from last bundle object's call.
+@return string - Returns error message from last formatter call.
+@return string - Returns error string for valid error code, NULL otherwise.
+@return string - Returns string error message.
+@return string - Returns the 8-bit binary string.
+@return string - Returns the IPv4 address or a string containing the unmodified hostname on failure.
+@return string - Returns the ISO-8859-1 translation of data.
+@return string - Returns the Internet IP address as a string.
+@return string - Returns the Internet service name as a string.
+@return string - Returns the ROT13 version of the given string.
+@return string - Returns the UTF-8 translation of data.
+@return string - Returns the WDDX packet, or FALSE on error.
+@return string - Returns the Zip archive comment.
+@return string - Returns the altered string.
+@return string - Returns the base name of the given path.
+@return string - Returns the calling file.
+@return string - Returns the collation key for the string.
+@return string - Returns the comment on success.
+@return string - Returns the content type in MIME format, like text/plain or application/octet-stream.
+@return string - Returns the converted string.
+@return string - Returns the current buffer as a string.
+@return string - Returns the data read, empty string on end of a file, or FALSE on error.
+@return string - Returns the database name on success, and FALSE on failure.
+@return string - Returns the decoded URL, as a string.
+@return string - Returns the decoded string.
+@return string - Returns the encoded string.
+@return string - Returns the encrypted data.
+@return string - Returns the error message associated with the errno parameter.
+@return string - Returns the error message, as a string.
+@return string - Returns the escaped string.
+@return string - Returns the formatted interval.
+@return string - Returns the hash as a 32-character hexadecimal number.
+@return string - Returns the hashed string or a string that is shorter than 13 characters and is guaranteed to differ from the salt on failure.
+@return string - Returns the hexadecimal representation of the given string.
+@return string - Returns the host name on success, the unmodified ip_address on failure, or FALSE on malformed input.
+@return string - Returns the in_addr representation of the given address, or FALSE if a syntactically invalid address is given (for example, an IPv4 address without dots or an IPv6 address without colons).
+@return string - Returns the initialization vector, or FALSE on error.
+@return string - Returns the last line of the command output on success, and FALSE on failure.
+@return string - Returns the lowercased string.
+@return string - Returns the modified string.
+@return string - Returns the modulus as a string, or NULL if modulus is 0.
+@return string - Returns the name as a string.
+@return string - Returns the name of the class of which object is an instance.
+@return string - Returns the name of the current session module.
+@return string - Returns the name of the current session.
+@return string - Returns the name of the directory.
+@return string - Returns the name of the opened algorithm as a string.
+@return string - Returns the name on success.
+@return string - Returns the original data or FALSE on failure.
+@return string - Returns the padded string.
+@return string - Returns the path of the current directory used for data storage.
+@return string - Returns the portion of str specified by the offset and length parameters.
+@return string - Returns the portion of str specified by the start and length parameters.
+@return string - Returns the portion of string, or FALSE if needle is not found.
+@return string - Returns the protocol name as a string, .
+@return string - Returns the quoted (escaped) string.
+@return string - Returns the repeated string.
+@return string - Returns the result as a string, or NULL if modulus is 0.
+@return string - Returns the result as a string.
+@return string - Returns the result of the division as a string, or NULL if right_operand is 0.
+@return string - Returns the resulting string.
+@return string - Returns the reversed string.
+@return string - Returns the sha1 hash as a string.
+@return string - Returns the shuffled string.
+@return string - Returns the specified character.
+@return string - Returns the square root as a string, or NULL if operand is negative.
+@return string - Returns the string containing formatted value, or FALSE on error.
+@return string - Returns the string containing the WDDX packet.
+@return string - Returns the string name of the column identified by column_number.
+@return string - Returns the string with meta characters quoted.
+@return string - Returns the stripped string.
+@return string - Returns the unescaped string.
+@return string - Returns the unique identifier, as a string.
+@return string - Returns the uppercased string.
+@return string - Returns the visual string.
+@return string - String representing the formatted currency value.
+@return string - The best pattern found for the given skeleton
+@return string - The calculated message digest as lowercase hexits unless raw_output is set to true in which case the raw binary representation of the message digest is returned.
+@return string - The closest matching language tag or default value.
+@return string - The compressed string or FALSE if an error occurred.
+@return string - The compression method.
+@return string - The contents of one cell from a MySQL result set on success, or FALSE on failure.
+@return string - The converted string.
+@return string - The corresponding locale identifier.
+@return string - The crypto-secure random bytes in binary format.
+@return string - The data that have been read.
+@return string - The decoded string, or FALSE if an error occurred.
+@return string - The deflated string or FALSE if an error occurred.
+@return string - The encoded data, as a string or FALSE on failure.
+@return string - The encoded string, or FALSE if an error occurred.
+@return string - The escaped string.
+@return string - The formatted string or, if an error occurred, FALSE.
+@return string - The last line from the result of the command.
+@return string - The locale name
+@return string - The locale name used to create the formatter.
+@return string - The modified string is returned.
+@return string - The name of the directory entry.
+@return string - The normalized string or NULL if an error occurred.
+@return string - The original uncompressed data or FALSE on error.
+@return string - The pattern string being used to format/parse.
+@return string - The result of the string cast.
+@return string - The result of the subtraction, as a string.
+@return string - The returned string will be the same as the name of the error code constant.
+@return string - The specified substring.
+@return string - The string representing the decimal (normally ".")
+@return string - The sum of the two operands, as a string.
+@return string - The symbol string or FALSE on error.
+@return string - The symbolic name of the given token.
+@return string - The trimmed string.
+@return string - The uncompressed and striped string, or FALSE on error.
+@return string - The uncompressed character or FALSE on EOF (unlike gzeof()).
+@return string - The uncompressed data or FALSE on error
+@return string - The uncompressed string, or FALSE on error.
+@return string - The value of the attribute, or an empty string if no attribute with the given localName and namespaceURI is found.
+@return string - The value of the attribute, or an empty string if no attribute with the given name is found.
+@return string - This function returns a string with whitespace stripped from the beginning of str.
+@return string - base skeleton, such as "Md"
+@return string - pattern
+@return string - session_id() returns the session id for the current session or the empty string ("") if there is no current session (no current session id exists).
+@return string - skeleton such as "MMMdd"
+@return string Description of an error occurred in the last Collator method call.
+@return string Description of the last error.
+@return string Description of the last occurred error.
+@return string ID string for the time zone used by this formatter
+@return string The API version string as in "1.0.0".
+@return string The opened archive's API version.
+@return string The raw text of a default value, or empty if it does not exist.
+@return string formatted number
+@return string locale name
+@return string representation of exception
+@return string representation of the instance
+@return string the filename if valid, empty string otherwise.
+@return sub path only (without main path)
+@return target of link.
+@return the code passed to the constructor
+@return the current sub path
+@return the filename only.
+@return the iterator which is an ArrayIterator object connected to this object.
+@return the line number where the exception was thrown
+@return the message passed to the constructor
+@return the name of the file where the exception was thrown
+@return the number of elements in the array or the number of public properties in the object.
+@return the number the global function count() should show
+@return the path part only.
+@return the stack trace as array
+@return the stack trace as string
+@return void
+@return void    - No value is returned.
+@return void -
+@return void No return values.
+@return void No value is returned.
+@return void no return value, exception is thrown on failure.
+@return whether all or one sub iterator is valid depending on flags.
+@return whether the current entry is a link.
+@return whether the current is a directory (not '.' or '..').
+@return whether the current node has sub nodes.
+@returns mixed - Returns TRUE on success, FALSE if negoation has failed, or 0 if there isn't enough data and you should try again (only for non-blocking sockets).
+@save_indexes mixed   Try to save the numeric indexes used in the original array.
+@save_path  mixed   The path where to store/retrieve the session.
+@see ArrayIterator
+@see Collator::sort()
+@see DomainException
+@see InvalidArgumentException
+@see OutOfBoundsException
+@see OutOfRangeException
+@see RangeException
+@see collator_sort()
+@see http://www.icu-project.org/apiref/icu4c/classDecimalFormat.html Localized patterns are not currently supported.
+@see http://www.icu-project.org/apiref/icu4c/umsg_8h.html
+@serialized mixed   The serialized ArrayObject.
+@serialized mixed   The serialized representation of a storage.
+@serialized mixed   The serialized string.
+@serialized mixed   The string representation of the object.
+@session_data mixed   The encoded session data.
+@session_id mixed   The session ID being destroyed.
+@session_id mixed   The session id.
+@severity   mixed   The severity level of the exception.
+@since PHP 5.0
+@since PHP 5.0  Abstract base interface that cannot be implemented alone.
+@since PHP 5.1
+@since PHP 5.1  Normally this means there was an arithmetic error other than under/overflow.
+@since PHP 5.1  This can be used for strings length, array size, file size, number of elements read from an Iterator and so on.
+@since PHP 5.1  This kind of exception should be used to inform about domain erors in mathematical sense.
+@since PHP 5.1  This kind of exceptions should directly leed to a fix in your code.
+@since PHP 5.1  This represents errors that cannot be detected at compile time.
+@since PHP 5.1  This represents errors that should be detected at compile time.
+@since PHP 5.1  Typically this happens when a function calls another function and espects the return value to be of a certain type or value not including arithmetic or buffer related errors.
+@size       mixed   The new array size.
+@size       mixed   The size of the fixed array.
+@size       mixed   The size to truncate to.
+@storage    mixed   The storage containing the elements to remove.
+@storage    mixed   The storage containing the elements to retain in the current storage.
+@storage    mixed   The storage you want to import.
+@stub       mixed   A string or an open stream handle to use as the executable stub for this phar archive.
+@subject    mixed   The SplSubject notifying the observer of an update.
+@suffix     mixed   Optional suffix to omit from the base name returned.
+@throws     Exception            Emits an Exception if max_depth is less than -1.
+@throws Exception - If generating sufficiently random data fails.
+@throws Exception - If there is an error creating the generator, an exception will be thrown.
+@throws Exception - If there is an error, an exception will be thrown.
+@throws IllegalValueException if a key is NULL and MIT_KEYS_ASSOC is set.
+@throws LogicException if mode MIT_NEED_ALL is set and at least one attached Iterator is not valid().
+@throws RuntimeException      if mode MIT_NEED_ALL is set and at least one attached Iterator is not valid().
+@type       mixed   One of INPUT_GET, INPUT_POST, INPUT_COOKIE, INPUT_SERVER, or INPUT_ENV.
+@use_include_path mixed   Whether to search in the include_path for filename.
+@value      mixed   Content of the file.
+@value      mixed   New property value.
+@value      mixed   The new value.
+@value      mixed   The value being appended.
+@value      mixed   The value to append.
+@value      mixed   The value to enqueue.
+@value      mixed   The value to insert.
+@value      mixed   The value to push.
+@value      mixed   The value to unshift.
+@value1     mixed   The value of the first node being compared.
+@value2     mixed   The value of the second node being compared.
+@var integer Operation mode, see RegexIterator::setMode() for a list of modes.
+@var integer Special flags, see RegexIterator::setFlags() for a list of available flags.
+@var integer The regular expression flags.
+@var string
+@var string The regular expression to match.
+@variable_name mixed   Name of a variable to check.
+@variable_name mixed   Name of a variable to get.
+@whence     mixed   whence values are: SEEK_SET - Set position equal to offset bytes.
+@wouldblock mixed   Set to TRUE if the lock would block (EWOULDBLOCK errno condition).
 A "Locale" is an identifier used to get language, culture, or regionally-specific  behavior from an API.
 A "Locale" is an identifier used to get language, culture, or regionally-specific behavior from an API.
 A "break iterator" is an ICU object that exposes methods for locating boundaries in text (e.g. word or sentence boundaries).
@@ -928,6 +2569,7 @@ A failed server will have its corresponding entry set to FALSE.
 A file archive, compressed with Zip.
 A first element
 A fun test for type inference.
+A helper script to check that HNI signatures in a PHP file match how the functions are defined in the C++ file.
 A limit of -1, 0 or NULL means "no limit" and, as is standard across PHP, you can use NULL to skip to the flags parameter.
 A list of available transports can be retrieved using stream_get_transports().
 A list of possible flags for fnmatch() Flag Description FNM_NOESCAPE Disable backslash escaping.
@@ -992,6 +2634,7 @@ A wait handle that can resume execution of PHP code
 A wait handle that is always finished
 A wait handle that succeeds with null after the desired timeout expires
 A wait handle that succeeds with null once desired scheduling priority is eligible for execution
+A wait handle that synchronizes against C++ operation in external thread
 A wait handle that waits for a list of other wait handles
 A warning will be emitted if a value has the wrong type, and the key/value pair in question will not be flipped.
 ADD THE 2 HANDLES
@@ -1317,7 +2960,7 @@ And all results are packaged back in a single batch.
 And as of PHP 5.4.0, call-time pass-by-reference was removed, so using it will raise a fatal error."
 And better support for folding.
 And here, we need to make sure, that the traits behave the same
-And if you do call it from user code, it will construct successfully, but you will fail on the *first* method call to the instantiated object.
+And if you do call it from user code, it will construct successfully, but you will fail on the first* method call to the instantiated object.
 And now a good one that will work
 And now allow the evil to do his work
 And now native PS
@@ -1648,6 +3291,7 @@ C should not have constant bar
 C should not have method bar
 C should not have property bar
 C's doc comment
+C++ exceptions, like stack overflow, now prevent further php code from running.
 C1 is the parent
 CAUTION: the insert_id() API call is not supposed to return the same value as a call to the LAST_INSERT_ID() SQL function.
 CHILDREN / PARENTS
@@ -1669,6 +3313,7 @@ CRYPT_EXT_DES - Extended DES-based hash.
 CURLFile can be used to upload a file with CURLOPT_POSTFIELDS.
 CURL_MULTI_GETCONTENT TEST CREATE RESOURCES
 CURRENTLY UNSUPPORTED IN HHVM.
+CURRENT_AS_FILEINFO + KEY_AS_FILENAME
 Cache BadClass
 Cache a variable in the data store.
 Caches a variable in the data store, only if it's not already stored.
@@ -1702,6 +3347,7 @@ Called by session_write_close(), when session_register_shutdown() fails, or duri
 Called during conversion from internal UChar to destination encoding
 Called during conversion from source encoding to internal UChar representation
 Called for each element to test whether it has children.
+Called from C++.
 Called from the subject (i.e. when it's value has changed).
 Called right after the session starts or when session_start() is called.
 Called when a session starts or when session_start() is invoked.
@@ -1882,9 +3528,15 @@ Check for mappings
 Check for read operation
 Check for sequences
 Check for size of existing data file after opening the file in "w" mode again, expected: 0 bytes
+Check for size of existing data file after opening the file in "w+" mode again, expected: 0 bytes
+Check for size of existing data file after opening the file in "w+b" mode again, expected: 0 bytes
+Check for size of existing data file after opening the file in "w+t" mode again, expected: 0 bytes
 Check for size of existing data file after opening the file in "wb" mode again, expected: 0 bytes
 Check for size of existing data file after opening the file in "wt" mode again, expected: 0 bytes
 Check for size of existing data file before opening the file in "w" mode again, expected: size of content
+Check for size of existing data file before opening the file in "w+" mode again, expected: size of content
+Check for size of existing data file before opening the file in "w+b" mode again, expected: size of content
+Check for size of existing data file before opening the file in "w+t" mode again, expected: size of content
 Check for size of existing data file before opening the file in "wb" mode again, expected: size of content
 Check for size of existing data file before opening the file in "wt" mode again, expected: size of content
 Check for strings
@@ -2108,6 +3760,7 @@ Compatibility decomposition followed by canonical composition.
 Compatibility decomposition.
 Compile a list of all test files (*.phpt).
 Compile only test.
+Compile only: verify no c++ compilation errors
 Complex resources are containers which can be either integer-indexed or string-indexed (just like PHP arrays).
 Complex types are returned as ResourceBundle object.
 Compressing a smaller string
@@ -2224,6 +3877,7 @@ Count blacklisted tests as failures Note clownylisted tests do not count in the 
 Count of elements to follow
 Count the elements in an iterator.
 Count the number of UTF-8 code points in string or byte count if it's not valid UTF-8.
+Count the number of UTF-8 code points in string, substituting U+FFFD for invalid sequences.
 Counts all elements in an array, or properties in an object.
 Counts the number of occurrences of every byte-value (0..255) in string and returns it in various ways.
 Counts the number of times the needle substring occurs in the haystack string.
@@ -2286,6 +3940,7 @@ Create instance of class in the test case
 Create nested Tunresolved that can occur as a result of anonymous function call, and check that subsequent unification of those types works correctly.
 Create new xmlwriter using memory for string output.
 Create results for the framework that just ran.
+Create sample arrays Test alpha, numeric (decimal, hex, octal) and special data
 Create some data buckets proportional to the number of threads
 Create some more holes to give the memory allocator something to work with.
 Create table here
@@ -2317,6 +3972,7 @@ Creates a rectangle filled with color in the given image starting at point 1 and
 Creates a special or ordinary file.
 Creates a spoof checker that checks for visually confusing characters in a string.
 Creates a stream or datagram socket on the specified local_socket.
+Creates a temporary file with a unique name in read-write (w+) mode and returns a file handle .
 Creates a timer that will send a SIGALRM signal to the process after the given number of seconds.
 Creates an HTML document from the DOM representation.
 Creates an XML document from the DOM representation.
@@ -2551,6 +4207,7 @@ Do nothing, the iterator always points to the top element
 Do so a couple times, so we exercise both directions of each branch through multiple executions.
 Do some crap, to block inlining
 Do some guesswork as to the key and the value
+Do this thing with a non-scalar initializer
 Doc comment on a function generator
 Doc comment on a method generator
 Docs say bool, but Zend's default implementation returns null
@@ -2801,8 +4458,8 @@ Every value in the current Pair is affected by a call to `map()`, unlike `filter
 Everything else will cause bzopen to return FALSE.
 Exact errors are in italics, errors where the message can vary are described in obliques.
 Example: given an input pattern of "d-M H:m", and a skeleton of "MMMMddhhmm", the output pattern will be "dd-MMMM hh:mm".
-Examples of identifiers include:  * en-US (English, United States) * zh-Hant-TW (Chinese, Traditional Script, Taiwan) * fr-CA, fr-FR (French for Canada and France respectively)   The Locale class (and related procedural functions) are used to interact  with locale identifiers--to verify that an ID is well-formed, valid,  etc.
 Examples of identifiers include:  en-US (English, United States) zh-Hant-TW (Chinese, Traditional Script, Taiwan) fr-CA, fr-FR (French for Canada and France respectively)    The Locale class (and related procedural functions) are used to interact with locale identifiers--to verify that an ID is well-formed, valid, etc.
+Examples of identifiers include:  en-US (English, United States) zh-Hant-TW (Chinese, Traditional Script, Taiwan) fr-CA, fr-FR (French for Canada and France respectively)   The Locale class (and related procedural functions) are used to interact  with locale identifiers--to verify that an ID is well-formed, valid,  etc.
 Exception here -- if this is in a closure, then it will return false PHP fatals on closures and getting default values, we will just return false.
 Exception test cases with fault funclets and nested FPI regions of various complexity.
 Exception thrown here
@@ -2948,6 +4605,8 @@ File pointer position after read operation, expected at the end of the file
 File pointer position after write operation, expected at the end of the file
 File testing corner cases for initialization of class members
 File which doesn't exist
+Files - Checking //
+Files - Whitelisting //
 Files as stored across two collections, the first containing file meta information, the second containing chunks of the actual file.
 Files within PharData archives do not have this restriction.
 Fill border
@@ -3585,6 +5244,10 @@ INT and integer work well together
 IPv6 explicit port.
 IPv6 with override port.
 IPv6 with port.
+IS_CONST + conversion
+IS_CV + conversion
+IS_TMP_VAR + conversion
+IS_VAR + conversion
 IV MUST exist in CFB, CBC, STREAM, nOFB and OFB modes.
 IV is ignored in ECB.
 Ideally we would be able to detect the impossibility of this comparison succeeding.
@@ -3709,6 +5372,7 @@ If e is specified, replacement string will be evaluated as PHP expression.
 If empty string ("") or "root" are passed, UCA rules will be used.
 If empty string is passed, the parser attempts to identify which encoding the document is encoded in by looking at the heading 3 or 4 bytes.
 If empty, all functions will be intercepted by the specified handler and registered individual handlers will be replaced.
+If enc_type is PHP_QUERY_RFC1738, then encoding is performed per RFC 1738 and the application/x-www-form-urlencoded media type, which implies that spaces are encoded as plus (+) signs.
 If encoding is omitted, mb_http_output() returns the current HTTP output character encoding.
 If encoding is omitted, then the current character encoding name is returned.
 If encoding_list is omitted, detect_order is used.
@@ -4075,6 +5739,7 @@ If the value returned in errno is 0 and the function returned FALSE, it is an in
 If the value returned in errno is 0 and the function returned FALSE, it is an indication that the error occurred before the connect() call.
 If there are fewer elements in the replacement array than in the pattern array, any extra patterns will be replaced by an empty string.
 If there are multiple connections queued on the socket, the first will be used.
+If there are n occurrences of pattern, the returned array will contain n+1 items.
 If there are no more entries in the result then it returns FALSE.
 If there are no pending connections, socket_accept() will block until a connection becomes present.
 If there are no slashes in path, a dot ('.') is returned, indicating the current directory.
@@ -4181,6 +5846,7 @@ If you have a direct query that requires no placeholders, then you can use this 
 If you have enabled safe mode, or open_basedir further restrictions may apply.
 If you have exhasted the cursor, it will not reset it.
 If you have open pipes to that process, you should fclose() them prior to calling this function in order to avoid a deadlock - the child process may not be able to exit while the pipes are open.
+If you have opened the file in append ("a" or "a+") mode, any data you write to the file will always be appended, regardless of the file position.
 If you have started iterating through results, it will not move the current position of the cursor.
 If you have this set, it probably points to hhvm objects, not OSS objects.
 If you have those, we are just double setting variables to true.
@@ -4256,6 +5922,7 @@ Import this wait handle to the current scheduler context
 Import variables from an array into the current symbol table.
 Imports GET/POST/Cookie variables into the global scope.
 Imports a zend extension into HHVM
+Improperly formatted U+0041 LATIN CAPITAL LETTER A
 In 'input' array argument, values are expected to be valid keys i.e. string/integer here testing for all different valid string and integer values
 In , this parameter is ignored and empty password is used.
 In , this parameter is ignored and the name of the user that owns the server process is used.
@@ -4748,6 +6415,7 @@ Join container elements with a glue string.
 Just make sure that you call ob_end_flush() the appropriate number of times.
 Just print out pertinent error information.
 Just skip over the test names or test file.
+KEkIE8+MlC9a7luoW63IostXbA2nwPSeTFaJHqDnidiboBic2wtVKG18bWgN0s
 KOI8-R koi8-ru, koi8r Russian.
 Keep in mind that PHP may be accessing the file as the user id that the web server runs as (often 'nobody').
 Keep track of all declared benchmark suites.
@@ -4931,6 +6599,7 @@ Make sure the weird trait importation syntax works when interleaved with normal 
 Make sure things cleanup when curl_multi_await is abandoned
 Make sure this backtracking handles line numbers correctly.
 Make sure this function shows up in a backtrace
+Make sure we don't die trying to read an uninitialized session from C++
 Make sure we don't just return '/tmp' or other easily-guessable location.
 Make sure we got clone right
 Make sure we raise a type error for the nonexistent method access in the lambda below
@@ -4951,6 +6620,7 @@ Manages an OAuth provider class.
 Manually checkout release appropriate system branch See: https://github.com/kohana/kohana/wiki/developers
 Many FTP servers do not support this command.
 Map is an ordered dictionary-style collection.
+MapSize+101
 Maps checks from HHJsonDecodeTest.php
 Maps do not have "copy-on-write" semantics.
 Maps do not support iterating while new keys are being added or elements are being removed.
@@ -5189,6 +6859,7 @@ Negative offsets, the file pointer should be at the end of file  to get data
 Negative start
 Negative values will stop searching at an arbitrary point prior to the end of the string.
 Neither of these options is supported in this implementation, and if provided a fatal error will be thrown.
+Neither the name of Google Inc.
 Neither this nor the persistent parameter has any effect when the extension is loaded dynamically via dl().
 Neither with libmysql nor with mysqlnd.
 Nested FVs.
@@ -5600,16 +7271,28 @@ Opening 'fubar' with the incorrect readonly flag
 Opening parentheses are counted from left to right (starting from 1) to obtain the number of the capturing subpattern.
 Opening section and start of test case array.
 Opening the existing data file again in "w" mode
+Opening the existing data file again in "w+" mode
+Opening the existing data file again in "w+b" mode
+Opening the existing data file again in "w+t" mode
 Opening the existing data file again in "wb" mode
 Opening the existing data file again in "wt" mode
+Opening the existing data file in "x+" mode to check for the warning message
+Opening the existing data file in "x+b" mode to check for the warning message
+Opening the existing data file in "x+t" mode to check for the warning message
 Opening the existing data file in 'x' mode to check for the warning message
 Opening the existing data file in 'xb' mode to check for the warning message
 Opening the existing data file in 'xt' mode to check for the warning message
 Opening the file in binary read mode
 Opening the non-existing file in "a" mode, which will be created
+Opening the non-existing file in "a+" mode, which will be created
+Opening the non-existing file in "a+b" mode, which will be created
+Opening the non-existing file in "a+t" mode, which will be created
 Opening the non-existing file in "ab" mode, which will be created
 Opening the non-existing file in "at" mode, which will be created
 Opening the non-existing file in "w" mode, which will be created
+Opening the non-existing file in "w+" mode, which will be created
+Opening the non-existing file in "w+b" mode, which will be created
+Opening the non-existing file in "w+t" mode, which will be created
 Opening the non-existing file in "wb" mode, which will be created
 Opening the non-existing file in "wt" mode, which will be created
 Opens a pipe to a process executed by forking the command given by command.
@@ -5994,6 +7677,7 @@ Passed an array made up of referenced variables 2.
 Passed an array of referenced variables 2.
 Passed an infinitely recursive multi-dimensional array
 Passing 'input' array which contains elements as reference to other data
+Passing 'source' argument with different increment/decrement operators to test them for token ++ - T_INC(297) -- - T_DEC(296)
 Passing 'source' argument with different style of comments
 Passing 'source' argument with different type casting operators to test them for token (int)/(integer) - T_INT_CAST(295), (float)/(real)/(double) - T_DOUBLE_CAST(294), (string) - T_STRING_CAST(293), (bool)/(boolean) - T_BOOL_CAST(290), (unset) - T_UNSET_CAST(289)
 Passing 0 causes the seams to be straight.
@@ -6081,6 +7765,7 @@ Please see your system's fork(2) man page for specific details as to how fork wo
 Please see your system's wait(2) man page for specific details as to how wait works on your system.
 Please see your system's waitpid(2) man page for specific details as to how waitpid works on your system.
 Please use MongoClient instead.
+Pollute the heap.
 Pooled curl handles persist between requests.
 Ported to PHP from Google's Octane v2.0 benchmarking suite for JavaScript.
 Position is counted from the beginning of str.
@@ -6235,6 +7920,7 @@ Prototype  : proto bool ob_clean(void) Description: Clean (delete) the current o
 Prototype  : proto bool ob_end_flush(void) Description: Flush (send) the output buffer, and delete current output buffer  Source code: main/output.c Alias to functions:
 Prototype  : proto bool ob_flush(void) Description: Flush (send) contents of the output buffer.
 Prototype  : proto bool posix_kill(int pid, int sig) Description: Send a signal to a process (POSIX.1, 3.3.2)  Source code: ext/posix/posix.c Alias to functions:
+Prototype  : proto bool stream_set_timeout(resource stream, int seconds, int microseconds) Description: Set timeout on stream read to seconds + microseonds  Source code: ext/standard/streamsfuncs.c Alias to functions: socket_set_timeout
 Prototype  : proto int fpassthru(resource fp) Description: Output all remaining data from a file pointer  Source code: ext/standard/file.c Alias to functions: gzpassthru
 Prototype  : proto int ob_get_level(void) Description: Return the nesting level of the output buffer  Source code: main/output.c Alias to functions:
 Prototype  : proto int posix_get_last_error(void) Description: Retrieve the error number set by the last posix function which failed.
@@ -6405,6 +8091,7 @@ Recursively test all sub scripts of provided statement list
 Red if we go from pass to something else
 Redis servers run here by default
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 Redundant match
 Refer to context options and parameters for a listing of stream options.
 Refer to context parameters for a listing of standard stream parameters.
@@ -7013,6 +8700,7 @@ Returns the floating point remainder of dividing the dividend (x) by the divisor
 Returns the general category value for the code point.
 Returns the height of the given image resource.
 Returns the hostname of the server the query was sent too.
+Returns the hyperbolic cosine of arg, defined as (exp(arg) + exp(-arg))/2.
 Returns the hyperbolic sine of arg, defined as (exp(arg) - exp(-arg))/2.
 Returns the hyperbolic tangent of arg, defined as sinh(arg)/cosh(arg).
 Returns the image types supported by the current PHP installation.
@@ -7021,6 +8709,7 @@ Returns the index of the color in the palette of the image which is "closest" to
 Returns the index of the color of the pixel at the specified location in the image specified by image.
 Returns the index of the first element that matches the search value.
 Returns the index of the specified color in the palette of the image.
+Returns the index of the specified color+alpha in the palette of the image.
 Returns the integer value of var, using the specified base for the conversion (the default is base 10).
 Returns the inverse hyperbolic cosine of arg, i.e. the value whose hyperbolic cosine is arg.
 Returns the inverse hyperbolic sine of arg, i.e. the value whose hyperbolic sine is arg.
@@ -7467,6 +9156,7 @@ Set type of the data to "resource" and verify using gettype Following are perfor
 Set type of the data to "string" and verify using gettype Following are performed in the listed sequence: get the current type of the variable set the type of the variable to string type dump the variable to see its new data get the new type of the variable
 Set up file
 Set where the OAuth parameters should be passed.
+Set with Unicode U+3013 (GETA MARK)
 Set/Get the HTTP output character encoding.
 Set/Get the current language.
 SetH calling __destruct()
@@ -7475,6 +9165,7 @@ SetM with array base on the stack
 SetOpProp: use __get
 SetOpProp: use __set and __get
 SetProp for visible, accessible properties
+SetSize+ 38+40
 Sets a busy handler that will sleep until the database is not locked or the timeout is reached.
 Sets a hard breakpoint.
 Sets a parameter.
@@ -7967,6 +9658,7 @@ Subclasses may provide richer functionality.
 Subscribe to a new mailbox.
 Subsecond accuracy is supported.
 Subsequent calls to fread() or stream_socket_recvfrom() will see the same data.
+Subtract FourCC + length header
 Successive calls to the ldap_next_entry() return entries one by one till there are no more entries.
 Suites of benchmarks consist of a name and the set of benchmarks in addition to the reference timing that the final score will be based on.
 Summarize results
@@ -8013,6 +9705,7 @@ TEST: tracking works when enabled and not when disabled
 TEST: vector with int and string vals (Packed)
 THE MALFORMED ARRAY
 THEY ARE FOR THE STREAM WRAPPER.
+THIS FILE IS AUTOMATICALLY GENERATED.
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
 THIS TEST ISN'T ENTIRELY CORRECT.
 TIFF intel byte order
@@ -8314,6 +10007,7 @@ Test destruction order for SetG.
 Test destruction order for SetS.
 Test different error conditions of settype() and gettype() functions
 Test dirname with one more than the expected number of arguments
+Test each power of two, +/- 1 and the negatives of them Test a single number and packed inside an array
 Test each with one more than the expected number of arguments
 Test end with one more than the expected number of arguments
 Test end() when passed: 1.
@@ -8741,6 +10435,7 @@ Test usort() when comparison function is: 1.
 Test utf8_decode with one more than the expected number of arguments
 Test utf8_encode with one more than the expected number of arguments
 Test var_export with one more than the expected number of arguments
+Test vector code (PHP can't create those, but they might come form C++ code in serialized strings)
 Test vectors taken from a combination of NIST FIPS-202, Wikipedia reference vectors, and output from reference implementation
 Test vfprintf()
 Test vfprintf() for char formats with an array of chars passed to the function
@@ -9425,12 +11120,14 @@ The following members are overridden in class P
 The following options are available: XML parser options Option constant Data type Description XML_OPTION_CASE_FOLDING integer Controls whether case-folding is enabled for this XML parser.
 The following parameters are returned in the array parameters Description "tm_sec" Seconds after the minute (0-61) "tm_min" Minutes after the hour (0-59) "tm_hour" Hour since midnight (0-23) "tm_mday" Day of the month (1-31) "tm_mon" Months since January (0-11) "tm_year" Years since 1900 "tm_wday" Days since Sunday (0-6) "tm_yday" Days since January 1 (0-365) "unparsed" the date part which was not recognized using the specified format
 The following static members are used with the getLocale methods of the various locale affected classes, such as numfmt.
+The form of this version number is main_version * 10000 + minor_version * 100 + sub_version (i.e. version 4.1.0 is 40100).
 The format for the options and longopts is almost the same, the only difference is that longopts takes an array of options (where each element is the option) where as options takes a string (where each character is the option).
 The format is defined by the formatter, returns both number and currency code.
 The frame color is that of the thumbnail's matte color.
 The function also returns TRUE/FALSE for INSERT/UPDATE/DELETE queries to indicate success/failure.
 The function converts the pathname of an existing accessible file and a project identifier into an integer for use with for example shmop_open() and other System V IPC keys.
 The function does not distinguish between static and non static properties and does not take visibility modifiers into account.
+The function first replaces _, - and + with a dot .
 The function fscanf() is similar to sscanf(), but it takes its input from a file associated with handle and interprets the input according to the specified format, which is described in the documentation for sprintf().
 The function get_magic_quotes_gpc() may come in handy for checking this.
 The function may be any PHP callable, either a string function name, an array of object instance and method, or array of classname and static class method.
@@ -9687,7 +11384,7 @@ The source can be MCRYPT_RAND (system random number generator), MCRYPT_DEV_RANDO
 The special name INBOX stands for the current users personal mailbox.
 The special value * matches all local names.
 The special value * matches all namespaces.
-The special value * matches all tags.
+The special value matches all tags.
 The stack trace
 The standard DES-based crypt() returns the salt as the first two characters of the output.
 The start time for the connection operation, in seconds since epoch.
@@ -10276,6 +11973,7 @@ This geometry defines a subregion of the image to crop.
 This geometry defines the final size of the image.
 This gets converted to string
 This gets the bitwise `OR` of the flags that are set for a given column.
+This gives no chance to hardcode the timezone name, for instance for UTC+1 it could choose from the multiple names like Europe/Berlin or Europe/Paris .
 This handler function needs to accept one parameter, which will be the exception object that was thrown.
 This handler is used by other handlers.
 This has no effect on the query if all shards are reachable.
@@ -10359,6 +12057,7 @@ This is done so that you can pick random keys as well as values out of the array
 This is due to the fact that zip support in PHP is read only access.
 This is either the first time we run the unit tests, and all pass because we are establishing a baseline.
 This is equivalent to searching the entire directory.
+This is equivalent to sqrt(x*x + y*y).
 This is expected to fatal due to embedded newline in the cookie domain.
 This is expected to fatal due to embedded newline in the cookie name.
 This is expected to fatal due to embedded newline in the cookie path.
@@ -10412,6 +12111,7 @@ This is proper usage of closeCursor().
 This is similar with using stream_copy_to_stream().
 This is sweeping the problem under the rug.
 This is test 36 from the pecl extension.
+This is test/zend/bad/ext/spl/tests/iterator_042.php, except that it doesn't test some systemlib + typehint violation + set_error_handler interactions that should be fixed separately
 This is testing our enhanced ini functionality, where we return things like arrays Interp mode testing will make sure we aren't always using the optimized version of ini_get (optimizedCallIniGet()) First make sure we are working on normal primitive based bindings, where something easily convertible to string is returned
 This is the *highly recommended* way to create connections to a MySQL client, as opposed to using the `AsyncMysqlClient` class which does not give you nearly the flexibility.
 This is the PDO way to close a connection
@@ -10477,6 +12177,7 @@ This line will trigger fromUCallback
 This line will trigger toUCallback
 This list is traversed by constraint strength, strongest first, as a heuristic for avoiding unnecessarily adding and then overriding weak constraints.
 This looks like something we could detect as an error, but doing it would require a lot of special casing, manual expanding of typedefs and traversing of Tunresolved to ban this case but allow the above ones.
+This makes "first thursday" equivalent to "+1 week thursday" - but only if the current day-of-week is the one mentioned in the phrase.
 This may be a DateTime object, an IntlCalendar object, a numeric type representing a (possibly fractional) number of seconds since epoch or an array in the format output by localtime().
 This may be a Pear thing, a PHPUnit running phpt thing, or or something else.
 This may be a space character or a 0 (zero character).
@@ -10604,6 +12305,7 @@ This process is repeated until either a) it reaches a variable that was not prev
 This produces the
 This property has a comment.
 This provokes a difference in behaviour when changing the number of elements in the array while iterating over it.
+This raises the E_STRICT in PHP 4/5, but not in HHVM or PHP 7+
 This represents errors that cannot be detected at compile time.
 This represents errors that should be detected at compile time.
 This resource comes from a call to xmlwriter_open_uri() or xmlwriter_open_memory().
@@ -10659,6 +12361,7 @@ This soundex function returns a string 4 characters long, starting with a letter
 This source code is licensed under the BSD-style license found in the LICENSE file in the "hack" directory of this source tree.
 This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
 This special type of socket can be used to manually construct any type of protocol.
+This specifier forces positive numbers to have the + sign attached as well, and was added in PHP 4.3.0.
 This statement will not parse in Hack, but we should not raise an error in decl mode.
 This string includes an invalid UTF-8 sequence.
 This takes time.
@@ -10737,6 +12440,8 @@ Those works.
 Though not recommended, this function may also be called statically to load and create a DOMDocument object.
 Three comes from 'RGB', three values per pixel
 Three independent arrays of socket resources are watched.
+Throw a C++ std::exception
+Throw a non-standard C++ exception
 Throw an exception with the class of the given name
 Throw from the user error handler after raising a warning about arg count.
 Throw out any initial blank lines
@@ -10750,6 +12455,7 @@ Throws ImagickPixelException on failure.
 Throws InvalidArgumentException, if Awaitable does not support cancellation.
 Throws an InvalidOperationException if the Awaitable is not finished.
 Throws for non-xbox threads.
+Thus +0123.45e6 is a valid numeric value.
 Thus there is no overhead in adding a large number of servers to the pool, even though they might not all be used.
 Thus, after a few minutes, the cursor "times out" and the database assumes the client has gotten everything it needs and cleans up its the cursor's resources.
 Thus, after you connect, this function will return NULL even if there are secondaries available.
@@ -10944,6 +12650,12 @@ Typically this happens when a function calls another function and expects the re
 Typically you will get 1.
 Typically, the message format will come from resources and the arguments will be dynamically set at runtime.
 Typically, these expressions will be used to query the database and find matching strings.
+U+00DF LATIN SMALL LETTER SHARP S
+U+00F1 LATIN SMALL LETTER N WITH TILDE
+U+0414 CYRILLIC CAPITAL LETTER DE
+U+044F CYRILLIC SMALL LETTER YA
+U+0525 CYRILLIC SMALL LETTER PE WITH DESCENDER (added in 5.2.0, October 2009)
+U+2C30 GLAGOLITIC SMALL LETTER AZU (added in 4.1.0, March 2005)
 UCOL_GREATER
 UDP will never cause a connection error, as it is a connection-LESS protocol
 UNSAFE_BLOCK
@@ -10984,6 +12696,7 @@ Unfortunately, the MongoCollection::ensureIndex() generates slightly different n
 Unfortunately, zend_strtod doesn't handle Nan's and Infs
 Unicode Security and Spoofing Detection http://icu-project.org/apiref/icu4c/uspoof_8h.html
 Unicode is on and we are told that the MySQL column type is a binary type.
+Uniform fill + n x 90degrees rotation , the color value does not change
 Unixified Dir
 Unixified Dir Or File
 Unixified File
@@ -11226,6 +12939,7 @@ Warning  In PHP 4.0.6 and earlier pow() always returned a float, and did not iss
 Warning  It cannot be used to add extra criteria to a query on the fly.
 Warning  On exit, the arrays are modified to indicate which socket resource actually changed status.
 Warning  Some web servers (e.g. Apache) change the working directory of a script when calling the callback function.
+Warning  The current (1.3.0+) releases of the driver no longer implements pooling.
 Warning  The parameter must be a string.
 Warning  There is no way to return another column from the same row if you use PDOStatement::fetchColumn() to retrieve data.
 Warning  This function returns FALSE for files inaccessible due to safe mode restrictions.
@@ -11759,6 +13473,7 @@ additional configuration items that may be set to provide proxy support for test
 address The email address is_group TRUE if the recipient is a newsgroup, FALSE otherwise.
 adds a few simple methods to all containers that implement iterators, mainly implemented so we can consolidate all the logic dealing with iterators in one place.
 affected rows related
+after 2+ seconds the server should kill the connection
 after unserialize the property myObjC::attrD is null instead of expected object
 again conversion
 again normal value
@@ -11782,6 +13497,7 @@ allowed to be empty
 allowed, but serve no purpose
 already in main distro
 alternative display function for class bar
+always executed use if with all scalar types + array
 always include the config.h file
 always strings, like STRINGIFY flag
 am invalid mode shoudl result in same o/p as mode 'a'
@@ -12314,6 +14030,7 @@ check a static string
 check a variety of acceptable default values and type hints: pass
 check an xhp element
 check array
+check associativity -- NOT the same as C/C++
 check behavior
 check case insensitive
 check color of a point on edge..
@@ -12583,6 +14300,7 @@ confirm link is deleted delete temp file
 confirm the closure, using ftell() and feof(), expect, false
 confirm the file pointer position
 conformance to Unicode 5.2, section 3.9, D92
+connect + select_db
 connect and table inc connect to mysql and create tables
 connection function tests
 considering case
@@ -12608,6 +14326,7 @@ convert to int for the test output...
 convert_uudecode() decodes a uuencoded string.
 convert_uuencode() encodes a string using the uuencode algorithm.
 converting stream type to int
+copy c++ runtime
 copy of input array for next iteration
 copy that dir into extras
 copy the extensions
@@ -12795,6 +14514,7 @@ data The maximum size of the data segment for the process, in bytes.
 data consistency
 data may be in any pecl/yaml suitable type
 data represented in base64 (ascii)
+data, empty data, empty data + eof
 database DNS
 date('Y') .
 date_default_timezone_set() sets the default timezone used by all date/time functions.
@@ -13089,6 +14809,7 @@ duplicate key names
 duplicate values
 duplicate values 3.
 dynamic calls to eval are a fatal
+e - the argument is treated as scientific notation (e.g. 1.2e+2).
 e.g. "hostname:port" or a path to a local socket e.g. ":/path/to/socket" for the localhost.
 e.g. Add/delete elements, unset elements, etc.
 e.g. PHPUnit 3.7.28 by Sebastian Bergmann.
@@ -13244,6 +14965,7 @@ exclusive/with comments first child element of doc element is context.
 exclusive/without comments first child element of doc element is context.
 exclusive/without comments using xpath query.
 exec() executes the given command.
+exec()-like functions // /
 executable that will be tested.
 execute query
 execute stmt
@@ -13337,6 +15059,7 @@ expecting true remove the new dir
 expecting true rename a hard link across dir
 expecting true rename a link across dir
 expecting true try to rename an non_existing dir
+expecting warning + "original"
 expecting: bool(false)
 expecting: bool(true)
 expecting: default key 0, value will be replaced by 'FALSE'   numeric keys
@@ -13449,6 +15172,8 @@ file type resource
 file_content_type loop
 file_get_contents() is the preferred way to read the contents of a file into a string.
 file_mode loop
+fileatime + 2
+filectime + 2
 filename Path to the temporary file name created origfilename The original filename, for uuencoded parts only The first filename entry is the message body.
 filename as resource
 filename as spaces
@@ -13850,6 +15575,7 @@ https://github.com/facebook/hhvm/issues/3096
 https://github.com/facebook/hhvm/issues/3899
 https://github.com/facebook/hhvm/issues/4084
 https://github.com/facebook/hhvm/issues/4086
+https://github.com/facebook/hhvm/issues/5010 utf8_decode() targets latin1, therefore any character greater than U+00FF should come out as U+003F QUESTION MARK U+00DF LATIN SMALL LETTER SHARP S
 https://github.com/php/php-src/pull/865
 huge negative value
 hypot() returns the length of the hypotenuse of a right-angle triangle with sides of length x and y, or the distance of the point (x, y) from the origin.
@@ -13995,6 +15721,7 @@ increment by one to create the situation  of accessing beyond array size
 increment by one to create the situation of accessing beyond array size
 increment the value of the static.
 increment with initial value only works with binary protocol
+increment/decrement operators : '++' , '--'
 increments twice before decrementing
 index starts at 0
 index starts at 5
@@ -14055,6 +15782,7 @@ instanceof does not change the expression id, though the type changes
 instanceof has to make adjustments for the fact that arrays are Traversable
 instanceof object
 instanceof string variable
+int + string
 int as pieces
 int not FooInt
 int operand
@@ -14226,6 +15954,7 @@ little hack for last parameter
 load list of enabled extensions
 loads the SOAP request to the Document
 log() might only return log(1) in this case due to lack of precision.
+log1p() returns log(1 + number) computed in a way that is accurate even when the value of number is close to zero.
 looks like we can't change this, or it'd change the original zval instead..
 loop over key sizes for test
 loop though each element of the array and check the working of krsort() when 'sort_flags' argument is supplied with different values
@@ -14504,9 +16233,11 @@ max negative integer value
 max number of retries exhausted, couldn't send query  Code: 19  The driver will automatically retry "plain" queries (not commands) a couple of times if the first attempt failed for certain reasons.
 max positive hexadecimal integer
 max positive integer
+max positive integer + 1
 max positive integer as octal
 max positive integer number
 max positive integer value
+max positive integer+1
 max posotive octal integer
 max postive integer as hexadecimal
 max2() returns the max of two operands (optimized FCallBuiltin for max).
@@ -14549,6 +16280,7 @@ microtime() returns the current Unix timestamp with microseconds.
 min negative integer
 min range of hexadecimal integer
 min range of integer
+min range of integer + 1
 min range of octal integer
 min2() returns the min of two operands (optimized FCallBuiltin for min).
 minimum int divided by -1, shouldn't sigfpe
@@ -14835,6 +16567,7 @@ not null because inheritance
 not reached
 not what a human might actually expect.
 note -- will always be null as DOMConfiguration is not implemented in PHP
+note that HTML5 is unique in that it forbids this entity, but allows a literal U+0D
 note that a label must always precede a statement
 note that gzclose is an alias to fclose.
 note that gzeof is an alias to gzeof.
@@ -14899,6 +16632,7 @@ null will convert to this and do what we expect
 nullable arguments
 number of formats in format strings not matching the no of variables
 number of remaining entries in the table
+numeric + strings
 numeric array
 numeric as string
 numeric assoc.
@@ -14908,6 +16642,7 @@ numeric string
 numeric value as glue, pieces as array containg sub array
 numeric values
 numerical assoc indices
+numerics + chars
 numerics in the form of string
 o - the argument is treated as an integer, and presented as an octal number.
 ob_end_clean(), ob_end_flush(), ob_clean(), ob_flush() and ob_start() may not be called from a callback function.
@@ -14958,7 +16693,7 @@ offsetSet is used for modifying an existing file, or adding a new file to a tar/
 offsetUnset is used for deleting an existing file, and is called by the unset() language construct.
 ok raise a fatal:
 ok tests methodIndexLookup and this variety of dynamic calls trying to exhause f_call_user_func_array cases
-ok to "override" a trait private function with a visibility expanding *consistent* implementation
+ok to "override" a trait private function with a visibility expanding consistent* implementation
 ok, 'type' is context sensitive
 ok, because we might not be allowed to do this
 ok, great we can create a file with a DSN in it
@@ -15017,18 +16752,30 @@ opening file for read
 opening file in r/w mode
 opening file resource type
 opening the file "a" mode
+opening the file "a+" mode
+opening the file "a+b" mode
+opening the file "a+t" mode
 opening the file "ab" mode
 opening the file "at" mode
 opening the file "w" mode
+opening the file "w+" mode
+opening the file "w+b" mode
+opening the file "w+t" mode
 opening the file "wb" mode
 opening the file "wt" mode
 opening the file for reading
 opening the file in "r" mode
+opening the file in "r+" mode
+opening the file in "r+b" mode
+opening the file in "r+t" mode
 opening the file in "rb" mode
 opening the file in "rt" mode
 opening the file in different modes
 opening the file in different read modes
 opening the non-existing file in "x" mode, file will be created
+opening the non-existing file in "x+" mode, file will be created
+opening the non-existing file in "x+b" mode, file will be created
+opening the non-existing file in "x+t" mode, file will be created
 opening the non-existing file in "xb" mode, file will be created
 opening the non-existing file in "xt" mode, file will be created
 openlog() Facilities Constant Description     LOG_AUTH  security/authorization messages (use LOG_AUTHPRIV instead in systems where that constant is defined) LOG_AUTHPRIV security/authorization messages (private)   LOG_CRON clock daemon (cron and at)   LOG_DAEMON other system daemons LOG_KERN kernel messages   LOG_LOCAL0 ...
@@ -15489,6 +17236,7 @@ require an existing file
 require an existing file.
 require another existing file that has its own namespace
 required by most modern LDAP servers, use LDAPv3
+requires MySQL 5+
 reschedule to the lowest priority
 reset for printing
 reset pointer, start again on step one
@@ -16194,6 +17942,7 @@ test fread with file opened in "r" and "rb" mode only Content with numeric and s
 test freeing queue in RSHUTDOWN
 test fscanf() for its return type
 test ftruncate with file opened in different modes
+test fwrite with file opened in mode : w,wb,wt,w+,w+b,w+t File containing data of type,  numeric, text, text_with_new_line, alphanumeric
 test if (dynamic or not) "color" property exists
 test if color exists and is accessible, or is dynamic
 test if dummy exists and is accessible, or is dynamic
@@ -16384,6 +18133,7 @@ the qualifiedName or its prefix is "xmlns" and the  namespaceURI is  different f
 the redirect section allows a set of tests to be reused outside of a given test dir
 the reference doesn't persist across the clone
 the rest are fine...
+the stack size + some random constant
 the test executables settings, used for web tests
 the timezone can be overridden when not specifying a calendar
 the used file is actually irrelevant, so just use this file even though it's not an .ini
@@ -16415,6 +18165,7 @@ this file is not used in the cron job use it to test the gcc regex with the samp
 this file may be duplicated to provide testing for multiple php binaries or configurations.
 this gives invalid args to shell_exec
 this grants you access to protected methods and members
+this is a C++-style comment, ...
 this is a C-style comment ...
 this is a token passed to all iterators so it can be invalidated.
 this is an Apache Licensed font, see separate LICENSE file
@@ -16534,6 +18285,7 @@ truncate the file when file pointer is positioned at end of the file
 try different locale names
 try fgetc on files which are opened in non readable modes w, wb, wt, a, ab, at, x, xb, xt
 try fgets on files which are opened in non readable modes w, wb, wt, a, ab, at, x, xb, xt
+try fgetss on files which are opened in read/write modes w+, w+b, w+t, a+, a+b, a+t, x+, x+b, x+t
 try fread when file pointer at end
 try isset/unset/empty on a member function
 try n delete the dir create the dir now
@@ -16731,6 +18483,7 @@ using xpath query with registered namespace.
 using zval_dump() to dump out the objects and its reference count
 utf8_strlen
 utime - user time used by the current process.
+valgrind 3.3.0+ doesn't have --log-file-exactly option
 valid 4 byte char - smiling face with heart-shaped eyes
 valid expression
 valid flags
