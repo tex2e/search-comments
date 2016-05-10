@@ -192,6 +192,10 @@ var comments = [];
 var getDatabase = jQuery.get("database/" + lang)
   .done(function (data) {
     Array.prototype.push.apply(comments, data.split("\n"));
+  })
+  .fail(function (e) {
+    $('#react').text('error: ' + e.statusText);
+    console.log(e);
   });
 
 $.when(getDatabase)
