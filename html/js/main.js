@@ -10,9 +10,10 @@ RegExp.escape = function(string) {
 };
 
 String.prototype.splice = function(idx, rem, str) {
-    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+  return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
 };
 
+// To search, at least one charactor is necessary.
 var MIN_SEARCH_CHARS = 1;
 
 var CommentRow = React.createClass({
@@ -44,8 +45,9 @@ var CommentRow = React.createClass({
 function isMatched(str, words) {
   var currentPos = 0;
   for (var i = 0; i < words.length; i++) {
-    currentPos = str.toLowerCase().indexOf(words[i], currentPos);
-    if (currentPos === -1) return false;
+    var pos = str.toLowerCase().indexOf(words[i], currentPos);
+    if (pos === -1) return false;
+    currentPos = pos + words[i].length; // update currentPos
   }
   return true;
 }
@@ -82,7 +84,7 @@ var CommentTable = React.createClass({
     }
 
     return (
-      <table className={"table"}>
+      <table className="table">
         <tbody>
           {rows}
         </tbody>
@@ -187,6 +189,7 @@ for(var i = 0; pair[i]; i++) {
   arg[kv[0]] = kv[1];
 }
 
+// load database
 var lang = arg.lang || "js";
 var comments = [];
 var getDatabase = jQuery.get("database/" + lang)
@@ -198,6 +201,7 @@ var getDatabase = jQuery.get("database/" + lang)
     console.log(e);
   });
 
+// render by react
 $.when(getDatabase)
   .done(function () {
     ReactDOM.render(
