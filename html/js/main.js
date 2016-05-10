@@ -143,12 +143,16 @@ var FilterableCommentTable = React.createClass({
 });
 
 var comments = [];
-var getDatabaseC = jQuery.get("database/js")
+var getDatabase = jQuery.get("database/js")
   .done(function (data) {
     Array.prototype.push.apply(comments, data.split("\n"));
+  })
+  .fail(function (e) {
+    $('#react').text('error: ' + e.statusText);
+    console.log(e);
   });
 
-$.when(getDatabaseC)
+$.when(getDatabase)
   .done(function () {
     ReactDOM.render(
       <FilterableCommentTable comments={comments} />,
