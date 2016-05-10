@@ -1,5 +1,6 @@
 
 // - FilterableCommentTable
+//   - LangTab
 //   - SearchBar
 //   - CommentTable
 //     - CommentRow
@@ -91,22 +92,60 @@ var CommentTable = React.createClass({
 });
 
 var SearchBar = React.createClass({
-  handleChange: function() {
+  handleUserInput: function() {
     this.props.onUserInput(
       this.refs.filterTextInput.value
     );
   },
+  handleLangChange: function (lang) {
+    this.props.onChangeLang(lang);
+  },
+  langList: [
+    { key: "c",   value: "C"},
+    { key: "cpp", value: "C++"},
+    { key: "js",  value: "JavaScript"},
+    { key: "rb",  value: "Ruby"},
+  ],
   render: function () {
+    var lang = this.props.lang;
+    var langFullName;
+    for (var i = 0; i < this.langList.length; i++) {
+      if (this.langList[i].key === lang) {
+        langFullName = this.langList[i].value;
+        break;
+      }
+    }
+
     return (
-      <form className={"form-inline"}>
+      <div className="input-group">
         <input
           type="text"
+          className="form-control"
           placeholder="Search..."
           value={this.props.filterText}
           ref="filterTextInput"
-          onChange={this.handleChange}
+          onChange={this.handleUserInput}
         />
-      </form>
+
+        <div className="input-group-btn">
+          <button
+            type="button"
+            className="btn btn-default dropdown-toggle"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            {langFullName}
+            {" "}
+            <span className="caret"></span>
+          </button>
+          <ul className="dropdown-menu dropdown-menu-right">
+            { this.langList.map(function (lang) {
+                return (<li key={lang.key}><a href="#" onClick={this.handleLangChange.bind(this, lang.key)}>{lang.value}</a></li>);
+              }.bind(this))
+            }
+          </ul>
+        </div>
+      </div>
     );
   }
 });
@@ -114,6 +153,7 @@ var SearchBar = React.createClass({
 var FilterableCommentTable = React.createClass({
   getInitialState: function () {
     return {
+      lang: 'js',
       filterText: '',
       maxRowNum: 100
     };
@@ -124,14 +164,20 @@ var FilterableCommentTable = React.createClass({
   changeMaxRowNum: function (maxRowNum) {
     this.setState({ maxRowNum: maxRowNum });
   },
+  changeLang: function (langName) {
+    this.setState({ lang: langName });
+  },
   render: function () {
     return (
       <div>
         <SearchBar
           filterText={this.state.filterText}
           onUserInput={this.handleUserInput}
+          lang={this.state.lang}
+          onChangeLang={this.changeLang}
         />
         <CommentTable
+          lang={this.state.lang}
           comments={this.props.comments}
           filterText={this.state.filterText}
           maxRowNum={this.state.maxRowNum}
