@@ -104,6 +104,10 @@ var SearchBar = React.createClass({
     { key: "cpp", value: "C++"},
     { key: "js",  value: "JavaScript"},
     { key: "rb",  value: "Ruby"},
+    { key: "php",  value: "PHP"},
+    { key: "java",  value: "Java"},
+    { key: "sh",  value: "Shell"},
+    { key: "py",  value: "Python"},
   ],
   render: function () {
     var lang = this.props.lang;
