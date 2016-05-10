@@ -97,9 +97,6 @@ var SearchBar = React.createClass({
       this.refs.filterTextInput.value
     );
   },
-  handleLangChange: function (lang) {
-    this.props.onChangeLang(lang);
-  },
   langList: [
     { key: "c",   value: "C"},
     { key: "cpp", value: "C++"},
@@ -140,7 +137,7 @@ var SearchBar = React.createClass({
           </button>
           <ul className="dropdown-menu dropdown-menu-right">
             { this.langList.map(function (lang) {
-                return (<li key={lang.key}><a href="#" onClick={this.handleLangChange.bind(this, lang.key)}>{lang.value}</a></li>);
+                return (<li key={lang.key}><a href={"?lang=" + lang.key}>{lang.value}</a></li>);
               }.bind(this))
             }
           </ul>
@@ -153,7 +150,6 @@ var SearchBar = React.createClass({
 var FilterableCommentTable = React.createClass({
   getInitialState: function () {
     return {
-      lang: 'js',
       filterText: '',
       maxRowNum: 100
     };
@@ -164,20 +160,15 @@ var FilterableCommentTable = React.createClass({
   changeMaxRowNum: function (maxRowNum) {
     this.setState({ maxRowNum: maxRowNum });
   },
-  changeLang: function (langName) {
-    this.setState({ lang: langName });
-  },
   render: function () {
     return (
       <div>
         <SearchBar
           filterText={this.state.filterText}
           onUserInput={this.handleUserInput}
-          lang={this.state.lang}
-          onChangeLang={this.changeLang}
+          lang={this.props.lang}
         />
         <CommentTable
-          lang={this.state.lang}
           comments={this.props.comments}
           filterText={this.state.filterText}
           maxRowNum={this.state.maxRowNum}
@@ -188,16 +179,25 @@ var FilterableCommentTable = React.createClass({
   }
 });
 
+// extract url paramater
+var arg  = {};
+var pair = location.search.substring(1).split('&');
+for(var i = 0; pair[i]; i++) {
+  var kv = pair[i].split('=');
+  arg[kv[0]] = kv[1];
+}
+
+var lang = arg.lang || "js";
 var comments = [];
-var getDatabaseC = jQuery.get("database/js")
+var getDatabase = jQuery.get("database/" + lang)
   .done(function (data) {
     Array.prototype.push.apply(comments, data.split("\n"));
   });
 
-$.when(getDatabaseC)
+$.when(getDatabase)
   .done(function () {
     ReactDOM.render(
-      <FilterableCommentTable comments={comments} />,
+      <FilterableCommentTable lang={lang} comments={comments} />,
       document.getElementById('react')
     );
   });
