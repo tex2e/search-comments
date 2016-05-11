@@ -1238,6 +1238,7 @@ Main catalyst view is responsible for collecting and sending touch events to JS.
 Make a new ApkSoSource that extracts DSOs from our APK instead of relying on the system to do the extraction for us.
 Make a new DirectorySoSource.
 Make sure TextView has exactly one span and that span has given type.
+Make sure that public fields/methods from AbstractTwitterServer are available here
 Make sure the SoLoaderShim is configured to use our loader for native libraries.
 Make sure the span is removed from existing text, otherwise the spans we set will be ignored or it will cover text that has changed.
 Make sure we do create one more L0 files.
@@ -2085,6 +2086,7 @@ This method isn't safe since it doesn't factor in layout-only view removal.
 This method needs to be called before event is sent to event dispatcher.
 This method retains an instance to provided mDefaultBackButtonImpl.
 This method returns true if the iterator is valid.
+This method runs automatically.
 This method should be used when you need to stub out creating NativeArrays in unit tests.
 This method should be used when you need to stub out creating NativeMaps in unit tests.
 This method should only be used by a subclass to support UIOperations not provided by UIViewOperationQueue.

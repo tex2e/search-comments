@@ -1,0 +1,224 @@
+"/admin/clients/myclient").
+"/admin/servers/myserver").
+"Controller" for displaying the current state of the sink.
+"Controller" for displaying the current state of threads.
+(parameter names differ from the other constructors' for backwards compatibility)
+- the handler ignores messages of this level
+- the logger ignores messages of this level
+2.11 won't apply an implicit conversion targeting Object, but we can manually invoke the converter provided by the view bound.
+@note Mesos doesn't gate traffic on /health so all pre-bind warmup needs to happen in `prebindWarmup()`
+@param alias A short name used to identify the route when listed in index.
+@param baseDirectory     The base directory for the directory resolver.
+@param baseDirectory  The base directory (either absolute or relative to the process's working directory) to which to the requested resource path should be appended.
+@param baseRequestPath     The base uri path handled by this handler (e.g. /admin/).
+@param baseResourcePath    The resource path from which this handler will serve resources when they are not found in localFilePath.
+@param baseResourcePath  The base path for the jarResolver.
+@param deadlockedIds Each value corresponds to a `Thread.getId` that is deadlocked.
+@param entry The stack registry entry.
+@param group A grouping used to organize the route in the admin server pages.
+@param handler The service which requests are routed to.
+@param headers Additional headers to include in the response.
+@param includeInIndex Indicates whether the route is included as part of the admin server index.
+@param localFilePath       The directory from which this handler will serve resources.
+@param path The path used to access the route.
+@param statScope The finagle StatsReceiver scope with which the entries stats are exported.
+@param statsReceiver typically scoped to /jvm/gc/
+@param status The HTTP status code.
+@param version The HTTP version for this response.
+@return                  A partial function that loads resources from a jar.
+@return                  A partial function that loads resources from baseDirectory, or a jar.
+@return               A partial function that loads resources from baseDirectory.
+@return the approximate number, in bytes, that have been allocated to the eden.
+A deserializer of Event types.
+A deserializer without any types.
+A handler designed to serve static resources.
+A handler which accepts metrics queries via http query strings and returns json encoded metrics.
+A handler which accepts queries via http strings and returns json encoded histogram details
+A handler which outputs `patterns` as html anchors.
+A logging event in suspension.
+A serializer and deserializer for sinks.
+A simple http service for serving up information pulled from a build.properties file.
+Add the following to the `onExit` hook to export the Sink to a file when the server exits, or place it behind an endpoint to be triggered by request.
+An HTTP server is bound to a configurable port (default: 9900) to which commands can be sent and information queried.
+An admin http server which serves requests outside the default finagle worker pool.
+An entry is a 3-tuple of Logger, Level and message.
+As an admin endpoint, it displays the entire registry in JSON.
+Attach the handlers with the sink and capture specification.
+Both ostrich and metrics export a `HttpMuxHandler`
+Called InternalResolverTest to avoid conflict with twitter-server
+Called after the `main` method.
+Called before the `main` method.
+Called prior to application exiting.
+Called prior to application initialization.
+Captures events from a logger.
+Clients can be queried by passing in the client name as part of the uri (ex.
+Compute a profile for each client that includes the success rate and the availability of endpoints the client connects to.
+Configuration for the EventSink.
+Constants for Admin endpoints.
+Constructs a ResourceHandler which tries to read resources from disk on every request, falling back to resources from the jar if needed.
+Convenience wrapper around Event.Type that preserves type information for objectVal -- we need this to deserialize.
+Create a Route using a Finagle service interface
+Create a Route using a Finagle service interface and a service using finagle-http
+Create a new hook for the given App.
+Create an http response with the give params.
+Define LogRecord equality.
+Defines a hook into an App.
+Defines many of the default `/admin/` HTTP routes.
+Depending on the VM flags used, `System.gc` will not have the effect we want.
+Determines (by examine the "Accept" header on `req`) if the client accepts given `contentType`.
+Determines if the client expects to receive `application/json` content type.
+Determines if the client expects to receive `text/html` content type.
+Doesn't matter that this is an exception, it's just used as a control signal for resumption of `stream`'s tail.
+Dumps a simple string representation of the current Dtab.
+Estimation, in bytes, of allocations to the eden.
+Expose this build revision as a number.
+Extract the type id from an opaque Buf.
+FIXME: This relies on a global.
+Factored out for testing.
+Finagle's StatFilter usually reports to the root of the `clientScope`.
+Find an Event.Type for this id.
+For DI (Dependency Injection) Twitter Server uses self-typed Scala traits that might be mixed in the `TwitterServer` trait.
+For each key return a cumulative percentage
+For each key return a percentage
+For example, if it's a request from a browser and the content is an html fragment.
+For unknown types, make an attempt to deserialize primitive values.
+From the Dtab docs: A Dtab--short for delegation table--comprises a sequence of delegation rules.
+Generates an html table to display key statistics of a histogram
+Generates html for the histogram selection page (/admin/histograms)
+Generates html for visualizing histograms
+Give the application control over when to present to Mesos as being ready for traffic.
+Given a list of loggers, we can generate a list of captures by sequencing the actions to generate arbitrary Levels.
+Helps make early gc pauses more consistent.
+However, the ClientBuilder API provides an easy to install retry filter with a separate StatsFilter that reports to "tries".
+However, then we may choose to add a `System.promoteAllLiveObjects()` hook.
+Ideally this runs in the moments right before your service starts accepting traffic.
+If histograms are available, add an additional endpoint
+If none return a non-404, the response of the last service is used.
+If possible, access histograms inside statsReceiversLoaded
+If present, the html page will link to the metrics graphs for this entry.
+If the given list of `services` is empty the resulting services will be always answering with 404.
+If this side-effect were to disappear in a future version of the jdk, it would not be disastrous.
+Implements "glog" style log formatting.
+In order to launch the `AbstractTwitterServer` instance, the `main` method should be explicitly defined.
+In particular, /health and /ping should be served in-band so that they are an accurate proxy of server health.
+Initialize the capture sink with this capture configuration.
+Inputs for which the resolver is undefined will be 404s.
+Intended for use only when developing locally, to enable saving a file, refreshing the browser, and immediately seeing the change.
+Interpret the journal by running each entry through the logger.
+It makes sense to define it within an inner class `Main` as shown below.
+It may miss allocations where large objects are eagerly allocated into the old generation along with some other cases.
+It provides common application components such as an administrative HTTP server, tracing, stats, etc.
+It's a pprof "raw" profile.
+It's intended to be used as a handler for TwitterServer, and doesn't take any arguments yet.
+Line-buffered reader, where lines are delimited by a configurable separator.
+Loads resources relative to the given baseDirectory.
+Make some effort to demangle scala names.
+Make the "test" command run both, test and doctest:test
+Mesos/Aurora lifecycle endpoints
+Mix-in to include service-loaded hooks.
+Namer records weights as Doubles, so this should never happen.
+Necessary for controller to determine that this is a request for HTML.
+NewHooks are service-loaded.
+Note that this method simply checks if the given `contentType` is a substring of the "Accept" header.
+Note, don't use `scala.sys.props` until we are on 2.12: https://github.com/scala/scala/pull/4372
+Note, the view is wrapped around the underlying service selectively.
+Note, unnamed clients are ignored as we can't dissambiguate their stats.
+Note, unnamed servers are ignored as we can't dissambiguate their stats.
+Note, we don't serve all of /admin on a separate worker pool because it's important to serve certain admin endpoints in-band with the server.
+Note: The events iterator can be potentially large, so to avoid fully buffering a big HTML document, we stream it as soon as it's ready.
+Note: due to race conditions, the number reported is NOT a monotonically increasing value.
+Parse a byte stream into a list of events.
+Parse uri into (path, params)
+Prevent the root logger from writing to stdout.
+Provides visibility into object allocations.
+Re-reads the file from disk on every request.
+Render a stack entry, along with its params, in an html template.
+Render nav and contents into an html template.
+Renders `profiles` in an html template.
+Renders information about clients registered to Finagle's ClientRegistry in an html fragment.
+Renders information about servers registered to Finagle's ServerRegistry in an html fragment.
+Represents an element which can be routed to via the admin http server.
+Resolvers are discovered via the com.twitter.server.resolverMap
+Returns a new 200 OK with contents set to `msg`
+Returns a new 404 with contents set to `msg`
+Returns the entry for `key` if it exists
+Returns the set of stat keys.
+Returns true if the map contains `key` and false otherwise.
+Routes with the same grouping are displayed together in the admin server pages.
+Search the metrics source for the stat scope that includes `clientName`.
+Search the metrics source for the stat scope that includes `serverName`.
+See: https://github.com/FasterXML/jackson-module-scala/issues/106.
+Serialize the sink to a lazy byte stream.
+Servers can be queried by passing in the server name as part of the uri (ex.
+Setup sink and Event construction for an arbitrary type.
+ShadowAdminServer does not listen for /quitquitquit so send it to the admin server
+Some of the headers like content length are inferred.
+Special case and group them here.
+Stat libraries join the global muxer namespace.
+Stores histogram bucket and a percentage.
+Supports the specification of a default close grace period from a flag.
+TODO Near replica of other Event.Type constructions, making Event.Type more generic could help factor out the boiler plate.
+TODO Report these errors somehow.
+TODO: deprecate in favor of Wily dtabs.
+TODO: have nice default HTML rendering for json output
+TODO: remove routes, have all routes be added via addAdminRoutes For now these routes will be added to allRoutes in premain
+Test Configuration for running tests on doc sources
+Test class name parameters, which were previously mangled
+The Event.Types the parser can construct.
+The `main` method of this server.
+The address to which the Admin HTTP server is bound.
+The name used for the finagle server.
+The percentage is either the density or a cumulative density for the bucket
+The service is bound to a port and warmed up, announce health.
+The success rate represents the health of the client on the request path while availability is a measure of session health.
+These entries are "run" by invoking log with the tuple arguments.
+These features are wired in correctly for use in production at Twitter.
+This can be overridden in the super class or set on the command line with -admin.port.
+This is bad news for things like com.twitter.util.Time
+This is intended for use in situations in local development (e.g. so one can save a resource, refresh the browser, and see the change immediately).
+This is ok, this Future is still useful for the assertion that `sink` and Response reader are connected.
+This is useful to avoid the returned fragment being wrapped with an index in the context of an ajax call.
+This line fails without the JsonDeserialize annotation in Envelope.
+This logging event should have made it to the sink unless: - the capture spec turned capture off for this logger
+This parameter can be omitted if not querying for plots
+This relies on the side-effect of a full gc that all objects in the young generation are promoted to the old generation.
+This server shadows vital endpoints (ex.
+Threads that say they are runnable, but are actually doing nothing.
+Together, these describe how to bind a path to an Addr.
+Tries to load resources using directoryResolver in baseDirectory, and if that fails, tries jarResolver in baseResourcePath.
+Twitter Server defines a template from which servers at Twitter are built.
+Used for warmup tasks that we want to run before we accept traffic.
+Useful to check cluster consistency.
+We have to run this in a pool or Reader.read ends up blocking, because we call Await.result in the sink events iterator.
+We require an annotation here, because for small numbers, this gets deserialized with a runtime type of int.
+When the method `warmupComplete()` is invoked, the application is considered ready.
+Wraps content returned from the underlying service with a view of the index.
+Write out the profile verbatim.
+a logger used to log all sync and async exceptions that occur in the admin server.
+checks for non-exceptional
+convert local routes into the IndexView data model
+create a service which multiplexes across all endpoints.
+create index with both the local and global muxer namespaces and server/client registries.
+disable admission control, since we want the server to report stats especially when it's in a bad state.
+first, gather the data
+first, run the rules.
+for java + backwards compatibility
+in the interest of keeping this simple, if the eden's current used is less than the last edenAllocated we will only return the number of bytes we have gc-ed from the eden.
+note, these could be -1 if the collector doesn't have support for it.
+note: contentType must be explicit here because of `IndexView.isFragment`
+pretty obvious they are idle
+render the ui and respond
+root has no level set
+same logic as org.slf4j.LoggerFactory
+set used for keeping track of jvm gauges (otherwise only weakly referenced)
+skip CMS because it does not collect objects from the eden
+so `edenAllocated` has not yet been updated which in turn means our math is off.
+stats) that are useful for diagnostics and should be available even if the server becomes overwhelmed.
+the Hotspot JVM exposes the full size that the metaspace can grow to which differs from the value exposed by `MemoryUsage.getMax` from above
+the Notification's userData correspond to `com.sun.management.GarbageCollectionNotificationInfo`s.
+there is a race here, where a gc has completed but we have not yet been notified.
+this is a snapshot, we can't reuse the value
+throws if adminHttpServer does not exit before the grace period, which indicates that we have not closed it properly.
+todo: see if we can support the g1 collector
+user-defined properties
+we acquired a snapshot of keys above, but `key` could have since been removed.

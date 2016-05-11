@@ -1,0 +1,684 @@
+"colorls"   will be installed on purpose and can't be pulled in by installing  coreutils, so prefer it to "gls".
+(1) install this file.
+(2) load the script, and add a directory to fpath before compinit.
+(4) geneate completion files once.
+(e.g. com, example.com and foo.example.com)
+(k) returns the "keys" (history index numbers) instead of the values (Oa) reverses the order, because (R) returns results reversed.
+* Alexis GRIMALDI (https://github.com/agrimaldi) * spacewander (https://github.com/spacewander)
+* Human-readably notifying the user of these insecurities.
+* Moving away all existing completion caches to a temporary directory.
+* Neither the name of the FIZSH nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* git-extras (http://github.com/tj/git-extras) * git-flow-completion (http://github.com/bobthecow/git-flow-completion)
+- Cache expiration days (default: 7): zstyle ':completion::complete:grunt::options:' expire 1
+- Configuration changes made at runtime are applied to all frames.
+- Not update options cache if target gruntfile is changed.
+- Show grunt file path: zstyle ':completion::complete:grunt::options:' show_grunt_path yes
+- You can share opened buffered across opened frames.
+- https://github.com/gruntjs/grunt - https://github.com/gruntjs/grunt-cli
+-- Some other invocation of nroff
+-V    Reduce the verbosity of the dump output.
+-v    Increase the verbosity of the dump output.
+15 char left truncated PWD
+@github.com/mfaerevaag/wd
+A command line interface for WordPress http://wp-cli.org/ Cache Cap CLI Comment Core
+A descriptive listing of core Gradle commands
+A script to make using 256 colors in zsh less painful.
+A test function that validates the regex against known forms of the simple index.
+ALT-LEFT moves back to directories  that the user has changed to in the past, and ALT-RIGHT undoes ALT-LEFT.
+Absolute path of the directory to which such files will be moved.
+Activate the environment only if it is not already active
+Actually don't autostart if we already did and multiple autostarts are disabled.
+Add Composer's global binaries to PATH
+Add a nifty symlink for screen/tmux if agent forwarding
+Adds a kapow command that will restart an app
+Adds command line aliases useful for dealing with JSON
+Adds handy command line aliases useful for dealing with URLs
+Agent forwarding support based on ideas from Florent Thoumie and Jonas Pfenniger
+Algorithm borrowed from http://wiki.rtorrent.org/MagnetUri and adapted to work with zsh.
+Alias tmux to our wrapper function.
+Aliases (sorted alphabetically)
+All the output is in one single file so it can be posted as a gist or bug comment on GitHub.
+All the zsh non-module builtin commands These are taken from the zsh reference manual for 5.0.2 Commands from modules should not be included.
+Already rebound event: do nothing.
+Also provides a command to list all installed/available rubies.
+Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+Always write directly to a file so terminal escape sequences are captured cleanly
+Announce success and generate git commit messages
+Anything that doesn't match a special action is considered an issue name
+Append workon_cwd to the chpwd_functions array, so it will be called on cd http://zsh.sourceforge.net/Doc/Release/Functions.html
+Apply theming defaults
+At the very end of the prompt
+Author: Adam Strzelecki nanoant.com, modified by Bodo Tasche bitboxer.de Updated to support ForkLift2 by Johan Kaving
+Author: https://github.com/pstadler
+Autocompletion for your gulp.js tasks
+Automatically activate Git projects or other customized virtualenvwrapper projects based on the directory name of the project.
+Automatically close the terminal when tmux exits
+Automatically connect to a previous session if it exists
+Automatically jump to last working directory unless this isn't the first time this plugin has been loaded.
+Automatically start tmux
+Autostart if not already in tmux and enabled.
+Avoid duplication of directory in terminals with independent dir display
+Based on code from Joseph M.
+Basic system and zsh information
+Before filtering set the locale to C, so invalid characters won't break some sed implementations
+Being able to switch between global and directory histories on the fly is a novel feature as far as I am aware.
+Below are some useful Perl-related aliases/functions that I use with zsh.
+Benefits are multiple - You don't have the cost of starting Emacs all the time anymore - Opening a file is as fast as Emacs does not have anything else to do.
+Bind keys to history navigation
+Bind terminal-specific up and down keys
+Bind terminal-specific up and down keys Bind in both emacs and vi modes so it works in both, and is not sensitive to whether this is loaded before or after the vi-mode plugin
+Both file and parent dir are versioned.
+Builtin widget: override and make it call the builtin ".widget".
+But when HIST_IGNORE_ALL_DUPS is set, ZSH already ensures a unique history.
+By default, reserved characters and unreserved "mark" characters are not escaped by this function.
+Cache policy: The cache file name: grunt The cache variable name: __grunt_version __grunt_gruntfile __grunt_opts __grunt_tasks
+Call it with `zsh update-from-upstream.zsh` from the command line, running it from within the plugin directory.
+Called by zsh when directory changes
+Changes directory to the last working directory.
+Check _grunt version.
+Check all of the plugins directories, if they exist
+Check for virtualenv name override
+Check if the DOWN arrow was pressed to move the cursor within a multi-line buffer.
+Check if the UP arrow was pressed to move the cursor within a multi-line buffer.
+Check if this is a Git repo
+Check if we are on the first line of the current multi-line buffer.
+Check if we are on the last line of the current multi-line buffer.
+Check no_update_options option.
+Check show_path option.
+Check which npm modules are outdated
+Checks if working tree is dirty
+Clean up crashed zeus instances.
+Clean up the namespace slightly by removing the checker function
+Clear zombie processes
+Command line head / tail shortcuts
+Compares the provided version of git to the version installed and on path Outputs -1, 0, or 1 if the installed version is less than, equal to, or greater than the input version, respectively.
+Completion script for git-extras (http://github.com/tj/git-extras).
+Completion script for grunt.
+Completion widget: override and rebind old one with prefix "orig-".
+Configuration file info
+Configuration variables
+Copy the files over, using the OMZ plugin's names where needed
+Copyright (c) 2009 Peter Stephenson Copyright (c) 2011 Guido van Steen Copyright (c) 2011 Suraj N.
+Copyright (c) 2010-2011 zsh-syntax-highlighting contributors All rights reserved.
+Copyright (c) 2012 Jim Hester
+Copyright (c) 2013 Yonchu.
+Core command definitions
+Create a basic .deb package
+Create, migrate and prepare database
+Created by Eduardo San Martin Morote aka Posva http://posva.github.io Sun Jun 09 10:59:36 CEST 2013  Don't remove this header, thank you Usage: quote
+Created by the blogger at the URL below...I don't know where to find his/her name Original found at http://www.shellperson.net/sprunge-pastebin-script/
+Creates a new repo with a blank README.md in it and pushes it up to GitHub.
+Ctrl+Shift+Left/Right
+Db Eval Eval-File Export Help Import Media Menu
+Debian, Ubuntu and friends related zsh aliases and functions for zsh
+Debian-related zsh aliases and functions for zsh Use aptitude if installed, or apt-get if not.
+Default values for the appearance of the prompt.
+Default: unhandled case.
+Defaults to the current application, and will walk up the tree to find a config.ru file and restart the corresponding app
+Defaults to toggling when no options are given.
+Defines path as current directory
+Defines path as parent directory and keeps looking for :)
+Determine if the terminal supports 256 colors
+Diagnostic and debugging support for oh-my-zsh omz_diagnostic_dump()
+Discarding stdout to quash "tab N of window id XXX" output
+Display information about a given package in the local database
+Display information about a given package in the repositories
+Displays a listing of emoji with their names
+Do OMZ-specific edits
+Do not edit it manually.
+Does not enforce that the input is a valid URL-encoded string.
+Don't complete uninteresting users
+Don't leave positional parameters being set
+Don't try to basename ()
+Easier access to skin tone modifiers
+Emits the control sequence to notify Terminal.app of the cwd Identifies the directory using a file: URI scheme, including the host name to disambiguate local vs.
+Emoji combining and auxiliary characters "Variation Selectors" for controlling text vs emoji style presentation These apply to the immediately preceding character
+Empty functions so we don't cause errors in prompts
+Ensure that the prompt is redrawn when the terminal size changes.
+Enumerate all of the Groovy files
+Erase current line in buffer
+Except for --help options.
+Execute command from node_modules folder based on current directory i.e npmE gulp
+FILE:  compleat.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
+FILE:  composer.plugin.zsh DESCRIPTION:  oh-my-zsh composer plugin file.
+FILE:  extract.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
+FILE:  fastfile.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
+FILE:  gnu-utils.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
+FILE:  osx.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
+FILE:  sbt.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
+FILE:  singlechar.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
+FILE: emoji-clock.plugin.zsh DESCRIPTION: The current time with half hour accuracy as an emoji symbol.
+FILE: n98-magerun.plugin.zsh DESCRIPTION: oh-my-zsh n98-magerun plugin file.
+Failing to do so prints an unreadable warning if no completion caches exist below.
+Failing to do so typically causes subsequent compinit() calls to fail with "command not found: compdef" errors.
+Faster alternative to the current SVN plugin implementation.
+Fedora command-not-found support
+Feel free to report any portability issues as bugs.
+Figure out what we're pulling in
+Filter mvn output using sed.
+Find all occurrences of the search query in the history file.
+Find the option for using colors in ls, depending on the version: Linux or BSD
+Fix all configuration files with vimdiff Pacman - https://wiki.archlinux.org/index.php/Pacman_Tips
+Flag indicating if we've previously jumped to last directory.
+For example: https://rails.lighthouseapp.com/projects/8994 Example usage: http://screencast.com/t/ZDgwNDUwNT
+For safety, move rather than permanently remove such files.
+For some reason, Cygwin puts strfile in /usr/sbin, which is not on the path by default
+For the purpose of highlighting we will also keep a version without doubly-escaped meta characters.
+Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
+Formats prompt string for current git commit long SHA
+Formats prompt string for current git commit short SHA
+Generate metadata cache
+Generate the aliases for the shortcuts
+Get absolute path, resolving symlinks
+Get all keys for developers and trusted users
+Get current gruntfile.
+Get the absolute path to the current directory
+Get the filename to store/lookup the environment from
+Get the real path of a shortcut
+Get the status of the working tree
+Get the value of an alias.
+Gets the difference between the local and remote branches
+Gets the number of commits ahead from remote
+Grabs all available tasks from the `gulpfile.js` in the current directory.
+Grep exits with 0 when "One or more lines were selected", return "dirty".
+HISTORY_BASE a global variable that defines the base directory in which the directory histories are stored
+Highlight matches during history-substring-up-search:
+Highlight the next match:
+Highlights the currently active ruby version and aliases.
+I've already got two problems
+If DIRHISTORY_CD is not set...
+If marked is called without an argument, open Marked If marked is passed a file, open it in Marked
+If no highlighting method supported for given extension then it tries  guess it by looking for file content.
+If no such directories exist, get us out of here.
+If not given, a file in the current directory is selected automatically.
+If one of your indexes are bogus you won't get any kind of error message, pip will just not autocomplete from them.
+If set to false, tmux will attempt to autostart every time your zsh configs are reloaded.
+If so, pressing DOWN would amount to leaving the multi-line buffer.
+If so, pressing UP would amount to leaving the multi-line buffer.
+If the bb command is called without an argument, launch BBEdit If bb is passed a directory, cd to it and open it in BBEdit If bb is passed a file, open it in BBEdit
+If the tt command is called without an argument, launch Textastic If tt is passed a directory, cd to it and open it in Textastic If tt is passed a file, open it in Textastic
+If they are not set yet, they will be overwritten with their default values
+If tm is passed a directory, cd to it and open it in TextMate If tm is passed anything else (i.e., a list of files and/or options), pass them all along This allows easy opening of multiple files.
+If you are not already using completion you might need to enable it with
+If you modify the regex to make it work for you, you should add a test case in here and make sure that your changes don't break things for someone else.
+If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+If you want to use the cache, set the followings in your .zshrc:
+If you would like to change the cheeseshops used for autocomplete set ZSH_PIP_INDEXES in your zshrc.
+If you would like to clear your cache, go ahead and do a "zsh-pip-clear-cache".
+If you'd prefer to specify an explicit path to load chruby from you can set variables like so:
+Implemented to use a single printf call and avoid subshells in the loop, for performance (primarily on Windows).
+In both cases the history is always saved to both the global history and the directory history, so the toggle state will not effect the saved histories.
+In increasing precedence order:
+In no event will the authors be held liable for any damages arising from the use of this software.
+In particular, almost everything is invoked with "builtin" or "command", to work in the face of user  redefinitions.
+Initialize opts and tasks.
+Inspired by: http://stackoverflow.com/a/14675583
+Install all .deb files in the current directory Assumes glob_subst is off
+Install all .deb files in the current directory.
+Install all packages given on the command line while using only the first word of each line: acs ...
+Install and save to dev-dependencies in your package.json npmd is used by https://github.com/dominictarr/npmd
+Install dependencies globally
+Install given package(s) as dependencies of another package
+Install n98-magerun into the current directory
+Install package group
+Install specific package not from the repositories but from a file
+Install specific package(s) from the repositories
+Internal: Print ruby version details, if it's currently active etc.
+Invalid cache because gruntfile is old.
+Invalid naming pattern
+It also implements a per-directory-history-toggle-history function to change from using the directory history to using the global history.
+It is not run during normal use of the plugin.
+It is not suitable for parsing.
+It only performs an action if the requested virtualenv is not the current one.
+It will not work with the _git that ships with git.
+It will override shell builtins.
+It's faster because his efficient use of svn (single svn call) which saves a lot on a huge codebase It displays the current status of the local files (added, deleted, modified, replaced, or else...)
+Its functionality has been folded in to the core lib/termsupport.zsh, which is loaded for all users.
+Its interface and behavior are going to change, and probably in non-back-compatible ways.
+Joiner that indicates a single combined-form glyph (ligature) should be used
+Just add pip to your installed plugins.
+Just bail on any error so we don't have to do extra checking.
+Just run tmux, fixing the TERM variable if requested.
+Kate Start kate always silent
+Keep Apple Terminal.app's current working directory updated Based on this answer: http://superuser.com/a/315029 With extra fixes to handle multibyte chars and non-UTF-8 locales
+Keeps track of the last used working directory and automatically jumps into it for new shells.
+Kernel-package building shortcut
+Key binding and terminal info
+Kills any process that matches a regexp passed to it
+Kurapati Copyright (c) 2011 Sorin Ionescu Copyright (c) 2011 Vincent Guerci All rights reserved.
+Last element in dirhistory_past is the cwd.
+Lets you work with pipes or files.
+List directory contents
+List installed packages
+List installed packages, even those installed from AUR (they're tagged as "local")
+List of the absolute paths of all unique existing completion caches.
+List of the absolute paths of all unique insecure directories, split on newline from compaudit()'s output resembling:
+List ownership and permissions of all insecure directories.
+List packages by size
+List such files first.
+Load ZSH module zsh/zleparameter, needed to override user defined widgets.
+Locally enable the "NULL_GLOB" option, thus removing unmatched filename globs from argument lists *AND* printing no warning when doing so.
+Locates all the installed versions of Xcode on this system, for this plugin's internal use.
+Make optioins completion.
+Make sure formatting is reset
+Make tasks completion.
+Make zsh know about hosts already accessed by SSH
+Makes emoji support available within ZSH
+May be specified multiple times.
+Migrate and prepare database
+More robust but less user friendly.
+Move backward in directory history
+Move forward in directory history
+Move such caches to a temporary directory.
+Must not have trailing semicolon, for iTerm compatibility
+NOTE: This is a work in progress.
+Navigate directory history using ALT-LEFT and ALT-RIGHT.
+Network Option Plugin
+Nmap options are: -sS - TCP SYN scan -v - verbose -T1 - timing of scan.
+Nonstandard alias names
+Not for rxvt-unicode, but it doesn't seem differentiate Ctrl-Shift-Arrow from plain Shift-Arrow, at least by default.
+Not options completions.
+Not part of either coreutils or findutils, installed separately.
+Note that if you change the zstyle settings, you should delete the cache file and restart zsh.
+Notes: It assumes Shift+Cmd+G launches go to folder panel and Cmd+N opens new app window.
+Now we have a UTF-8 encoded string in the variable.
+OMZ binds the keys as part of the plugin loading
+OSX command-not-found support https://github.com/Homebrew/homebrew-command-not-found
+Oh-my-zsh installation
+On OS X and Windows, the main system clipboard or "pasteboard" is used.
+On OpenBSD, "gls" (ls from GNU coreutils) and "colorls" (ls from base,  with color and multibyte support) are available from ports.
+On and off use the menu bar items.
+On other Unix-like OSes, this considers the X Windows CLIPBOARD selection to be the "system clipboard", and the X Windows `xclip` command must be installed.
+On the connected IP sorted by the number of connections
+One emacs process handles all your frames whether you use a frame opened in a terminal via a ssh connection or X frames opened on the same host.
+Only run if tmux is actually installed
+Opens specified directory or current working directory in ForkLift.app
+Or, use this file as a oh-my-zsh plugin.
+Or, use this file as an oh-my-zsh plugin.
+Otherwise, it will do a clean checkout of upstream's HEAD to a temporary local repo and use that.
+Otherwise, no lines were found, or an error occurred.
+Outputs a bunch of information about the state and configuration of oh-my-zsh, zsh, and the user's system.
+Outputs if current branch exists on remote or not
+Outputs if current branch is ahead of remote
+Outputs if current branch is behind remote
+Outputs the encoded string on stdout.
+Override ZLE widgets to make them invoke _zsh_highlight.
+Override the mvn command with the colorized one.
+Pacman - https://wiki.archlinux.org/index.php/Pacman_Tips
+Parses the Xcode version from a filename based on our conventions Only meaningful when called from other _omz_xcode functions
+Pass the name of the variable to return the result in.
+Paths noted below are for Postgres installed via Homebrew on OSX
+Percent-encode the pathname.
+Perl grep, because 'grep -P' is terrible.
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+Place it in your .zshrc:
+Plugin creators, please add your *_prompt_info function to the list of dummy implementations to help theme creators not receiving errors without the need of implementing conditional clauses.
+Plugin highlights file content based on the filename extension.
+Pop the last element of dirhistory_past.
+Prefix at the very beginning of the prompt, before the branch name
+Print the active version, using xcselv's notion of versions
+Printing process according to the port number
+Prints a random emoji character
+Prints the encoded string on stdout.
+Protect other escapes to pass through the printf unchanged
+Public: Create rvm_prompt_info command for themes compatibility, unless it has already been defined.
+Public: Provide a list with all available rubies, this basically depends on `ls -1` and .rfbu/rubies.
+Push a new element onto the end of dirhistory_past.
+Push and pop directories on directory stack
+Reagle http://www.cygwin.com/ml/cygwin/2001-06/msg00537.html
+Rebuild if .agignore more recent than cache.
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+Remove ALL kernel images and headers EXCEPT the one in use
+Remove orphans using yaourt Additional yaourt alias examples
+Remove python compiled byte-code in either current directory or in a list of specified directories
+Remove the specified package(s), its configuration(s) and unneeded dependencies
+Remove the specified package(s), retaining its configuration(s) and required dependencies
+Repeat the current search so that a different (unique) match is found.
+Requires http://www.bruji.com/bwana/
+Requires xterm, urxvt, iTerm2 or any other terminal that supports bracketed paste mode as documented: http://www.xfree86.org/current/ctlseqs.html create a new keymap to use while pasting
+Restart pow process taken from http://www.matthewratzloff.com/blog/2011/12/23/restarting-pow-when-dns-stops-responding
+Return value: 0 if the alias was found, 1 if it does not exist
+Return value: Always 0
+Returns nonzero if encoding failed.
+Returns status zero if the completions cache needs rebuilding.
+Returns the element if the array was not empty, otherwise returns empty string.
+Rewrite Role Scaffold Search-Replace Shell Sidebar
+Run once to get initial cwd set
+Run sudo gem on the system ruby, not the active ruby.
+Runs before executing the command
+Runs before showing the prompt
+Same as yaupg, but without confirmation
+Search for package(s) in the local database
+Search for package(s) in the local database Additional pacman alias examples
+Search for package(s) in the repositories
+See README.md for details
+See the README for documentation.
+See: https://www.ietf.org/rfc/rfc2396.txt
+Set '-CC' option for iTerm2 tmux integration
+Set term to screen or screen-256color based on current terminal support
+Set the correct local config file to use.
+Show all 256 colors where the background is set to specific color
+Show all 256 colors with color number
+Show package information
+Simple definition completer for ruby-build
+Since any of these caches may have been generated from insecure directories, they are all suspect now.
+Since the ignorable first line is printed to stderr and thus not captured, stderr is squelched to prevent this output from leaking to the user.
+Site Super-Admin Term Theme
+Some files for bash that zsh does not use are intentionally included to help with diagnosing behavior differences between bash and zsh
+Some of which come from http://justinlilly.com/dotfiles/zsh.html
+Some self-explanatory aliases
+Someone overwrote our variable.
+Sort connection state
+Source SSH settings, if applicable
+Source: http://aur.archlinux.org/packages/lolbash/lolbash/lolbash.sh
+Special format for colums
+Statistical connections 404
+Statistical http status.
+Supports command completion.
+Synchronize with repositories before upgrading packages (AUR packages too) that are out of date on the local system.
+Synchronize with repositories before upgrading packages that are out of date on the local system.
+TODO: * Multi-file capture * Add automatic gist uploading * Consider whether to move default output file location to TMPDIR.
+TODO: Make the section part easier to use.
+TODO: Make this usable w/o rvm.
+TODO: Should combine the two instead of either or.
+Tack OMZ-specific notes on to readme
+Taken from: http://ruslanspivak.com/2010/06/02/urlencode-and-urldecode-from-a-command-line/
+Tell terminal to send escape codes around pastes.
+Text to display if the branch is clean Setup the prompt with pretty colors
+Text to display if the branch is dirty
+The TERM to use for 256 color terminals.
+The TERM to use for non-256 color terminals.
+The extra spaces in output here are a hack for readability, since some terminals treat these emoji chars as single-width.
+The following constants have been initialized in _history-substring-search-up/down-search():
+The following snippet was taken from the zsh-syntax-highlighting project:
+The implementation is by Jim Hester in September 2012.
+The keys are the group names, and the values are whitespace-separated lists of emoji character names.
+The lifetime may be specified in seconds or as described in sshd_config(5) (see TIME FORMATS) If left unspecified, the default lifetime is forever.
+The official upstream repo is zsh-users/zsh-history-substring-search https://github.com/zsh-users/zsh-history-substring-search
+The output is human-readable and its format may change over time.
+The shuffle property of current playlist can't be changed in iTunes 12, so this workaround uses AppleScript to simulate user input instead.
+The terminalapp plugin is deprecated and may be removed in a future release.
+The toggle option depends on the shuffle button being visible in the Now playing area.
+The use_env call below is a reusable command to activate/create a new Python virtualenv, requiring only a single declarative line of code in your .env files.
+There are insecure directories: /usr/share/zsh/site-functions /usr/share/zsh/5.0.6/functions /usr/share/zsh /usr/share/zsh/5.0.6
+These are apt-get only
+These sequences work for xterm, Apple Terminal.app, and probably others.
+This allows the common usage of passing an entire URL in, and encoding just special characters in it, with the expectation that reserved and mark characters are used appropriately.
+This amounts to three tests:
+This depends on and reuses some of the internals of the _git completion function that ships with zsh itself.
+This effectively speeds up Rails' boot process to under 1 sec.
+This file has support for doing system clipboard copy and paste operations from the command line in a generic cross-platform fashion.
+This file is auto-generated by update_emoji.pl.
+This function will add all non-hidden files to git.
+This is a convenience to allow callers to pass in a full URL or similar strings and decode them for human presentation.
+This is a developer-use script, so terse output like that should be fine.
+This is a zsh script, not a function.
+This is intended to be widely portable, and run anywhere that oh-my-zsh does.
+This is intended to provide a bunch of context for diagnosing your own or a third party's problems, and to be suitable for posting to public bug reports.
+This is one for the system administrator, operation and maintenance.
+This is to be run by OMZ developers when they want to pull in new changes from upstream to OMZ.
+This is unlikely to change so make it all statically assigned
+This is written in a defensive style so it still works (and can detect) cases when basic functionality like echo and which have been redefined.
+This method allows for builtin commands to be primary but it's lost if hash -r or rehash -f is executed.
+This method generates wrapper functions.
+This method is inflexible since the aliases are at risk of being overriden resulting in the BSD coreutils being called.
+This notice may not be removed or altered from any source distribution..
+This plugin adds single char shortcuts (and combinations) for some commands.
+This plugin adds the ability to on the fly generate and access file shortcuts.
+This script intercepts calls to the brew plugin and adds autocompletion for the cask subcommand.
+This script updates the Oh My Zsh version of the zsh-history-substring-search plugin from the independent upstream repo.
+This software is provided 'as-is', without any express or implied warranty.
+This value is set in _history-substring-search-begin().
+This variable name is unlikly to collide.
+This will look for a custom profile for the local machine and each domain or subdomain it belongs to.
+Thus, those two  functions have to be wrapped.
+Tmux states this should be screen, but you may need to change it on systems without the proper terminfo
+Tmux states this should be screen-256color, but you may need to change it on systems without the proper terminfo
+To achieve git-flow completion nirvana:
+To achieve git-hubflow completion nirvana:
+To enable agent forwarding support add the following to your .zshrc file:
+To enable simpler handeling of spaces in file names
+To load multiple identities use the identities style, For example:
+To set the maximum lifetime of the identities, use the lifetime style.
+Try to connect to an existing session.
+Try to get the value of an alias, otherwise return the input.
+Try to use terminfo to set the title If the feature is available set title
+Undocumented Terminal.app-specific control sequence
+Unversioned "default" installation location
+Update and refresh the local package and ABS databases against repositories
+Update and refresh the local package and AUR databases against repositories
+Update and refresh the local package database against repositories
+Update and refresh the local package, ABS and AUR databases against repositories
+Update your zsh's git-completion module to the newest verion.
+Update your zsh's git-completion module to the newest version.
+Updates the last directory once directory is changed.
+Usage is also described at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins Look for yaourt, and add some useful functions if we have it.
+Use `svn_prompt_info` method to enquire the svn data.
+Use a precmd hook instead of a chpwd hook to avoid contaminating output
+Use as a drop-in replacement of the svn plugin not as complementary plugin
+Use caching so that commands like apt and dpkg complete are useable
+Use emacs key bindings
+Use emotty set defined by user, fallback to default
+Use sudo by default if it's installed
+Use the completions for tmux for our function
+Use this when creating a new repo from scratch.
+Use this when you have a directory that is not yet set up for git.
+Use this when you have a git repo that's ready to go and you want to add it to your GitHub.
+User defined widget: override and rebind old one with prefix "orig-".
+Various other combining characters.
+Verbosity levels: 0 - Basic info, shell state, omz configuration, git state 1 - (default) Adds key binding info and configuration file contents 2 - Adds zcompdump file contents
+View all 80 Port Connections
+View the standard out (puts) from any pow app
+Virtual environment name can be overridden by placing a .venv file in the project root with a virtualenv name in it.
+Visit http://www.ember-cli.com/ to view user guide
+Warn if the current branch is a WIP
+Warning: you will need to put the glob in single quotes if you use: glob_subst
+We are at the beginning of history and there are no further matches.
+We are at the end of history and there are no further matches.
+We have other arguments, just run them
+We have to "override" some keys and widgets if the zsh-syntax-highlighting plugin has not been loaded:
+We need to re-encode it if caller is in a non-UTF-8 locale.
+We will miss you dearly.
+We've just left the repo, deactivate the environment Note: this only happens if the virtualenv was activated automatically
+Website traffic statistics (G)
+When HIST_FIND_NO_DUPS is set, meaning that only unique command lines from history should be matched, make sure the new and old results are different.
+While current path is not root path
+Will Detect if a app does not exist in pow and print a (slightly) helpful error message
+With either a manual or brew installed chruby things should just work.
+Work bytewise, since URLs escape UTF-8 octets
+Wrapper function for Maven's mvn command.
+Wrapper function for tmux.
+Write to standard output the directory of the file opened in the the current buffer
+Write to standard output the path to the file opened in the current buffer.
+You can do this conveniently by loading the "xterm with Numeric Keypad" preset.
+You can set the environment variable REPO_PATH to point it at an upstream repo you have already prepared.
+Zeus preloads your Rails environment and forks that process whenever needed.
+Zsh installation and configuration
+absolute path of files resolving symlinks (:A) and quoting special chars (:q)
+add all non-dot files
+add functions to the exec list for chpwd and zshaddhistory
+adds a service specified by URI to the system
+age - but without sudo
+allow ctrl-p, ctrl-n for navigate history (standard behaviour)
+allow v to edit the command line (standard behaviour)
+allows square brackts for rake task invocation
+another manual user-local installation
+another rotation to match qwerty
+as seen in http://www.porcheron.info/command-not-found-for-zsh/ this is installed in Ubuntu
+autoload -U compinit compinit
+bash completion for the `wp` command
+build main page url: split by '/', then rejoin protocol (1) and domain (2) parts with '//'
+build search url: join arguments passed with '+', then append to search context URL TODO substitute for proper urlencode method
+build search url: join arguments passed with '+', then append to search engine URL
+called by zsh before executing a command
+called by zsh before showing the prompt
+capture stdout and stderr
+check again if another agent is running using the newly sourced settings
+check for existing ssh-agent
+check if another agent is running
+check if autojump is installed
+check if fasd is installed
+check whether the search context is supported
+check whether the search engine is supported
+clipcopy - Copy data to clipboard
+clippaste   - writes clipboard's contents to stdout
+clippaste - "Paste" data from clipboard to stdout
+cmd name only, or if this is sudo or ssh, the next cmd
+compile a string of coffeescript and print to output
+compile from clipboard and copy to clipboard
+complete on installed rubies
+debian and ubuntu package
+define right prompt, if it wasn't defined by a theme
+define search context URLS
+define search engine URLS
+define the open command
+determine local IP address
+disable named-directories autocompletion
+disables prompt mangling in virtual_env/bin/activate
+discard previous directory's history
+display info about packages
+display info about patches
+display info about patterns
+display info about products
+do not autoselect the first completion entry
+do the first one with both -M viins and -M vicmd in vi mode
+don't use nohup on OSX
+download source rpms for all installed packages
+emoji-char-definitions.zsh - Emoji character definitions for oh-my-zsh emoji plugin
+execute the bundled rake gem
+gather external ip address
+generate-complete-function/ruby/optparse COMMAND1 generate-complete-function/ruby/optparse COMMAND2
+get top process eating memory
+git theming default: Variables for theming the git info prompt
+go back to our normal keymap, and insert all the pasted text in the command line.
+going down from somewhere above the bottom of history
+going down from the absolute top of history
+going up from somewhere below the top of history
+gulp-autocompletion-zsh
+here will override ones with the same name in the main plugins directory.
+highlight command line using zsh-syntax-highlighting
+highlight the search query inside the command line
+http://github.com/olivierverdier/zsh-git-prompt
+https://github.com/AlexBio https://github.com/dbb https://github.com/Mappleconfusers
+https://github.com/AlexBio https://github.com/dbb https://github.com/Mappleconfusers Nicolas Jonas nextgenthemes.com https://github.com/loctauxphilippe
+https://github.com/nicoulaj/zsh-syntax-highlighting
+https://raw.githubusercontent.com/zsh-users/zsh/master/Completion/Unix/Command/_git
+iTunes control function
+if it doesn't, make it, and open it
+if mode indicator wasn't setup by theme, define default
+if the file exists, just open it
+ignore VCS folders (if the necessary grep flags are available)
+ignore duplication command history list
+insecure ownership or permissions) by:
+insert newlines rather than carriage returns when pasting newlines
+install composer in the current directory
+install newly added packages recommended by already installed ones
+install package group
+install patches Request commands
+install source of a package
+jump FOO: jump to a mark named FOO mark FOO: create a mark named FOO unmark FOO: delete a mark marks: lists all marks
+list all packages providing the specified capability Repositories commands
+list contents of directories in a tree-like format
+list currently active package locks
+list necessary patchs
+list process using deleted files
+list services defined on the system Package Locks Management commands
+list unresolved files (since hg does not list unmerged files in the status command)
+list whats inside packed file
+long list,show almost all,show type,human readable
+long list,sorted by date,show type,human readable
+ls, the common ones I use a lot shortened for rapid fire usage
+make everything in this keymap call our custom widget
+make sure minutes and hours don't exceed 60 nor 12 respectively
+man will be inserted before the command
+manual user-local installation
+maybe you want to track if you were in ins or cmd mode and restore the right one.
+might be possible to improve this using glob, without the basename trick
+modify properties of specified services
+name - The env variable to set 2.
+name - The name of the shortcut (default: name of the file) 2.
+name - The name of the shortcut STDOUT: Name and value of the shortcut
+name - The name of the shortcut STDOUT: The path
+name - The variable to set 2.
+noglob must come before sudo
+npm package names are lowercase Thus, we've used camelCase for the following aliases: Install and save to dependencies in your package.json npms is used by https://www.npmjs.com/package/npms
+of the tab window should be.
+oh-my-zsh supports an rvm prompt by default get the name of the rvm ruby version
+only define LC_CTYPE if undefined
+open a zypper shell session
+otherwise start gpg-agent with ssh support
+paths are for osx installation via macports
+pick the first entry from LANG
+print all installed packages
+print help for the search command
+prints a report about licenses and EULAs of installed packages
+read history in new file
+rebuilds the dnf package list
+rebuilds the yum package list
+refreshing a service mean executing the service's special task
+remove package and leaves
+remove repositories Services commands
+remove specified package lock
+remove specified repository index service from the sytem
+rename repositories (for the alias only)
+same than M-x eval but from outside Emacs.
+save history to previous file
+save to the global history
+search or go to main page depending on number of arguments passed
+search package apt-file
+second arg: remote branch name
+servers using CNAMES via whois.geek.nz
+set EDITOR if not already defined.
+set screen hardstatus
+share command history data
+show completion menu on succesive tab press
+show help for command list
+show the latest stable release of Perl
+shows  the  ID string of the target operating system
+size,show type,human readable
+sorted by date,recursive,show type,human readable
+source settings of old agent, if applicable
+ssh-agent running, start gpg-agent without ssh support
+start in directory mode
+start ssh-agent and setup environment
+sudo will be inserted before the command
+switch the active keymap to paste mode
+tell whether version1 is older or newer than version2 Packages commands
+temporarily unset MAKEFLAGS ( '-j3' will fail )
+test if agent-forwarding is enabled
+the search was succesful so display the result properly by clearing away existing highlights and moving the cursor to the end of the result buffer
+these are the codes sent around the pasted text in bracketed paste mode.
+third arg: remote name
+this has the nice effect of making the whole paste be a single undo/redo event.
+this shows up in the .deb file name
+tidy up after ourselves
+to code all night long
+toggle line-wrapping off and back on again
+top10 of gain access to the ip address
+top100 of Page lists the most time-consuming (more than 60 seconds) as well as the corresponding page number of occurrences
+top20 of Find SYN connection
+top20 of Find the number of requests on 80 port
+top20 of Find time_wait connection
+top20 of Most Visited file or page
+top20 of Using tcpdump port 80 access to view
+unless we really want to.
+update-from-upstream.zsh
+use bindkey -v here with vi mode probably.
+use perl like awk/sed
+use the current user as the prefix of the current tab title
+use this to enable users to see their ruby version, no matter which version management system they use
+val  - The default value Return value: 0 if the env variable exists, 3 if it was set
+val  - The default value Return value: 0 if the variable exists, 3 if it was set
+verify dependencies of installed packages Updates commands
+want to preserve spaces at the end
+we have reached the absolute top of history
+when at the shell prompt, use the shell name (truncated to remove the path to the shell) as the rest of the title
+when running a command, show the command name and arguments as the rest of the title
+when running a command, show the title of the command as the rest of the title (truncate to drop the path to the command)
+zsh is able to auto-do some kungfoo depends on the SUFFIX :)
+zstyle ':completion:*' use-cache yes
+zstyle ':completion::complete:grunt::options:' no_update_options yes
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa2 id_github
+zstyle :omz:plugins:ssh-agent lifetime 4h

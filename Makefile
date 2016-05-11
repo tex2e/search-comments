@@ -21,7 +21,14 @@ target_repo := \
 	https://github.com/eslint/eslint \
 	https://github.com/FreeCodeCamp/FreeCodeCamp \
 	https://github.com/mbostock/d3 \
-	https://github.com/vuejs/vue
+	https://github.com/vuejs/vue \
+	https://github.com/ruby/ruby \
+	https://github.com/robbyrussell/oh-my-zsh \
+	https://github.com/Homebrew/brew \
+	https://github.com/docker/docker \
+	https://github.com/electron/electron \
+	https://github.com/twitter/twitter-server \
+	https://github.com/WordPress/WordPress
 target_name := $(notdir $(target_repo))
 database_dir := database
 

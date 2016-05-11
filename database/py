@@ -117,6 +117,7 @@ A Objective-C dynamic decl
 A Objective-C synthesize decl
 A PBXBuildFile that refers to this object will call this method to obtain additional hashables specific to this XCFileLikeElement.
 A PBXProject is really just an XCObject, the XCContainerPortal thing is just to allow PBXProject to be used in the containerPortal property of PBXContainerItemProxy.
+A Test calls this internally to create the golden files So it can process them (so we don't have to checkin the files).
 A bundle directory depends on its dependencies such as bundle resources and bundle binary.
 A closing punctuation without matching opening punctuations.
 A context manager for changing the current working directory.
@@ -249,6 +250,7 @@ Add the command to trigger build of the target type depending on the toolset.
 Add the config to the file node
 Add the custom build action for one input file.
 Add the custom build step for one input file.
+Add the defines passed from command line.
 Add the filter to the group.
 Add the hashables of the remote PBXProject that it's related to.
 Add the information to the appropriate tool
@@ -298,6 +300,7 @@ Also set the "PRODUCT_NAME" build setting in each configuration, but only if the
 Also skip checks if we are on the first line.
 Also use quotation marks to represent empty strings.
 Also validate actions and run_as elements in targets.
+Also, 'en-US' should be represented simply as 'en' (http://crbug.com/19165, http://crbug.com/25578).
 Also, for list expansions, there can be no other text besides the variable expansion in the input string.
 Alternative tokens and their replacements.
 Although XCProjectFile is implemented here as an XCObject, it's not a proper object in the Xcode sense, and it certainly doesn't have its own ID.
@@ -333,6 +336,7 @@ An unknown error occurred
 And always add static_libraries that have no dependencies on them from linkables.
 And count them later, when we see something real.
 And since you should never have braces at the beginning of a line, this is an easy test.
+And the settings are controlled by the variable "libchromiumcontent_component" which is defined before running gyp.
 Android NDK requires a strict link order.
 Android uses separate flags for assembly file invocations, but gyp expects the same CFLAGS to be applied:
 Android's envsetup.sh adds a number of directories to the path including the built host binary directory.
@@ -378,6 +382,7 @@ Attempt to make the file writable before deleting it.
 Attempting to unpack a non-sequence.
 Automatically adapt CIndex/ctype pointers to python objects
 Avoid preprocessor lines
+Avoid using the old gyp lib in system.
 BMP code points are 16-bit values.
 Backport of OrderedDict() class that runs on Python 2.4, 2.5, 2.6, 2.7 and pypy.
 Based on http://code.activestate.com/recipes/576694/.
@@ -406,8 +411,10 @@ Build 'self.symbolic_values' -- an array that maps numeric property values to sy
 Build a dict to access each target's subdict by qualified name.
 Build and start the HTTP response
 Build systems that operate serially or that need to have dependencies defined before dependents reference them should generate targets in the order specified in flat_list.
+Build the transitive closure of all dependencies.
 Build up a list of outputs.
 Build up a list of products in the remote project file, ordered the same as the targets that produce them.
+Build with prebuilt clang.
 Builtins don't have source files.
 Bump up the version for upgrade.
 Bundle all of the above together, if needed.
@@ -463,6 +470,7 @@ Check for None, corresponding to the root node.
 Check for a cached value to avoid executing commands, or generating file lists more than once.
 Check for custom main gyp name, otherwise use the default CHROMIUM_GYP_FILE and prepend .ninja before the .gyp extension.
 Check for non-const references in function parameters.
+Check for optional target_arch and only install for that architecture.
 Check for people declaring static/global STL strings at the top level.
 Check for potential format string bugs like printf(foo).
 Check for potential memset bugs like memset(buf, sizeof(buf), 0).
@@ -570,6 +578,7 @@ Convert all strings that are canonically-represented integers into integers.
 Convert any paths to native form (first element is used directly).
 Convert into a tree of dicts on path.
 Convert it to a string
+Convert machine type to format recognized by gyp.
 Convert most of the signature to GUID form (discard the rest)
 Convert to folders and the right slashes.
 Convert to folders recursively.
@@ -579,21 +588,30 @@ Converts a Clang `SourceLocation` into a dict.
 Converts a Clang `SourceRange` into a dict.
 Converts a python source from stdin to JSON formatted AST on stdout.
 Copies all the phplang-spec tests to a temporary directory, runs them in interp mode, then copies the good ones to test/spec/good and the bad ones to test/spec/bad.
+Copy V8 headers from chromium's repository.
 Copy a reference to the TranslationUnit to prevent premature GC.
 Copy additional generator configuration data from VS, which is shared by the Eclipse generator.
 Copy additional generator configuration data from VS, which is shared by the Windows Ninja generator.
 Copy additional generator configuration data from Xcode, which is shared by the Mac Make generator.
 Copy additional generator configuration data from Xcode, which is shared by the Mac Ninja generator.
+Copy atom.lib to node.lib and iojs.lib.
+Copy file and keep the executable bit.
 Copy out only the edges we're interested in from the full edge list.
 Copy passed lists (or set to empty lists)
+Copy standard node headers from node.
 Copy test_dir and its contents to backup so we can restore it later.
 Copyright (c) 2009 Google Inc.
 Copyright (c) 2009 Raymond Hettinger.
+Copyright (c) 2009 The Chromium Authors.
 Copyright (c) 2011 Google Inc.
+Copyright (c) 2011 The Chromium Authors.
 Copyright (c) 2011 The LevelDB Authors.
 Copyright (c) 2011-present, Facebook, Inc.
 Copyright (c) 2012 Google Inc.
+Copyright (c) 2012 The Chromium Authors.
+Copyright (c) 2013 GitHub, Inc.
 Copyright (c) 2013 Google Inc.
+Copyright (c) 2013 The Chromium Authors.
 Copyright (c) 2014, Facebook, Inc.
 Copyright (c) 2015, Facebook, Inc.
 Copyright (c) 2015-present, Facebook, Inc.
@@ -634,6 +652,7 @@ Currently, all tests appear to be able to be run in parallel.
 Currently, only 'pymod_do_main' is supported.
 Custom Nuclide fields
 DB should have atleast one value for scan to work
+Data are sent in JSON format.
 Decide the guid of the project.
 Decide the set of replacement macros that should be suggested
 Declaration Kinds A declaration whose specific kind is not exposed via this interface.
@@ -654,6 +673,7 @@ Define how each output is generated.
 Delegate everything else to self.tmp_file
 Delete the lists that are known to be unneeded at this point.
 Delete the old filter file.
+Delete the original file before uploading in CI.
 Deleting an existing item uses self.__map to find the link which is then removed by updating the links in the predecessor and successor nodes.
 Describes an C or C++ initializer list.
 Descriptions of the compiler options, i.e. VCCLCompilerTool in MSVS and ClCompile in MSBuild.
@@ -685,6 +705,7 @@ Directives for converting VCResourceCompilerTool to ResourceCompile.
 Directly depend on all the runners as they depend on the target that builds them.
 Directory all our build output goes into.
 Display types for variables and typedefs.
+Distinguish between different userland bitness by querying the python binary.
 Do a first round of toolsets expansion so that conditions can be defined per toolset.
 Do a quick scan to determine if an expensive regex search is warranted.
 Do a regular expression match here to make sure that we are matching the expected CHECK macro, as opposed to some other macro that happens to contain the CHECK substring.
@@ -692,6 +713,7 @@ Do an extra check to avoid work when we're not debugging.
 Do expansions on the condition itself.
 Do not check those function parameters.
 Do not parse function bodies.
+Do not upload other files when passed "-p".
 Do not write out dependency files.
 Do nothing if there was no precompiled source.
 Do the same kind of validation.
@@ -732,6 +754,7 @@ Don't warn on function pointer declarations.
 Don't waste time here if line doesn't contain 'CHECK' or 'EXPECT'
 Don't write postbuilds for target's output.
 Done if not processing outputs as sources.
+Download prebuilt clang binaries.
 Drop last 2 NULs, one for list terminator, one for trailing vs.
 Due to C++11 brace initialization, there are more places where semicolons are required than not, so we use a whitelist approach to check these rather than a blacklist.
 Due to circular dependencies between libraries :(, we wrap the special "figure out circular dependencies" flags around the entire input list during linking.
@@ -768,6 +791,7 @@ Enable core dump by change ulimit to infinity.
 Enable project in this solution configuration.
 Enable typo-detection (and the corresponding fixits) For some reason this is not enabled by default in libclang.
 Enable v3_req extensions.
+Ensure msgpack-python and cbor are installed first, using: pip install --user msgpack-python pip install --user cbor
 Escape all quotes so that they are interpreted literally.
 Escape codes should already be removed by ESCAPES.
 Evaluate conditions sections, allowing variable expansions within them as well as nested conditionals.
@@ -907,6 +931,7 @@ Flags with values 16 and 32 are deprecated and intentionally omitted.
 Flatten lists to strings.
 Folder mappings Omit this section if there are no folders
 For Android, the target of these maps is a tuple ('static', 'modulename'), ('dynamic', 'modulename'), or ('path', 'some/path') instead of a string, since we link by module.
+For Cocoa to find the locale at runtime, it needs to use '_' instead of '-' (http://crbug.com/20441).
 For MSVS 2008 and earlier, we need to process all files before walking the sub folders.
 For a list of options available for each theme, see the documentation.
 For a literal quote, CommandLineToArgv requires an odd number of backslashes preceding it, and it produces half as many literal backslashes (rounded down).
@@ -943,6 +968,7 @@ For this we need to check what came before the "(type)" string.
 Force a re-parse, in case the user e.g. changed a header file.
 Force app to exit on Ctrl-C.
 Force ninja to use rsp files.
+Force using win32 python on cygwin.
 Format can be a custom python file, or by default the name of a module within gyp.generator.
 Format upgrade_check_project_version with leading zeros as needed.
 Fortunately, for most symboles, we do not need to perform a function call.
@@ -1165,6 +1191,7 @@ If previous line was _END_ASM, we will now shift to _NO_ASM state.
 If previous line was a blank line, assume that the headers are intentionally sorted the way they are.
 If previous section is different from current section, _last_header will be reset to empty string, so it's always less than current header.
 If self.bmp_data contains identical data blocks, keep the first one, remove duplicates and change the indexes in self.bmp_lookup to point to the first one.
+If target_arch is not specified, then only install for the host architecture.
 If that's why, make it writable and try the op again.
 If the GUID contains lowercase hex letters, MSVS will be fine.
 If the NXCOMPAT flag has not been specified, default to on.
@@ -1259,6 +1286,7 @@ If you put an exception in here, please send a pull request upstream to php-src.
 Ignore control structures.
 Ignore errors if the file doesn't exist.
 Ignore non-stopping events.
+Ignore npm install errors when running in CI.
 Ignore pointers/references to arrays.
 Ignore pointers/references to functions.
 Ignore the interrupt signal so that the parent process catches it and kills all multiprocessing children.
@@ -1271,6 +1299,7 @@ Import sha otherwise, preserving 2.4 compatibility.
 In 2.6, md5 is deprecated.
 In 2.6, sha is deprecated.
 In Atom 1.2+, "apm test" exits with an error when there is no "spec" directory
+In CI we just build as told.
 In Xcode, this is only activated when GCC_COMPILER_VERSION is clang or llvm-gcc.
 In addition to macros, we also don't want to warn on compound literals.
 In addition, we look for people taking the address of a cast.
@@ -1279,6 +1308,7 @@ In auto mode, check environment variable for override.
 In fact, if this code was responsible for creating the xcodeproj directory, get rid of that too.
 In order for linking to succeed, DYLIB_CURRENT_VERSION and DYLIB_COMPATIBILITY_VERSION must be cleared.
 In order to gradually migrate away from build-script-impl, this module provides tools to handle parsing of these args.
+In order to work around this, we decided to generate the configuration for twice, one is to generate "Debug" config, the other one to generate the "Release" config.
 In practice, this strips the top-level "src/" dir from the hierarchy in the solution.
 In principle this could be extended to more nesting
 In ps, 'comm' means the base command and 'command' is the full command.
@@ -1290,6 +1320,7 @@ In that case, the expansion should result in a list.
 In the future, maybe it should just accept a list, and not the whole data dict.
 In the latter case, we want to package just the API exposed by the outermost module.
 In the same way, a do/while should never be on one line
+In this case we return early on non-linux platforms.
 In this case, we also need to save the compile_deps for the target, so that the the target that directly depends on the .objs can also depend on those.
 In this example, grandparent would be set to path/to and parent_root would be set to Language.
 Incidentally, they have names denoting which part of the client made the request.
@@ -1380,6 +1411,7 @@ It's important to get the "All" target first, though.
 It's not possible for gmock macros to appear in the first 2 lines, since the class head + section name takes up 2 lines.
 It's ok not to have spaces around binary operators like + - * /, but if there's too little whitespace, we get concerned.
 It's ok to have many commands in a switch case that fits in 1 line
+It's possible to use 64-bit kernel with 32-bit userland, e.g. to give linker slightly more memory.
 It's preferable to keep dependencies listed first during a link phase so that they can override symbols that would otherwise be provided by libraries, which will usually include system libraries.
 It's stupid to replace and append simultaneously, for example.
 Items for which no exclusion or inclusion has been applied (yet) have value -1, items excluded have value 0, and items included have value 1.
@@ -1633,6 +1665,7 @@ Normalize the node, and remove all extranous whitespaces.
 Normalize the path so trailing slashes don't confuse us.
 Normally make does this implicitly, but we force rules to always run so we can check their command lines.
 Normally the xcode-ninja generator includes only valid executable targets.
+Not a git repository collect git status information
 Not all generators will need to use the rule_sources lists, but some may, and it seems best to build the list in a common spot.
 Not entering assembly block.
 Not exactly the same as disable.
@@ -1842,6 +1875,7 @@ Prepare the command line for this rule.
 Prepare the list of tools as a dictionary.
 Prepare the set of configurations.
 Preserve current xml.dom.minidom functions.
+Press the publish button.
 Prevent default library inheritance from the environment.
 Print invalid JSON requests to stderr.
 Print logs to stdout if verbose is specified.
@@ -1889,10 +1923,12 @@ Python wrappers for invoking `xcrun` on the command-line.
 Query for the line table.
 Querying the same location should hit the cache.
 Queue of targets to visit.
+Quote each element so filename spaces don't mess up GYP's attempt to parse it into a list.
 Random other files that zend wants
 Rather than attempting to enumerate the bad shell characters, just whitelist common OK ones and quote anything else.
 Rather than simply appending new items, insert them after the dependency that exported them.
 Raw string ended on same line
+Read in 1mb chunks, so it doesn't all have to be loaded into memory.
 Read stdout from inferior.
 Read the resource and write it to a given dir using the resource name as file name.
 Read the source Info.plist into memory.
@@ -1911,6 +1947,7 @@ Red links are a bit too garish
 Redefine the type of the "target" property.
 Redirect stdout to a stream for capturing.
 Redirect them to show up in one of those other groups.
+Redirect to use local libchromiumcontent build.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 Reduces the cpu time usage by skipping lines.
 Refer to documentation for a list of supported languages.
@@ -2031,6 +2068,8 @@ Save a copy of this object's old properties, because they'll still be needed.
 Save last 100 logs into buffer.
 Scan for includes and merge them in.
 Scan the previous line
+Script to install a Debian Wheezy sysroot for making official Google Chrome Linux builds.
+Search for existing draft.
 Search for loop keywords at the beginning of the line.
 Search for the function arguments or an initializer list.
 Search python binding with heuristics.
@@ -2131,6 +2170,7 @@ Since 'copies' can't run scripts, there's no need to write the env then.
 Since I could find no way to make foreach work with spaces in filenames correctly, the .d files have spaces replaced with another character.
 Since environment variables can refer to other variables, the evaluation order is important.
 Since flow v0.18.1 `--version` was deprecated in favor a `version` command
+Since gyp doesn't support specify link_settings for each configuration, we are not able to link to different libraries in  "Debug" and "Release" configurations.
 Since make might not rebuild everything that could be declared here as an output, this extra compilation activity is unnecessary.
 Since some toolsets might have been defined conditionally, perform a second round of toolsets expansion now.
 Since the CLT has no SDK paths anyway, returning None is the most sensible route and should still do the right thing.
@@ -2249,6 +2289,7 @@ Suppress nohup logging.
 Surprisingly, including the path to the clang binary as the first argument does not cause any issues.
 Swift documentation build configuration file.
 Swift_Programming_Language/Expressions.html
+Switch to a different domain for the releases uploading API.
 TODO fix quoting for qualified variable names
 TODO(bradnelson): include_dirs should really be flexible enough not to require this sort of thing.
 TODO(bradnelson): once the annotator supports a postscript (section for after the build proper that could be used for cumulative failures), use that instead of this.
@@ -2307,6 +2348,7 @@ TODO(sky): I don't like hanging this off Target.
 TODO(sugawarayu): Audit cpplint.py to see what places could be profitably rewritten to use _GetTextInside (and use inferior regexp matching today).
 TODO(thakis): It would be nice to have some general mechanism instead.
 TODO(thakis): This copies file attributes like mtime, while the single-file branch below doesn't.
+TODO(thestig) Consider putting this else where to avoid having to recreate it on every build.
 TODO(tvl): Remove the below hack.
 TODO(ukai): define cmd when only wrapper is specified in make_global_settings.
 TODO(unknown): Do a better job of finding .h files so we are confident that not having the .h file means there isn't one.
@@ -2354,6 +2396,7 @@ TODO: make this configurable.
 TODO: pass environment variables.
 TODO: print interface's methods and dynamic type's func pointers thereof.
 TODO: really support workspace.
+TODO: remove this script when GYP has for loops
 TOOD(hansonw): Remove this when these bindings are upstreamed.
 Tail 1-indexes line numbers and starts emitting from the nth line.
 Take N+1 and reduce to 1.
@@ -2407,6 +2450,7 @@ The .d checking code below uses these functions: wildcard, sort, foreach, shell,
 The Android build system does not allow generation of files into the source tree.
 The CC and CXX from host_clang() should be of the form 'path/to/clang', where 'clang' may have a trailing version number.
 The CLT has no build information, so we return an empty string.
+The Developer folder moved in Xcode 4.3.
 The GUID needs to be the same each time this builder is invoked, so that we don't need to rebuild the solution when the project changes.
 The LLVM Compiler Infrastructure
 The Mac linker doesn't work that way, but other platforms do, and so their linker invocations need to be constructed in this way.
@@ -2481,6 +2525,7 @@ The guard should be PATH_FILE_H_, but we also allow PATH_FILE_H__ for backward c
 The harness chooses a number of iterations for each tests to achieve the best accuracy in the given time limit (in order to do that, it performs several auxiliary test runs).
 The harness makes a separate test from each of these functions, runs all the tests and reports aggregate results.
 The headers phase should come before the resources, sources, and frameworks phases, if any.
+The image will normally need to be rebuilt every time chrome's build dependancies are changed.
 The implicit make rules have it looking for RCS files, among other things.
 The import .lib is the output of a build step, but because dependents only link against the lib (not both the lib and the dll) we keep track of the import library here.
 The include_state object keeps track of the highest type seen, and complains if we see a lower type after that.
@@ -2532,6 +2577,7 @@ The only subclass of PBXGroup, PBXVariantGroup, should not participate in repare
 The only workaround is to put rules and their inputs in a separate target from the one that compiles the rule outputs.
 The opening angle bracket is probably there if we look for it, so just return early here.
 The operation failed, possibly because the file is set to read-only.
+The option can be either in the form "-I /path/to/dir" or "-I/path/to/dir" so handle both.
 The ordering required to allow for monkeypatching causes the warning "I100 Import statements are in the wrong order." when linting using flake8-import-order.
 The original parent had a sourceTree set, use it.
 The other intelligent aspects of merge processing won't apply because item is being merged into an empty dict.
@@ -2571,6 +2617,9 @@ The spec explicitly defined an external builder, so don't change it.
 The suffix of source filenames.
 The supp tables contain entries for BMP code units to simplify trie implementation, but those BMP entries are filled with the default value, so they compress well.
 The support project also gets the dependencies (in case they are needed for the actions/rules to work).
+The sysroot directory should match the one specified in build/common.gypi.
+The sysroot image could be constructed from scratch based on the current state or Debian Wheezy but for consistency we currently use a pre-built root image.
+The sysroot is needed to make Chrome work for Debian Wheezy.
 The target doesn't contain the source, but the dependent targets have not yet been visited to determine a more specific status yet.
 The target has a dependency on another target that contains one of the supplied paths.
 The target is linkable, add it to the list of link dependencies.
@@ -2679,6 +2728,7 @@ This adds time to parsing but speeds up code completion.
 This allows all the other paths we use to be relative to the Android.mk file, as the Android build system expects.
 This allows us to avoid the need to do two passes during linking.
 This allows us to handle quotes properly as long as we always use use single quotes and escape_quotes.
+This argument is passed when run from the gclient hooks.
 This arrangement means that a "conditions" section containing a "variables" section will only have those variables effective in subdicts, not in the_dict.
 This avoids these false positives: - macro that defines a base class - multi-line macro that defines a base class - macro that defines the whole class-head
 This benefits both the "build chrome" case as well as the gyp tests, which expect to be able to run actions and build libraries by their short name.
@@ -2808,6 +2858,8 @@ This replaces the gyp_* variables for the action rule with an absolute version s
 This replaces the obj variable for the action rule with an absolute version so that the output goes in the right place.
 This represents the unary-expression's (except sizeof and alignof).
 This requires input file cooperation and it means that process_outputs_as_sources is unusable.
+This script can be run manually but is more often run as part of gclient hooks.
+This script creates the .pak files under locales directory, it is used to fool the ResourcesBundle that the locale is available.
 This script runs and kills db_stress multiple times.
 This script works by starting with the unity build file and recursively expanding include directives.
 This should be deleted once Py2.7 is available on all bots, see http://crbug.com/241769.
@@ -2837,6 +2889,7 @@ This will always be the fallback because we're not sure enough that the header i
 This will be read by link.exe to know which instance of mspdbsrv.exe it should connect to (if it's not set then the default endpoint is used).
 This will break if 'src' or 'java' exists in the package structure.
 This will compute the actual application data size
+This will create golden files in a directory passed to it.
 This will not help if the comment started before the current line or ended after the current line, but it catches most of the false positives.
 This will result in a KeyError being raised for the property that should be present, which seems more appropriate than NotImplementedError in this case.
 This works around actions/rules which have more inputs than will fit on the command line.
@@ -2915,6 +2968,13 @@ Update the map now that the config is complete.
 Update the original target to depend on the shim target.
 Update the output file mtime, or create it if necessary.
 Update the translation unit with the latest contents.
+Upload PDBs to Windows symbol server.
+Upload atom-shell with GitHub Releases API.
+Upload chromedriver and mksnapshot for minor version update.
+Upload free version of ffmpeg.
+Upload node's headers to S3.
+Upload the SHASUMS.txt.
+Upload the index.json.
 Usage of PCH must only be for the same language (i.e. C vs.
 Use '.' for the current directory '', so that the error messages make more sense.
 Use 0 for linenum since outputting only one error for potentially several lines.
@@ -2925,6 +2985,8 @@ Use clang-cl to cross-compile for x86 or x86_64.
 Use consistent guids for folders (so things don't regenerate).
 Use items instead of iteritems because there's no need to try to look at reinserted keys and their associated values.
 Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+Use of this source code is governed by the MIT license that can be found in the LICENSE file.
+Use prebuilt clang for building native modules.
 Use project filename if name not specified
 Use regex_filter to look for regex pattern in ps output.
 Use source file name to set breakpoint.
@@ -2935,6 +2997,7 @@ Use the hashables of the weak objects that this object refers to.
 Use the order of each remote PBXFileReference in remote_products to determine the sort order.
 Use the output filename passed to the linker to generate an endpoint name for mspdbsrv.exe.
 Use the param name, but fall back to the raw type if unnamed.
+Use unzip command on Mac to keep symbol links in zip file work.
 Used by SourceTreeAndPathFromPath
 Used by _AdjustLibrary to match .a and .dylib entries in libraries.
 Used to indicate that brief documentation comments should be included into the set of code completions returned from this translation unit.
@@ -3041,6 +3104,7 @@ We support two kinds of shared objects (.so): 1) shared_library, which is just b
 We swallow that output with a pipe.
 We translate between these two notions of paths with two helper functions:
 We try to start accessibility server only if we don't have needed method active
+We update the file only if the content has changed (ignoring line ending differences).
 We use codecs here because sometimes Python decides to use the ascii codec and chokes on utf-8 characters.
 We use the name 'gyp_all_modules' as the Android build system doesn't allow the use of the Make target 'all' and because 'all_modules' is the equivalent of the Make target 'all' on Android.
 We use these names to disambiguate LLDB commands from C-style expressions.
@@ -3068,6 +3132,8 @@ When expanding a list into string context, turn the list items into a string in 
 When reading from stdin, the extension is unknown, so no cpplint tests should rely on the extension.
 When referencing an item in another project file, containerPortal is a PBXFileReference identifying the other project file.
 When referencing an item in this project file, containerPortal is the PBXProject root object of this project file.
+When run from hooks this script should be a no-op on non-linux platforms.
+When run from runhooks, only install the sysroot for an Official Chrome Linux build, except on ARM where we always use a sysroot.
 When serving as a proxy to a PBXFileReference (in another project file), proxyType is 2.
 When serving as a proxy to an XCTarget (in this project file or another), proxyType is 1.
 When snprintf is used, the second argument shouldn't be a literal.
@@ -3078,6 +3144,7 @@ When there are more args than the command has declared, assume the initial args 
 When we enable nohup logging, the test or any Python script that calls this script via subprocess.Popen will hang on Popen.communicate().
 Where Python 3's `map` function returns an iterator.
 Where the hhi files, socket, etc get extracted
+Whether to build for Mac App Store.
 While less than optimal in terms of build time, attach them to the first input for now.
 Whitelist "lib" subdirectories.
 Windows Structured Exception Handling's except statement.
@@ -3147,6 +3214,7 @@ _configs is the default list of configurations.
 _escape is used with re.sub to backslash anything in _escape's first match group, hence the (parentheses) in the regular expression.
 _quote is a pattern that should match any argument that needs to be quoted with double-quotes by EncodePOSIXShellArgument.
 `SBError.success` denotes no error.
+`git status --porcelain --branch` can collect all information branch, remote_branch, untracked, staged, changed, conflicts, ahead, behind
 `obj` is not a view, make sure recursive bordering is not requested
 `obj` is not a view, make sure recursive unbordering is not requested
 `objectGroups` are used by the client to designate remote objects on the server that should stick around (for potential future queries), and eventually released with a `releaseObjectGroup` call.
@@ -3171,6 +3239,7 @@ already did old bucket
 amalgamate.py creates an amalgamation from a unity build.
 and can get confused if more then one test runs at a time.
 and the Swift project authors Licensed under Apache License v2.0 with Runtime Library Exception
+are not recognized as such later in the parsing, we choose them to look the same as ordinary variables.
 argparse can't handle an '--' argument, so we replace it with a custom identifier.
 argparse is only capable of expressing mutual exclusivity among options, not among groups of options, so we detect this case manually.
 argv will contain the path to the executable
@@ -3193,6 +3262,15 @@ check how the old one exited
 check if we have exactly 1 parameter.
 check-filelist-abc.py - Fake build to test driver-produced -filelists.
 check_ouput is not available in Python 2.6.
+class: 'na' - to be revised
+class: 'nc' - to be revised
+class: 'nd' - to be revised
+class: 'nn' - to be revised
+class: 'no' - to be revised
+class: 'nv' - to be revised
+class: 'vc' - to be revised
+class: 'vg' - to be revised
+class: 'vi' - to be revised
 cmpcodesize.py - Compare sizes of built products -*- python -*-
 cmpcodesize/main.py - Command-line entry point for cmpcodesize -*- python -*-
 combination of short runtimes and long runtimes, with heavier weight on short runtimes
@@ -3211,6 +3289,7 @@ copytree() will fail if the directory already exists.
 could be multi-line if find the ( after the if
 cross-reference text.
 ctypes doesn't implicitly convert c_void_p to the appropriate wrapper object.
+current and remote branch info
 dSYMs need to build before stripping happens.
 delayed import to break circular dependency
 dicts are never strong.
@@ -3236,6 +3315,7 @@ fails because timstamp's length is greater than value's
 fake-build-for-bitcode.py - Fake build with -embed-bitcode -*- python -*-
 fake-build-for-whole-module.py - Optimized fake build -*- python -*-
 fake-ld.py - Fake Darwin linker to test driver-produced -filelists.
+fall back if theme is not there
 false_dict is merged into the_dict if cond_expr evaluates to false.
 fetch the file name from the first line of the report.
 first check private headers
@@ -3249,6 +3329,7 @@ gMock methods are defined using some variant of MOCK_METHODx(name, type) where t
 generator_dir: relative path from pwd to where make puts build files.
 generic parameter list
 get commands for the CI job determinator
+get list with all primitive types, and a combo type
 get rid of comments and strings
 get rid of comments and strings Don't try to do spacing checks for operator methods
 global count of reported errors filters to apply when emitting error messages
@@ -3375,6 +3456,7 @@ path just provides a new variant that belongs to the group.
 path_tree_to_subfolder maps names of Xcode variables to the associated dstSubfolderSpec property value used in a PBXCopyFilesBuildPhase object.
 perhaps from os.urandom(4)
 php coderz are so l33t
+platform.machine is based on running kernel.
 plists can contain envvars and substitute them into the file.
 preserves member order iteration in the resulting objects Member order is used by package linting However, this is Python 2.7 only, so we conditionally enable it
 print(self) print(other)
@@ -3421,6 +3503,7 @@ stylistic only - omitting the "./" works
 substitute local variables into the string
 support_targets are the action/rule targets used by GYP file targets, just kept for the assert check.
 swift_build_support/toolchain.py - Detect host machine's versioned executables
+sys.setrecursionlimit(1000)
 target is the qualified target.
 target_outputs is a map from qualified target name to a Target object.
 target_short_names is a map from target short name to a list of Target objects.
@@ -3442,6 +3525,7 @@ this allows one level of nesting.
 this file is probably generated while running tests :(
 this should start a new server
 this sometimes happens and retrying helps
+this way we don't get ugly syntax coloring
 time for one db_stress instance to run
 time to stabilize after a kill
 time to stabilize before the next run we need to clean up after ourselves -- only do this on test success
