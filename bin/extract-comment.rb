@@ -79,9 +79,9 @@ target_files.each do |file|
     .encode("UTF-8")
 
   comments = []
-  if file =~ /\.(c|cpp|h|hpp|java|cs|php|js|go)$/
+  if file =~ /\.(c|cpp|h|hpp|java|cs|php|js|go|scala)$/
     comments = extract_c_comment(code_str)
-  elsif file =~ /\.(sh|py|rb|coffee)$/
+  elsif file =~ /\.(sh|py|rb|coffee|zsh)$/
     comments = extract_sh_comment(code_str)
   else
     next
