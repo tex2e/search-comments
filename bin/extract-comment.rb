@@ -4,13 +4,13 @@ def comment_reject_filter(comment)
   return (
     comment.length <=  20 ||  # comment's length is less than 10
     comment.length >= 200 ||
-    !comment.match(/\A@?[-a-zA-Z0-9_ ,.:`'"\/*+()]++\z/) ||  # comments isn't composed of
+    !comment.match(/\A@?[-a-zA-Z0-9_ ,.:`'"\/*+()#]++\z/) ||  # comments isn't composed of
     comment.count("-0-9_ ,.: `'\"\/") / comment.length.to_f >= 0.4  # more than 40% symbols
   )
 end
 
 def split_sentence(comment)
-  comment.split(/(?<=\.)(?<!e\.g\.|i\.e\.)\s++/i)
+  comment.split(/(?<=\.)(?<!e\.g\.|i\.e\.|ex\.)\s++/i)
 end
 
 def extract_c_comment(code_string)
@@ -79,7 +79,7 @@ target_files.each do |file|
     .encode("UTF-8")
 
   comments = []
-  if file =~ /\.(c|cpp|h|hpp|java|cs|php|js|go|scala)$/
+  if file =~ /\.(c|cpp|h|hpp|java|cs|php|js|ts|go|scala|mm)$/
     comments = extract_c_comment(code_str)
   elsif file =~ /\.(sh|py|rb|coffee|zsh)$/
     comments = extract_sh_comment(code_str)
