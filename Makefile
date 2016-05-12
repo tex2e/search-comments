@@ -28,74 +28,29 @@ target_repo := \
 	https://github.com/docker/docker \
 	https://github.com/electron/electron \
 	https://github.com/twitter/twitter-server \
-	https://github.com/WordPress/WordPress
+	https://github.com/WordPress/WordPress \
+	https://github.com/angular/angular.js \
+	https://github.com/jquery/jquery \
+	https://github.com/meteor/meteor \
+	https://github.com/torvalds/linux \
+	https://github.com/atom/atom \
+	https://github.com/adobe/brackets \
+	https://github.com/jekyll/jekyll \
+	https://github.com/expressjs/express \
+	https://github.com/mrdoob/three.js \
+	https://github.com/jashkenas/backbone \
+	https://github.com/django/django \
+	https://github.com/rg3/youtube-dl \
+	https://github.com/jashkenas/underscore \
+	https://github.com/ariya/phantomjs \
+	https://github.com/ansible/ansible \
+	https://github.com/jashkenas/coffeescript \
+	https://github.com/mitchellh/vagrant \
+	https://github.com/Microsoft/TypeScript \
+	https://github.com/pugjs/pug \
+	https://github.com/github/hubot
 target_name := $(notdir $(target_repo))
 database_dir := database
-
-# Target repositories:
-# [
-#   "FreeCodeCamp/FreeCodeCamp", "twbs/bootstrap", "vhf/free-programming-books",
-#   "mbostock/d3", "angular/angular.js", "FortAwesome/Font-Awesome", "facebook/react",
-#   "jquery/jquery", "nodejs/node-v0.x-archive", "robbyrussell/oh-my-zsh", "github/gitignore",
-#   "sindresorhus/awesome", "airbnb/javascript", "h5bp/html5-boilerplate", "meteor/meteor",
-#   "torvalds/linux", "facebook/react-native", "daneden/animate.css", "docker/docker",
-#   "rails/rails", "getify/You-Dont-Know-JS", "apple/swift", "Homebrew/legacy-homebrew",
-#   "nwjs/nw.js", "hakimel/reveal.js", "electron/electron", "atom/atom", "impress/impress.js",
-#   "jlevy/the-art-of-command-line", "moment/moment", "adobe/brackets", "jekyll/jekyll",
-#   "Semantic-Org/Semantic-UI", "expressjs/express", "AFNetworking/AFNetworking",
-#   "mrdoob/three.js", "socketio/socket.io", "jashkenas/backbone", "driftyco/ionic",
-#   "google/material-design-icons", "blueimp/jQuery-File-Upload", "zurb/foundation-sites",
-#   "tensorflow/tensorflow", "laravel/laravel", "nodejs/node", "jkbrzt/httpie",
-#   "resume/resume.github.com", "chartjs/Chart.js", "NARKOZ/hacker-scripts",
-#   "h5bp/Front-end-Developer-Interview-Questions", "necolas/normalize.css", "gulpjs/gulp",
-#   "vinta/awesome-python", "google/material-design-lite", "pallets/flask", "nvbn/thefuck",
-#   "harvesthq/chosen", "TryGhost/Ghost", "django/django", "kennethreitz/requests",
-#   "dypsilon/frontend-dev-bookmarks", "neovim/neovim", "tiimgreen/github-cheat-sheet",
-#   "vuejs/vue", "Dogfalo/materialize", "johnpapa/angular-styleguide", "discourse/discourse",
-#   "reactjs/redux", "jashkenas/underscore", "ariya/phantomjs", "Modernizr/Modernizr",
-#   "nylas/N1", "antirez/redis", "gitlabhq/gitlabhq", "rg3/youtube-dl", "caolan/async",
-#   "select2/select2", "tastejs/todomvc", "golang/go", "ansible/ansible", "rust-lang/rust",
-#   "Alamofire/Alamofire", "lodash/lodash", "elastic/elasticsearch", "papers-we-love/papers-we-love",
-#   "emberjs/ember.js", "bayandin/awesome-awesomeness", "callemall/material-ui",
-#   "Trinea/android-open-project", "Prinzhorn/skrollr", "babel/babel",
-#   "FezVrasta/bootstrap-material-design", "facebook/pop", "plataformatec/devise",
-#   "prakhar1989/awesome-courses", "Polymer/polymer", "webpack/webpack", "getlantern/lantern",
-#   "lukehoban/es6features", "numbbbbb/the-swift-programming-language-in-chinese",
-#   "open-source-society/computer-science", "kenwheeler/slick", "certbot/certbot",
-#   "nvie/gitflow", "balderdashy/sails", "mozilla/pdf.js", "kubernetes/kubernetes",
-#   "rs/SDWebImage", "mathiasbynens/dotfiles", "alvarotrigo/fullPage.js", "Microsoft/vscode",
-#   "wasabeef/awesome-android-ui", "yahoo/pure", "bower/bower", "typicode/json-server",
-#   "caesar0301/awesome-public-datasets", "scrapy/scrapy", "cantino/huginn", "usablica/intro.js",
-#   "ReactiveCocoa/ReactiveCocoa", "hammerjs/hammer.js", "gogits/gogs", "Leaflet/Leaflet",
-#   "ReactiveX/RxJava", "less/less.js", "facebook/hhvm", "sahat/hackathon-starter",
-#   "angular/material", "rethinkdb/rethinkdb", "defunkt/jquery-pjax", "google/web-starter-kit",
-#   "IanLunn/Hover", "enaqx/awesome-react", "t4t5/sweetalert", "bevacqua/dragula",
-#   "ripienaar/free-for-dev", "git/git", "twbs/ratchet", "Unitech/pm2", "jashkenas/coffeescript",
-#   "facebook/immutable-js", "shadowsocks/shadowsocks", "nostra13/Android-Universal-Image-Loader",
-#   "josephmisiti/awesome-machine-learning", "reactjs/react-router", "ajaxorg/ace",
-#   "avelino/awesome-go", "creationix/nvm", "twitter/typeahead.js", "BradLarson/GPUImage",
-#   "limetext/lime", "ftlabs/fastclick", "videojs/video.js", "square/retrofit", "angular-ui/bootstrap",
-#   "adam-p/markdown-here", "symfony/symfony", "codepath/android_guides", "bcit-ci/CodeIgniter",
-#   "kahun/awesome-sysadmin", "0xAX/linux-insides", "photonstorm/phaser", "syncthing/syncthing",
-#   "mitchellh/vagrant", "GitbookIO/gitbook", "angular/angular", "zenorocha/clipboard.js",
-#   "ziadoz/awesome-php", "dhg/Skeleton", "firehol/netdata", "ecomfe/echarts", "kriskowal/q",
-#   "dokku/dokku", "SnapKit/Masonry", "designmodo/Flat-UI", "VundleVim/Vundle.vim",
-#   "sindresorhus/awesome-nodejs", "facebook/flux", "interagent/http-api-design",
-#   "Microsoft/TypeScript", "vsouza/awesome-ios", "minimaxir/big-list-of-naughty-strings",
-#   "iluwatar/java-design-patterns", "tornadoweb/tornado", "scikit-learn/scikit-learn",
-#   "angular/angular-seed", "braydie/HowToBeAProgrammer", "tobiasahlin/SpinKit",
-#   "dimsemenov/PhotoSwipe", "rstacruz/nprogress", "square/okhttp", "jdg/MBProgressHUD",
-#   "rwaldron/idiomatic.js", "petkaantonov/bluebird", "jasmine/jasmine", "google/iosched",
-#   "request/request", "pugjs/pug", "isocpp/CppCoreGuidelines", "justjavac/free-programming-books-zh_CN",
-#   "angular-ui/ui-router", "textmate/textmate", "gruntjs/grunt", "twbs/bootstrap-sass",
-#   "reddit/reddit", "Valloric/YouCompleteMe", "diaspora/diaspora", "bolshchikov/js-must-watch",
-#   "SamyPesse/How-to-Make-a-Computer-Operating-System", "madrobby/zepto", "github/hubot",
-#   "karan/Projects", "h5bp/Effeckt.css", "julianshapiro/velocity", "astaxie/build-web-application-with-golang",
-#   "pixijs/pixi.js", "feross/webtorrent", "bbatsov/ruby-style-guide", "wycats/handlebars.js",
-#   "postcss/postcss", "enyo/dropzone", "BVLC/caffe", "koajs/koa", "kripken/emscripten",
-#   "Shopify/dashing", "jmcunningham/AngularJS-Learning", "alex/what-happens-when",
-#   "desandro/masonry", "SwiftyJSON/SwiftyJSON", "scottjehl/Respond"
-# ]
 
 .PHONY: FORCE test install
 FORCE:
