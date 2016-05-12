@@ -1,10 +1,10 @@
 " double quote string "
 "" can mess up subobject access and is used by MongoDB internally.
+"#"" is just comment text
+"#"" is just comment text ...
 "' URL could not be accessed: " .
 "0" bit is found at position 7.
 "1" is the revisioning system version
-"123") into integer keys.
-"123") into integers.
 "4" as key is taken as key 4 9.2 as key is truncated to key 9 "12.8" as key is treated as key with that string, NOT truncated and made int 12 NULL as key becomes key ""
 "First-order" means that it's an array with a 'key' or 'value'.
 "G" for GET, "P" for POST, "C" for COOKIE, "S" for string, "L" for list, and "I" for the whole list (will return array).
@@ -35,6 +35,16 @@
 "standard Macintosh format"
 "this is a hebrew string"
 "this is an arabic string"
+###ADMIN_URL### The link to click on to confirm the email change.
+###EMAIL###     The new email.
+###SITENAME###  The name of the site.
+###SITEURL###   The URL to the site.
+#1909 fwrite() failure behavior when used on a stream_socket_pair with one end closed.
+#2511892: have to specify all fields due to a bug
+#44575, comments starting with '#'
+#44842, labels starting with underscore
+#WP19627 Replicate behavior from options-reading.php and hide front page options if there are no pages
+#plugin-information-scrollable
 ' and " are escaped only if they are not paired.
 '" listed for update is not installed.
 '*' means to return all mailboxes.
@@ -165,7 +175,6 @@
 ( excerpt from http://php.net/manual/en/arrayobject.ksort.php )  Sorts the entries by key, maintaining key to entry correlations.
 ( excerpt from http://php.net/manual/en/arrayobject.natcasesort.php )  This method is a case insensitive version of ArrayObject::natsort.
 ( excerpt from http://php.net/manual/en/arrayobject.offsetset.php )  Sets the value at the specified index to newval.
-( excerpt from http://php.net/manual/en/arrayobject.offsetunset.php )  Unsets the value at the specified index.
 ( excerpt from http://php.net/manual/en/arrayobject.serialize.php )  Serializes an ArrayObject.
 ( excerpt from http://php.net/manual/en/arrayobject.setflags.php )  Set the flags that change the behavior of the ArrayObject.
 ( excerpt from http://php.net/manual/en/arrayobject.setiteratorclass.php )  Sets the classname of the array iterator that is used by ArrayObject::getIterator().
@@ -518,7 +527,6 @@
 ( excerpt from http://php.net/manual/en/spldoublylinkedlist.current.php )  Get the current doubly linked list node.
 ( excerpt from http://php.net/manual/en/spldoublylinkedlist.next.php )  Move the iterator to the next node.
 ( excerpt from http://php.net/manual/en/spldoublylinkedlist.offsetset.php )  Sets the value at the specified index to newval.
-( excerpt from http://php.net/manual/en/spldoublylinkedlist.offsetunset.php )  Unsets the value at the specified index.
 ( excerpt from http://php.net/manual/en/spldoublylinkedlist.prev.php )  Move the iterator to the previous node.
 ( excerpt from http://php.net/manual/en/spldoublylinkedlist.push.php )  Pushes value at the end of the doubly linked list.
 ( excerpt from http://php.net/manual/en/spldoublylinkedlist.rewind.php )  This rewinds the iterator to the beginning.
@@ -584,12 +592,9 @@
 ( excerpt from http://php.net/manual/en/splfixedarray.count.php )  Returns the size of the array.
 ( excerpt from http://php.net/manual/en/splfixedarray.current.php )  Get the current array element.
 ( excerpt from http://php.net/manual/en/splfixedarray.getsize.php )  Gets the size of the array.
-( excerpt from http://php.net/manual/en/splfixedarray.key.php )  Returns the current array index.
 ( excerpt from http://php.net/manual/en/splfixedarray.next.php )  Move the iterator to the next array entry.
 ( excerpt from http://php.net/manual/en/splfixedarray.offsetexists.php )  Checks whether the requested index index exists.
-( excerpt from http://php.net/manual/en/splfixedarray.offsetget.php )  Returns the value at the index index.
 ( excerpt from http://php.net/manual/en/splfixedarray.offsetset.php )  Sets the value at the specified index to newval.
-( excerpt from http://php.net/manual/en/splfixedarray.offsetunset.php )  Unsets the value at the specified index.
 ( excerpt from http://php.net/manual/en/splfixedarray.rewind.php )  Rewinds the iterator to the beginning.
 ( excerpt from http://php.net/manual/en/splfixedarray.setsize.php )  Change the size of an array to the new size of size.
 ( excerpt from http://php.net/manual/en/splfixedarray.toarray.php )  Returns a PHP array from the fixed array.
@@ -637,6 +642,7 @@
 ( excerpt from http://php.net/manual/en/spltempfileobject.construct.php )  Construct a new temporary file object.
 ( excerpt* http://php.net/manual/en/reflectionclass.getproperties.php )  Retrieves reflected properties.
 ("auto" is expanded to "ASCII, JIS, UTF-8, EUC-JP, SJIS") If encoding_list is omitted, it returns the current character encoding detection order as array.
+(#WP22702 for background.)
 (2) An XHP name must always be preceded by whitespace if the previous token was ':'.
 (A child theme is set up first.)
 (Also, will never be returned for en_US.)
@@ -748,10 +754,15 @@
 */' form, at start of string
 *This is not used with Fixed-size lacing as it is calculated automatically from (total size of lace) / (number of frames in lace).
 +2 to include CRLF line break for a 1000 total
+- ###ADMIN_EMAIL### The admin email in case this was unexpected.
+- ###EMAIL###       The old email.
+- ###SITENAME###    The name of the site.
+- ###SITEURL###     The URL to the site.
 - 1: RegexIterator::USE_KEY
 - An integer between 1 and 12 that follows 'year' conflicts with 'monthnum'.
 - An integer between 1 and 31 that follows 'monthnum' conflicts with 'day'.
 - Blacklist tests that are causing problems with this script running.
+- Clowny tests that fail both Zend and HHVM (#WTFPear).
 - Decide whether proxy-based code needs to be solidified better or whether we should just add the frameworks to our repo officially.
 - Diff files showing the tests names and results that are different than expected for the test suite.
 - Enhanced data output by the script to include "diff" type information about why a passing percentage is different from a previous run, particularly from a regression perspective.
@@ -1192,6 +1203,8 @@
 -1 is just a valid filename on windows
 -1 is used for any depth.
 -n - print function nesting depth
+...a post id in the form 'post-###'
+...an integer #XXXX (simplest case)
 ...and if it has a theme location assigned or an assigned menu to display,
 ...and if the fallback_cb can be serialized to JSON, since it will be included in the placement context data,
 ...and if the nav menu would be rendered with a wrapper container element (upon which to attach data-* attributes).
@@ -1201,6 +1214,7 @@
 ...column name-keyed row arrays
 ...if wp_nav_menu() is directly echoing out the menu (and thus isn't manipulating the string after generated),
 ...integer-keyed row arrays
+...or a string #title, a little more complicated
 ...then convert WP_Error across.
 ..and a point on background
 ..and modify original
@@ -1210,6 +1224,7 @@
 .tmp", "fileowner_variation3/fileowner*.tmp",  /* Testing Binary safe
 .tmp", "fileperms_variation3/fileperms*.tmp",  /* Testing Binary safe
 .tmp", "is_file_variation4/is_file*.tmp",  /* Testing Binary safe
+/ # Remove the space to close comment  Some users have issues with opening large files and manipulating the contents for want is usually the first 1kiB or 2kiB.
 /* Boolean operand with all kinds of operands
 /* IEEE special values / /* leading and trailing whitespace
 /* NULL operand with all kinds of operands
@@ -1436,9 +1451,7 @@
 @index      mixed   An offset to check for.
 @index      mixed   The index being checked.
 @index      mixed   The index being set.
-@index      mixed   The index being unset.
 @index      mixed   The index to set for.
-@index      mixed   The index with the value.
 @index      mixed   The offset being checked.
 @index      mixed   The offset to assign the value to.
 @index      mixed   The offset to get the value from.
@@ -1463,10 +1476,12 @@
 @length     mixed   If the length argument is given, writing will stop after length bytes have been written or the end of string is reached, whichever comes first.
 @line_pos   mixed   The zero-based line number to seek to.
 @lineno     mixed   The line number where the exception is thrown.
+@link http://tools.ietf.org/html/rfc2616#section-19.4.6 Process for chunked decoding.
 @link http://www.php.net/htmlentities Borrowed from the PHP Manual user notes.
-@link https://codex.wordpress.org/Debugging_in_WordPress
+@link https://codex.wordpress.org/Editing_wp-config.php#WordPress_Upgrade_Constants  Plugins may define a custom transport handler, See WP_Filesystem().
 @link https://codex.wordpress.org/Function_Reference/WP_Query Codex page.
 @link https://codex.wordpress.org/The_Loop More information on The Loop.
+@link https://tools.ietf.org/html/rfc5321#section-4.4 RFC5321 reference
 @link: https://core.trac.wordpress.org/ticket/20027
 @localname  mixed   Path that the file will be stored in the archive.
 @maxMemory  mixed   The maximum amount of memory (in bytes, default is 2 MB) for the temporary file to use.
@@ -1495,8 +1510,6 @@
 @name       string  Name of the method.
 @name       string  Name of the type constant.
 @name      string  Name of the type alias.
-@newval     mixed   The new value for the index.
-@newval     mixed   The new value to store at the index.
 @newvalue   mixed   The value to set.
 @noinspection PhpMissingBreakStatementInspection
 @noinspection PhpUnusedParameterInspection
@@ -1562,6 +1575,7 @@
 @priority   mixed   The associated priority.
 @priority1  mixed   The priority of the first node being compared.
 @priority2  mixed   The priority of the second node being compared.
+@ref https://github.com/paragonie/random_compat/issues/6#issuecomment-119564973
 @refl       mixed   The reflection to export.
 @regex      mixed   The regular expression to match.
 @ret        mixed   Setting to TRUE will return the export, as opposed to emitting it.
@@ -1761,7 +1775,6 @@
 @return     mixed   The current DirectoryIterator item.
 @return     mixed   The current active sub iterator.
 @return     mixed   The current array entry.
-@return     mixed   The current array index.
 @return     mixed   The current element value.
 @return     mixed   The current flags.
 @return     mixed   The current inner iterator, or NULL if there is not one.
@@ -1806,6 +1819,7 @@
 @return     mixed   The owner id in numerical format.
 @return     mixed   The parameters default value.
 @return     mixed   The path to the file.
+@return     mixed   The position of the parameter, left to right, starting at position #0.
 @return     mixed   The return value (usually TRUE on success, FALSE on failure).
 @return     mixed   The return value from this method is ignored.
 @return     mixed   The return value will be casted to boolean and then evaluated.
@@ -1860,7 +1874,6 @@
 @return - An `InvariantException`.
 @return - The `AsyncMysqlErrorResult` that underlies the current exception.
 @return - The `AsyncMysqlRow` associated with the current iterator position.
-@return - The `AsyncMysqlRow` representing one specific row in the current row block.
 @return - The `ImmVector` that combines the values of the current `Pair` with the provided `Traversable`.
 @return - The `Iterable` view of the current `Pair`.
 @return - The `int` count of errors, warnings, etc.
@@ -1878,7 +1891,6 @@
 @return - The hostname as a `string`.
 @return - The last insert id, or 0 if none existed.
 @return - The last value in the current `Pair`.
-@return - The name of the column as a `string`.
 @return - The normalized error string.
 @return - The number of columns in the current row block.
 @return - The number of columns in the current row.
@@ -2750,7 +2762,6 @@
 @return mixed - A stream context resource.
 @return mixed - A string token.
 @return mixed - Always returns NULL.
-@return mixed - An array containing the elements of the iterator.
 @return mixed - An array including the position of a matched part for a multibyte regular expression.
 @return mixed - An array including the sub-string of matched part by last mb_ereg_search(), mb_ereg_search_pos(), mb_ereg_search_regs().
 @return mixed - An array of all registered __autoload functions.
@@ -4143,6 +4154,7 @@ A top-level element to speed seeking access.
 A trait that has a abstract function
 A type specifier that says what type the argument data should be treated as.
 A typical network connection is made up of 2 sockets, one performing the role of the client, and another performing the role of the server.
+A typical use is: Example #1 MongoClient basic usage See MongoClient::__construct() and the section on connecting for more information about creating connections.
 A unary input constraint used to mark a variable that the client wishes to change.
 A unique identifier created for database objects.
 A useful value here is 78, for RFC2822 section 2.1.1 compliance.
@@ -5054,7 +5066,6 @@ Also accepts a post ID.
 Also accepts false, an empty array, or 'none' to disable `ORDER BY` clause.
 Also all categories will be updated to be backwards compatible with pre-2.3 plugins and themes.
 Also allows for the CUSTOM_USER_TABLE and CUSTOM_USER_META_TABLE to override the WordPress users and usermeta tables that would otherwise be determined by the prefix.
-Also also works on objects.
 Also an easy layer of abstraction away from the complexity of the taxonomy layer.
 Also appended to the current item, which is not linked.
 Also assume that tests will be found by reflecting over the framework.
@@ -5104,8 +5115,8 @@ Also you can use memcache_replace() function.
 Also you can use memcache_set() function.
 Also, I did not ask to get exceptions using the mysqli_options()
 Also, JP2 files may contain multiple JPEG 2000 codestreams.
-Also, Maps do not automagically convert integer-like string keys (ex.
-Also, Sets do not automagically convert integer-like strings (ex.
+Also, Maps do not automagically convert integer-like string keys (ex. "123") into integer keys.
+Also, Sets do not automagically convert integer-like strings (ex. "123") into integers.
 Also, ZipArchive::FL_UNCHANGED may be ORed to it to request information about the original file in the archive, ignoring any changes made.
 Also, boolean values for whether the site is public, archived, mature, spam, and/or deleted.
 Also, if the first character in a range has a higher ASCII value than the second character in the range, no range will be constructed.
@@ -5408,6 +5419,7 @@ Arrange args in the way mw_editPost understands.
 Arrange pages into two parts: top level pages and children_pages children_pages is two dimensional array, eg.
 Array Note: PHP Warning, strlen() expects parameter 1 to be string, array given
 Array containing all min-max checks.
+Array from Bug Request #64493 test script
 Array indexed from 0 by SQL result row number.
 Array indices can be accessed as properties in read/write
 Array keys correspond to host:port of server and values contain the individual server statistics.
@@ -6479,6 +6491,7 @@ Characters before and after the formatting string will be returned unchanged.
 Characters we know not to be numbers.
 Chararter type variations
 Check ID1, ID2, and CM
+Check MixedArray::MakeReserveLike on NVT (GitHub #3065)
 Check WordPress version against the newest version.
 Check a MIME-Type against a list.
 Check a non-Latin language.
@@ -7434,6 +7447,7 @@ Copy update-core.php from the new version into place.
 Copyright (c) 2004-2009, Ryan Parman, Geoffrey Sneddon, Ryan McCue, and contributors All rights reserved.
 Copyright (c) 2004-2012, Ryan Parman, Geoffrey Sneddon, Ryan McCue, and contributors All rights reserved.
 Copyright (c) 2014, Facebook, Inc.
+Copyright (c) 2015 Thomas Punt https://github.com/tpunt/PHP7-Reference/blob/master/LICENSE.md https://github.com/tpunt/PHP7-Reference#preg_replace_callback_array-function
 Copyright (c) 2015, Facebook, Inc.
 Copyright (c) 2016, Facebook, Inc.
 Copyright 1996 John Maloney and Mario Wolczko.
@@ -7850,7 +7864,6 @@ Cuts a portion of str specified by the start and length parameters.
 D D   (Zend outputs: D B B) (Rule 1)
 D stands for decimal number.
 DDL will issue an implicit commit
-DEBUG_BACKTRACE_IGNORE_ARGS  Whether or not to omit the "args" index, and thus all the function/method arguments, to save memory.
 DELETE should be rolled back
 DELETE should have been rolled back.
 DIRECTORY_SEPARATOR .
@@ -8231,6 +8244,7 @@ Defaults to -1 which means that first found time zone corresponding to abbr is r
 Defaults to -1, which means that whether the time zone has daylight saving or not is not taken into consideration when searching.
 Defaults to 0, synonymous for the current blog.
 Defaults to CRLF (for message bodies) and preserves consecutive breaks.
+Defaults to `#ffffff`.
 Defaults to `auto`, and it is recommended that you use this default.
 Defaults to `false`, implying 4:3 mode.
 Defaults to a flat scan (0 depth).
@@ -8616,6 +8630,7 @@ Disables autocomplete on the 'post' form (Add/Edit Post screens) for WebKit brow
 Disables showing of database errors.
 Disables the Automattic widgets plugin, which was merged into core.
 Disables the Link Manager on upgrade if, at the time of upgrade, no links exist in the DB.
+Disabling #line directives
 Disabling specialization
 Disallow anything that creates, deletes, or updates core, plugin, or theme files.
 Disallow the file editors.
@@ -8713,7 +8728,6 @@ Display post format form elements.
 Display post tags form fields.
 Display post thumbnail meta box.
 Display relational link for the first post.
-Display relational link for the site index.
 Display screen options.
 Display search form for searching plugins.
 Display search form for searching themes.
@@ -8950,6 +8964,8 @@ Do remove_meta_box() and add_meta_box() calls in the callback.
 Do so a couple times, so we exercise both directions of each branch through multiple executions.
 Do some cleaning up after the loop
 Do some crap, to block inlining
+Do some escaping magic so that '#' (number of) characters in the spam words don't break things:
+Do some escaping magic so that '#' chars in the spam words don't break things:
 Do some guesswork as to the key and the value
 Do some timestamp voodoo
 Do some timestamp voodoo.
@@ -9132,7 +9148,7 @@ Draws an ellipse centered at the specified coordinate on the given image.
 Draws an ellipse centered at the specified coordinates.
 Draws the character c vertically at the specified coordinate on the given image.
 Drop column from database table, if it exists.
-Drop the old option_name index.
+Drop the old option_name index. dbDelta() doesn't do the drop.
 Drop the old primary key and add the new.
 Drop-in replacement for pathinfo(), but multibyte-safe, cross-platform-safe, old-version-safe.
 Dropping a non-existent table with IF EXISTS generates a warning.
@@ -9593,6 +9609,10 @@ Examine a URL and try to determine the post ID it represents.
 Example: given an input pattern of "d-M H:m", and a skeleton of "MMMMddhhmm", the output pattern will be "dd-MMMM hh:mm".
 Examples include Press This and the Comment editor.
 Examples of the post field will be, 'post_type', 'post_status', 'post_content', etc and based off of the post object property or key names.
+Examples which violate rule #1
+Examples which violate rule #2
+Examples which violate rule #3
+Examples which violate rule #4
 Exception here -- if this is in a closure, then it will return false PHP fatals on closures and getting default values, we will just return false.
 Exception test cases with fault funclets and nested FPI regions of various complexity.
 Exception thrown here
@@ -11357,6 +11377,7 @@ Fires after all automatic updates have run.
 Fires after all built-in meta boxes have been added, contextually for the given post type.
 Fires after all built-in meta boxes have been added.
 Fires after all default WordPress widgets have been registered.
+Fires after all meta box sections have been output, before the closing #post-body div.
 Fires after an HTTP API response is received and before the response is returned.
 Fires after an object's terms have been set.
 Fires after an option has been added.
@@ -11909,6 +11930,7 @@ Follow and sign redirects automatically, which is enabled by default.
 Follow the interface hierarchy up
 Following character sets are supported in PHP 4.3.0 and later.
 Following class definition should fail, but cannot test
+Following files added back in 4.5 see #36083 'wp-admin/css/media-rtl.min.css', 'wp-admin/css/media.min.css', 'wp-admin/css/farbtastic-rtl.min.css',
 Foncy - replace the parent and all its children
 Foo can be used as int, but not the reverse
 Footer The footer is a copy of the header, but with a different identifier.
@@ -12046,10 +12068,12 @@ For example, to insert the name O'reilly into a database, you will need to escap
 For example, to profile all queries that take longer than one second, run:    Profiled queries will appear in the system.profile collection of this database.
 For example, to retrieve options at the socket level, a level parameter of SOL_SOCKET would be used.
 For example, use the WHERE and SORT BY clauses in SQL to restrict results before retrieving and processing them with PHP.
+For example, we could do: Example #2 Iterating over MongoCursor  This will go through each document in the collection, loading and garbage collecting documents as needed.
 For example, what tests caused the regression.
 For example, when the plugin is located in wp-content/plugins/sampleplugin/sample.php, then the name of this hook will become 'activate_sampleplugin/sample.php'.
 For example, when the plugin is located in wp-content/plugins/sampleplugin/sample.php, then the name of this hook will become 'deactivate_sampleplugin/sample.php'.
 For example:  Filter call.
+For example: Example #1 Storing dates with MongoDate    MongoDB stores dates as milliseconds past the epoch.
 For example: The segments filter can expand or ignore paths.
 For flex, limit size of image displayed to 1500px unless theme says otherwise
 For frameworks running in serial, just the framework name will be printed right now.
@@ -12104,6 +12128,7 @@ For plugin description, it must not have any newlines or only parts of the descr
 For reach we check a plain value, a reference value with integer key and a reference value with a string key.
 For reflection in finding tests Since PHPUnit 3.8, Autoload.php has gone away.
 For reliability and performance reasons, the TCP implementation itself decides the appropriate octet boundaries of the underlying datagram communication layer.
+For sanitizing values without a #, see sanitize_hex_color_no_hash().
 For sendmail users, this file is /etc/mail/trusted-users.
 For settings handled as theme_mods or options, see those corresponding functions for available hooks.
 For setups that use the multisite feature.
@@ -12320,6 +12345,7 @@ Generate handler for undefined opcodes
 Generate helper's code
 Generate helper's entry point according to selected threading model
 Generate new filename.
+Generate opcode #defines (zend_vm_opcodes.h)
 Generate opcode handler's code
 Generate opcode handler's entry point according to selected threading model
 Generate our own database.
@@ -12528,6 +12554,7 @@ Get resource variable
 Get result of an already finished Awaitable.
 Get rid of any old data, except the expect file and test info, of course.
 Get rid of any test file and test information.
+Get rid of the #anchor
 Get salt to add to hashes.
 Get sanitized Term field.
 Get section parameters for JS.
@@ -12597,7 +12624,6 @@ Get the current working directory.
 Get the data link attribute for a setting.
 Get the data to export to the client via JSON.
 Get the default image if there is one.
-Get the details of an entry defined by its index.
 Get the details of an entry defined by its name.
 Get the diff in inline format.
 Get the directory name relative to the basedir (back compat for pre-2.7 uploads)
@@ -12854,6 +12880,7 @@ Getting equivelent ASCII value for the character in binary form
 Getting inode of created file
 Getting inode of current file
 Getting inode of directories
+Github Issue #1436: Return type of htmlspecialchars() when wrong type passed.
 Give Post-By-Email extending plugins full access to the content, either the raw content, or the content of the last quoted-printable section.
 Give future posts a post_status of future.
 Give huge penalty by not dividing.
@@ -14036,7 +14063,6 @@ If set to empty, an excerpt is generated.
 If set to false and compressed content is returned in the response anyway, it will need to be separately decompressed.
 If set to null, no version is added.
 If set to true and no filename was given, it will be droped it in the WP temp dir and its name will be set using the basename of the URL.
-If set, start parameter numbering with it.
 If set, this will convert all remaining line-breaks after paragraphing.
 If setcookie() successfully runs, it will return TRUE.
 If setlocale is global, the pagelet thread will have changed this output line to Dutch
@@ -14485,6 +14511,7 @@ If the user provided an encoding in metadata (like an HTTP or XML declaration), 
 If the user supplied a fixed width AND height, use it
 If the user wants ssl but the session is not ssl, force a secure cookie.
 If the user wants ssl but the session is not ssl, redirect.
+If the user wants to set a new name -- override the current one Note: if empty name is supplied -- use the title instead, see #6072
 If the username is blank, no error will be set, so assume blank username on that case.
 If the value doesn't exist (removed or random), use the header_image value.
 If the value is 0 at this level, the tags apply to all chapters in the Segment.
@@ -15081,6 +15108,7 @@ In other words, whether the sidebar contains any widgets.
 In pagelet mode expecting regular decimal point(.) and Dutch (default) date (vrijdag 22 december 1978) depending on what's passed in.
 In particular, this is useful for passing passphrases to programs like PGP, GPG and openssl in a more secure manner.
 In passive mode, data connections are initiated by the client, rather than by the server.
+In php 5 parse_url may fail if the URL query part contains http://, bug #38143
 In practice, we aren't implementing this correctly in hhvm right now, so it doesn't really matter.
 In short, it does the opposite of extract().
 In single site, the user would be redirected to wp-admin/upgrade.php.
@@ -15129,6 +15157,7 @@ In this synopsis, the function takes an optional variable list of options.
 In this test, genThrow*Catch() run at the same stack depth as genFoo().
 In this way, if the atom needs to be converted from a 32-bit to a 64-bit atom, the placeholder atom can be overwritten to obtain the necessary 8 extra bytes.
 In this way, the archive will be up-to-date with the activity performed on it.
+In ticket #22692, that sequence was found to be unreliable due to random inclusion of the A0 byte.
 In words: when the string representation is the same.
 IncDecProp: use __get
 IncDecProp: use __set and __get
@@ -15780,7 +15809,6 @@ Keep track of taxonomies whose hierarchies need flushing.
 Keep track of the arguments that are being passed to wp_nav_menu().
 Keep track of the current partial being rendered.
 Keep track of the last query for debug..
-Keep track of the number of times that dynamic_sidebar() was called for a given sidebar index.
 Keep track of the times that dynamic_sidebar() is called in the template, and assume this means the sidebar would be rendered on the template if there were widgets populating it.
 Keep track of the times that is_active_sidebar() is called in the template, and assume that this means that the sidebar would be rendered on the template if there were widgets populating it.
 Keeps date permalink structure with all year, month, and day.
@@ -16466,6 +16494,7 @@ Menu item title can't be blank
 Menu slug, used to uniquely identify the page
 Menus for which the original parent is not accessible due to lack of privileges will have the next submenu in line be assigned as the new menu parent.
 Menus meta boxes (accordion sections) all use the 'side' context.
+Merge Custom headers ala #8145
 Merge additional query vars found in the original URL into 'add_args' array.
 Merge all term children into a single array of their IDs.
 Merge edits when possible.
@@ -16477,6 +16506,7 @@ Merge old and new fields with new fields overwriting old ones.
 Merge post types with any that already declared their support for post thumbnails.
 Merge user defined arguments into defaults array.
 Merge with the first part of the init array
+Merged from WP #8145 - allow custom headers
 Merges the elements of one or more arrays together so that the values of one are appended to the end of the previous one.
 Message Format provides for runtime formatting of messages in a manner somewhat similar to sprintf.
 Message data has been sent, complete the command Increase timelimit for end of DATA command
@@ -16755,7 +16785,7 @@ Navigates through an array, object, or scalar, and raw-encodes the values to be 
 Navigates through an array, object, or scalar, and removes slashes from the values.
 Navigates through an array, object, or scalar, and sanitizes content for allowed HTML tags for post content.
 Navigation menu actions
-Nearest Past Cleanpoint is the most common type of index.
+Nearest Past Cleanpoint is the most common type of index. Index Entry Count                DWORD        32              // Specifies the number of Index Entries in the block.
 Need to back up wpdb table names, and create a new wp_blogs entry for new blog.
 Need to be created every time to get expected return value
 Need to display in hierarchical order.
@@ -16935,6 +16965,7 @@ Normal operation with hexadecimal output
 Normal operation with raw binary output
 Normalise the endpoints.
 Normalization database  Each key is the scheme, each value is an array with each key as the IRI part and value as the default value for that part.
+Normalization from UTS #22
 Normalization is a process that involves transforming characters and sequences of characters into a formally-defined underlying representation.
 Normalize EOL characters and strip duplicate whitespace.
 Normalize a filesystem path.
@@ -17256,6 +17287,7 @@ NumberFormatter methods format primitive-type numbers, such as double and output
 Numbered indices are left as is.
 Numbers (hex and dec) we know to be valid HTML entities.
 Numbers formatting See http://php.net/number_format
+Numeric index. If set, start parameter numbering with it.
 Numeric keys should always have array values.
 Numeric positions of attributes
 Numeric strings consist of optional sign, any number of digits, optional decimal part and optional exponential part.
@@ -17343,6 +17375,7 @@ On second call, we will have translations loaded and can trigger warnings easily
 On some Unix variants, getcwd() will return FALSE if any one of the parent directories does not have the readable or search mode set, even if the current directory does.
 On some older UNIX platforms, it may not be able to determine the current OS information in which case it will revert to displaying the OS PHP was built on.
 On some operating systems, you may want to specify a path on a filesystem that handles lots of small files efficiently.
+On some setups GD library does not provide imagerotate() - Ticket #11536
 On some systems it is impossible to distinguish between empty match and an error.
 On sub dir installs, some names are so illegal, only a filter can spring them from jail.
 On success, the array will contain two keys 'file' and 'line' which indicate the filename and line number of the callsite that invoked the current function or method.
@@ -17428,6 +17461,7 @@ Only display excerpts for archives and search.
 Only do parents if no children exist
 Only do the expensive stuff on a page-break, and about 1 other time per page
 Only do the unix2dos thing done above already
+Only echo if key exists in the header
 Only file paths matching the regular expression will be included in the archive.
 Only filters 'rich' and 'html' response types.
 Only for internal use
@@ -17697,7 +17731,6 @@ Otherwise, try to determine the TMPDIR environment variable.
 Otherwise, update all entries.
 Otherwise, use the first path segment (as usual).
 Otherwise, use the normal line.
-Otherwise, you can pass in a numerical index to display the sidebar at that index.
 Our defaults for the link color may have changed, based on the color scheme.
 Our new query for the Recent Posts section.
 Out of range - should return false
@@ -17896,6 +17929,9 @@ PDOStatement::rowCount() returns the number of rows affected by the last DELETE,
 PHP 4/5: E_STRICT "Redefining already defined constructor" HHVM (PHP 5 mode), HHVM (PHP 7 mode), PHP 7, 8: No error is raised
 PHP 5.2.0 - 5.6.x way to implement random_bytes()  We use conditional statements here to define the function in accordance to the operating environment.
 PHP 7 used preg_replace_callback here, but we are testing preg_replace_callback_array.
+PHP Unit's code to unserialize data passed as args to #testFormatTypeDoubleIntl
+PHP Unit's code to unserialize data passed as args to #testFormatTypeInt32Intl
+PHP Unit's code to unserialize data passed as args to #testFormatTypeInt64Intl
 PHP date format defaults to the date_format option if not specified.
 PHP defaults to Daylight Saving Time.
 PHP doesn't handle strings like "12,300.2" correctly by default.
@@ -19347,6 +19383,7 @@ Remember that with each additional feed comes additional processing and resource
 Remember to call this function again if you wish to re-enable cache adds earlier.
 Remember, resources can not be serialized or added as an option.
 Remember, that shared memory still exist in the Unix system and the data is still present.
+Remove # of bytes + null characters.
 Remove 'delete' action if theme has an active child
 Remove 'spellchecker' from the internal plugins if added with 'tiny_mce_plugins' filter to prevent errors.
 Remove a customize control.
@@ -19700,6 +19737,7 @@ Requires: PostgreSQL 7.2.x
 Reschedule a recurring event.
 Reschedule the work of an async function until some other time in the future.
 Reserves enough memory to accommodate 'sz' elements.
+Reset #line directives
 Reset GUID if transitioning to publish and it is empty.
 Reset Image to original Format
 Reset a header image to the default image for the theme.
@@ -19723,6 +19761,7 @@ Reset timeout on socket for now
 Reset to the way it was - RIFF parsing will have messed this up
 Reset variables for next partial render.
 Reset when libxml_use_internal_errors() is called.
+Resets #line directives in resulting executor
 Resets class properties.
 Resets lazy-load queue for a given object type.
 Resets query flags to false.
@@ -20109,7 +20148,6 @@ Retrieve the raw response from the HTTP request.
 Retrieve the regular expression for an HTML element.
 Retrieve the regular expression for shortcodes.
 Retrieve the requested data of the author of the current post.
-Retrieve the shortcode attributes regex.
 Retrieve the shortcode regular expression for searching.
 Retrieve the specified author's preferred display name.
 Retrieve the specified msg number.
@@ -20386,7 +20424,7 @@ Retrieves the search permalink structure.
 Retrieves the settings for all instances of the widget class.
 Retrieves the single non-image attachment fields to edit form fields.
 Retrieves the site URL for the current network.
-Retrieves the site index.
+Retrieves the site index.  This endpoint describes the capabilities of the site.
 Retrieves the taxonomy and term, if term is available.
 Retrieves the taxonomy for the current Tag cloud widget instance.
 Retrieves the taxonomy relationship to the term object id.
@@ -20554,6 +20592,7 @@ Returning false will effectively short-circuit display of the widget.
 Returning false will effectively short-circuit the widget's ability to update settings.
 Returning null bypasses the filter.
 Returning true to the filter will disable captions.
+Returns # of msgs in mailbox or false on failure (or -1, if the error occurs while getting the number of messages.)
 Returns 'localhost.localdomain' if unknown.
 Returns -1 if the supplied connection itself is invalid.
 Returns -1 if unknown.
@@ -20720,7 +20759,6 @@ Returns a lazy iterable view of this Map.
 Returns a lazy iterable view of this Set.
 Returns a lazy iterable view of this Vector.
 Returns a lazy, access elements only when needed view of the current `Pair`.
-Returns a link to a post format index.
 Returns a link to the feed for all posts by a given author.
 Returns a link to the feed for all posts in a given category.
 Returns a link to the feed for all posts in a given term.
@@ -20885,6 +20923,8 @@ Returns default text color if hex color is empty.
 Returns document title for the current page.
 Returns drop-ins that WordPress uses.
 Returns e raised to the power of arg.
+Returns either '', a 3 or 6 digit hex color (with #), or nothing.
+Returns either '', a 3 or 6 digit hex color (without a #), or null.
 Returns either the standard message for UI or the AJAX message.
 Returns empty string when not allowed.
 Returns errors property.
@@ -20977,6 +21017,7 @@ Returns the attribute node with name name for the current element.
 Returns the base URL of the uploads directory.
 Returns the base-10 logarithm of arg.
 Returns the best pattern matching the input skeleton.
+Returns the bidirectional category value for the code point, which is used in the Unicode bidirectional algorithm (UAX #9 http://www.unicode.org/reports/tr9/).
 Returns the classes for the comment div as an array.
 Returns the columns for the nav menus page.
 Returns the combining class of the code point.
@@ -21205,7 +21246,6 @@ Rewind the Iterator to the first element.
 Rewind the comments, resets the comment index and comment to first.
 Rewind the internal array pointer.
 Rewind the loop posts.
-Rewind the posts and reset post index.
 Rewrite query the request matched.
 Rewrite rule the request matched.
 Rewrite rules can't be flushed during switch to blog.
@@ -21576,6 +21616,7 @@ See https://core.trac.wordpress.org/ticket/5007.
 See https://core.trac.wordpress.org/ticket/9396
 See https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html
 See https://github.com/facebook/hhvm/issues/6624.
+See https://github.com/facebook/xhp-lib/blob/master/src/core/ComposableElement.php#L283-L285
 See https://github.com/leafo/lessphp/pull/549
 See if framework is already installed.
 See if we also have a post with the same slug
@@ -21652,6 +21693,7 @@ See wp_suspend_cache_invalidation().
 See wp_xmlrpc_server::wp_getMediaItem() for a description of each item contents
 See xml_parser_set_option() for their description.
 See your system's man execve(2) page for additional information.
+See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 See: https://codex.wordpress.org/Post_Formats
 Seeds the random number generator with seed or with a random value if no seed is given.
 Seek and write a random byte
@@ -21743,6 +21785,7 @@ Sends both user and pass.
 Sends multiple HTTP headers.
 Sends pings to all of the ping site services.
 Sends the "Allow" header to state all methods that can be sent to the current route.
+Sends the PASS command, returns # of msgs in mailbox, returns false (undef) on Auth failure
 Sends the USER command, returns true or false
 Sends the specified data through the socket.
 Sent level 0 by accident, by default, or because we don't know the actual level.
@@ -22027,7 +22070,6 @@ Set up the enqueue for the JavaScript files.
 Set up the hooks for the Custom Background admin page.
 Set up the hooks for the Custom Header admin page.
 Set up the hover actions for this user
-Set up the next post and iterate current post index.
 Set up the object properties.
 Set up the setting for aggregated multidimensional values.
 Set up the tags in a way which can be interpreted by wp_generate_tag_cloud()
@@ -22909,10 +22951,12 @@ Strips everything from the translation after the last bar.
 Strips out all characters that are not allowable in an email.
 Strips out widget IDs for widgets which are no longer registered.
 Strips slashes from in front of quotes.
+Strips the #fragment from a URL, if one is present.
 Structural subtyping of ad-hoc shapes
 Structural subtyping of ad-hoc shapes in presence of optional fields
 Structural subtyping of declared shapes
 Structural subtyping of declared shapes in presence of optional fields
+StubNumberFormatterTest#testFormatTypeInt32Intl is tested many times, each with different args.
 Style and scripts for the admin bar.
 Style handle name or file name (without ".css" extension) relative to wp-admin/.
 Style the header text displayed on the blog.
@@ -23029,6 +23073,8 @@ TODO move this to a expectf if we can
 TODO route this pages via a specific iframe handler instead of the do_action below
 TODO test something that will throw, make sure stack materialization worked.
 TODO the results look wrong, why do we get 2014 with buffered AND unbuffered queries
+TODO(#2512714): set this to true and you'll SEGV :)
+TODO(#2512715): this doesn't work.
 TODO(4017519) PHP5 doesn't have this destructor, we have it to prevent a nasty issue with destructing IntlUConverter.
 TODO(glevi): This should error as soon as we remove that hack that says a Generator is Awaitable
 TODO(kaili) a quick and dirty way to figure out rocksdb's root dir.
@@ -23328,6 +23374,7 @@ Test behaviour with interfaces.
 Test behaviour with parameter variations
 Test behaviour with various visibility levels.
 Test binding params via emulated prepared query
+Test bug #48188, trying to execute again
 Test case for inlining from FB's IPAddress class, removed real logic.
 Test case pretty much stolen from www
 Test casting ImmVector to array.
@@ -23393,6 +23440,7 @@ Test fetching into an object
 Test file_exists with one more than the expected number of arguments
 Test finfo_buffer with one more than the expected number of arguments
 Test flow control around exceptions.
+Test for PHP bug #50394 (PHP 5.3.x conversion to null only, not 5.2.x)
 Test for handling of incorrect parameters.
 Test for integer overflow:
 Test for invalid characters
@@ -24192,6 +24240,7 @@ Tests for segfault if no connection available
 Tests how array_diff_assoc compares 1.
 Tests identity and basic helper functions
 Tests if already/default namespace mappings can be overridden.
+Tests issue #3815 This makes reading the output easier for debugging
 Tests taken from GMPs own test suite.
 Tests that call ezc_set_error_reporting to manipulate EG(error_reporting) in lval context.
 Tests that no strict warning is issued
@@ -24219,6 +24268,7 @@ Text to display instead of the comment author's email address.
 Text to display when more content is available but not displayed.
 Text to display when not replying to a comment.
 Text to display when replying to a comment.
+Text to include as a comment before the start of the PO contents  Doesn't need to include # in the beginning of lines, these are added automatically
 Text_Diff_Renderer class
 Text_Diff_Renderer_inline class
 That can break the editor when the user navigates to it with the browser's Back button.
@@ -24819,6 +24869,8 @@ The exception message
 The execution will be halted as soon as one of the plugins has an error.
 The existence of custom user tables shouldn't suggest an insane state or prevent a clean install.
 The extension of the filename defines the type of the file.
+The extensions used by CLDR in UAX #35 (and inherited by ICU) are  valid and used wherever they would be in ICU normally.
+The extensions used by CLDR in UAX #35 (and inherited by ICU) are valid and used wherever they would be in ICU normally.
 The extra backslash is required because the string is in double quotes.
 The extracted files or folders are identified by their index in the archive (from 0 to n).
 The feed widget can not have more than 20 items or it will reset back to the default, which is 10.
@@ -24910,6 +24962,7 @@ The first time through this loop, we know it is an array and therefore can't be 
 The first value registered wins.
 The flat value for the 'format' argument will separate tags with spaces.
 The following 3 members override those in class M
+The following borrowed from http://php.net/manual/en/function.mhash.php#27225 RFC 2104 HMAC implementation for php.
 The following code is an optimized version that executes as few valid() calls as necessary and that only checks the flags once.
 The following conditions determine whether or not this instance of wp_nav_menu() can use selective refreshed.
 The following constants are used to specify different formats in the constructor.
@@ -24930,6 +24983,8 @@ The following line will give a Fatal error: Call to private ...
 The following members are overridden in class P
 The following options are available: XML parser options Option constant Data type Description XML_OPTION_CASE_FOLDING integer Controls whether case-folding is enabled for this XML parser.
 The following static members are used with the getLocale methods of the various locale affected classes, such as numfmt.
+The following strings have a special meaning and will get replaced dynamically: ###USERNAME###  The current user's username.
+The following strings have a special meaning and will get replaced dynamically: - ###USERNAME###    The current user's username.
 The following table shows this in detail.
 The footer widget area is triggered if any of the areas have widgets.
 The form of the string is "0,4-6,8-12" with only numbers and '-' for range or ',' to separate ranges.
@@ -25250,6 +25305,7 @@ The only remaining alternatives are quoted-printable and base64, which are both 
 The only supported image types are PNG, GIF, and JPEG.
 The only way to specify this default value is to leave it out of the parameter list.
 The operation for which the string is sanitized.
+The option doesn't work with safe mode or when open_basedir is set, and there's a bug #17490 with redirected POST requests, so handle redirections outside Curl.
 The option should not be autoloaded, because it is not needed in most cases.
 The option that is set is 'admin_color' and is the color and key for the array.
 The option will first check for the per site name and then the per Network name.
@@ -25605,6 +25661,7 @@ The template for displaying comments  The area of the page that contains both cu
 The template for displaying link post formats  Used for both single and index/archive/search.
 The template for displaying pages  This is the template that displays all pages by default.
 The template for displaying search results pages.
+The template for displaying the footer  Contains footer content and the closing of the #main and #page div elements.
 The template for displaying the footer  Contains the closing of the "site-content" div and all content after.
 The template for displaying the header  Displays all of the head element and everything up until the "site-content" div.
 The template generates the css dynamically for instant display in the Customizer preview.
@@ -25899,7 +25956,6 @@ These are less than 80 width, but the pretty newlines are preserved.
 These are matched against the permalink structure for which one is used.
 These are not in our custom ini file for this test, but should be bound to a default value
 These are now pulled from an external source.
-These are parsed from the URL using the regex.
 These are set in our custom ini file for this test
 These are strings returned by the API that we want to be translatable
 These are strings we may use to describe maintenance/security releases, where we aim for no new strings.
@@ -26114,6 +26170,7 @@ This can only happen if bad arguments are passed in.
 This can still be explicitly asked for by defining CORE_UPGRADE_SKIP_NEW_BUNDLED as false.
 This cannot be implemented in __construct, because a derived class may implement its own __construct, losing the stacktrace.
 This catches urls like https:host.com for which parse_url does not set the host field.
+This caused the segfault in #5150421.
 This causes a seg fault.
 This causes hash collisions if the string hash is case-insensitive.
 This causes problems on IIS and some FastCGI setups
@@ -26218,7 +26275,6 @@ This element can be useful at the end of a Track (as there is not other Block av
 This element does not contain shortcodes.
 This element is mandatory when DefaultDuration is set for the track.
 This enables simpler client behaviour, as it is represented as a list in JSON rather than an object/map.
-This endpoint describes the capabilities of the site.
 This ensures that all keys are available at all times.
 This ensures that all writes with fwrite() are completed before other processes are allowed to write to that output stream.
 This ensures that the new value will get sanitized and used the next time that `WP_Customize_Setting::_multidimensional_preview_filter()` is called for this setting.
@@ -26715,7 +26771,6 @@ This has been removed as of 1.3 as it caused a lot of confusion.
 This has no effect on the query if all shards are reachable.
 This has the same functionality and prototype of array_column() (PHP 5.5) but also supports objects.
 This has to be done before a connection is be established using socket_connect() or socket_listen().
-This helps facilitate the uncommon scenario where a single sidebar is rendered multiple times on a template.
 This hits the filesystem.
 This hook also applies to various types of files loaded as part of the Template Hierarchy.
 This hook also fires before the plugins list table is rendered in the Network Admin.
@@ -26895,6 +26950,7 @@ This is more general and adaptive than variant one, but not as efficient.
 This is more of a test for testing the behavior of serialization/unserialization when a class with native data implements __sleep() and __wakeup() methods.
 This is most likely due to a problem initializing the socket.
 This is most likely not implemented on your operating system.
+This is most likely to be problematic in the context of bug #18549.
 This is mostly for diagnostic purposes.
 This is necessary because the generated __xhpAttributeDeclaration() has a call to parent::__xhpAttributeDeclaration().
 This is neither a delimiter, nor is this content inside of no_texturize pairs.
@@ -27566,6 +27622,7 @@ To export all the functions, pass a special constant SOAP_FUNCTIONS_ALL.
 To export several functions, pass an array of function names.
 To extract single parts of a multipart MIME-encoded message you have to use imap_fetchstructure() to analyze its structure and imap_fetchbody() to extract a copy of a single body component.
 To fetch only the unique values of a single column from the result set, bitwise-OR PDO::FETCH_COLUMN with PDO::FETCH_UNIQUE.
+To get a database: Example #1 Selecting a database  Database names can use almost any character in the ASCII range.
 To get a theme header for display, use the display() method.
 To get the documents themselves, you can use one of the methods shown above.
 To get the output of the executed command, be sure to set and use the output parameter.
@@ -27868,8 +27925,10 @@ U+044F CYRILLIC SMALL LETTER YA
 U+0525 CYRILLIC SMALL LETTER PE WITH DESCENDER (added in 5.2.0, October 2009)
 U+2C30 GLAGOLITIC SMALL LETTER AZU (added in 4.1.0, March 2005)
 U+FFFD REPLACEMENT CHARACTER
+UAX #35 extensions are accepted.
 UDP will never cause a connection error, as it is a connection-LESS protocol
 UNHOOKING THIS FUNCTION WILL NOT PROPERLY REMOVE THE ADMIN BAR.
+UNSAFE_EXPR - See #1337
 UNSAFE_EXPR -- roflcopter
 UNSAFE_EXPR Multiline comments should not cause following line numbers to break.
 UNumberFormatAttribute
@@ -28876,6 +28935,8 @@ We must resend HELO after tls negotiation
 We must reset timeout but it must be AFTER we get info
 We need a primary defined so responsive views show something, so let's fall back to the first non-checkbox column.
 We need a working directory - Strip off any .tmp or .zip suffixes
+We need absolute path to definition file to use it in #line directives
+We need absolute path to skeleton file to use it in #line directives
 We need raw tag names here, so don't filter the output
 We need some CSS to position the paragraph
 We need this because some collections are not ordered.
@@ -29721,6 +29782,10 @@ Writes the given text into the image using TrueType fonts.
 Writes the text and apply a gaussian blur on the image
 Writes, commands, and any other operation that sends information to the database and waits for a response can throw a MongoCursorException.
 Writing settings administration panel.
+Wrong Media RSS Namespace #2.
+Wrong Media RSS Namespace #3.
+Wrong Media RSS Namespace #4.
+Wrong Media RSS Namespace #5.
 Wrong Media RSS Namespace.
 Wrong number of parameters for  assert()
 Wrong number of parameters for assert_options()
@@ -30044,6 +30109,7 @@ always executed use if with all scalar types + array
 always include the config.h file
 always strings, like STRINGIFY flag
 am invalid mode shoudl result in same o/p as mode 'a'
+an #anchor is there, it's either...
 an APE tag footer was found before the last ID3v1, assume false "TAG" synch
 an array containing integer references
 an array containing unsorted hexadecimal values with keys
@@ -30236,6 +30302,7 @@ array with string keys
 array with string value repeatition
 array without elements
 array without elements 2.
+array(channel configuration, # channels (not incl LFE), channel order)
 array, or object notation
 array_args an array containing elements with reference variables
 array_count_values() returns an array using the values of the input array as keys and their frequency in input as values.
@@ -30944,7 +31011,6 @@ date_sunrise() returns the sunrise time for a given day (specified as a timestam
 date_sunset() returns the sunset time for a given day (specified as a timestamp) and location.
 daylight saving time is in effect
 daylight saving time is not in effect
-dbDelta() doesn't do the drop.
 debugging detail in output.
 decimal numeric string
 decimal values as permission
@@ -31120,6 +31186,7 @@ disjoint field sets, does not unify
 disk_free_space() could return false.
 display emacs/msvc error output
 display the file content, check the file size
+display: none is required here, see #WP27605
 do as much as we can do in 5 seconds
 do like operation in native php.
 do not allow users to create a blog that conflicts with a page on the main blog.
@@ -31346,6 +31413,15 @@ even though we allow unset on *array* indexes, we shouldn't allow it on shapes
 every character (including whitespace) is put into an array element
 everything looks good
 example from HTML5, section 2.4
+example#1: Argument swapping
+example#2: Argument swapping
+example#3: Argument swapping
+example#4: Argument swapping
+example#5: various examples
+example#6: string specifiers
+example#7: zero-padded integers
+example#8: formatting currency
+example#9: scientific notation
 exception must be throwed from error handler.
 exclude system traits
 exclusive/with comments first child element of doc element is context.
@@ -31354,6 +31430,9 @@ exclusive/without comments using xpath query.
 exec() executes the given command.
 exec()-like functions // /
 executable that will be tested.
+execute the code from #testFormatTypeDoubleIntl
+execute the code from #testFormatTypeInt32Intl
+execute the code from #testFormatTypeInt64Intl
 execute() has not been called yet NOTE: no warning
 execution is suspended here, so the following never gets run:
 exif_imagetype() reads the first bytes of an image and checks its signature.
@@ -31553,8 +31632,10 @@ first insert normal value to force initial send of types
 first listed category will be the primary category
 first object in array
 first page of logical bitstream (bos)
+first remove the XML declaration merged from WP #10698 - this method avoids the RAM usage of preg_replace on very large messages
 first test uncompressing invalid string
 first() and last() don't read codepoint and set the last code point var to -1 The pointer is after the last read codepoint if moving forward and before the last read codepoint is moving backwards
+fix inconsistent output ordering (bug #61810)
 fix list item's 2nd lines
 flag  value as defualt 2.
 flag  value as defualt SORT_REGULAR - compare items normally
@@ -31591,6 +31672,7 @@ foo is foobar You can also use arrays
 footer takes last 10 bytes of ID3v2 header, after frame data, before audio
 fopen with interesting windows paths.
 fopen() binds a named resource, specified by filename, to a stream.
+for 5.3 #define ZEND_VM_STACK_PAGE_SIZE ((64 * 1024) - 64) for 5.4 #define ZEND_VM_STACK_PAGE_SIZE ((16 * 1024) - 16) we should trick EG(argument_stack) into growing
 for FTP, Need to clear the stat cache
 for Layer 2 and Layer 3 slot is 8 bits long.
 for Options +Multiviews: /wp-admin/themes/index.php (themes.php is queried)
@@ -31645,6 +31727,7 @@ free statement after close
 from an expanded shortcode
 from post or get data
 from: https://github.com/facebook/hhvm/issues/3336
+from: https://reviews.facebook.net/D20967#inline-162849
 fromArray() from empty array
 fseek() on a file handle which is already closed
 fseek() on a file handle which is unset
@@ -31917,6 +32000,7 @@ http://3v4l.org/sbf0s
 http://atomicparsley.sourceforge.net/mpeg-4files.html
 http://cpan.uwinnipeg.ca/htdocs/Audio-WMA/Audio/WMA.pm.html
 http://cyber.law.harvard.edu/blogs/gems/tech/rsd.html
+http://developer.apple.com/library/mac/#documentation/QuickTime/QTFF/QTFFChap4/qtff4.html#//apple_ref/doc/uid/TP40000939-CH206-34353
 http://developer.apple.com/qa/snd/snd07.html
 http://developer.apple.com/techpubs/quicktime/qtdevdocs/APIREF/INDEX/atomalphaindex.htm
 http://en.wikipedia.org/wiki/8SVX
@@ -31924,18 +32008,25 @@ http://en.wikipedia.org/wiki/AIFF
 http://en.wikipedia.org/wiki/Audio_Video_Interleave
 http://en.wikipedia.org/wiki/CD-DA
 http://en.wikipedia.org/wiki/Wav
+http://flac.sourceforge.net/format.html#metadata_block_picture
 http://flac.sourceforge.net/id.html
 http://gabriel.mp3-tech.org/mp3infotag.html
 http://icu-project.org/apiref/icu4c/ucsdet_8h.html
 http://libquicktime.sourcearchive.com/documentation/2:1.0.2plus-pdebian-2build1/esds_8c-source.html
+http://matroska.org/technical/specs/index.html#block_structure
 http://miki.it/blog/2014/7/8/abusing-jsonp-with-rosetta-flash/
 http://msdn.microsoft.com/en-us/library/bb643323.aspx
 http://tools.ietf.org/html/draft-ietf-codec-oggopus-03
 http://websec.io/2012/08/27/Preventing-XEE-in-PHP.html https://core.trac.wordpress.org/changeset/29378
+http://wiki.xiph.org/VorbisComment#METADATA_BLOCK_PICTURE The unencoded format is that of the FLAC picture block.
 http://www.atsc.org/standards/a_52a.pdf
+http://www.geocities.co.jp/SiliconValley-Oakland/3664/alittle.html#GenreExtended Extended ID3v1 genres invented by SCMPX Note that 255 "Japanese Anime" conflicts with standard "Unknown"
 http://www.geocities.com/xhelmboyx/quicktime/formats/qtm-layout.txt
 http://www.id3.org/id3v2.4.0-structure.txt Frames that allow different types of text encoding contains a text encoding description byte.
 http://www.matroska.org/technical/specs/codecid/index.html
+http://www.matroska.org/technical/specs/index.html#DisplayUnit
+http://www.matroska.org/technical/specs/index.html#EBMLBasics
+http://www.matroska.org/technical/specs/index.html#block_structure http://www.matroska.org/technical/specs/index.html#simpleblock_structure
 http://www.matroska.org/technical/specs/tagging/index.html
 http://www.php.net/manual/en/language.operators.comparison.php
 http://www.speex.org/manual/node10.html
@@ -31945,6 +32036,7 @@ http://www.theora.org/doc/Theora.pdf (table 6.4)
 http://www.volweb.cz/str/tags.htm
 http://xiph.org/ogg/vorbis/doc/framing.html
 http://xiph.org/vorbis/doc/Vorbis_I_spec.html
+http://xiph.org/vorbis/doc/Vorbis_I_spec.html#x1-810005
 https://github.com/facebook/hhvm/issues/2408
 https://github.com/facebook/hhvm/issues/3094
 https://github.com/facebook/hhvm/issues/3096
@@ -31952,6 +32044,7 @@ https://github.com/facebook/hhvm/issues/3899
 https://github.com/facebook/hhvm/issues/4084
 https://github.com/facebook/hhvm/issues/4086
 https://github.com/facebook/hhvm/issues/5010 utf8_decode() targets latin1, therefore any character greater than U+00FF should come out as U+003F QUESTION MARK U+00DF LATIN SMALL LETTER SHARP S
+https://github.com/owncloud/music/issues/212#issuecomment-43082336
 https://github.com/php/php-src/pull/865
 hypot() returns the length of the hypotenuse of a right-angle triangle with sides of length x and y, or the distance of the point (x, y) from the origin.
 i - add PID of the current process currently PHP is not multi-threaded, so it should be save to test for the PID of this PHP process
@@ -32049,6 +32142,7 @@ ignore response Let client run until script quits
 ignore some well-known system dlls
 ignore stuff in our build dir, but only if it is one of our targets
 ignore, audio data is broken into chunks so will always be data "missing"
+ignored for now, see bug #58756
 ignoring UTF-32 for now, sorry
 ill-formed name, but no error.
 image2wbmp() outputs or save a WBMP version of the given image.
@@ -32252,6 +32346,7 @@ iterate over again to get all different key values
 iterate through array again to see which values are considered equal
 iterate through original array
 ivs should be ignored in ecb mode
+json_encode is available in PHP 5.2 and above, or you can install a PECL module in earlier versions
 json_encode() has had extra params added over the years.
 jumped to next Sunday
 jumped to next Sunday again
@@ -32270,7 +32365,7 @@ key 1.9 is truncated to key 1
 key and value from array_index swapped
 key can be a runtime expression
 key can be a variable
-key can be any value possible for an array index.
+key can be any value possible for an array index.  Also also works on objects.
 key of the current element
 key() returns the index element of the current array position.
 key_exists() is the same as array_key_exists().
@@ -32678,6 +32773,7 @@ memlock The maximum number of bytes of memory that may be locked into RAM.
 memory limits probably disabled
 memsize and perm will be ignored.
 menu doesn't already exist, so create a new menu
+merged from WP #12559 - remove trim
 message sequences instead of numbers
 metaDATA atom seems to be 2 bytes language code (ASCII), 2 bytes unknown (set to 0x10B5 in sample I have), remainder is useful data
 meta_key and meta_value might be slashed
@@ -32864,6 +32960,7 @@ no result set, one input, one output parameter
 no result set, one output parameter
 no return statement, so when included, int(1) is returned
 no segfault if this is commented out
+no term passed - just exit early with no response
 no theme change, grab only sidebars that are currently registered
 no toString() method defined
 no warning, but refers to different variable
@@ -33096,6 +33193,9 @@ openssl_free_key() frees the key associated with the specified key_identifier fr
 openssl_get_privatekey() parses key and prepares it for use by other functions.
 openssl_get_publickey() extracts the public key from certificate and prepares it for use by other functions.
 openssl_open() opens (decrypts) sealed_data using the private key associated with the key identifier priv_key_id and the envelope key env_key, and fills open_data with the decrypted data.
+openssl_pkcs12_export() stores x509 into a string named by out in a PKCS#12 file format.
+openssl_pkcs12_export_to_file() stores x509 into a file named by filename in a PKCS#12 file format.
+openssl_pkcs12_read() parses the PKCS#12 certificate store supplied by pkcs12 into a array named certs.
 openssl_pkcs7_encrypt() takes the contents of the file named infile and encrypts them using an RC2 40-bit cipher so that they can only be read by the intended recipients specified by recipcerts.
 openssl_pkcs7_sign() takes the contents of the file named infilename and signs them using the certificate and its matching private key specified by signcert and privkey parameters.
 openssl_pkcs7_verify() reads the S/MIME message contained in the given file and examines the digital signature.
@@ -33481,6 +33581,7 @@ remove part of an entity at the end
 remove possible duplicated identical entries
 remove possible empty keys
 remove second (and final) alias from second point, so destructor runs
+remove slashes if they were magically added
 remove terminator, only if present (it should be, but...)
 remove the directory structure
 remove the execute permission from the parent dir and test scandir() on child dir 1.
@@ -33611,6 +33712,7 @@ run tests on a function.
 run the command 'locale -a' to fetch all locales available in the system
 run the command application
 run the endpoint test
+run this test in ext/standard/tests (see bug #64714)
 run-tests cannot test for a multiple Vary header
 run-tests, I love you for not allowing me to set ini settings dynamically
 s - Image encoding restrictions
@@ -33641,9 +33743,11 @@ seconds to run any individual test for any framework
 see about :: in interfaces
 see also hphp/hack/hhi/stdlib/builtins_tokens.php
 see argument 1 to Services_JSON() above for array-parsing behavior.
+see bug #16908 - regarding numeric locale printing
 see gallery_shortcode() in wp-includes/media.php
 see hphp/runtime/vm/bytecode.h:kMaxBuiltinArgs
 see https://github.com/JamesHeinrich/getID3/pull/10
+see if compiler complains (ala C#) if there are unreachable catch clauses by putting the ultimate base exception class first.
 see if included file can access including file's variables, and if including file can access the included file's functions and variables
 see if internal pointer is in same position as referenced array
 see if internal pointer is in the same position from when accessing this inner array
@@ -33679,6 +33783,7 @@ separate testcase for str_ireplace() off-by-one
 separate_zval_if_not_ref
 separator for optional parameters
 seq_parameter_set_id // sps
+serial: Serial # of this revision of the requested domain.
 serialization and not var_dump preserves whether keys are ints or strings
 serialization of FS literals
 serialization of FV literals
@@ -34127,6 +34232,8 @@ temp link touch a link, check stat, there should be difference in atime
 temperory array for checking unexpected behavior
 temporary addition for Kent's setup, Win32 box
 temporary way, works OK for now, but should be reworked in the future
+test #1: numeric data
+test #3: basic test (used to leak memory)
 test C::o_invoke, C::o_invoke_few_args, lookup in call_user_func static method call (in G::f4).
 test CBC, ECB modes test encrypt decrypt test tripledes, aes test different lengths of key, iv test no iv being passed on CBC, ECB  test upto 32 bytes with unlimited strength
 test HHVM_VERSION and HHVM_VERSION_ID matches
@@ -34313,6 +34420,7 @@ testing whether strip_tags() is binary safe or not
 testing wordwrap() by providing different values for str argument
 that runs for several whole lines
 the "current" element as seen by the iterator is unmodified
+the INI directives from bug #60761 report
 the Phar::startBuffering()/ Phar::stopBuffering() pair of methods is provided for this purpose.
 the above would be a good place to link to codex documentation on the gravatar functions, for putting it in themes.
 the array is with  three elements in it.
@@ -34806,6 +34914,7 @@ unless 'ignore_sticky_posts' is true.
 unless we're in an old version of PHP, and json_encode() returned a string containing 'null'.
 unlink old test results
 unpack() works slightly different from Perl as the unpacked data is stored in an associative array.
+unreachable, but makes typechecker happy - #2916
 unread_bytes (int) - the number of bytes currently contained in the PHP's own internal buffer.
 unrechable, but make the typechecker happy.
 unrelated parent method
@@ -34851,6 +34960,7 @@ use isset to see that array is not set
 use recursion to implement a factorial function Note: can call a function prior to its definition
 use stat on file created using "w" and "r" mode of fopen
 use the context argument with include path
+use the custom padding character '#'
 use unset/empty/isset to check the object
 used by HACKLIB_iteratable.
 used in result table output
@@ -34940,6 +35050,7 @@ very light-weight function to extract a single named file from a gzipped tarball
 very likely a bug, but someone could have done something on the server between the second last insert and the lock, therefore don't stop just bail
 very likely we do have both of them...
 vfsstream already provides isolation for unit tests, allow it
+video tracks http://developer.apple.com/library/mac/#documentation/QuickTime/QTFF/QTFFChap3/qtff3.html
 violate type inference via SetG
 virtualmem The maximum size of the virtual memory for the process, in bytes.
 visibility and static ordering unimportant
@@ -34973,6 +35084,7 @@ we have a timezone, so let's compute an offset
 we have found a start tag
 we have the actual image size, but might need to further constrain it if content_width is narrower
 we have the most current copy
+we have to insert more values, cause lexer sets auto_increment to max_int see mysql bug #54.
 we have to trim as AES rounds the blocks and decrypt doesnt detect that
 we haven't read a line and eof came
 we know the type, position and name of this symbol, but we won't know where it's definition is

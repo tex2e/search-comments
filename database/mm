@@ -1,0 +1,525 @@
+'owner' is consumed by this call.
+'self' of witnesses is passed at +0, so we still need to consume the value.
+(-1, -1) means showing on mouse location.
+(The argument should also be marked NS_RELEASES_ARGUMENT, but clang doesn't realize that a block parameter should be treated as an Objective-C parameter here.)
+(type being mirrored, mirror type, mirror witness)
++bundleForClass: itself takes 1-2ms.
+-- Build an Any from an arbitrary value unowned-referenced by a mirror.
+-- Class destructuring.
+-- Enum destructuring.
+-- MagicMirror implementation.
+-- Mirror witnesses for ObjC classes.
+-- Struct destructuring.
+-- Tuple destructuring.
+/ / Precondition: object does not encode a tagged pointer
+/ / The "scratch" pointer should point to an uninitialized word-sized / temporary buffer.
+/ / This function consumes 'value', following Swift's +1 convention for "in" / arguments.
+/ / This type is layout-compatible with a Swift existential container for the / _Mirror protocol.
+/ FIXME: this should be replaced by a real demangler
+/ On success, *outModule and *outClass must be freed with free().
+/ Returns true if the name was successfully decoded.
+/ This type cannot be subclassed, and should not ever be instantiated / except by the Swift runtime.
+@interface StatusItemView
+A Listener class to act as a event target for NSColorPanel and send the results to the C++ class, ColorChooserMac.
+A Mirror witness table for use by MagicMirror.
+A _Reflectable witness table.
+A course grain lock that we use to synchronize our leak dictionary.
+A magic implementation of Mirror that can use runtime metadata to walk an / arbitrary object.
+A set of allocated objc objects that we are tracking for leaks.
+A subclass of NSError used to represent bridged native Swift errors.
+A test process that kills itself if its parent died by detecting that the ppid has changed from the one passed in.
+A trivial class that increments DestroyedObjCCount when deallocated.
+A weak reference registered with the ObjC runtime.
+Add an event tap to intercept the system defined media/volume key events.
+Add the single path to the file list.
+Addresses of the type metadata and Mirror witness tables for the primitive mirrors.
+Adds a separator item at the given index. As the separator doesn't need anything from the model, this method doesn't need the model index as the other method below does.
+Adopt the same CFTypeID as NSObject.
+Again, this should never happen.
+All ControlRegionViews should be added as children of the WebContentsView, because WebContentsView will be removed and re-added when entering and leaving fullscreen mode.
+Allocate a catchable error object.
+Allocate the instance as if it were a CFError.
+Also it ensures that data stuctures don't have cycles and non-serializable fields.
+Also set the represented object to be the model so hierarchical menus check the correct index in the correct model.
+Also will update the title if the item is marked as "dynamic".
+Always call End() before destroying.
+An Objective-C unowned reference.
+An additional grant of patent rights can be found in the PATENTS file in the same directory.
+An empty title causes crash on OS X.
+AppKit will not update its cache of mouseDownCanMoveWindow unless something changes.
+Apply the higlight color if the image is a template image.
+Ask the browser to create the shared memory for us.
+Attach the file list to the AppleEvent.
+Based on JSEndProfiling, with a little extra code to return the profile as JSON.
+Build a magic mirror.
+Build a new MagicMirror for type T by taking ownership of the referenced / value.
+Build a new MagicMirror for type T, sharing ownership with an existing / heap object, which is retained.
+Build the AppleEvent data structure that instructs Finder to open files.
+But only take the first value.
+But we'd like to be able to statically take advantage of Swift's representational advantages when we know that all the objects involved are Swift-native.
+By default, OS X sets 4px to tray image as left and right padding margin.
+By default, pass the event through.
+By this point, UnregisterAccelerator should have been called for all keyboard shortcuts.
+C-style cast to avoid both a static_cast and a const_cast to get across the toll-free bridge.
+CFError and NSError are toll-free-bridged, so we can use either type's witness table interchangeably.
+CFError's is potentially slightly more efficient since it doesn't need to dispatch for an unsubclassed NSCFError.
+Cached lookup of NSStringFromClass, which is in Foundation.
+Cached lookup of swift_convertStringToNSString, which is in Foundation.
+Calculate the progress width.
+Called before the menu is to be displayed to update the state (enabled, radio, etc) of each item in the menu.
+Called by ChromeTtsDelegate when we get a callback from the native speech engine.
+Called from ColorPanelCocoa.
+Called from NSColorPanel.
+Called when the user chooses a particular menu item.
+Calling the below seems to be an effective solution.
+Change collectionBehavior will make the zoom button revert to default, probably a bug of Cocoa or OS X.
+Change style mask will make the zoom button revert to default, probably a bug of Cocoa or OS X.
+Change styleMask for frameless causes the window to change size, so we have to explicitly disables that.
+Cheating, since it's not a "hook", but meh
+Check for a bridged Cocoa NSError.
+Check if we are dealing with Swift mangled name, otherwise, don't try to demangle and send indication to the user.
+Chromium uses this too, even though it's not exactly right.
+Clears the delegate when window is going to be closed, since EL Capitan it is possible that the methods of delegate would get called after the window has been closed.
+Close the device context to retrieve the compiled metafile.
+Close the menu if it is still open.
+Cocoa doen't have concept of maximize/unmaximize, so wee need to emulate them by calculating size change when zooming.
+Convert resilient tag index to fragile tag index.
+Convert the CGEvent to an NSEvent for access to the data1 field.
+Copy an ASCII string into a swift String on the heap.
+Copy into the provided buffer.
+Copy the enum payload into a box
+Copying the ivar list just to free it is lame, but we have no room to save it.
+Copying the ivar list just to free it is lame, but we have nowhere to save it.
+Copyright (c) 2012 The Chromium Authors.
+Copyright (c) 2015-present, Facebook, Inc.
+Create a Swift String from two concatenated nul-terminated strings.
+Create a new temporary array of the available voices with the default voice first.
+Create an accelerator corresponding to the keyCode.
+Create and add a ControlRegionView for each region that needs to be excluded from the dragging.
+Create the list of files (only ever one) to open.
+Create the status item.
+Create the target of this AppleEvent, the Finder.
+Creates a NSMenu from the given model.
+Deallocate an error object whose contained object has already been / destroyed.
+Debugger will at this line.
+Decide dynamically whether the given object uses native Swift / reference-counting.
+Declare some Objective-C stuff.
+Declare the debugQuickLookObject selector.
+Default value in cases where any of the following fails.
+Deliberately construct a new speech synthesizer every time Speak is called, otherwise there's no way to know whether calls to the delegate apply to the current utterance or a previous utterance.
+Demangles a Swift symbol name.
+Destroy the whole original value if we couldn't take it.
+Determine the extra allocated space necessary to carry the value.
+Determine which image to use.
+Disable auto-hiding cursor.
+Disable zoom button if window is not resizable.
+Dispatching the event on main thread.
+Do not care about the reply.
+Don't add the "Enter Full Screen" menu item automatically.
+Don't emit click events when menu is showing.
+Don't need to .retain.autorelease since it's immutable.
+Don't reflect ivars of classes that lie about their layout.
+Don't send events from an utterance that's already completed.
+Don't use the C++ allocator.
+Draggable regions is implemented by having the whole web view draggable (mouseDownCanMoveWindow) and overlaying regions that are not draggable.
+Draw edges of rounded rect.
+Draw the system bar background.
+Duplicate the callback object here since c is a reference and gcd would only store the pointer, by duplication we can force gcd to store a copy.
+Enable the NSView to accept first mouse event.
+Enable the window to be larger than screen.
+Ensure both event tap and source are initialized.
+Ensure the comparison is case-insensitive as LS does not persist the case of the bundle id.
+Ensure the menu_controller_ is destroyed after main menu is set.
+Ensure the superclass is realized.
+Ensure this accelerator is already registered.
+Existential containers can end up nested in some cases due to generic abstraction barriers.
+Explicitly introduce a retain cycle here - The RCTJSCExecutor might be deallocated while there's still work enqueued in the JS thread, so we wouldn't be able kill the JSContext.
+Extract a pointer to the value, the type metadata, and the ErrorProtocol / protocol witness from an error object.
+Extract the hotkey from the event.
+FIXME: Actual compare CFTypeIDs, once they are available in the metadata.
+FIXME: Actually compare CFTypeIDs, once they arae available in the metadata.
+FIXME: Actually compare CFTypeIDs, once they are available in the metadata.
+FIXME: If the class has ObjC heritage, get the field offset using the ObjC metadata, because we don't update the field offsets in the face of resilient base classes.
+FIXME: Put superclass name here
+FIXME: Use the usual NSString bridging entry point.
+FIXME: We need to decide if this is really how we want to treat 'nil'.
+Fall back to just logging the line number
+Fast path for opaque ISAs.
+Fill the progress bar with color blue.
+Fill the rounded rect.
+Filter out objects that aren't the title bar buttons.
+Finalize setup by sizing our views
+First clear our tracked objects set.
+Flip coordinates based on the primary screen.
+Focus the button at default_id if the user opted to do so.
+For an ObjC witness, this is / the ObjC class.
+For class values / this is the class instance itself.
+For events that don't matter, this handler should return as quickly as possible.
+For now we have no reason to forbid this on other MacOS as we don't have the roaming profile troubles there.
+For now, SwiftError is always objc-refcounted.
+For the first time API invoked, we need to create a ContentView in DockTile.
+For the official canary channel, the Info.plist will have CrProductDirName set to "Google/Chrome Canary".
+Force the NSApplication subclass to be used.
+Foreign class should be CFError.
+Format stack as used in RCTFormatError
+Foundation collections expect these to be implemented.
+Foundation leaks it anyway, and this should be the only call to OuterAppBundleInternal().
+From C.app/Contents/Versions/1.2.3.4, go up three steps to get to C.app.
+Furthermore, and unlike weak references, they also do not need to be safe against races with the deallocation of the object.
+Get a Mirror for the nth element.
+Get a field name from a doubly-null-terminated list.
+Get the magic mirror witnesses appropriate to a particular type.
+Get the ref corresponding to this accelerator.
+Get the runtime type of the object.
+Get the single instance of this class.
+Getting an NSBundle from a path, on the other hand, essentially takes no time at all, at least when the bundle has already been loaded as it will have been in this case.
+Given a non-nil native swift object reference, return true if / either the object has a strong reference count of 1 or its / pinned flag is set.
+Given a non-nil object reference, return true if the object is a / native swift object and either its strong reference count is 1 or / its pinned flag is set.
+Given a non-nil object reference, return true iff the object uses native swift reference counting.
+Given an object reference, return true iff it is non-nil and refers to a native swift object with strong reference count of 1.
+Go into the versioned directory.
+Go up two steps to get to the browser .app's versioned directory.
+Handle the timeout case by re-enabling the tap.
+Helper from the standard library for stringizing an arbitrary object.
+Hide the native toolbar before entering fullscreen, so there is no visual artifacts.
+However, the language runtime will generally not see any such objects.
+If Foundation hasn't loaded yet, fall back to returning the static string "SwiftObject".
+If an initial value was given, copy or take it in.
+If an update is sent, we'll get that.
+If keys are still registered, make sure we stop the tap.
+If matched, callback to the event handling system.
+If neither is native, we can use the ObjC function.
+If no exception is thrown by the block, returns an empty dictionary.
+If nullptr, a new buffer will be malloced.
+If so, attempt the bridge.
+If the Foundation overlay isn't loaded, then NSErrors can't be bridged.
+If the class has a superclass, the superclass instance is treated as the first child.
+If the demangled / name does not fit into the outputBuffer, the output will be truncated and / the size will be updated, indicating how large the buffer should be.
+If the existential happens to include the _Reflectable protocol, use the witness table from the container.
+If the existing value is not allocated, this is just an initialize.
+If the incoming value is not allocated, this is just a destroy and re-initialize.
+If the key wasn't pressed (eg.
+If the menu is showing, when user clicked the tray icon, the `mouseDown` event will be dissmissed, we need to close the menu at this time.
+If the menu item has an icon, set it.
+If the model has submenus, this can be invoked recursively.
+If the new width is less than the frame size use it as the primary constraint.
+If the output buffer is not provided, malloc memory ourselves.
+If the payload is indirect, we need to jump through the box to get it.
+If the superclass is natively ObjC, cut over to the ObjC mirror implementation.
+If the value is a swift-refcounted class we don't need to put it in a box to point into it.
+If the value is an existential container, look through it to reflect the contained value.
+If there's a superclass, it becomes the first child.
+If they're both native, we can use the native function.
+If this is a pure ObjC class, reflect it using ObjC's runtime facilities.
+If this is the Builtin.NativeObject type, and the heap object is a class instance, use the dynamic type of the object reference.
+If this is the Builtin.UnknownObject type, use the dynamic type of the object reference.
+If this is the first media/volume key registered, start the event tap.
+If unbundled (as in a test), there's no app bundle.
+If we already have a domain set, then we've already initialized.
+If we meet a '*' file extension, we allow all the file types and no need to set the specified file types.
+If we unregistered a hot key, and no more hot keys are registered, remove the hot key handler.
+If we unregistered a media/volume key, and now no media/volume keys are registered, stop the media/volume key tap.
+Ignore events that are not system defined media/volume keys.
+Ignore media keys that aren't previous, next and play/pause and volume keys that aren't up, down and mute.
+Image must have at least kHorizontalMargin horizontal margin on each side.
+Image must have same horizontal vertical margin.
+Image's width must be larger than menu bar's height.
+Implementation of run-time API availability queries.
+In OSX 10.10, adding subviews to the root view for the NSView hierarchy produces warnings.
+In experimentation, the overhead of constructing and destructing a NSSpeechSynthesizer is minimal.
+In that case, / the user of this API is responsible for freeing the returned buffer.
+In the meantime, out-of-band allocation is inefficient but not ridiculously so.
+Incorrect app activation with com.apple.quarantine: http://crbug.com/32921 2.
+Indicate a failure if the result does not fit and will be truncated and set the required outputBufferSize.
+Initialize the SQRLUpdater.
+Initialize the Swift type metadata.
+Inject handler used by HMR
+Instead we can look at the bits in the ISA and tell if its a non-pointer opaque ISA which means it is definitely an ObjC object and doesn't use native swift reference counting.
+Instead we create this retain cycle, and enqueue the -invalidate message in this object, it then releases the JSContext, breaks the cycle and stops the runloop.
+Instead, it returns a value that counts the clicked times.
+Invalidate the event tap.
+It is intended to be used as a NSWindow's contentView.
+It is needed because NSWindow's implementation explicitly resizes the contentView at inopportune times.
+It is the user's responsibility to ensure that the reference remains valid at the time that the unowned reference is read.
+It's safe to use self.window instead if you don't assign one delegate to many windows
+Iterate through registered accelerators, looking for media/volume keys.
+JSONKit takes an extra hundred microseconds to handle this simple case, so we are adding a shortcut to make executeJSCall method even faster
+JSStringCreateWithUTF8CString expects a null terminated C string.
+Just print out the class of Obj.
+Keep String trivial on the C++ side so we can control its instantiation.
+Keep the details of String's implementation opaque to the runtime.
+Leaked, but the only caller initializes a static with this result, so it only happens once, and that's OK.
+Leave the NSError bits zero-initialized.
+Let 200 be the default.
+Load and parse the SystemVersion dictionary to determine the current / operating system version.
+Load crashpad database.
+Load the contents of the SystemVersion plist, looking in the appropriate / place if running on the iOS simulator.
+Load the type and offset from their respective vectors.
+Look for a match with a bound hot_key.
+Look through artificial subclasses.
+Look up the accelerator based on this hot key ID.
+Looks like making lots of JSC API calls is slower than communicating by using a JSON string.
+MagicMirror ownership-sharing subvalue constructor.
+MagicMirror ownership-taking whole-value constructor.
+Magical constants are from http://weblog.rogueamoeba.com/2007/09/29/
+Make a Native Swift object by calling a Swift function.
+Make sure the bottom corner is rounded: http://crbug.com/396264.
+Make sure the set is clean.
+Make sure there's no existing event tap.
+Make window has transparent background.
+Map an ObjC type encoding string to a Swift type metadata object.
+Mask out the spare bits in a bridgeObject, returning the object it encodes.
+NB(hokein): Make tray's behavior more like official one's.
+NB: This function is not used directly in the Swift codebase, but is exported for Xcode support and is used by the sanitizers.
+NOTE: This is a temporary workaround.
+NSBundle is also documented as being not thread-safe, and thread safety may be a concern here.
+NSStringFromClass will still return the mangled name.
+Native class metadata is also the class object.
+Native class should be an NSError subclass.
+New title bar styles are available in Yosemite or newer
+No official docs found, but widely known.
+No ownership because it will outlive this class.
+Note that this function needs Swift calling conventions, hence the use of NS_RETURNS_RETAINED and Block_release.
+Note that unowned references need not provide guaranteed behavior in the presence of read/write or write/write races on the reference itself.
+Note: we could just return false if all spare bits are set, but in that case the cost of a deeper check for a unique native object is going to be a negligible cost for a possible big win.
+Now we have a media/volume key that we care about.
+OS X tends to make the title 2px lower.
+ObjC class should be an NSError subclass.
+ObjC makes no guarantees about the state of ivars, so we can't safely introspect them in the general case.
+ObjC unfortunately doesn't expose a copy-assign operation.
+On EL Capitan this flag is required to hide fullscreen button.
+On Mac OS X, we can't query the default, but the handlers list seems to put Apple's defaults first, so we'll use the first option that isn't our bundle
+On OS X the initial window size doesn't include window frame.
+One step up to MacOS, another to Contents.
+Only need to initilize once.
+Other kinds of type can never conform to ObjC protocols.
+Otherwise load and parse from SystemVersion dictionary.
+Otherwise, calculate the domain and code (TODO: and user info), and initialize the NSError.
+Otherwise, destroy according to one set of semantics and re-initialize with the other.
+Otherwise, fall back to MagicMirror.
+Otherwise, unwrap the existential container and do a runtime lookup on its contained value as usual.
+Otherwise, use the native Swift facilities.
+Otherwise, we'll get our inserted `nil` value.
+Our frameless window still has titlebar attached, so setting contentSize will result in actual content size being larger.
+Override the domain/code/userInfo accessors to follow our idea of NSError's layout.
+Passing empty array to setAllowedFileTypes will cause exception.
+Please coordinate before changing.
+Prefix for a mangled class
+Pretending that there's a subclass relationship here means that accesses to objects formally constructed as UnownedReferences will technically be aliasing violations.
+Prevent event from proagating to other apps if handled by Chrome.
+Prevents window from resizing during the scope.
+Previously we tried adding an NSView and removing it, but for some reason it required reposting the mouse-down event, and didn't always work.
+Processed events should propagate if they aren't handled by any listeners.
+Produce a mirror for any value, like swift_reflectAny, but do not consume / the value, so we can produce a mirror for a subobject of a value already / owned by a mirror.
+Pure ObjC classes never have negative extents.
+Put value types into a box so we can take stable interior pointers.
+RAM Bundling already provides a null terminated one.
+Recur in case we have a nested existential.
+Recursively build a submenu from the sub-model at this index.
+Redraw the dray icon to show highlight if it is enabled.
+Register hot_key if they are non-media keyboard shortcuts.
+Register the event hot key.
+Release the event tap source.
+Remove all ControlRegionViews that are added last time.
+Remove hot_key from the mappings.
+Remove non-transparent corners, see http://git.io/vfonD.
+Remove the event from the mapping.
+Resizing is disabled.
+Restore the native toolbar immediately after entering fullscreen, if we do this before leaving fullscreen, traffic light buttons will be jumping.
+Retaining the class object itself is a no-op.
+Return a pointer to the scratch buffer.
+Return a retained (NOT autoreleased) NSBundle* as the internal implementation of chrome::OuterAppBundle(), which should be the only caller.
+Return the SwiftError reference and a pointer to the uninitialized value inside.
+Return the version of the operating system currently running for use in / API availability queries.
+Return true if the given bits of a Builtin.BridgeObject refer to a / native swift object whose strong reference count is 1.
+Return true iff the given BridgeObject is not known to use native / reference-counting.
+Returning NULL prevents the event from propagating.
+Returning event causes the event to propagate to other applications.
+Returns nullptr if the input String is not a / Swift mangled name.
+Run modal dialog with parent window and return user's choice.
+See Leaks.h for a description of this leaks detector.
+See http://swift.org/LICENSE.txt for license information See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
+Send a `nil` after everything...
+Send it to the caller.
+Send the actual event.
+Set menu item's role.
+Set our own application delegate.
+Set that we should track objects.
+Set to 1 to enable reflection of objc ivars.
+Set up a dummy runloop source to avoid spinning
+Sets color to the NSColorPanel as a non user change.
+Setting the background color to clear will also hide the shadow.
+Shortcut: in the browser process, just return the main app bundle.
+Should highlight when showing menu.
+Show menu when there is a context menu.
+Signature uniquely identifies the application that owns this hot_key.
+Silent no-op for unassociated file types: http://crbug.com/50263 Instead, an AppleEvent is constructed to tell the Finder to open the document.
+So remove that default, and make the requested button the default.
+So we don't check the clickCount here, just pop up the menu for each click event.
+So we need to bridge the _XCTCurrentTestCase function to return a +1 object.
+Some third-party OS X utilities check the zoom button's enabled state to determine whether to show custom UI on hover, so we disable it here to prevent them from doing so in a frameless app window.
+Start out with the path to the running executable.
+Still we should clean up.
+Store the hotkey-ID mappings we will need for lookup later.
+Storing the domain must be the LAST THING we do, since it's the signal that the NSError has been initialized.
+Subclass of NSSpeechSynthesizer that takes an utterance string on initialization, retains it and only allows it to be spoken once.
+Substribe to MenuClosed event.
+Swift assumes Any is returned in memory.
+Swizzle out -(void)dealloc, +(id)alloc, and +(id)allocWithZone: for our custom implementations.
+System started termination.
+TODO Return 'void' as the type of fields we don't understand.
+TODO(thestig): Fail and return false instead.
+TODO(zcbenz): Remove the alias after figuring out a proper way to disptach move.
+TODO: If the error type is a simple enum with no associated values, we could emplace it in the "code" slot of the NSError and save ourselves some work.
+TODO: Implement specialized mirror witnesses for all kinds.
+TODO: Make this function handle first class instead of dynamically dispatching it.
+TODO: Should look through existential metatypes too, but it doesn't really matter yet since we don't have any special mirror behavior for concrete metatypes yet.
+TODO: Specialize behavior here.
+TODO: We should define what these will be.
+TODO: Would be great if Clang had a return-three convention so we didn't need the out parameter here.
+TODO: convert SSML to SAPI xml.
+TODO: support languages other than the default: crbug.com/88059
+Take an ErrorProtocol box and turn it into a valid NSError instance.
+Take the value, unless we projected a subvalue from it.
+That means that whatever scheme we use for unowned references needs to interoperate with code just doing naive loads and stores, at least when the ObjC case isn't triggered.
+The FilePath operations needed to compute the framework's path are also effectively free, so that is the approach that is used here.
+The MenuModel works on indexes so we can't just set the command id as the tag like we do in other menus.
+The NSObject version of this pushes an autoreleasepool in case -description autoreleases, but we're OK with leaking things if we're at the top level of the main thread with no autorelease pool.
+The RAM bundle has a magic number in the 4 first bytes `(0xFB0BD1E5)`.
+The TTS api defines rate via words per minute.
+The app is not visible
+The contentView gets moved around during certain full-screen operations.
+The data for the mirror.
+The default is "Google/Chrome" for officially-branded builds, and "Chromium" for unbranded builds.
+The existential header.
+The first button added gets set as the default selected.
+The framework bundle is at a known path and name from the browser .app's versioned directory.
+The gloal SQRLUpdater object.
+The input is a float from 0.0 to 2.0, with 1.0 being the default.
+The likelihood of someone invoking +description without ObjC interop is low.
+The likelihood of someone invoking -description without ObjC interop is low.
+The media/volume keys subtype.
+The mirror does not own the referenced value.
+The mirror owns a strong reference to / this object.
+The name is the stringized element number '.0'.
+The non-pointer bits, excluding the ObjC tag bits.
+The object should be destroyed by now.
+The out-of-line storage of an ObjC unowned reference.
+The owner pointer for the buffer the value lives in.
+The plugin may call this method several times, so avoid spamming the UI thread with requests by only allowing one outstanding request at a time.
+The pointer to the value.
+The popUpStatusItemMenu returns only after the showing menu is closed.
+The protocol descriptor for _Reflectable from the stdlib.
+The stdlib cannot directly import these modules without introducing circular dependencies.
+The store can be relaxed, since we'll do a store(release) of the domain last thing to publish the initialized NSError.
+The superobject counts as a child.
+The type metadata for the referenced value.
+The versions of the Objective-C runtime which use non-pointer ISAs also export this symbol.
+The web contents invoking the color chooser.
+The width of the full status item.
+The width of the icon.
+The width of the title.
+The witness table lives in the Foundation overlay, but it should be safe to assume that that's been linked in if a user is using NSError in their Swift source.
+There is a new update that has been downloaded.
+There's not really anything more efficient to do here than this.
+This assumes that the LeaksMutex is already being held.
+This can be overridden by setting the CrProductDirName key in the outer browser .app's Info.plist.
+This could happen if a tab gets closed while its context menu is still open.
+This depends on the fact that we construct a new NSSpeechSynthesizer each time we call Speak.
+This doesn't use LaunchServices or NSWorkspace because of two bugs: 1.
+This ensures that the value returned by this method will never be larger than the users requested window size.
+This file contains replacements for the designated initializers of some UIKit classes that take variadic parameters and thus cannot be used in Swift as-is.
+This file contains shims to refer to framework functions required by the standard library.
+This function is implemented in Objective-C because Swift does not support failing initializers.
+This function opens a file.
+This gives us a buffer in case NSError decides to change its stored property order.
+This has the effect of removing the window title, which VoiceOver already sees.
+This hot key should be registered.
+This implements runtime support for bridging between Swift and Objective-C types in cases where they aren't trivial.
+This implements the object representation of the standard ErrorProtocol type, which represents recoverable errors in the language.
+This is less than ideal, and should eventually be removed.
+This method is directly called by NSWindow during a window resize on OSX 10.10.0, beta 2.
+This method is supposed to put focus on window, however if the app does not have focus then "makeKeyAndOrderFront" will only show the window.
+This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
+This source file is part of the Swift.org open source project
+This structure needs to mirror _MagicMirrorData in the stdlib.
+This would normally use base::mac::FrameworkBundle(), but that references the framework bundle within the versioned directory.
+To associate delegate callbacks with a particular utterance, without assuming anything undocumented about the protocol.
+To eliminate the warnings, we resize the contentView to fill the window, and add subviews to that.
+Translate ui::Accelerator modifiers to cmdKey, altKey, etc.
+Types can't have these kinds.
+Unconditionally destroy the value at the end.
+Undocumented attribute that VoiceOver happens to set while running.
+Unregister the event hot key.
+Unregister the hot_key if it's a keyboard shortcut.
+Unwrap to get the class object.
+Update the label and the icon.
+Use AnyReturn to guarantee that even on architectures  where Any would be returned in registers.
+Use OuterAppBundle() to get the main app's bundle.
+Use an NSEvent monitor to listen for the wheel event.
+Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
+Use of this source code is governed by the MIT license that can be found in the LICENSE file.
+Use runModal for synchronous alert without parent, since we don't have a window to wait for.
+Use the _Reflectable conformance if the object has one.
+Used when we have class metadata and we want to ensure a class has been initialized by the Objective-C runtime.
+Walk the superclass chain.
+We construct a new NSSpeechSynthesizer for each utterance, for two reasons: 1.
+We don't call DidChooseColor if the change wasn't caused by the user interacting with the panel.
+We don't want the title to show in transparent or frameless window.
+We don't want to call _swift_getClassOfAllocated as that will call object_getClass.
+We don't want to deal with partial value deinitialization.
+We have to be sensitive about making unreasonable assumptions about the implementation of ObjC weak references, and we definitely cannot modify memory owned by the ObjC runtime.
+We intentionally use a non-POD return type with these entry points to give them an indirect return ABI for compatibility with Swift.
+We must destroy the contained Swift value.
+We must override it to prevent the content view from shrinking.
+We need to do this because the class "c" might be valid metadata, but it hasn't been initialized yet.
+We often return `null` from JS when there is nothing for native side.
+We should be aware of draggable regions when using hidden titlebar.
+We will manage window's lifetime ourselves.
+We won't really initialize the CFError parts until forced to though.
+We'll lazily instantiate them when needed.
+When it returns, we need to redraw the tray icon to not show highlight.
+When targeting the iOS simulator, look in a special location so we do not pick up the host OS version.
+When the completed event is sent with no update, then we know there is no update available.
+When the tray icon gets clicked quickly multiple times, the event.clickCount doesn't always return 1.
+Where we store the dealloc, alloc, and allocWithZone functions we swizzled.
+Whether or not we should be collecting objects.
+Which menu item to show.
+Without removing the title and with VO disabled, the TTS would always read the window title instead of using Cmd+C to get the selected text.
+Workaround buggy behavior of TransformProcessType.
+Wrap a string literal in a swift String.
+XCTestCase needs the unmangled version of a test case name, so let -className return the demangled name for a test case class.
+XXX FIXME When we have layout information, do precise alignment rounding For now, assume someone is using hardware vector types
+and the Swift project authors Licensed under Apache License v2.0 with Runtime Library Exception
+check occlusion binary flag
+check whether crashpad has been initilized.
+copy thread name to pthread name
+eventually deprecate separate "standardWindow" option in favor of standard / textured window types
+flash/sram/periph cached
+flash/sram/periph uncached
+get the BatchedBridge object
+http://lists.apple.com/archives/cocoa-dev/2007/Aug/msg00499.html
+http://stackoverflow.com/questions/7596643/
+just initialized to nil and by guaranteeing a bit pattern that distinguishes Swift references.
+kernel linear segment
+length may not be zero
+make_swift_object is defined in TestHelpers.swift as part of StdlibUnittest.
+namespace This view always takes the size of its superview.
+namespace accelerator_util
+namespace auto_updater
+namespace crash_reporter
+namespace file_dialog
+namespace platform_util
+notification.object is the window that changed its state.
+once a module has been loaded free its space from the heap, remove it from the index and release the module name
+path identifies the helper .app's Contents directory in the browser .app's versioned directory.
+physical RAM cached area
+protocol _ObjectiveCBridgeableErrorProtocol
+skip table length base offset to add to every module's offset to skip the header of the RAM bundle
+the space allocated for each module's metada gets freed when the module is injected into JSC on `nativeRequire`
+uncached on-chip registers
+version for SwiftShims
+was released), ignore this event.
+we do not support "placement new" or zones, so there is no need to call allocWithZone
+when VoiceOver is disabled, this causes Cmd+C to be used for TTS but still leaves the buttons available in the accessibility tree.
+when VoiceOver is enabled, the full accessibility tree is used.

@@ -1,4 +1,27 @@
 "colorls"   will be installed on purpose and can't be pulled in by installing  coreutils, so prefer it to "gls".
+# Complete with gruntfile.
+# Complete without gruntfile.
+# Function definitions
+# Hook function definitions
+# If the scd function exists, define a change-directory-hook function to record visited directories in the scd index.
+# Load the directory aliases created by scd if any.
+# Local Variables: mode: sh End:
+# allow custom function override
+# args: (exit_status, command, elapsed_seconds)
+# args: (title, subtitle)
+# case-insensitive (all),partial-word and then substring completion
+# more intelligent acking for ubuntu users
+# only enable if a local (non-ssh) connection
+########################## Alias CAT, GREP, CURL, WGET
+########################## Impl
+################################# Init
+################################# Shortcuts
+##################################################################### print all installed packages
+#############################################################################
+############################################################################# Discover the gradle tasks by running "gradle tasks --all"
+############################################################################# Register the completions against the gradle and gradlew commands
+###############################################################################
+###############################################################################  Settings  These can be overwritten any time.
 (1) install this file.
 (2) load the script, and add a directory to fpath before compinit.
 (4) geneate completion files once.
@@ -24,7 +47,6 @@
 A command line interface for WordPress http://wp-cli.org/ Cache Cap CLI Comment Core
 A descriptive listing of core Gradle commands
 A script to make using 256 colors in zsh less painful.
-A test function that validates the regex against known forms of the simple index.
 ALT-LEFT moves back to directories  that the user has changed to in the past, and ALT-RIGHT undoes ALT-LEFT.
 Absolute path of the directory to which such files will be moved.
 Activate the environment only if it is not already active
@@ -37,6 +59,8 @@ Adds handy command line aliases useful for dealing with URLs
 Agent forwarding support based on ideas from Florent Thoumie and Jonas Pfenniger
 Algorithm borrowed from http://wiki.rtorrent.org/MagnetUri and adapted to work with zsh.
 Alias tmux to our wrapper function.
+Aliases ################################################################### These are for more obscure uses of apt-get and aptitude that aren't covered below.
+Aliases ################################################################### perlbrew ########
 Aliases (sorted alphabetically)
 All the output is in one single file so it can be posted as a gist or bug comment on GitHub.
 All the zsh non-module builtin commands These are taken from the zsh reference manual for 5.0.2 Commands from modules should not be included.
@@ -45,9 +69,11 @@ Also provides a command to list all installed/available rubies.
 Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
 Always write directly to a file so terminal escape sequences are captured cleanly
 Announce success and generate git commit messages
+Antigen is a bundle manager.
 Anything that doesn't match a special action is considered an issue name
 Append workon_cwd to the chpwd_functions array, so it will be called on cd http://zsh.sourceforge.net/Doc/Release/Functions.html
 Apply theming defaults
+Arch Linux command-not-found support, you must have package pkgfile installed https://wiki.archlinux.org/index.php/Pkgfile#.22Command_not_found.22_hook
 At the very end of the prompt
 Author: Adam Strzelecki nanoant.com, modified by Bodo Tasche bitboxer.de Updated to support ForkLift2 by Johan Kaving
 Author: https://github.com/pstadler
@@ -93,6 +119,7 @@ Clean up the namespace slightly by removing the checker function
 Clear zombie processes
 Command line head / tail shortcuts
 Compares the provided version of git to the version installed and on path Outputs -1, 0, or 1 if the installed version is less than, equal to, or greater than the input version, respectively.
+Completion ################################################################
 Completion script for git-extras (http://github.com/tj/git-extras).
 Completion script for grunt.
 Completion widget: override and rebind old one with prefix "orig-".
@@ -135,6 +162,7 @@ Easier access to skin tone modifiers
 Emits the control sequence to notify Terminal.app of the cwd Identifies the directory using a file: URI scheme, including the host name to disambiguate local vs.
 Emoji combining and auxiliary characters "Variation Selectors" for controlling text vs emoji style presentation These apply to the immediately preceding character
 Empty functions so we don't cause errors in prompts
+End Functions #############################################################
 Ensure that the prompt is redrawn when the terminal size changes.
 Enumerate all of the Groovy files
 Erase current line in buffer
@@ -168,6 +196,7 @@ For the purpose of highlighting we will also keep a version without doubly-escap
 Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
 Formats prompt string for current git commit long SHA
 Formats prompt string for current git commit short SHA
+Functions ################################################################# create a simple script that can be used to 'duplicate' a system
 Generate metadata cache
 Generate the aliases for the shortcuts
 Get absolute path, resolving symlinks
@@ -201,7 +230,6 @@ If the tt command is called without an argument, launch Textastic If tt is passe
 If they are not set yet, they will be overwritten with their default values
 If tm is passed a directory, cd to it and open it in TextMate If tm is passed anything else (i.e., a list of files and/or options), pass them all along This allows easy opening of multiple files.
 If you are not already using completion you might need to enable it with
-If you modify the regex to make it work for you, you should add a test case in here and make sure that your changes don't break things for someone else.
 If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
 If you want to use the cache, set the followings in your .zshrc:
 If you would like to change the cheeseshops used for autocomplete set ZSH_PIP_INDEXES in your zshrc.
@@ -227,6 +255,7 @@ Install specific package(s) from the repositories
 Internal: Print ruby version details, if it's currently active etc.
 Invalid cache because gruntfile is old.
 Invalid naming pattern
+It allows you to enhance the functionality of your zsh session by installing bundles and themes easily.
 It also implements a per-directory-history-toggle-history function to change from using the directory history to using the global history.
 It is not run during normal use of the plugin.
 It is not suitable for parsing.
@@ -296,6 +325,7 @@ Only run if tmux is actually installed
 Opens specified directory or current working directory in ForkLift.app
 Or, use this file as a oh-my-zsh plugin.
 Or, use this file as an oh-my-zsh plugin.
+Original idea by DefV (Jan De Poorter) Source: https://gist.github.com/pjaspers/368394#comment-1016
 Otherwise, it will do a clean checkout of upstream's HEAD to a temporary local repo and use that.
 Otherwise, no lines were found, or an error occurred.
 Outputs a bunch of information about the state and configuration of oh-my-zsh, zsh, and the user's system.
@@ -310,6 +340,7 @@ Parses the Xcode version from a filename based on our conventions Only meaningfu
 Pass the name of the variable to return the result in.
 Paths noted below are for Postgres installed via Homebrew on OSX
 Percent-encode the pathname.
+Perl ############ perldoc`
 Perl grep, because 'grep -P' is terrible.
 Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 Place it in your .zshrc:
@@ -426,6 +457,7 @@ This method is inflexible since the aliases are at risk of being overriden resul
 This notice may not be removed or altered from any source distribution..
 This plugin adds single char shortcuts (and combinations) for some commands.
 This plugin adds the ability to on the fly generate and access file shortcuts.
+This requires updating the PYTHONPATH to ensure that the full set of code can be located.
 This script intercepts calls to the brew plugin and adds autocompletion for the cask subcommand.
 This script updates the Oh My Zsh version of the zsh-history-substring-search plugin from the independent upstream repo.
 This software is provided 'as-is', without any express or implied warranty.
@@ -452,6 +484,7 @@ Update and refresh the local package database against repositories
 Update and refresh the local package, ABS and AUR databases against repositories
 Update your zsh's git-completion module to the newest verion.
 Update your zsh's git-completion module to the newest version.
+Update youtube-dl (and all other antigen bundles): antigen update The antigen command will download the git repository to a folder and then execute an enabling script (this file).
 Updates the last directory once directory is changed.
 Usage is also described at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins Look for yaourt, and add some useful functions if we have it.
 Use `svn_prompt_info` method to enquire the svn data.
@@ -496,6 +529,7 @@ You can set the environment variable REPO_PATH to point it at an upstream repo y
 Zeus preloads your Rails environment and forks that process whenever needed.
 Zsh installation and configuration
 absolute path of files resolving symlinks (:A) and quoting special chars (:q)
+adapted from: github.com/grml/grml-etc-core/blob/master/etc/zsh/zshrc#L1547
 add all non-dot files
 add functions to the exec list for chpwd and zshaddhistory
 adds a service specified by URI to the system
@@ -525,10 +559,14 @@ clipcopy - Copy data to clipboard
 clippaste   - writes clipboard's contents to stdout
 clippaste - "Paste" data from clipboard to stdout
 cmd name only, or if this is sudo or ssh, the next cmd
+commands using su #########
+commands using sudo #######
 compile a string of coffeescript and print to output
 compile from clipboard and copy to clipboard
 complete on installed rubies
+consider emacs keybindings: bindkey -e  ## emacs key bindings
 debian and ubuntu package
+default 10 seconds definitions ##
 define right prompt, if it wasn't defined by a theme
 define search context URLS
 define search engine URLS
@@ -560,9 +598,11 @@ here will override ones with the same name in the main plugins directory.
 highlight command line using zsh-syntax-highlighting
 highlight the search query inside the command line
 http://github.com/olivierverdier/zsh-git-prompt
+http://zsh.sourceforge.net/Doc/Release/Zsh-Modules.html#The-zsh_002fcap-Module
 https://github.com/AlexBio https://github.com/dbb https://github.com/Mappleconfusers
 https://github.com/AlexBio https://github.com/dbb https://github.com/Mappleconfusers Nicolas Jonas nextgenthemes.com https://github.com/loctauxphilippe
 https://github.com/nicoulaj/zsh-syntax-highlighting
+https://github.com/zsh-users/zsh-syntax-highlighting/blob/56b134f5d62ae3d4e66c7f52bd0cc2595f9b305b/zsh-syntax-highlighting.zsh#L126-161
 https://raw.githubusercontent.com/zsh-users/zsh/master/Completion/Unix/Command/_git
 iTunes control function
 if it doesn't, make it, and open it
@@ -643,6 +683,7 @@ ssh-agent running, start gpg-agent without ssh support
 start in directory mode
 start ssh-agent and setup environment
 sudo will be inserted before the command
+superuser operations ######################################################
 switch the active keymap to paste mode
 tell whether version1 is older or newer than version2 Packages commands
 temporarily unset MAKEFLAGS ( '-j3' will fail )

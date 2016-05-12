@@ -1,0 +1,7 @@
+Error check the values.
+Make sure the base version is specified
+The license and further copyright text can be found in the file LICENSE.TXT LICENSE.TXT at the root directory of the distribution.
+The license and further copyright text can be found in the file LICENSE.TXT at the root directory of the distribution.
+This software is released under Microsoft Reciprocal License (MS-RL).
+at the time the extension attribute is parsed, the compiler might not yet have parsed the Name attribute, so we need to get it directly from the parent element.
+condition is the inner text of the element.

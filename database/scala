@@ -1,13 +1,14 @@
-"/admin/clients/myclient").
-"/admin/servers/myserver").
 "Controller" for displaying the current state of the sink.
 "Controller" for displaying the current state of threads.
+#formatter #fail_fast
+#log_usage #stats_usage
+#registering_http_service
+#registering_http_service And wait on the server
 (parameter names differ from the other constructors' for backwards compatibility)
 - the handler ignores messages of this level
 - the logger ignores messages of this level
 2.11 won't apply an implicit conversion targeting Object, but we can manually invoke the converter provided by the view bound.
 @note Mesos doesn't gate traffic on /health so all pre-bind warmup needs to happen in `prebindWarmup()`
-@param alias A short name used to identify the route when listed in index.
 @param baseDirectory     The base directory for the directory resolver.
 @param baseDirectory  The base directory (either absolute or relative to the process's working directory) to which to the requested resource path should be appended.
 @param baseRequestPath     The base uri path handled by this handler (e.g. /admin/).
@@ -15,7 +16,6 @@
 @param baseResourcePath  The base path for the jarResolver.
 @param deadlockedIds Each value corresponds to a `Thread.getId` that is deadlocked.
 @param entry The stack registry entry.
-@param group A grouping used to organize the route in the admin server pages.
 @param handler The service which requests are routed to.
 @param headers Additional headers to include in the response.
 @param includeInIndex Indicates whether the route is included as part of the admin server index.
@@ -51,7 +51,7 @@ Called before the `main` method.
 Called prior to application exiting.
 Called prior to application initialization.
 Captures events from a logger.
-Clients can be queried by passing in the client name as part of the uri (ex.
+Clients can be queried by passing in the client name as part of the uri (ex. "/admin/clients/myclient").
 Compute a profile for each client that includes the success rate and the availability of endpoints the client connects to.
 Configuration for the EventSink.
 Constants for Admin endpoints.
@@ -121,7 +121,6 @@ Necessary for controller to determine that this is a request for HTML.
 NewHooks are service-loaded.
 Note that this method simply checks if the given `contentType` is a substring of the "Accept" header.
 Note, don't use `scala.sys.props` until we are on 2.12: https://github.com/scala/scala/pull/4372
-Note, the view is wrapped around the underlying service selectively.
 Note, unnamed clients are ignored as we can't dissambiguate their stats.
 Note, unnamed servers are ignored as we can't dissambiguate their stats.
 Note, we don't serve all of /admin on a separate worker pool because it's important to serve certain admin endpoints in-band with the server.
@@ -149,7 +148,7 @@ Search the metrics source for the stat scope that includes `clientName`.
 Search the metrics source for the stat scope that includes `serverName`.
 See: https://github.com/FasterXML/jackson-module-scala/issues/106.
 Serialize the sink to a lazy byte stream.
-Servers can be queried by passing in the server name as part of the uri (ex.
+Servers can be queried by passing in the server name as part of the uri (ex. "/admin/servers/myserver").
 Setup sink and Event construction for an arbitrary type.
 ShadowAdminServer does not listen for /quitquitquit so send it to the admin server
 Some of the headers like content length are inferred.
@@ -182,7 +181,7 @@ This line fails without the JsonDeserialize annotation in Envelope.
 This logging event should have made it to the sink unless: - the capture spec turned capture off for this logger
 This parameter can be omitted if not querying for plots
 This relies on the side-effect of a full gc that all objects in the young generation are promoted to the old generation.
-This server shadows vital endpoints (ex.
+This server shadows vital endpoints (ex. stats) that are useful for diagnostics and should be available even if the server becomes overwhelmed.
 Threads that say they are runnable, but are actually doing nothing.
 Together, these describe how to bind a path to an Addr.
 Tries to load resources using directoryResolver in baseDirectory, and if that fails, tries jarResolver in baseResourcePath.
@@ -192,7 +191,7 @@ Useful to check cluster consistency.
 We have to run this in a pool or Reader.read ends up blocking, because we call Await.result in the sink events iterator.
 We require an annotation here, because for small numbers, this gets deserialized with a runtime type of int.
 When the method `warmupComplete()` is invoked, the application is considered ready.
-Wraps content returned from the underlying service with a view of the index.
+Wraps content returned from the underlying service with a view of the index. Note, the view is wrapped around the underlying service selectively.
 Write out the profile verbatim.
 a logger used to log all sync and async exceptions that occur in the admin server.
 checks for non-exceptional
@@ -213,7 +212,6 @@ same logic as org.slf4j.LoggerFactory
 set used for keeping track of jvm gauges (otherwise only weakly referenced)
 skip CMS because it does not collect objects from the eden
 so `edenAllocated` has not yet been updated which in turn means our math is off.
-stats) that are useful for diagnostics and should be available even if the server becomes overwhelmed.
 the Hotspot JVM exposes the full size that the metaspace can grow to which differs from the value exposed by `MemoryUsage.getMax` from above
 the Notification's userData correspond to `com.sun.management.GarbageCollectionNotificationInfo`s.
 there is a race here, where a gc has completed but we have not yet been notified.
