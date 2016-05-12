@@ -196,18 +196,11 @@ for(var i = 0; pair[i]; i++) {
 // load database
 var lang = arg.lang || "js";
 var comments = [];
-var getDatabase;
-try {
-  console.time("load file");
-  getDatabase = jQuery.get("database/" + lang);
-} catch (e) {
-  $('#react').text('error: ' + e.statusText);
-  console.log(e);
-}
-getDatabase
+console.time("load file");
+var getDatabase = jQuery.get("database/" + lang)
   .done(function (data) {
     console.timeEnd("load file");
-    Array.prototype.push.apply(comments, data.split("\n"));
+    comments = data.split("\n");
   })
   .fail(function (e) {
     $('#react').text('error: ' + e.statusText);
