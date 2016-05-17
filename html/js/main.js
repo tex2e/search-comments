@@ -16,6 +16,7 @@ String.prototype.splice = function(idx, rem, str) {
 // To search, at least one charactor is necessary.
 var MIN_SEARCH_CHARS = 1;
 
+// CommentRow
 var CommentRow = React.createClass({
   render: function() {
     var comment = this.props.comment;
@@ -52,6 +53,7 @@ function isMatched(str, words) {
   return true;
 }
 
+// CommentTable
 var CommentTable = React.createClass({
   addRowNum: function () {
     this.props.changeRowNum(
@@ -93,6 +95,7 @@ var CommentTable = React.createClass({
   }
 });
 
+// SearchBar
 var SearchBar = React.createClass({
   handleUserInput: function() {
     this.props.onUserInput(
@@ -153,6 +156,7 @@ var SearchBar = React.createClass({
   }
 });
 
+// FilterableCommentTable
 var FilterableCommentTable = React.createClass({
   getInitialState: function () {
     return {
@@ -161,7 +165,10 @@ var FilterableCommentTable = React.createClass({
     };
   },
   handleUserInput: function (filterText) {
-    this.setState({ filterText: filterText, maxRowNum: 100 });
+    this.setState({
+      filterText: filterText,
+      maxRowNum: 100
+    });
   },
   changeMaxRowNum: function (maxRowNum) {
     this.setState({ maxRowNum: maxRowNum });
