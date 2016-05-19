@@ -32,7 +32,6 @@ target_repo := \
 	https://github.com/angular/angular.js \
 	https://github.com/jquery/jquery \
 	https://github.com/meteor/meteor \
-	https://github.com/torvalds/linux \
 	https://github.com/atom/atom \
 	https://github.com/adobe/brackets \
 	https://github.com/jekyll/jekyll \
