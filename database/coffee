@@ -1523,7 +1523,6 @@ Only send to the first non-spec window created
 Only to be used in specs
 Only to be used when deserializing
 Only waypoints within the "selector" context on the "axis" axis are tested.
-Open Atom's license in the active pane.
 Opening another directory creates a second window.
 Opening another directory resuses the same window and add the folder to project paths.
 Opening another file reuses the same window and add parent dir to project paths.

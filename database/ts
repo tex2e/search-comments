@@ -37,7 +37,6 @@
 (Backward skipping is not supported.)
 (Pattern: fogbar, Candidate: quuxfogbarFogBar).
 (TS Exceptions: namespaces, function overloads, enums, and interfaces)
-(c) Copyright - Important
 (function/method) symbol(..signature)
 (i.e. they're both BinaryExpressions with an assignment operator in it).
 + 3 for leading /**, - 5 in total for /**
@@ -1013,7 +1012,6 @@ Alias only for module A
 Aliases can be written asynchronously so use correct enclosing declaration
 All JavaScript numbers are 64-bit floating-point numbers.
 All classes are automatically in strict mode in ES6.
-All comments look like they could have been part of the copyright header.
 All conflict markers consist of the same character repeated seven times.
 All constituents can be called by passing a single string.
 All container nodes are kept on a linked list in declaration order.
@@ -1562,8 +1560,6 @@ Converts all the alphabetic characters in a string to lowercase.
 Converts all the alphabetic characters in a string to uppercase.
 Copied from the compiler sources
 Copies vararg arrays correctly
-Copyright (c) 2012 Ecma International.
-Copyright (c) Microsoft Corporation.
 Correct: return Bar.a
 Could be the try-block, or the finally-block.
 Could not find a symbol e.g. unknown identifier
@@ -4056,7 +4052,6 @@ Same class, everything is visible
 Sampling of stuff from AisIn1_1_1
 Scanner that is currently used for formatting
 Second, check if we have already started a comparison of the given two types in which case we assume the result to be true.
-See LICENSE.txt in the project root for complete license information.
 See examples in tests/cases/conformance/jsx/tsxReactEmitWhitespace.tsx
 See https://github.com/nodejs/node/issues/4002
 See if it is a property assignment, and if so use the property name
@@ -4890,7 +4885,6 @@ This case is covered by bug 3028.
 This check is done before an open brace in a control construct, a function, or a typescript block declaration
 This check is mainly used inside SpaceBeforeOpenBraceInControl and SpaceBeforeOpenBraceInFunction.
 This check is to ensure we don't report error on constructor parameter property as that error would be reported during parameter emit
-This code is governed by the BSD license found in the LICENSE file.
 This command can be any of the command identifiers that can be executed in script.
 This comment should appear for foo
 This comment should appear for nonExportedFoo
@@ -5010,7 +5004,6 @@ This shouldnt be error as its a static property
 This shouldnt be of type number and result in error.
 This shoulnot be help comment
 This signature will contribute to contextual union signature
-This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
 This speed is expressed as a multiple of the normal speed of the media resource.
 This trailing Comment1
 This type of declaration is permitted only in the global module.

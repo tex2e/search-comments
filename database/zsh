@@ -31,7 +31,6 @@
 * Human-readably notifying the user of these insecurities.
 * Moving away all existing completion caches to a temporary directory.
 * Neither the name of the FIZSH nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 * git-extras (http://github.com/tj/git-extras) * git-flow-completion (http://github.com/bobthecow/git-flow-completion)
 - Cache expiration days (default: 7): zstyle ':completion::complete:grunt::options:' expire 1
 - Configuration changes made at runtime are applied to all frames.
@@ -126,10 +125,6 @@ Completion widget: override and rebind old one with prefix "orig-".
 Configuration file info
 Configuration variables
 Copy the files over, using the OMZ plugin's names where needed
-Copyright (c) 2009 Peter Stephenson Copyright (c) 2011 Guido van Steen Copyright (c) 2011 Suraj N.
-Copyright (c) 2010-2011 zsh-syntax-highlighting contributors All rights reserved.
-Copyright (c) 2012 Jim Hester
-Copyright (c) 2013 Yonchu.
 Core command definitions
 Create a basic .deb package
 Create, migrate and prepare database
@@ -275,7 +270,6 @@ Keeps track of the last used working directory and automatically jumps into it f
 Kernel-package building shortcut
 Key binding and terminal info
 Kills any process that matches a regexp passed to it
-Kurapati Copyright (c) 2011 Sorin Ionescu Copyright (c) 2011 Vincent Guerci All rights reserved.
 Last element in dirhistory_past is the cwd.
 Lets you work with pipes or files.
 List directory contents
@@ -652,7 +646,6 @@ paths are for osx installation via macports
 pick the first entry from LANG
 print all installed packages
 print help for the search command
-prints a report about licenses and EULAs of installed packages
 read history in new file
 rebuilds the dnf package list
 rebuilds the yum package list

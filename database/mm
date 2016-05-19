@@ -90,8 +90,6 @@ Copy into the provided buffer.
 Copy the enum payload into a box
 Copying the ivar list just to free it is lame, but we have no room to save it.
 Copying the ivar list just to free it is lame, but we have nowhere to save it.
-Copyright (c) 2012 The Chromium Authors.
-Copyright (c) 2015-present, Facebook, Inc.
 Create a Swift String from two concatenated nul-terminated strings.
 Create a new temporary array of the available voices with the default voice first.
 Create an accelerator corresponding to the keyCode.
@@ -338,7 +336,6 @@ Returning event causes the event to propagate to other applications.
 Returns nullptr if the input String is not a / Swift mangled name.
 Run modal dialog with parent window and return user's choice.
 See Leaks.h for a description of this leaks detector.
-See http://swift.org/LICENSE.txt for license information See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
 Send a `nil` after everything...
 Send it to the caller.
 Send the actual event.
@@ -440,7 +437,6 @@ This implements the object representation of the standard ErrorProtocol type, wh
 This is less than ideal, and should eventually be removed.
 This method is directly called by NSWindow during a window resize on OSX 10.10.0, beta 2.
 This method is supposed to put focus on window, however if the app does not have focus then "makeKeyAndOrderFront" will only show the window.
-This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
 This source file is part of the Swift.org open source project
 This structure needs to mirror _MagicMirrorData in the stdlib.
 This would normally use base::mac::FrameworkBundle(), but that references the framework bundle within the versioned directory.
@@ -457,8 +453,6 @@ Update the label and the icon.
 Use AnyReturn to guarantee that even on architectures  where Any would be returned in registers.
 Use OuterAppBundle() to get the main app's bundle.
 Use an NSEvent monitor to listen for the wheel event.
-Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
-Use of this source code is governed by the MIT license that can be found in the LICENSE file.
 Use runModal for synchronous alert without parent, since we don't have a window to wait for.
 Use the _Reflectable conformance if the object has one.
 Used when we have class metadata and we want to ensure a class has been initialized by the Objective-C runtime.
@@ -490,18 +484,14 @@ Workaround buggy behavior of TransformProcessType.
 Wrap a string literal in a swift String.
 XCTestCase needs the unmangled version of a test case name, so let -className return the demangled name for a test case class.
 XXX FIXME When we have layout information, do precise alignment rounding For now, assume someone is using hardware vector types
-and the Swift project authors Licensed under Apache License v2.0 with Runtime Library Exception
 check occlusion binary flag
 check whether crashpad has been initilized.
 copy thread name to pthread name
 eventually deprecate separate "standardWindow" option in favor of standard / textured window types
-flash/sram/periph cached
-flash/sram/periph uncached
 get the BatchedBridge object
 http://lists.apple.com/archives/cocoa-dev/2007/Aug/msg00499.html
 http://stackoverflow.com/questions/7596643/
 just initialized to nil and by guaranteeing a bit pattern that distinguishes Swift references.
-kernel linear segment
 length may not be zero
 make_swift_object is defined in TestHelpers.swift as part of StdlibUnittest.
 namespace This view always takes the size of its superview.
@@ -513,11 +503,9 @@ namespace platform_util
 notification.object is the window that changed its state.
 once a module has been loaded free its space from the heap, remove it from the index and release the module name
 path identifies the helper .app's Contents directory in the browser .app's versioned directory.
-physical RAM cached area
 protocol _ObjectiveCBridgeableErrorProtocol
 skip table length base offset to add to every module's offset to skip the header of the RAM bundle
 the space allocated for each module's metada gets freed when the module is injected into JSC on `nativeRequire`
-uncached on-chip registers
 version for SwiftShims
 was released), ignore this event.
 we do not support "placement new" or zones, so there is no need to call allocWithZone

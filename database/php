@@ -701,7 +701,6 @@
 * Include Point.inc to get at the Point class type
 * My Doc Comment for B::privf
 * Numeric strings with all kinds of operands, swapping them over to make LHS/RHS order is irrelevent.
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 * See arrays.php for array creation and initialization This set of tests deals only with array-element access
 * Two non-numeric strings
 * a simple example of passing by reference
@@ -5973,7 +5972,6 @@ But if it doesn't exist, it'll fall back to the latest core default theme that d
 But if you call `setResuable(false)`, then the current connection will not be reusable by the connection pool.
 But just keep executing anyway and use the previous value...
 But neither must be in the first X characters.
-But please keep this copyright notice.
 But reads should always fail
 But the MySQL 5.1 manual states: Truncation operations do not return the number of deleted rows.
 But the above assignment causes a new expression id to be made
@@ -7444,23 +7442,6 @@ Copy new versions of WP files into place.
 Copy tags to root key 'tags_html' properly translated from various encodings to HTML entities public: Optional tag/comment calucations
 Copy the elements of an iterator into an array.
 Copy update-core.php from the new version into place.
-Copyright (c) 2004-2009, Ryan Parman, Geoffrey Sneddon, Ryan McCue, and contributors All rights reserved.
-Copyright (c) 2004-2012, Ryan Parman, Geoffrey Sneddon, Ryan McCue, and contributors All rights reserved.
-Copyright (c) 2014, Facebook, Inc.
-Copyright (c) 2015 Thomas Punt https://github.com/tpunt/PHP7-Reference/blob/master/LICENSE.md https://github.com/tpunt/PHP7-Reference#preg_replace_callback_array-function
-Copyright (c) 2015, Facebook, Inc.
-Copyright (c) 2016, Facebook, Inc.
-Copyright 1996 John Maloney and Mario Wolczko.
-Copyright 2004 Geoffrey T.
-Copyright 2004-2010 The Horde Project (http://www.horde.org/)  See the enclosed file COPYING for license information (LGPL).
-Copyright 2004-present Facebook.
-Copyright 2006-2008 the V8 project authors.
-Copyright 2007-2010 The Horde Project (http://www.horde.org/)  See the enclosed file COPYING for license information (LGPL).
-Copyright 2008 the V8 project authors.
-Copyright 2009 the V8 project authors.
-Copyright 2013 the V8 project authors.
-Copyright 2014 the V8 project authors.
-Copyright 2015-present Facebook.
 Core Customizer class for implementing selective refresh partials.
 Core Customizer class for implementing selective refresh.
 Core HTTP Request API  Standardizes the HTTP requests for WordPress.
@@ -13357,7 +13338,6 @@ IS_CONST + conversion
 IS_TMP_VAR + conversion
 IV MUST exist in CFB, CBC, STREAM, nOFB and OFB modes.
 IV is ignored in ECB.
-IXR - The Incutio XML-RPC Library  Copyright (c) 2010, Incutio Ltd.
 Ideally we would be able to detect the impossibility of this comparison succeeding.
 Ideally, call this function immediately after the body tag is opened.
 Identical to fgets(), except that fgetss() attempts to strip any NUL bytes, HTML and PHP tags from the text it reads.
@@ -14811,7 +14791,6 @@ If you create a PDOStatement object through PDO::prepare() or PDO::query() and i
 If you create a PDOStatement object through PDO::prepare() or PDO::query() and invoke an error on the statement handle, PDO::errorInfo() will not reflect the error from the statement handle.
 If you create the file, it will return TRUE even if you then delete the file.
 If you created the image from a file, only colors used in the image are resolved.
-If you did not receive this file, see http://opensource.org/licenses/lgpl-license.php.
 If you do not call this, you'll get "not master" errors when you try to query.
 If you do not fetch all of the data in a result set before issuing your next call to PDO::query(), your call may fail.
 If you do not want the function to append elements, call unset() on the array before passing it to exec().
@@ -15958,7 +15937,6 @@ Lets try again, setting the filename rather than format This should cause PNG im
 Levels of folders to follow, Default 100 (PHP Loop limit).
 Leveraging this improperly in a plugin or theme could result in an endless loop of password resets if precautions are not taken to ensure it does not execute on every page load.
 Libxml 2.6.24 and up adds a new line after a processing instruction (PI)
-Licensed under the GNU GPL.
 Like all objects in PHP, Maps have reference-like semantics.
 Like all objects in PHP, Sets have reference-like semantics.
 Like all objects in PHP, Vectors have reference-like semantics.
@@ -20285,7 +20263,6 @@ Retrieves specified options for a route.
 Retrieves tag list of current post, separated by commas.
 Retrieves taxonomies attached to given the attachment.
 Retrieves the CURIEs (compact URIs) used for relations.
-Retrieves the EXIF metadata aperture, credit, camera, caption, copyright, iso created_timestamp, focal_length, shutter_speed, and title.
 Retrieves the HTML link of the url of the author of the current comment.
 Retrieves the HTTP method for the request.
 Retrieves the HTTP return code for the response.
@@ -21653,8 +21630,6 @@ See test/typecheck/array_heterogeneous.php
 See the "See also" section for available methods.
 See the ArrayObject::setFlags method for a list of the available flags.
 See the FilesystemIterator constants.
-See the GNU General Public License for more details.
-See the GNU Lesser General Public License for more details.
 See the Supported Protocols and Wrappers for links to information about what abilities the various wrappers have, notes on their usage, and information on any predefined variables they may provide.
 See the description of these modes in htmlspecialchars().
 See the example at the mysql_fetch_array() description about aliases.
@@ -24404,7 +24379,6 @@ The ID of the original object being trashed.
 The ID of the queried object.
 The ID of the site's parent network.
 The IMAP specification requires that these messages be passed to the user.
-The IPTC metadata that is retrieved is APP13, credit, byline, created date and time, caption, copyright, and title.
 The Imagick filter to use when resizing.
 The Jewish calendar has been in use for several thousand years, but in the early days there was no formula to determine the start of a month.
 The Levenshtein distance is defined as the minimal number of characters you have to replace, insert or delete to transform str1 into str2.
@@ -27382,8 +27356,6 @@ This signature is a hash calculated on the entire phar's contents, and may be us
 This skin is designed to be extended for specific purposes.
 This sort of check is especially important if there is any chance that anything done with uploaded files could reveal their contents to the user, or even to other users on the same system.
 This soundex function returns a string 4 characters long, starting with a letter.
-This source code is licensed under the BSD-style license found in the LICENSE file in the "hack" directory of this source tree.
-This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
 This special type of socket can be used to manually construct any type of protocol.
 This specifier forces positive numbers to have the + sign attached as well, and was added in PHP 4.3.0.
 This statement will not parse in Hack, but we should not raise an error in decl mode.
@@ -32437,7 +32409,6 @@ link() creates a hard link.
 linkname used to create soft/hard link
 linknames resulting in valid paths
 linknames with invalid linkpath
-links copyright notice
 list assignment generates a new expression id
 list build-in extensions
 list of arrays with key and values
@@ -33564,7 +33535,6 @@ remove all permissions from dir
 remove comments (but preserve the number of lines)
 remove empty root keys
 remove execute permission from 2nd parent and test scandir()
-remove existing license
 remove files while going through directory
 remove first element from array
 remove it from this instance
@@ -34062,7 +34032,6 @@ stream_wrapper_register() will return FALSE if the protocol already has a handle
 strict Bad because duplicate variables on LHS
 strict Because of the ordering here, things will fail to load if we don't properly mark A and C as not being hoistable
 strict Case not exhaustive, but we're casing on a newtype, so it is fine.
-strict Copyright 2004-present Facebook.
 strict Correct usage of Shapes::keyExists
 strict Hacky replacement XHP base class for testing.
 strict If a class is declared abstract final then it cannot contain any abstract type constants
@@ -34505,7 +34474,6 @@ this is NOT "fiel" (Field Ordering) as describe here: http://developer.apple.com
 this is a C++-style comment, ...
 this is a C-style comment ...
 this is a token passed to all iterators so it can be invalidated.
-this is an Apache Licensed font, see separate LICENSE file
 this is an ISO-8859-1 umlaut
 this is different from new DateTimeZone('CET'), which gives a Europe/Berlin timezone
 this is fine this is fine since it is a subdir of an allowed dir

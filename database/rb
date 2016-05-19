@@ -58,7 +58,6 @@
 # :category: Extensions
 # :category: Gem Dependencies DSL
 # :category: Recommended gemspec attributes
-# :category: Recommended gemspec attributes The license(s) for the library.
 # :category: Utility Methods  CGI escapes +text+
 # :markup: RDoc  This is a comment in RDoc markup format ...
 # :method: :call-seq: yields(name)
@@ -730,7 +729,6 @@
 # Converts a target url to one that is relative to a given path
 # Converts added specials.
 # Converts all newlines into hard breaks
-# Converts ampersand, dashes, ellipsis, quotes, copyright and registered trademark symbols in +text+ to properly encoded characters.
 # Converts flow items +flow+
 # Converts special sequences to RDoc attributes
 # Converts the CROSSREF +special+ to plain text, removing the suppression marker, if any
@@ -1977,7 +1975,6 @@
 # Picks which sets to use for the configured sources.
 # Pins the gem +name+ to the given +source+.
 # Platform of the gem
-# Plural accessor for setting licenses
 # Policy used to verify a certificate and key when signing a gem
 # Pops the list type for +list+ from #list_type
 # Populate the first pane
@@ -2695,7 +2692,6 @@
 # Simple wrapper for providing basic authentication for a request.
 # Singleton for table-of-contents generation
 # Singular accessor for #executables
-# Singular accessor for #licenses
 # Singular accessor for #require_paths
 # Singular accessor for #test_files
 # Singular mutator for #test_files
@@ -4089,7 +4085,6 @@
 * Psych::Nodes::Sequence * Psych::Nodes::Mapping * Psych::Nodes::Scalar
 * Psych::Nodes::Sequence * Psych::Nodes::Mapping * Psych::Nodes::Scalar * Psych::Nodes::Alias
 * RUBY_ISEQ_LOADER_STORAGE_COMPILE_IF_NOT_COMPILED * true: store compiled file if compiled data is not available.
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 * Removes a "_id" suffix if present.
 * Removing directory tree includes world writable directory.
 * Replaces underscores with spaces, if any.
@@ -4669,7 +4664,6 @@
 -*- encoding: utf-8 -*- stub: stub 2 ruby lib
 -*- encoding: utf-8 -*- stub: stub_e 2 ruby lib stub: ext/stub_e/extconf.rb
 -*- frozen-string-literal: true -*-")
--*- ruby -*- -- Copyright 2006 by Chad Fowler, Rich Kilmer, Jim Weirich and others.
 -*- ruby -*- for backward compatibility
 --  Class for reading entries out of a tar file
 --  Copy the clicked icon data (command string of creating a TkPhotoImage instance) to the clipboard.
@@ -4680,8 +4674,6 @@
 -- Allows code reuse in the methods below without polluting Module.
 -- Also sets the gzip modification time to the package build time to ease testing.
 -- An instance of FixtureSet is normally stored in a single YAML file and possibly in a folder with the same name.
--- Copyright (c) 1999-2004 Yukihiro Matsumoto Copyright (c) 1999-2004 Minero Aoki
--- Copyright 2006 by Chad Fowler, Rich Kilmer, Jim Weirich and others.
 -- Defines the standard inflection rules.
 -- FIXME deprecate these once everything else has been done -ebh
 -- FIXME: fails if the birthday falls on February 29th ++ The DOB is returned as a Time object.
@@ -7207,19 +7199,6 @@ Authenticator for the "LOGIN" authentication type.
 Authenticator for the "PLAIN" authentication type.
 Author.first.books.transaction do same effect as calling Book.transaction end
 Author: IPR -- Internet Programming with Ruby -- writers
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2000 TAKAHASHI Masayoshi, GOTOU YUUZOU Copyright (c) 2002 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2000 TAKAHASHI Masayoshi, GOTOU YUUZOU Copyright (c) 2003 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2000 TAKAHASHI Masayoshi, GOTOU Yuuzou Copyright (c) 2002 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2000, 2001 TAKAHASHI Masayoshi, GOTOU Yuuzou Copyright (c) 2002 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2000, 2001 TAKAHASHI Masayoshi, GOTOU Yuuzou Copyright (c) 2003 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2001 GOTOU Yuuzou Copyright (c) 2002 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2001 TAKAHASHI Masayoshi, GOTOU Yuuzou Copyright (c) 2002 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2001 TAKAHASHI Masayoshi, GOTOU Yuuzou Copyright (c) 2003 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2002 GOTO Kentaro Copyright (c) 2002 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2002 GOTOU Yuuzou Copyright (c) 2002 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2002 Internet Programming with Ruby writers.
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2002 keita yamaguchi Copyright (c) 2002 Internet Programming with Ruby writers
-Author: IPR -- Internet Programming with Ruby -- writers Copyright (c) 2003 Internet Programming with Ruby writers.
 Author: Keiju ISHITSUKA (SHL Japan Inc.) -- class Numeric follows to make this documentation findable in a reasonable location
 Author: Yukihiro "Matz" Matsumoto
 Author:: Masatoshi SEKI
@@ -7312,7 +7291,6 @@ Base module for HTML-generation mixins.
 Based on Tcl/Tk8.5a2 widget demos.
 Based on the Collection to which it belongs.
 Based on the above example, the subscribers of this channel will get whatever data is put into the, let's say, `comments_for_45` broadcasting as soon as it's put there.
-Based on the widget demo of Tcl/Tk8.5.2 The following is the original copyright text.
 Based on this fact, this method only understands the time zone abbreviations described in RFC 822 and the system time zone, in the order named.
 Basic configuration proc
 Basic functionality (wait until specified threads have terminated) can be accessed through the class method ThreadsWait::all_waits.
@@ -8052,7 +8030,6 @@ Check path that exists in metadata
 Check procfs to see if NFSd is a supported filesystem
 Check response freshness (Last-Modified and ETag) against request If-Modified-Since and If-None-Match conditions.
 Check style in a single batch run up front for performance
-Check that a copyright notice was given in each source file.
 Check that a method is callable via dRuby.
 Check that all the found specs are just different versions of the same gem
 Check that ansible binaries are well installed on the guest,
@@ -8737,45 +8714,6 @@ Copy right hand side with pivoting
 Copy the SSH key from the clone machine if we can
 Copy the instance variables from the current session instance into the test instance.
 Copy validators on inheritance.
-Copyright (C) 2000  Information-technology Promotion Agency, Japan
-Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
-Copyright (C) 2001  Yukihiro "Matz" Matsumoto Copyright (C) 2000  Network Applied Communication Laboratory, Inc.
-Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER This file is distributed under the same license as the PACKAGE package.
-Copyright (c) 1999-2003 Masatoshi SEKI.
-Copyright (c) 1999-2006 Minero Aoki
-Copyright (c) 1999-2007 Minero Aoki.
-Copyright (c) 1999-2007 Yukihiro Matsumoto Copyright (c) 1999-2007 Minero Aoki Copyright (c) 2001 GOTOU Yuuzou
-Copyright (c) 1999-2007 Yukihiro Matsumoto.
-Copyright (c) 2000 TAKAHASHI Masayoshi, GOTOU YUUZOU Copyright (c) 2002 Internet Programming with Ruby writers.
-Copyright (c) 2000-2007 Minero Aoki
-Copyright (c) 2001 University of Illinois Board of Trustees Copyright (c) 2001 Mark D.
-Copyright (c) 2003 GOTOU Yuuzou All rights reserved.
-Copyright (c) 2003 H.M.
-Copyright (c) 2003-2005 Minero Aoki
-Copyright (c) 2004,2005 Minero Aoki
-Copyright (c) 2004-2016 David Heinemeier Hansson
-Copyright (c) 2005-2016 David Heinemeier Hansson
-Copyright (c) 2006-2007 Justin Bailey
-Copyright (c) 2007, 2008, Michael Granger.
-Copyright (c) 2009 Vladimir Kolesnikov
-Copyright (c) 2010-2015 James Coglan
-Copyright (c) 2012 - present Adobe Systems Incorporated.
-Copyright (c) 2012-2014 Arnau Siches
-Copyright (c) 2014-2016 David Heinemeier Hansson
-Copyright (c) 2015 Acme Inc.
-Copyright (c) 2015 VMware, Inc.
-Copyright (c) 2015-2016 Basecamp, LLC
-Copyright 2005 James Edward Gray II.
-Copyright 2008 James Edward Gray II.
-Copyright 2011, 2012 Keith Rarick
-Copyright 2015 Acme Inc.
-Copyright notice with automatic deactivation.
-Copyright: 2015 Jekyll - MIT License Encoding: utf-8
-Copyright:: (C) 2000  Information-technology Promotion Agency, Japan
-Copyright:: (C) 2000  Network Applied Communication Laboratory, Inc.
-Copyright:: (c) 2002-2003 David Alan Black License:: Distributed on the same licensing terms as Ruby itself
-Copyright:: Copyright (c) 2000-2002 Nathaniel Talbott.
-Copyright:: Copyright 2012 Google Inc.
 Core DOM node interface
 Core configuration keys provided by the kernel.
 Correct for windows paths
@@ -9946,7 +9884,6 @@ Each item in the outside array corresponds to a reflection in the #chain.
 Each item is a file field or a normal field.
 Each key is a data item name, and each value is its value.
 Each key is one of "MESSAGES", "RECENT", "UIDNEXT", "UIDVALIDITY", "UNSEEN".
-Each license must be a short name, no more than 64 characters.
 Each line in the backtrace will be mapped against this filter.
 Each line of the summary is yielded to the block (without newline).
 Each line of this file is expected to be a file name.
@@ -10786,7 +10723,6 @@ For connection-oriented socket such as TCP, sender_addrinfo is platform dependen
 For convenience reasons, mailers provide a shortcut for ActionController::UrlFor#url_for.
 For convenience, an instance predicate method is defined as well.
 For convenience, each instance method of +Prime+.instance can be accessed as a class method of +Prime+.
-For details of Ruby License, see ruby/COPYING.
 For details of response classes, see the section "HTTP Response Classes" below.
 For details of this security vulnerability, see Perl's case:
 For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -11386,7 +11322,6 @@ Gets/Sets the Hash that holds the metadata for this layout.
 Gets/Sets the content of this layout.
 Gets/Sets the extension of this layout.
 Gettext gem is implemented by pure Ruby.
-GitHub also provides a license picker at http://choosealicense.com/.
 GitHub provides commits/pull-requests raw patches using this URL.
 Give it a big border to debug drawing
 Give up: we couldn't compute the klass type so we won't be able to find any associations either.
@@ -11877,7 +11812,6 @@ IXMLHttpRequest Interface
 Ideally the function should return, but those tests take noticeable time (performance).
 Ideally the hook adder could decide whether to be in the background or not, and what to call it.
 Ideally this would, if only for symmetry's sake with other association types
-Ideally you should pick one that is OSI (Open Source Initiative) http://opensource.org/licenses/alphabetical approved.
 Ideally, we calculate this relative to the project root.
 Identical to CSV#convert(), but for header rows.
 Identifies whether the class name of a record or class is uncountable.
@@ -12956,7 +12890,6 @@ If the user didn't specify an encoding, and the handler handles encodings, we si
 If the user has asked for the gem to be installed in a directory that is the system gem directory, then use the system bin directory, else create (or use) a new bin dir under the gem_home.
 If the user has explicitly decided to NOT raise errors, pass that option to I18n.
 If the user has run `vagrant login`, this will use that token.
-If the user installs Xcode-only, they have to approve the license or no "xc*" tool will work.
 If the user is given a way to change their locale, they will also be able to change the relative value of the currency displayed with this helper.
 If the user is using TextMate or Sublime Text, give a nice project view instead.
 If the user passes any flags that trigger building over installing from a bottle, they are collected here and returned as an Array for checking.
@@ -14360,7 +14293,6 @@ It is used for keeping separate connection pools for Active Record models that c
 It is used for reply.
 It is used to determine the name of the unmarshalled object.
 It is used to initialize some common internal state that is used in a provider.
-It is used under the MIT license:
 It is written in Ruby itself, and generates Ruby programs.
 It is written in pure Ruby and uses its own protocol.
 It is your responsibility to ensure that the string contains no malicious content.
@@ -14756,10 +14688,6 @@ Let's work through a project lifecycle using our Stack example from above.
 Lets create a model so we have something to play with
 Lets you selectively disable calls to `touch` for the duration of a block.
 Level one headings have one equals sign, level two headings have two, and so on until level six, which is the maximum (seven hyphens or more result in a level six heading).
-License is License is Apache-2
-License:: All Rights Reserved.
-License:: Ruby license.
-License:: You can redistribute it and/or modify it under the same term as Ruby.
 Like #create, except that if the record is invalid, raises an exception.
 Like #distinct, but modifies relation in place.
 Like #find_by, except that if no record is found, raises an ActiveRecord::RecordNotFound error.
@@ -16319,7 +16247,6 @@ Ordinal returns the suffix used to denote the position in an ordered sequence su
 Ordinalize turns a number into an ordinal string used to denote the position in an ordered sequence such as 1st, 2nd, 3rd, 4th.
 Ordinarily you want to use the default fetcher from Gem::SpecFetcher::fetcher which uses the Gem.sources.
 Original program (C) Syoyo Fujita in Javascript (and other languages) https://code.google.com/p/aobench/ Ruby(yarv2llvm) version by Hideki Miura
-Original version: Copyright (C) 1998 maeda shugo.
 Originally this expression was:
 Orphan in Foo::ClassMethods, not Bar::ClassMethods.
 Os is the default Apple uses for all its stuff so let's trust them
@@ -16788,7 +16715,6 @@ Please note that with touching no validation is performed and only the +after_to
 Please note the fourth argument does not set a column's default.
 Please only run this test on machines reasonable for testing.
 Please pretend this doesn't exist.
-Please read 'license_terms_of_Img_extension' file.
 Please read the documentation of that class for more information.
 Please refer to #unlink for more information and a code example.
 Please refer to the documentation of the base helper for details.
@@ -17491,7 +17417,6 @@ Redirects the browser to the page that issued the request (the referrer) if poss
 Redirects the browser to the target specified in +options+.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1.
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 Refer to Socket#accept for the exceptions that may be thrown if the call to TCPServer#accept_nonblock fails.
 Refer to Socket#accept for the exceptions that may be thrown if the call to UNIXServer#accept_nonblock fails.
 Refer to Socket#accept for the exceptions that may be thrown if the call to _accept_nonblock_ fails.
@@ -17566,7 +17491,6 @@ Release it so we can modify it
 Release it so we can test the contents
 Release old working directory.',
 Release the unload lock if it has been previously obtained
-Released under the same term of license as Ruby.
 Releases a local lock on a machine.
 Releases an entry, unlocking it.
 Relies on Active Support, so we have to lazy load to postpone definition until AS has been loaded
@@ -19501,7 +19425,6 @@ Root of the HTTP redirect statuses
 Root of the HTTP server error statuses
 Root of the HTTP success statuses
 Rose, "The Content-MD5 Header Field", RFC 1864, October 1995.
-Roth Copyright (c) 2002, 2003 Akinori MUSHA All rights reserved.
 Roughly simulate the embedded Bundler availability
 Round trip a job in memory only
 Roundtrip to Rake to allow plugins to hook into database initialization.
@@ -19896,7 +19819,6 @@ See IRB::WorkSpace.new for more information.
 See Irb#suspend_input_method for more information.
 See Jekyll::Configuration::DEFAULTS for a list of option names and their defaults.
 See Kernel#sprintf for format string details.
-See LICENSE.txt for permissions.
 See Lighthouse ticket #1966
 See Logger for more documentation.
 See MiniTest::Assertions
@@ -20772,7 +20694,6 @@ Simple sequence with nested map
 Simple to remember: The "2" in "call2" denotes the number of values it returns.
 Simple, efficient background processing for Ruby.
 SimpleDelegator's implementation serves as a nice example of the use of Delegator:
-SimpleTupleSpace Copyright (c) 1999-2000 Masatoshi SEKI You can redistribute it and/or modify it under the same terms as Ruby.
 Simpler formula that *just work* 8.
 Simulate `db:migrate`
 Simulate `db:rollback` + edit of the migration file + `db:migrate`
@@ -20998,7 +20919,6 @@ Socket.getaddrinfo(left, nil, Socket::AF_INET6, Socket::SOCK_STREAM, nil, Socket
 Socket.tcp_server_loop succeeds if one socket can be used at least.
 Socket.udp_server_loop can be implemented using this method as follows.
 SocketError:: Hostname not known or other socket error.
-Software Package Data Exchange (SPDX) standard open-source software license identifiers
 Software is unlikely to link against libraries from build-time deps, so it doesn't matter if they link against different C++ stdlibs.
 Software that will not be sym-linked into the `brew --prefix` will only live in its Cellar.
 Solaris returns IPv4 address for ::ffff:1.2.3.4.
@@ -21718,7 +21638,6 @@ Tests whether the given URL points to a metadata file or a box file without comp
 Tests whether the given capability is possible.
 Tests, setup, and teardown common to the application and plugin generator suites.
 Text Search widget demo (called by 'widget')
-TextConstruct that contains copyright information regarding the content in an Entry or Feed
 TextConstruct that conveys a description or subtitle for a Feed
 TextConstruct that conveys a description or title for a feed or Entry
 Textual time zones listed in ZoneOffset are also supported.
@@ -21920,7 +21839,6 @@ The Async adapter runs jobs with an in-process thread pool.
 The Atlas token to use.
 The Atom format is described in http://tools.ietf.org/html/rfc4287
 The Atom module provides support in reading and creating feeds.
-The Atom spec copyright date
 The Atom spec defines five elements (content rights title subtitle summary) which may directly contain xhtml content if type: 'xhtml' is specified as an attribute.
 The Base64 module provides for the encoding (#encode64, #strict_encode64, urlsafe_encode64) and decoding (#decode64, #strict_decode64, urlsafe_decode64) of binary data using a Base64 representation.
 The Benchmark module provides methods for benchmarking Ruby code, giving detailed reports on the time taken for each task.
@@ -22121,7 +22039,6 @@ The above code creates a new method +div_radio_button+ which wraps a div around 
 The above code will load all the comments and all of their associated authors and gravatars.
 The above command returns: - '4' if /usr/sbin/biosdevname detects it is running in a virtual machine - '127' if /usr/sbin/biosdevname doesn't exist
 The above content may be added in the future.
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 The above declaration creates two gems, a-1 and b-1, with a dependency from b to a.
 The above example will now change /posts/new to /posts/brand_new
 The above example's HTML is:
@@ -22526,7 +22443,6 @@ The default port for LDAPS URIs is 636, and the scheme is 'ldaps:' rather than '
 The default port for POP3 connections, port 110
 The default port for POP3S connections, port 995
 The default queue adapter is the +:async+ queue.
-The default regexp for an acceptable copyright notice can be found in config/default.yml.
 The default returns "Infinity" or "NaN" which are not valid JSON.
 The default safe level is 0
 The default safe_level is 0
@@ -22823,8 +22739,6 @@ The full path to the directory containing the collection.
 The full path to the output file.
 The full request object is available via the request accessor and is primarily used to query for HTTP headers:
 The full set of Requirements for this formula's dependency tree.
-The full text of the license should be inside of the gem (at the top level) when you build it.
-The full text of the license should be inside of the gem when you build it.
 The functions in this module accept integers, floating-point numbers or complex numbers as arguments.
 The gateway needs to install this id conversion and create servers for each of the protocols or networks it will be a gateway between.
 The gem created here has no files, just a gem specification for the given +name+ and +version+.
@@ -22850,7 +22764,6 @@ The global default options for the JSON.dump method: :max_nesting: false :allow_
 The global default options for the JSON.load method: :max_nesting: false :allow_nan:   true :quirks_mode: true
 The goal is for this to work in almost every case, but perhaps with some warnings.
 The goal of this class is to be able to insert and remove these blocks without modifying anything else in the string.
-The grammar that produces RDoc::RD::BlockParser and RDoc::RD::InlineParser is included in RDoc under the Ruby License.
 The graph is represented by _each_node_ and _each_child_.
 The graph is represented by _node_ and _each_child_.
 The guest can then be extended with various "guest capabilities" which are their own form of plugin.
@@ -22988,8 +22901,6 @@ The length of the resulting hexadecimal string is twice of _n_.
 The length written is reported as result and it should be checked later.
 The lexer is for internal use only.
 The lexer used by this irb session
-The license for this gem.
-The license must be no more than 64 characters.
 The lifetime of the key is from the current time to +age+ which defaults to one year.
 The limit for field size, if any.
 The limit of backtrace lines displayed as top +n+ and tail +n+.
@@ -23104,7 +23015,6 @@ The most common errors are:
 The most common usage pattern for this method is probably in a migration, when just after creating a table you want to populate it with some default values, eg:
 The most common way of defining these writers is either with +accepts_nested_attributes_for+ in a model definition or by defining a method with the proper name.
 The most common way to get a SourceList is Gem.sources.
-The most commonly used OSI approved licenses are MIT and Apache-2.0.
 The most versatile and common is the rendering of a template.
 The mysql2 and postgresql adapters support setting the transaction isolation level.
 The name "rmtree" is borrowed from File::Path of Perl.
@@ -23571,7 +23481,6 @@ The shell wrapper command used in shell_execute defined by the sudo and shell op
 The short description should be a single word description of the state of the machine such as "running" or "not created".
 The simplest way to do this is via cookies.
 The simplest way to send output to the HTTP client is using the #out() method.
-The simplest way, is to specify the standard SPDX ID https://spdx.org/licenses/ for the license.
 The single argument to scanf is a format string, which generally includes one or more conversion specifiers.
 The size of any such reaason is tested if it is not a multiple of five true is returned since the board is prunable.
 The size of the data structure, in bytes.
@@ -24843,7 +24752,6 @@ This feature can be turned off completely by setting:
 This feature is accomplished by instantiating the class and storing the instance as a thread local keyed by the class name.
 This feature is implemented by keeping a connection pool in ActiveRecord::Base that is a hash indexed by the class.
 This feature is provided by the unobtrusive JavaScript driver.
-This file allows for the running of rubygems with a nice command line look-and-feel: ruby -rubygems foo.rb -- Copyright 2006 by Chad Fowler, Rich Kilmer, Jim Weirich and others.
 This file can be distributed under the terms of the Ruby.
 This file contains configuration for an unknown cop.
 This file contains the implementation of trackbacks.
@@ -25577,7 +25485,6 @@ This lets you set some sort of instance-specific state on your configuration key
 This library does NOT provide functions to compose internet mails.
 This library extends the Time class with the following conversions between date strings and Time objects:
 This library is an interface to secure random number generators which are suitable for generating session keys in HTTP cookies, etc.
-This library is distributed under the terms of the Ruby license.
 This library provides functionality for retrieving email via POP3, the Post Office Protocol version 3.
 This library provides functionality to send internet mail via SMTP, the Simple Mail Transfer Protocol.
 This library provides the Set class, which deals with a collection of unordered values with no duplicates.
@@ -25957,13 +25864,11 @@ This middleware is meant to be used with Call and can check if a variable in env
 This middleware is responsible for logging exceptions and showing a debugging page in case the request is local.
 This middleware is used with Call to test if this machine supports SSH.
 This middleware is used with Call to test if we're using a host VM.
-This middleware licenses a plugin by copying the license file to the proper place.
 This middleware lists all the installed plugins.
 This middleware rescues any exception returned by the application and calls an exceptions app that will wrap it in a format for the end user.
 This middleware returns a file's contents from disk in the body response.
 This middleware runnable is run with the same environment as this class.
 This middleware sequence is built-in to Vagrant.
-This middleware sequence licenses paid addons.
 This middleware sequence will install a plugin.
 This middleware sequence will list all installed plugins.
 This middleware sequence will uninstall a plugin.
@@ -26277,7 +26182,6 @@ This should be used when creating for new formulae.
 This should be used when creating new formulae.
 This should execute a query that does not raise an error
 This should ideally be false in the production environment where dumping schema is rarely needed.
-This should just be the name of your license.
 This should never happen because configuration validation should catch this case.
 This should never happen because the autodetect above uses the hosts hash to look up hosts.
 This should never leave the database in an inconsistent state.
@@ -26950,7 +26854,6 @@ Try: gem help commands"
 Ttk 8.5 (Tile 0.8) lost 'LoadImages' utility procedure.
 Ttk package merged Tcl/Tk core (Tcl/Tk 8.5+)
 Tune the size yourself with config.action_cable.worker_pool_size.
-TupleSpace Copyright (c) 1999-2000 Masatoshi SEKI You can redistribute it and/or modify it under the same terms as Ruby.
 TupleSpace clients can register themselves with the remote TupleSpace and look up other provided services via the remote TupleSpace.
 Tuples may be matched against templates if the tuple and the template are the same size.
 Turn "some_long_filename.rb" to "...ong_filename.rb"
@@ -27601,7 +27504,6 @@ Verify the config result
 Verify the connection param has been applied.
 Verify the count is only one
 Verify the image exists if we have one
-Verify the license file exists
 Verify the name is not taken
 Verify the proper procs were captured
 Verify the recovery process goes in reverse order
@@ -28692,7 +28594,6 @@ You can define arguments for metaprogrammed methods via either the :call-seq:, :
 You can define your own output method to use with Irb.new, or Context.new
 You can disable forgery protection on controller by skipping the verification before_action:
 You can disable it by passing +nil+ as the +handler+ parameter.
-You can distribute and/or modify this program under the Ruby License.
 You can distribute/modify this program under the same terms of Ruby.
 You can distribute/modify this program under the same terms of ruby.
 You can do that by pressing +n+:
@@ -28767,17 +28668,13 @@ You can provide a configuration hash as second argument.
 You can provide an Array, which will be converted to a CSV::Row (inheriting the table's headers()), or a CSV::Row.
 You can provide arguments either by an Array or a Hash.
 You can provide documentation for methods that don't appear using the :method:, :singleton-method: and :attr: directives:
-You can re-distribute and/or modify this program under the same terms as Ruby itself, Ruby Distribute License or GNU General Public License.
-You can re-distribute and/or modify this program under the same terms as Ruby itself, Ruby Distribute License.
 You can re-distribute and/or modify this program under the same terms as Ruby itself.
-You can re-distribute and/or modify this program under the same terms of ruby itself --- Ruby Distribution License or GNU General Public License.
 You can read more about each approach by clicking the modules below.
 You can read more about setting up your DNS CNAME records from your ISP.
 You can redirect any path to another path using the redirect helper in your router:
 You can redistribute and/or modify it under the same terms as Ruby.
 You can redistribute it and/or modify it under the same term as Ruby.
 You can redistribute it and/or modify it under the same terms as Ruby.
-You can redistribute or modify this code under the terms of Ruby's license.
 You can reload routes if you feel you must:
 You can remove the padding by setting +padding+ as false.
 You can require that the attribute matches the regular expression:
@@ -28864,7 +28761,6 @@ You can use this method to install a CSV::Converters built-in, or provide a bloc
 You can use this method when you have an HTTP response that never changes, and the browser and proxies should cache it indefinitely.
 You can use this servlet in your own project by mounting it on a WEBrick server:
 You can use this shortcut in a controller, instead of the previous example:
-You can use, re-distribute or change these files under Ruby's License or GPL.
 You can view more information on CRAM-MD5 on Wikipedia: http://en.wikipedia.org/wiki/CRAM-MD5
 You cannot append to this accessor, you must assign to it.
 You cannot get valid value before opening SMTP session.
@@ -28906,7 +28802,6 @@ You may distribute the software in object code or binary form, provided that you
 You may either provide a +block+ which will be called with each row of the String in turn, or just use the returned Array of Arrays (when no +block+ is given).
 You may exit the transaction early with a call to either PStore#commit or PStore#abort.
 You may leave this unset if these are at the root of your project.
-You may make and give away verbatim copies of the source form of the software without restriction, provided that you duplicate all of the original copyright notices and associated disclaimers.
 You may modify and include the part of the software into any other software (possibly commercial).
 You may modify your copy of the software in any way, provided that you do at least ONE of the following:
 You may need to perform some syslog.conf setup first.
@@ -28920,7 +28815,6 @@ You may pass these same parameters directly to Net::HTTP.new.
 You may provide a second Encoding to have the data transcoded as it is read just as you can with a normal call to IO::open().
 You may provide a second Encoding to have the data transcoded as it is read.
 You may receive either your subscribed event or the 'close' event when iterating over notifications.
-You may redistribute and/or modify this library under the same license terms as Ruby.
 You may set any reading and/or writing preferences in the +options+ Hash.
 You may use a type not in this list as long as it is supported by your database (for example, "polygon" in MySQL), but this will not be database agnostic and should usually be avoided.
 You may use this to also restrict other parameters:
@@ -28970,7 +28864,6 @@ You should put the implementation of your command in rubygems/commands.
 You should read stdout and stderr simultaneously (using threads or IO.select).
 You should register your command against the Gem::CommandManager instance, like this:
 You should set Content-Type: header field for POST.
-You should specify a license for your gem so that people know how they are permitted to use it, and any restrictions you're placing on it.
 You should use +have_func+ rather than +try_func+.
 You should use +have_var+ rather than +try_var+.
 You should use ::register and ::cancel instead of creating the timeout handler directly.
@@ -29123,9 +29016,6 @@ account for multiline range literals
 account for our own connections
 account is dependent with nullify, therefore its firm_id should be nil
 account is dependent, therefore is destroyed when reference to owner is lost
-acl.rb is copyrighted free software by Masatoshi SEKI.
-acltest.rb - ACL unit test Copyright (c) 2000 Masatoshi SEKI
-acltest.rb is copyrighted free software by Masatoshi SEKI.
 acquired by another thread.
 action_methods are cached and there is sometimes a need to refresh them.
 action_methods are cached and there is sometimes need to refresh them.
@@ -29509,7 +29399,6 @@ based on Tk::Iwidgets::Entryfield
 based on Tk::Listbox ( and TkTextWin )
 based on Tk::Text widget
 based on tk/scrollable.rb
-based on tkmenubar.rb : Copyright (C) 1998 maeda shugo.
 basic demo  ---  called from demo.rb
 basic_word_break_characters completer_word_break_characters basic_quote_characters completer_quote_characters filename_quote_characters special_prefixes
 bcc:: Returns an array of Net::IMAP::Address that represents the bcc.
@@ -29994,7 +29883,6 @@ copy signerInfo and certificate from one to another
 copy the list to li2 (not by individual items)
 copy to dynamic variable
 copy_stream can sendfile() to sock.io unless we use SSL.
-copyright:: (c) registered trademark:: (r)
 core aliases + tap alias names + tap alias full name
 correct an off-by-one generated by split
 count always trigger the COUNT query.
@@ -30538,7 +30426,6 @@ encoding: UTF-8 frozen_string_literal: false tc_interface.rb
 encoding: UTF-8 frozen_string_literal: false tc_row.rb
 encoding: UTF-8 frozen_string_literal: false tc_table.rb
 encoding: UTF-8 frozen_string_literal: false ts_all.rb
-encoding: utf-8 Copyright (c) 2015 Acme Inc.
 encoding: utf-8 frozen_string_literal: false
 end class Foo extend Exception2MessageMapper include Error ...
 end class Foo include Error ...
@@ -30811,7 +30698,6 @@ frozen_string_literal: false This test is in a different file than TestUnicodeEs
 frozen_string_literal: false entry3.rb --
 frozen_string_literal: false image3.rb
 frozen_string_literal: true
-frozen_string_literal: true -- Copyright 2006 by Chad Fowler, Rich Kilmer, Jim Weirich and others.
 frozen_string_literal: true Disable colors in specs
 frozen_string_literal: true Force JRuby not to select the current working directory as a temporary directory on Travis CI.
 frozen_string_literal: true RuboCop can be run in contexts where unexpected other libraries are included, which may interfere with its normal behavior.
@@ -31346,7 +31232,6 @@ lib may have a large directory tree (see Erlang for instance), and clean_dir app
 lib("foreign.rb", "# Foreign code is fun")
 lib/language folders also get explicitly created
 library_db: database: library host: some.library.org
-libxml2's COPYING and Copyright are affected by this.
 like as 1.8, withdraw a root widget before calling Tk.mainloop
 limit argument syntax
 lines:: Returns the size of the body in text lines.
@@ -31797,7 +31682,6 @@ otherwise this exercise causes too much contention on the lock
 otherwise we are loading
 otherwise, generate TclTkCommand
 otherwise, we need to loop and pull some more data to complete the row
-otool may not work, for example if the Xcode license hasn't been accepted yet
 outline -     Color to use for the floor's outline.
 output buffer size in sending File or IO for HTTPProxyServer
 output keeps track of what will finally be written
@@ -33008,7 +32892,6 @@ test with limit assert_equal nil, Topic.limit(1).third # TODO: currently failing
 test writing fields in the correct order
 test/strscan/test_stringscanner.rb
 test/unit backwards compatibility methods
-test2 Copyright 2015 Acme Inc.
 test_check "Proc#binding"
 test_connect will be skipped
 test_handle_args_minus_1 handled by test_handle_method

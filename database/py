@@ -38,7 +38,6 @@
 ## Binary Predicates ##
 ## C++ access specifiers ###
 ## Coordinate sequence prototype factory classes.
-## End of Python Software Foundation Licensed code
 ## Error-checking routines specific to coordinate sequences.
 ## Exception Classes ###
 ## Expression Kinds An expression whose specific kind is not exposed via this interface.
@@ -52,7 +51,6 @@
 ## Structures and Utility Classes ###
 ## TODO: Eventually, these should all get moved to populate().
 ## TODO: __del__ can be problematic in python...
-## The following block of code is under the terms and conditions of the Python Software Foundation License
 ## Unary Predicates ##
 ## We need to be able to modify the inventory
 ### Base I/O Class ###
@@ -87,7 +85,6 @@
 ### ctypes factory classes ###
 ### ctypes prototypes ### Area, distance, and length prototypes.
 ### ctypes prototypes ### Deprecated creation routines from WKB, HEX, WKT
-#### BEGIN GPL LICENSE BLOCK #####
 #### Binary predicates.
 #### Boolean Properties ####
 #### Checking routines used during initialization ####
@@ -139,7 +136,6 @@
 ##### Backend-specific transaction management methods #####
 ##### Backend-specific wrappers for PEP-249 connection methods #####
 ##### Connection termination handling #####
-##### END GPL LICENSE BLOCK #####
 ##### Foreign key constraints checks handling #####
 ##### Generic savepoint management methods #####
 ##### Generic transaction management methods #####
@@ -292,28 +288,19 @@
 'True' or 'true' should be rendered without a value attribute
 '_meta.related_field' also contains M2M reverse fields, these will be filtered out
 'all' is special cased to mean all the root targets.
-'branch_types' provides descriptions for each type of branch.
-'call_paths' represents all the call stacks.
-'calls' is only created when the 'calls' option to this script is specified.
-'calls' represents function calls and is related to 'samples' by 'call_id' and 'return_id'.
-'calls_paths' is only created when the 'calls' option to this script is specified.
 'cmake -E copy src dst' will create the 'dst' directory if needed.
 'col' is of the form 'field' or 'field1__field2' or '-field1__field2__field', etc.
-'comm_threads' shows how 'comms' relates to 'threads'.
-'comms' contains a record for each 'comm' - the name given to the executable that is running.
 'contentv4' is used in the website, but it also returns the related videos, we don't need them
 'created', non-editable, is excluded by default
 'data_abstract' is a forward field, and therefore will be found
 'data_abstract' is a reverse field, and will raise an exception
 'django.contrib.admin'.
 'django.contrib.staticfiles.finders.DefaultStorageFinder',
-'dsos' contains a record for each executable file or library.
 'find' returns the top of these four bytes, so we'll need to munch them later to prevent them from polluting the payload.
 'id' in list_display_links
 'id' not in list_display_links
 'isolation_level' is a misleading API.
 'mac_framework_dirs', input already handles _dirs endings.
-'machines' can be used to distinguish virtual machines if virtualization is supported.
 'managed' is True by default.
 'obj' can be a class or a function.
 'parse_interface_line' and 'parse_inet*_line' leave two dicts in the ipv4/ipv6 lists which is ugly and hard to read.
@@ -322,14 +309,10 @@
 'pk' is included for backwards compatibility
 'pointsize': '10pt', Additional stuff for the LaTeX preamble.
 'recommended' feed has infinite 'load more' and each new portion spins the same videos in (sometimes) slightly different order, so we'll check for unicity and break when portion has no new videos
-'samples' is the main table.
-'selected_events' contains a record for each kind of event that has been sampled.
 'shutdown_message' is a stealth option.
 'skip': 'Extremely unreliable',
-'symbols' contains a record for each symbol.
 'table_name_filter' is a stealth option
 'target_build_files' keeps track of the keys corresponding to "target" files.
-'threads' contains a record for each thread.
 'truncatingBitPattern' initializer is defined if the conversion is truncating on any platform that Swift supports.
 'url' results don't have a title
 'video exists but is marked as "deleted" md5 is unstable
@@ -378,7 +361,6 @@
 * Neither the name of Google Inc.
 * Neither the name of the CherryPy Team nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 * Neither the name of ws4py nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 * attname:   The attribute to use on the model object.
 * column:    The database column for this field.
 * db_column: The db_column specified in the model (or None).
@@ -424,11 +406,6 @@
 -- Print body template for printing coverage report for each file.
 -- Print header size of separator is determined by 3 column sizes: file name, coverage percentage and lines.
 -- Second line of the file report (with coverage percentage)
--- device callbacks --
--- non-devicecallback actions -- if trace events are not available, these are better than nothing
--- phase changes -- suspend start
--- phase changes -- suspend_prepare start
--- preprocessing -- parse each dmesg line into the time and message
 -- the following methods are only used in Python 2.7 --
 -- the following methods do not depend on the internal structure --
 --- Define function prototypes for extra safety ---
@@ -438,8 +415,6 @@
 ---- HWaddr / MAC address filters ----
 ---- IP address and network filters ----
 ---- IP address and network query helpers ----
------------------ CLASSES -------------------- Class: SystemValues Description: A global, single-instance container used to store system values and test parameters
------------------ FUNCTIONS -------------------- Function: vprint Description: verbose print (prints only with -verbose option) Arguments: msg: the debug/log message to print
 --all-sub automatically sets --write-sub if --write-auto-sub is not given this was the old behaviour if only --all-sub was given.
 --allow_concurrent_memtable_write with --filter_deletes is not supported.
 --list is mutually exclusive with both --additional-sections and --category.
@@ -1628,8 +1603,6 @@ An error during rollback means that something went wrong with the connection.
 An error occurred while parsing POST data.
 An error should be raised when QuerySet.datetimes() is passed the wrong type of field.
 An error we somewhat expected
-An example of using the database is provided by the script call-graph-from-postgresql.py.
-An example of using this script with Intel PT:
 An exception here should be caught in the caller
 An explicit link to the parent (we can control the attribute name).
 An expression that calls a function.
@@ -1786,8 +1759,6 @@ Arbitrary limit for select_related to prevents infinite recursion.
 Argument is a YAML file (JSON is a subset of YAML)
 Arguments as Key-value
 Arguments to filters are 'safe' and manipulate their input unescaped.
-Arguments: data: an empty Data object (with dmesgtext) obtained from loadKernelLog Output: The filled Data object
-Arguments: testruns: the array of Data objects obtained from parseKernelLog
 Arithmetic connectors
 Arrange to strip off the quotes so that it shows up in the output as expected.
 Article objects have access to their related Publication objects.
@@ -1813,7 +1784,6 @@ As password is probably wrong, a database exception is expected
 As per discussion re: #13023 on django-dev, max_num should not prevent existing related objects/inlines from being displayed.
 As short names are  not necessarily unique only do this for short names that haven't already been output for another target.
 As the assertQuerysetEqual uses a set for comparison, check we've only got David listed once
-As the event number may be very big, so we can't use linear way to show the histogram in real number, but use a log2 algorithm.
 As the last resort, show the login form
 As we've passed through this model, but not explicitly included any fields, we have to make sure it's mentioned so that only the "must include" fields are pulled in.
 As with CharField, this will cause URL validation to be performed twice.
@@ -2006,16 +1976,13 @@ Bandwidth of live streams may differ over time thus making format_id unpredictab
 Base 36 functions: useful for generating compact URLs
 Base table must be present in the query - this is the same table on both sides.
 BaseForm itself has no way of designating self.fields.
-Based on a shell/awk script originally written by Harish Patil, which was converted to Perl by Matthew Chapman, which was converted to Python by David Mosberger.
 Based on code submitted to comp.lang.python by Andrew Dalke
 Based on http://code.activestate.com/recipes/576694/.
 Based on tests/reserved_names/models.py
 Based on the list of version at http://dev.mysql.com/doc/refman/4.1/en/news.html and http://dev.mysql.com/doc/refman/5.0/en/news.html .
-Basic Intel PEBS (Precise Event-based Sampling) event, whose raw buffer contains the context info when that event happened: the EFLAGS and linear IP info, as well as all the registers.
 Basic auth without host is not allowed.
 Basic functionality: Successfully hid the password
 Basic setup for proxy models.
-Basically, if this script runs successfully and displays expected results, Python scripting support should be ok.
 Batch file verification
 Be consistent with the main Nuclide logs.
 Be sure not to return anything and potentially call a destructor on nothing.
@@ -2200,7 +2167,6 @@ But you can get natural keys if you ask for them and they are available
 But, as the join is nullable first use by annotate will be LOUTER
 But, this relation isn't direct, the join is generated reverse along foreign key.
 By convention, it's called "all".
-By copying, installing or otherwise using Python, Licensee agrees to be bound by the terms and conditions of this License Agreement.
 By default OFTReals are mapped to `FloatField`, however, they may also be mapped to `DecimalField` if specified in the `decimal` keyword.
 By default foreign object doesn't relate to any remote field (for example custom multicolumn joins currently have no remote field).
 By default memcached allows objects up to 1MB.
@@ -2274,7 +2240,6 @@ Cache values can be set to expire
 Cache values for speed.
 Caches location cannot be modified through override_settings / modify_settings, hence settings are manipulated directly here and the setting_changed signal is triggered manually.
 Calculate a MD5 signature for the seed and name.
-Calculate a time interval(msec) from src(nsec) to dst(nsec)
 Calculate boundary values based on scale and size
 Calculate min and max values
 Calculate the length to truncate to (max length - end_text length)
@@ -2686,7 +2651,6 @@ Check the timestamp is within limit
 Check the title attribute is there for tool tips: ticket #20821
 Check the token before the matching opening parenthesis, and don't warn if it looks like a macro.
 Check the tooltip is still there after moving: ticket #20821
-Check the total record number in the table
 Check timestamp is not older than max_age
 Check to determine if PowerShell modules are supported, and apply some fixes (hacks) to module name + args.
 Check to make sure the exotic characters are preserved even through file save.
@@ -2758,13 +2722,6 @@ Class attributes for the new form class.
 Class mapping dictionary (using the OGRwkbGeometryType as the key)
 Class mapping dictionary for OFT Types and reverse mapping.
 Class names must be ASCII in Python 2.x, so we forcibly coerce it here to break early if there's a problem.
-Class: Data Description: The primary container for suspend/resume test data.
-Class: DeviceNode Description: A container used to create a device hierachy, with a single root node and a tree of child nodes.
-Class: FTraceCallGraph Description: A container for the ftrace callgraph of a single recursive function.
-Class: FTraceLine Description: A container for a single line of ftrace data.
-Class: TestRun Description: A container for a suspend/resume test run.
-Class: Timeline Description: A container for a suspend/resume html timeline.
-Class: TraceEvent Description: A container for trace event data found in the ftrace file
 Classes used to implement DB routing behavior.
 Clean up any autoincrement trigger
 Clean up bad processes and old files.
@@ -3080,41 +3037,6 @@ Copying a class doesn't force evaluation.
 Copying a class works and returns the correct objects.
 Copying a list doesn't force evaluation.
 Copying a list works and returns the correct objects.
-Copyright (c) 2002 Drew Perttula.
-Copyright (c) 2009 Google Inc.
-Copyright (c) 2009 Raymond Hettinger.
-Copyright (c) 2009 Simon Willison.
-Copyright (c) 2009 The Chromium Authors.
-Copyright (c) 2010 Rising Tide Systems Copyright (c) 2010 Linux-iSCSI.org
-Copyright (c) 2010-2015 Benjamin Peterson
-Copyright (c) 2011 Google Inc.
-Copyright (c) 2011 The Chromium Authors.
-Copyright (c) 2011 The LevelDB Authors.
-Copyright (c) 2011-present, Facebook, Inc.
-Copyright (c) 2012 Google Inc.
-Copyright (c) 2012 The Chromium Authors.
-Copyright (c) 2013 GitHub, Inc.
-Copyright (c) 2013 Google Inc.
-Copyright (c) 2013 The Chromium Authors.
-Copyright (c) 2014 Hewlett-Packard Development Company, L.P.
-Copyright (c) 2014, Facebook, Inc.
-Copyright (c) 2014, Intel Corporation.
-Copyright (c) 2015, Facebook, Inc.
-Copyright (c) 2015, Normation SAS
-Copyright (c) 2015-present, Facebook, Inc.
-Copyright (c) 2016 Linaro Ltd
-Copyright (c) 2016, Facebook, Inc.
-Copyright (c) Ansible Inc, 2015 All rights reserved.
-Copyright (c) Siemens AG, 2013
-Copyright (c) Thiebaud Weksteen, 2015
-Copyright (c), James Cammarata, 2016 Copyright (c), Toshio Kuratomi, 2016
-Copyright (c), James Laska All rights reserved.
-Copyright 2007 Google Inc.
-Copyright 2009 Simon Arlott
-Copyright 2013 Google Inc.
-Copyright 2015 IIX Inc.
-Copyright 2015-present, Facebook, Inc.
-Copyright 2016 Doalitic.
 Core methods: engines have to provide their own implementation (except for from_string which is optional).
 Core utility functions
 Corner case: Don't call parent implementation
@@ -3147,7 +3069,6 @@ Counting in the opposite direction works in conjunction with distinct()
 Country queries should still work.
 Course link equals to welcome/introduction video link of same course We will recognize it as course link
 Covers https://github.com/rg3/youtube-dl/pull/5983
-Cpu task migration overview toy
 Creat a callback object so we can capture the output
 Create Resolver object so that we can set NS if necessary
 Create a .swift file we can feed into swift-ide-test
@@ -3228,7 +3149,6 @@ Create an instance of the concrete class
 Create an intermediate file based on the path.
 Create an intermediate file to store preprocessed results.
 Create an object for sitemap content.
-Create and insert event object to a database so that user could do more analysis with simple database commands.
 Create another Article, and set it to appear in both Publications.
 Create another article and reporter
 Create another user, explicitly specifying the database
@@ -3273,7 +3193,6 @@ Create test raster and geom.
 Create the VMware client connection.
 Create the data structures to be used later.
 Create the default manager, if needed.
-Create the event object and insert it to the right table in database
 Create the forwards plan Django would follow on an empty database
 Create the handler for serving static and media files
 Create the initial tables
@@ -3355,7 +3274,6 @@ Currently these are all "dummy" values that we're just setting in the default ma
 Currently these modules must (1) take a "name" or "pkg" parameter that is a list.
 Currently this weird argument munging is used to duplicate the way a python script would need to be run as part of the chrome tree.
 Currently we can't even get the diagnostics on failure because they refer to locations in an object that will have been invalidated.
-Currently we don't have good way to tell the event type, but by the size of raw buffer, raw PEBS event with load latency data's size is 176 bytes, while the pure PEBS event's size is 144 bytes.
 Currently we just throw it away, but in the future we may make use of it.
 Currently, all tests appear to be able to be run in parallel.
 Currently, it looks like _get_paths() never forces a cache refresh so if we expect additional directories to be added later, it is buggy.
@@ -3556,7 +3474,6 @@ Descendant path, mixed.
 Descendant path, win-style.
 Describe the migration
 Describes an C or C++ initializer list.
-Description: This tool is designed to assist kernel and OS developers in optimizing their linux stack's suspend/resume time.
 Descriptions of the compiler options, i.e. VCCLCompilerTool in MSVS and ClCompile in MSBuild.
 Deserialize and test.
 Deserialize each field.
@@ -3645,7 +3562,6 @@ Disable change_view, but leave other urls untouched
 Disable json indenting when pretty printing for the arrays
 Disable logging message trigged by pSphere/suds.
 Disable non-supported fields.
-Disable pagination while reporting symbol (re-)loading.
 Disable reverse relation
 Disable the request_finished signal during this test to avoid interfering with the database connection.
 Disabled fields are generally not transmitted by user agents.
@@ -3657,8 +3573,6 @@ Disconnect after reference check since it flushes the tested cache.
 Dispatch the signal before the user is logged out so the receivers have a chance to find out *who* logged out.
 Display a helpful error message listing all possible (built-in) database backends.
 Display a link to the admin page.
-Display a process of received packets and interrputs associated with a NET_RX softirq
-Display a process of transmitting a packet
 Display a relative path if it's below the current working directory, or an absolute path otherwise.
 Display an error message for people without docutils
 Display help if no arguments were given.
@@ -3670,8 +3584,6 @@ Display the number of tasks specified or the default of 20
 Display types for variables and typedefs.
 Displaying more than 1 blank form ########################################### We can also display more than 1 empty form at a time.
 Displays info about playbook being started by a person on an inventory, as well as Tags, Skip Tags and Limits
-Displays system-wide failed system call totals, broken down by pid.
-Displays system-wide system call totals, broken down by syscall.
 Distance to self should be 0.
 Distances -- all should be equal (except for the degree/meter pair in au_cities, that's somewhat approximate).
 Distances are from the closest vertex in each geometry -- should be 3 (distance from (2, 2) to (5, 2)).
@@ -3861,7 +3773,6 @@ Drop the corresponding #if
 Drop the default again.
 Drop the default if we need to (Django usually does not use in-database defaults)
 Drop the traceback when an expected failure occurs.
-Dropping symbols will disable all breakpoints.
 Due to C++11 brace initialization, there are more places where semicolons are required than not, so we use a whitelist approach to check these rather than a blacklist.
 Due to backwards compatibility ModelForms need to be able to provide an alternate model.
 Due to circular dependencies between libraries :(, we wrap the special "figure out circular dependencies" flags around the entire input list during linking.
@@ -3910,7 +3821,6 @@ EPSG integer code was input.
 ETag + If-Not-Modified support tests
 EXCEPTION_CONVERTERS is defined below due to using to_unicode
 EXIT EARLY IF DIGEST DOESN'T MATCH
-Each 'call' has an associated record in 'call_paths'.
 Each 2-tuple will create one join condition in the ON clause.
 Each Field has a default Widget that it'll use if you don't specify this.
 Each Gyp configuration creates a different CMakeLists.txt file to avoid incompatibilities between Gyp and CMake configurations.
@@ -3930,7 +3840,6 @@ Each item is a list of all of the concrete outputs for the rule_source.
 Each item is three tuples: First tuple is Paginator parameters - object_list, per_page, orphans, and allow_empty_first_page.
 Each item is two tuples: First tuple is Paginator parameters - object_list, per_page, orphans, and allow_empty_first_page.
 Each model class gets a "_default_manager" attribute, which is a reference to the first manager defined in the class.
-Each number will have at least one '#'
 Each of the child benchmarks emit their own line.
 Each of these individually should return the item.
 Each point # corresponds to City PK.
@@ -4209,7 +4118,6 @@ Even though they may be built by other targets that depend upon them it makes de
 Even with an invalid date, the widget should reflect the entered value (#17401).
 Event loop terminates, shutdown chrome server app.
 Event session page, may contain downloadable content
-Event types, user could add more here
 Eventually we should add some sort of rule_default option to set this per project.
 Every DateField and DateTimeField creates get_next_by_FOO() and get_previous_by_FOO() methods.
 Every check is run so the last check in the series to fail will be the rc that is returned.
@@ -4235,7 +4143,6 @@ Example: "/var/www/example.com/media/"
 Example: "/var/www/example.com/static/"
 Example: "http://example.com/static/", "http://static.example.com/"
 Example: "main.cc in Sources"
-Examples of installing postgresql and adding such a user are:
 Examples: "http://example.com/media/", "http://media.example.com/"
 Except after an opening paren, or after another opening brace (in case of an initializer list, for instance), you should have spaces before your braces.
 Except in if/for/while/switch, there should never be space immediately inside parens (eg "f( 3, 4 )").
@@ -4288,7 +4195,6 @@ Expand macros in all_system_includes.
 Expand the lazy instance, as it can cause issues when it is passed further to some Python functions like urlparse.
 Expand the rules into a matrix.
 Expand variables and nested conditinals in the merge_dict before merging it.
-Expanding a couple of levels of the tree and adjusting column widths to suit will display something like:
 Expanding in list context.
 Expanding in string context.
 Expect "bad request" response
@@ -4425,7 +4331,6 @@ FLOAT column: binary-precision floating point.
 FOR UPDATE will block.
 FUTURE: Add runas support
 FUTURE: Consider adding pywinrm status check/abort operations to see if the target is still running after a failure.
-Fail if there's not any.
 Fail loudly when content has control chars (unsupported in XML 1.0) See http://www.w3.org/International/questions/qa-controls
 Fail out if user specifies conflicting privilege escalations
 Fail silently for an invalid argument
@@ -4584,7 +4489,6 @@ Find opening parenthesis.
 Find out which model's fields are not present in the query.
 Find reference to base class.
 Find standard gyp include dirs.
-Find symbols by pattern matching on part of the name (e.g. names containing 'alloc'):
 Find the "real" replacement, matching the appropriate closing paren, and adjust the replacement start and end.
 Find the URL for the iFrame which contains the actual video.
 Find the actual message
@@ -4709,7 +4613,6 @@ Floats with many zeroes after the decimal point should be passed in as another t
 Folder mappings Omit this section if there are no folders
 Followed by zero or more .labels
 Following characters are same, except for excluding a star
-Following on from the example in the export-to-postgresql.py script, a call-graph can be displayed for the pt_example database like this:
 Following queryset should return the most recent revision:
 Fontconfig for better font matching
 Fool the check later...
@@ -4759,9 +4662,7 @@ For convenience, store other field-related data here too.
 For deferred models this isn't the same as all attnames of the model's fields.
 For doing the join in Python, we have to match both the FK val and the content type, so we use a callable that returns a (fk, class) pair.
 For each app, print its migrations in order from oldest (roots) to newest (leaves).
-For each defined group in the expected events check we match the same group in the result.
 For each dependencies in this project
-For each expected event find all matching events in result.
 For each linkable target, add a "dependencies" entry referring to all of the target's computed list of link dependencies (including static libraries if no such entry is already present.
 For each node, take a copy, and remove it from the list.
 For each remote project file, sort the associated ProductGroup in the same order that the targets are sorted in the remote project file.
@@ -4929,7 +4830,6 @@ FormSets with ordering ###################################################### We
 FormSets with ordering + deletion ########################################### Let's try throwing ordering and deletion into the same form.
 Format can be a custom python file, or by default the name of a module within gyp.generator.
 Format dependencies and write out swappable dependencies right
-Format for displaying rx packet processing
 Format imports nicely, swapping imports of functions from migration files for comments
 Format of Accept-Language header values.
 Format upgrade_check_project_version with leading zeros as needed.
@@ -4993,26 +4893,6 @@ Function for clearing out all the counties before testing.
 Function for determining if the OGR mapping field is in the Layer.
 Function signature specialization of a generic specialization.
 Function/method cursor kinds.
-Function: addScriptCode Description: Adds the javascript code to the output html Arguments: hf: the open html file pointer testruns: array of Data objects from parseKernelLog or parseTraceLog
-Function: createHTMLSummarySimple Description: Create summary html file for a series of tests Arguments: testruns: array of Data objects from parseTraceLog
-Function: doError Description: generic error function for catastrphic failures Arguments: msg: the error message to print help: True if printHelp should be called after, False otherwise
-Function: doesTraceLogHaveTraceEvents Description: Quickly determine if the ftrace log has some or all of the trace events required for primary parsing.
-Function: executeSuspend Description: Execute system suspend through the sysfs interface, then copy the output dmesg and ftrace files to the test output directory.
-Function: getArgInt Description: pull out an integer argument from the command line with checks
-Function: getFPDT Description: Read the acpi bios tables and pull out FPDT, the firmware data Arguments: output: True to output the info to stdout, False otherwise
-Function: getModes Description: Determine the supported power modes on this system Output: A string list of the available modes
-Function: initFtrace Description: Configure ftrace to use trace events and/or a callgraph
-Function: initFtraceAndroid Description: Configure ftrace to capture trace events
-Function: ms2nice Description: Print out a very concise time string in minutes and seconds Output: The time string, e.g. "1901m16s"
-Function: parseTraceLog Description: Analyze an ftrace log output file generated from this app during the execution phase.
-Function: printHelp Description: print out the help text
-Function: rerunTest Description: generate an output from an existing set of ftrace/dmesg logs
-Function: rootCheck Description: quick check to see if we have root access
-Function: runSummary Description: create a summary of tests in a sub-directory
-Function: runTest Description: execute a suspend/resume, gather the logs, and generate the output
-Function: statusCheck Description: Verify that the requested command and options will work, and print the results to the terminal Output: True if the test will work, False if not
-Function: verifyFtrace Description: Check that ftrace is working on the system Output: True or False
-Function: yesno Description: Print out an equivalent Y or N for a set of known parameter values Output: 'Y', 'N', or ' ' if the value is unknown
 Functions calls through the python interface are rather slow.
 Functions strictly alphabetical order.
 Funny case - because the ForeignKey cannot be null, existing members of the set must remain.
@@ -5077,7 +4957,6 @@ Generate other file names.
 Generate sanitized key
 Generate suffix rules for all compilable extensions.
 Generate the .xml file
-Generate the header for this timeline
 Generate the inner query.
 Generate version file for the mock.
 Generates a BFS of the views tree starting at the given view as root.
@@ -5981,7 +5860,6 @@ If the file has an encoding, encode unicode with it.
 If the file has the wrong C++ extension, then we add a rule to copy that to intermediates and use the new version.
 If the file itself is a symlink, always resolve it.
 If the filename already exists, add an underscore and a random 7 character alphanumeric string (before the file extension, if one exists) to the filename until the generated filename doesn't exist.
-If the first and last two bytes are removed then the values become valid, but the modulation will be forced to ANSI T1.413 only which may not be appropriate.
 If the form is permitted to be empty, and none of the form data has changed from the initial data, short circuit any validation.
 If the form's valid we can handle the action.
 If the framework doesn't contain a binary, then nothing depends on the actions -- make the framework depend on them directly too.
@@ -6026,7 +5904,6 @@ If the original parent had a name set, keep using it.
 If the output path has variables in it, which happens in practice for 'copies', writing the environment as target-local doesn't work, because the variables are already needed for the target name.
 If the output stream doesn't have a fileno, it's virtual
 If the page is only for videos or for a game
-If the perf.data has a big number of samples, then the insert operation will be very time consuming (about 10+ minutes for 10000 samples) if the .db database is on disk.
 If the pixeltype is an integer, convert to int
 If the pk is None, it means that the object can't be deleted again.
 If the pointer is NULL, throw an exception.
@@ -6472,7 +6349,6 @@ In iQiyi's flash player, um is set to 1 if there's a logged user Some 1080P form
 In lieu of any other connector, an existing OneToOneField will be promoted to the primary key.
 In most cases, the default widget is TextInput.
 In normal ansible, we connect from controller to inventory_hostname (playbook's hosts: field) or controller to delegate_to host and run a module on one of those hosts.
-In older versions of the script there were multiple timelines, but in the latest there is only one.
 In order for linking to succeed, DYLIB_CURRENT_VERSION and DYLIB_COMPATIBILITY_VERSION must be cleared.
 In order to at least prevent crashing we will percent encode Set-Cookie header before HTTPCookieProcessor starts processing it.
 In order to avoid accessing settings at compile time, wrap the logic in a function and cache the result.
@@ -6812,7 +6688,6 @@ It gets emptied out every time the script is run
 It gets used when an action plugin directly invokes a module instead of going through the strategies.
 It has changed, write it
 It has to be run inside the django git root directory.
-It helps us to investigate networking or network device.
 It includes each non_runtest_target that does not have suppress_wildcard set.
 It is False by default so overriding self.clean() and failing to call super will stop validate_unique from being called.
 It is allowed to filter on values that would be found from local model anyways.
@@ -6820,7 +6695,6 @@ It is also provided as a convenience to those who want to deploy these URLs else
 It is based on make.py, the standard makefile generator.
 It is composed of a list of fields pointing to the current model from other models.
 It is defined below because it uses PBXContainerItemProxy, defined below.
-It is easier to create records for them than replace the zeroes with NULLs
 It is in the mobile version, but that seems to use a different URL structure altogether.
 It is marked as outer join by above filter (even if it is trimmed away).
 It is merged with a list that can come from the generator to create non_configuration_keys.
@@ -6856,7 +6730,6 @@ It might not actually have a column behind it
 It mustn't call get_app_config().
 It needs every file separate, not a string else ./run barfs
 It needs to be reloaded on access, so one query executed.
-It represents what instruction was executing at a point in time when something (a selected event) happened.
 It requires ffmpeg (m3u8 download)
 It seems assets always go from lower to better quality, so no need to sort
 It seems it is possible that self is not in all_models, so guard against that with default for get().
@@ -6868,7 +6741,6 @@ It should be possible for Oracle as well, but the semantics for  extracting the 
 It should be possible to compare *_lazy objects.
 It should have one dependency, the parent xcode target.
 It shouldn't start with an underscore (Oracle hates this)
-It shows buffer status.
 It simply ignores a limit and returns the whole offset number of videos.
 It supports https if key_file and cert_file are given.
 It takes into account quoted quotes, and makes sure that the quotes match.
@@ -7013,7 +6885,6 @@ Keeping the path to each generator that is used in sys.path is likely harmless a
 Keeping this commented for when this inevitably changes.
 Kept ISO formats as one is in first position
 Kept for backward compatibility
-Kernel proc information reader
 KeyError will be raised by os.getpwuid() (called by getuser()) if there is no corresponding entry in the /etc/passwd file (a very restricted chroot environment, for example).
 Keyed by name, to provide multiple named local memory caches.
 Keys are names of packages and values are the corresponding configs.
@@ -7112,8 +6983,6 @@ LiTV HLS segments doesn't like compressions
 Libraries (i.e. -lfoo) These must be included even for static libraries as some of them provide implicit include paths through the build system.
 Libs can have multiple words.
 Libtool on Mac also generates warnings when duplicate basenames are passed into Make generator on Mac.
-License: Python Software Foundation License version 2
-Licensed under the terms of the GNU GPL License version 2
 Light issues like warnings, infos or debugs will not generate a message.
 Like /bin/touch, but takes a time using the LLVM epoch.
 Like actions, but implicitly depend on the target's output.
@@ -7716,7 +7585,6 @@ Maybe there's a more elegant way around this, but this is the only case where we
 Maybe this should be in the test below, but we might as well test the feature values here while in this loop.
 Means the file was moved or deleted before the tempfile could unlink it.
 Measure time for one iteration If it's too small, increase number of iteration until it's measurable
-Measures futex contention
 Mechanism to turn off CSRF checks for test suite.
 Media objects can be combined.
 Media objects can be interrogated by media type
@@ -7817,7 +7685,6 @@ Models to test correct related_name inheritance
 Models used for setting `through` in M2M field.
 Models with broken unicode methods should still have a printable repr
 Modification with both POST and PUT (browser compatible)
-Modified from original contribution by Aryeh Leib Taurog, which was released under the New BSD license.
 Modify all files after the primary file.
 Modify session in first context.
 Modifying the source tree - even just modification times - feels dirty.
@@ -7828,8 +7695,6 @@ Module is not a package (e.g. migrations.py).
 Module replacer for jsonargs and windows
 Module-related functions
 Modules that we optimize by squashing loop items into a single call to the module
-Modules which end up using this snippet, which is dynamically combined together by Ansible still belong to the author of the module, and they may assign their own license to the complete work.
-Modules you write using this snippet, which is embedded dynamically by Ansible still belong to the author of the module, and may assign their own license to the complete work.
 Monday (in Dutch 'maandag') The *_INPUT_FORMATS strings use the Python strftime format syntax, see http://docs.python.org/library/datetime.html#strftime-strptime-behavior
 Monday (lundo) The *_INPUT_FORMATS strings use the Python strftime format syntax, see http://docs.python.org/library/datetime.html#strftime-strptime-behavior
 Monday The *_INPUT_FORMATS strings use the Python strftime format syntax, see http://docs.python.org/library/datetime.html#strftime-strptime-behavior
@@ -7842,7 +7707,6 @@ Monkeypatch pygments so it will know about the Swift lexers
 Monkeypatch pygments.lexers.get_lexer_by_name to return our lexers.
 More accurate, resource intensive Replace boolean param by the real spheroid of the base field
 More characters the spec forbids.
-More examples of browsing the database with psql: Note that some of the examples are not the most optimal SQL query.
 More initial forms than max_num now results in all initial forms being displayed (but no extra forms).
 More twisted cases, involving nested negations.
 Moreover it may even lead to account ban (see https://github.com/rg3/youtube-dl/issues/6842).
@@ -7852,7 +7716,6 @@ Most likely because geo-blocked
 Most likely people who think this should be hospitalized, but who am I to argue.
 Most likely the input was incomplete, otherwise we should have seen a semicolon and returned early.
 Most of *.letv.com is changed to *.le.com on 2016/01/02 but yuntv.letv.com is kept, so also keep the extractor name
-Most of the tables have views for more friendly display.
 Most of the time Pillow only needs a small chunk to parse the image and get the dimensions, but with some TIFF files Pillow needs to parse the whole file.
 Most of this is from yaml.constructor.SafeConstructor.
 Most setting_changed receivers are supposed to be added below, except for cases where the receiver is related to a contrib app.
@@ -7867,7 +7730,6 @@ Move into the framework directory to set the symlinks correctly.
 Move many-to-many related fields from self.fields into self.many_to_many.
 Move positional args out of options to mimic legacy optparse
 Move raster to overlap with the model point on the left side
-Move the .db file to RAM based FS to speedup the handling, which will cut the time down to several seconds.
 Move the temporary file to a filename that has better chances of being recognized by the archive utils
 Move the test over to the fixed suite.
 Move the time zone info into os.environ.
@@ -7994,7 +7856,6 @@ Necessary for correct validation of new instances of objects with explicit (non-
 Necessary to retrieve decimal values without rounding error.
 Need a TransactionTestCase to avoid deferring FK constraint checking.
 Need some more module_utils work (porting urls.py) before we can test modules.
-Need to access PostgreSQL C library directly to use COPY FROM STDIN
 Need to add a restriction so that outer query's filters are in effect for the subquery, too.
 Need to add proper argument here
 Need to add the associated contrib app to INSTALLED_APPS in some cases to avoid "RuntimeError: Model class X doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS."
@@ -8234,7 +8095,6 @@ Note that Python sort is stable.
 Note that STATIC_URL cannot be empty.
 Note that Windows is not affected and produces playable files (see https://github.com/rg3/youtube-dl/issues/8300).
 Note that both fields are not unique.
-Note that call information is only available if the script's 'calls' option has been used.
 Note that dead weakref cleanup happens as side effect of using the signal's receivers through the signals API.
 Note that doing the cleanup here isn't a good idea, _remove_receiver() will be called as side effect of garbage collection, and so the call can happen while we are already holding self.lock.
 Note that even if the group_by is set, it is only the minimal set to group by.
@@ -8253,7 +8113,6 @@ Note that proxy_for_model can create a chain of proxy models.
 Note that single quotes are used because this is a string (and could otherwise cause a collision with a field name).
 Note that the _M versions need to come first for substring matching to work.
 Note that the above filters on a force the join to an inner join even if it is trimmed.
-Note that the branch count gives a rough estimation of cpu usage, so functions that took a long time but have a relatively low branch count must have spent time waiting.
 Note that the caller is to be expecting a list in return, and not all callers do because not all are working in list context.
 Note that the code below adds actions to this target, so if you move these two lines, move the lines below as well.
 Note that the end result will be: (outercol NOT IN innerq AND outercol IS NOT NULL) OR outercol IS NULL.
@@ -8295,8 +8154,6 @@ Note that we're assuming OSError means that the client program isn't installed.
 Note that we're calling MultiWidget, not SplitDateTimeWidget, because we want to define widgets.
 Note that we're instantiating a new ModelChoiceIterator *each* time _get_choices() is called (and, thus, each time self.choices is accessed) so that we can ensure the QuerySet has not been consumed.
 Note that you need to be careful here to use the flags that ccache and distcc can understand.
-Note this script supports connecting to remote databases by setting hostname, port, username, password, and dbname e.g.
-Note transaction start has 'in_tx' true whereas, transaction end has 'in_tx' false.
 Note, for GeoIP Country, Region and Netspeed databases, GEOIP_INDEX_CACHE is equivalent to GEOIP_MEMORY_CACHE
 Note, however, that this flexibility comes with the responsibility of displaying all the errors, including any that might not be associated with a particular field.
 Note, if no dot is found, this will give the entire filename as the ext.
@@ -8346,7 +8203,6 @@ Note: when combining the query we need to have information available about the j
 Note: zlogin invokes a shell (just like ssh does) so we do not pass this through /bin/sh -c here.
 Nothing else can be a link dependency of them, there can only be dependencies in the sense that a dependent target might run an executable or load the loadable_module.
 Nothing in the variable, default based on platform.
-Nothing in this License Agreement shall be deemed to create any relationship of agency, partnership, or joint venture between PSF and Licensee.
 Nothing to add Write out the user file.
 Nothing to do for an empty plan
 Nothing to do if the connection is already open.
@@ -8642,7 +8498,6 @@ Only split once initially for single-parameter tags that might have additional s
 Only split once initially for single-parameter tags that might have additional spaces in their values (i.e. "usemtl Material with spaces").
 Only support setting breakpoints in real files.
 Only support the exterior ring.
-Only symbols that have samples are present.
 Only the CharField should have a LIKE index.
 Only the beginning, because there are differences depending on installed libs
 Only the extra columns specified in the values_list() are returned
@@ -8899,15 +8754,12 @@ PBXBuildFile's settings property is represented in the output as a dict, but a h
 PBXReferenceProxy is also an XCFileLikeElement subclass.
 PC UA is served with m3u8 that provides some bonus lower quality formats
 PCTV for extracting f4m manifest
-PEBS event with load latency info
 PHP puts a newline in that we don't
 PKCS#7 PAD DATA http://tools.ietf.org/html/rfc5652#section-6.3
 PLUGINS Modules that can optimize with_items loops into a single call.
 POST data provided in the URL augments actual form data
 PROJ.4 versions 4.7+ have updated datums, and thus different distance values.
-PSF License text follows:
 PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED.
-PSF is making Python available to Licensee on an "AS IS" basis.
 PUT is a valid HTTP verb for creating (with a known URL) or editing an object, note that browsers only support POST for now.
 PY2 can't pickle naive exception: http://bugs.python.org/issue1692335.
 PY2 has a `message` property which is always there so we can't duck-type on it.
@@ -9004,7 +8856,6 @@ Performing setup here rather than in `_spatial_attribute` so that we can get the
 Performs a depth-first search of the project root for package.json files.
 Perhaps it should also remove references from this pbxproject that are no longer present in other_pbxproject.
 Perhaps it should update various properties if they change.
-Periodically displays system-wide system call totals, broken down by syscall.
 Periscope only shows videos in the last 24 hours, so it's possible to get 0 videos
 Permission bits constants documented at: http://docs.python.org/2/library/stat.html#stat.S_ISUID
 Permissions on the inlines vary per test.
@@ -9397,7 +9248,6 @@ Read host_vars/ files
 Read in 1mb chunks, so it doesn't all have to be loaded into memory.
 Read in the hosts, groups, and variables defined in the inventory file.
 Read lines from a stream
-Read parent event if there's any
 Read sequentially from a stream
 Read settings and parse CLI arguments
 Read settings, environment variables, and CLI arguments
@@ -9453,13 +9303,11 @@ Redirect to use local libchromiumcontent build.
 Redirecting after "Save as new".
 Redis sigle node cluster Because all Redis clusters are single nodes, we'll merge the info from the cluster with info about the node
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 Reduce Model instances to their primary key values
 Reduce given test labels to just the app module path
 Reduces the cpu time usage by skipping lines.
 Redundant sanity check.
 Refer to documentation for a list of supported languages.
-Refer to that script for details.
 Reference county names, number of polygons, and state names.
 Reference data for what's in the fixtures.
 Reference distances in feet and in meters.
@@ -9644,7 +9492,6 @@ Relative path, mixed.
 Relative path, win-style.
 Release it to minimize overhead for the database server.
 Release savepoint if there is one
-Released under the New BSD license.
 Relies on the "guest tools" (e.g. vmware tools) to be installed
 Reload data from disk
 Reload newly created raster from file
@@ -10171,7 +10018,6 @@ Search all contexts for the error.
 Search also in the role/files directory and in the playbook directory
 Search for a different beginning of the password field.
 Search for existing draft.
-Search for function pointer
 Search for loop keywords at the beginning of the line.
 Search for the beginning of a passwd
 Search for the function arguments or an initializer list.
@@ -10203,7 +10049,6 @@ See #25407 for details.
 See -h output for instructions
 See BaseInlineFormSet.get_default_prefix().
 See IEEE 1003.1 XCU.2.2 at http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_02 and the documentation for various shells.
-See LICENSE.TXT for details.
 See Modules/_sqlite/connection.c.
 See MySQLdb/cursors.py in the source distribution.
 See PBXTargetDependency._schema above.
@@ -10220,7 +10065,6 @@ See also http://trac.osgeo.org/gdal/wiki/rfc23_ogr_unicode
 See comment a few lines above.
 See comment at cc_command for why there's two .pdb files.
 See comments in the debug() method for information on debugging
-See comments in the source for which code precisely is under this License.
 See create_test_db for details.
 See docstring of msvs_emulation.GenerateEnvironmentFiles().
 See explanation in WriteActions.
@@ -10232,8 +10076,6 @@ See http://docs.python.org/lib/bltin-file-objects.html The WSGI server must call
 See http://goo.gl/cuFbX and http://goo.gl/dhPnp including the comment threads.
 See http://pandoc.org/README.html for more information.
 See http://schema.org/VideoObject
-See http://swift.org/LICENSE.txt for license information See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
-See http://swift.org/LICENSE.txt for license information See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors Bit counts for all int types
 See http://trac.osgeo.org/gdal/ticket/1992.
 See http://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt
 See http://www.python.org/dev/peps/pep-3333/#environ-variables
@@ -10264,8 +10106,6 @@ See regroup() for the reason why we temporarily put the object in the context.
 See the 'ogr_core.h' source file for more information: http://www.gdal.org/ogr/ogr__core_8h-source.html
 See the AUTHORS file for names of contributors.
 See the GEOS C API source code for more details on the library function calls: http://geos.refractions.net/ro/doxygen_docs/html/geos__c_8h-source.html
-See the GNU General Public License for more details.
-See the License for the specific language governing permissions and limitations under the License.
 See the `content` property methods.
 See the `streaming_content` property methods.
 See the adjacent openstack.yml file for an example config file There are two ansible inventory specific options that can be set in the inventory section.
@@ -10428,7 +10268,6 @@ Set the relation_tree using the internal __dict__.
 Set the reporter for the Third article
 Set the territory first.
 Set the test environment
-Set the usetraceevents and/or usetraceeventsonly flags in the global sysvals object
 Set the value of the related field to the value of the related object's related field
 Set the values of the related field.
 Set the variable to the supplied value.
@@ -10587,10 +10426,7 @@ Shouldn't fail silently if trying to cache an unpicklable type.
 Shouldn't use quoted printable, should detect it can represent content with 8 bit data
 Shouldn't use the X-Forwarded-Port header
 Show begin/end around output only for atomic migrations
-Show branches made during a function call (e.g. where call_id is 29357 and return_id is 29370 and tid is 29670)
-Show function calls made by function in the same context (i.e. same call path) (e.g. one with call_path_id 254):
 Show packages being linted when --verbose flag is specified
-Show transaction aborts:
 Show variable names but not their values.
 Showing a fancy prompt string if we're interactive
 Sigh, handle these as well:
@@ -10793,7 +10629,6 @@ So no need to do anything here
 So ordering by name doesn't take place for Students.
 So print a warning if we find any
 So put it in LOCAL_CFLAGS.
-So save their states and restore them afterward.
 So the MITM can circumvent the CSRF protection.
 So the default query has to be adapted to include raster indices.
 So things that are directly related to the core of ansible are in terms of that sort of connection that always originate on the controller.
@@ -11203,7 +11038,6 @@ Swap the last two items in the order list
 Swift documentation build configuration file.
 Swift_Programming_Language/Expressions.html
 Switch to a different domain for the releases uploading API.
-Symbol and dso info are not always resolved
 Symmetrical m2m field with a normal field using the reverse accessor name ("valid").
 Symptom is ValueError: insecure pickle when shred is not installed there.
 Synthesize the contents of a file upload with a mixed case filename so we don't have to carry such a file in the Django tests source code tree.
@@ -11787,7 +11621,6 @@ The *_INPUT_FORMATS strings use the Python strftime format syntax, see http://do
 The *_id version is returned by default.
 The -3 argument indicates that we're using the Swift 3 Clang importer rules.
 The .d checking code below uses these functions: wildcard, sort, foreach, shell, wordlist wildcard can handle spaces, the rest can't.
-The 2 database related functions in this script just show how to gather the basic information, and users can modify and write their own functions according to their specific requirement.
 The 5 minute (300 seconds) default expiration time for keys is defined in the implementation of the initializer method of the BaseCache type.
 The 8BUI stores both the PostGIS pixel data type and a nodata flag.
 The ::1.2.3.4 format used to be valid but was deprecated in rfc4291 section 2.5.5.1
@@ -11877,7 +11710,6 @@ The `geom_args` flag is set to true if a geometry parameter was passed in.
 The `google-multi.js` template is used instead of `google-single.js` by default.
 The `list` reduce function returns an iterator as the fourth element that is normally used for repopulating.
 The above command should have caused the accelerate daemon to shutdown, so we'll reconnect.
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 The above test fails because of Python 2's float handling.
 The above tests run with Asia/Singapore which are on the positive side of UTC.
 The active translations are stored by threadid to make them thread local.
@@ -11955,7 +11787,6 @@ The code below generates a separate .mk file for each target, but all are source
 The code below generates a separate .mk file for each target, but all are sourced by the top-level Makefile.
 The code below will create a new empty instance of class self.__class__, then update its dict with self.__dict__ values - so, this is very close to normal pickle.
 The code here normally doesn't run.
-The code in this particular templatable string, and this templatable string only, is BSD licensed.
 The code point value is split as follows:
 The code to mark the form field as not required is used by form_for_instance, but can probably be removed once form_for_instance is gone.
 The codenames and ctypes that should exist.
@@ -11968,7 +11799,6 @@ The condition variable used to protect this object and notify the main loop when
 The connection is closed and the transaction is marked as needing rollback.
 The connection is created by running ssh/scp/sftp from the exec_command, put_file, and fetch_file methods, so we don't need to do any connection management here.
 The connection is usable again .
-The console input is blocked in this context so that we would get stuck waiting for the user to acknowledge paged output.
 The constructor and destructor will not have those qualifiers.
 The content of ifchanged template tag was rendered twice.
 The contents are a black box - assume no aggregates are used.
@@ -11995,7 +11825,6 @@ The custom queryset filters should be applied to the queryset instance returned 
 The cwd is the current build directory.
 The cygwin case handles this inside the bash sub-shell.
 The data does not disappear because it has been iterated.
-The data is appended to the Data objects provided.
 The data is ignored, but let's check it doesn't crash the system anyway.
 The data source driver is a void pointer.
 The database backend wasn't found.
@@ -12011,7 +11840,6 @@ The default exec user is root, unless it was changed in the Dockerfile with USER
 The default file storage backend used during the build process
 The default from the new field is used in updating existing rows.
 The default implementation of this method looks at the backend-specific data_types dictionary, looking up the field by its "internal type".
-The default interval is 3 seconds.
 The default is instance method, and methodTypeCharacter may not actually be '-'.
 The default is to use the SMTP backend.
 The default manager is used in migrations
@@ -12051,7 +11879,6 @@ The entire nesting stack up to #else
 The environment is saved as an "environment block" (see CreateProcess and msvs_emulation for details).
 The error message depends on the backend
 The errors should be available via the TranslationUnit's diagnostics.
-The event record section header contains 'event' word, optionaly followed by ':' allowing to load 'parent event' first as a base
 The exception isn't created at initialization time for the sake of consistency with `ForwardManyToOneDescriptor`.
 The exception raised on attribute access when a related object doesn't exist should be an instance of a subclass of `AttributeError` refs #21563
 The exception type to catch from the underlying library for a key that was not found.
@@ -12243,7 +12070,6 @@ The managers on this model should be ordered by their creation counter and not b
 The mapping is 0: default, 1: false, 2: true.
 The master app registry is always ready when the tests run.
 The master toctree document.
-The match_hostname function and supporting code is under the terms and conditions of the Python Software Foundation License.
 The maximum length of a full host name is 253 characters per RFC 1034 section 3.1.
 The maximum number of forms should respect 'get_max_num' on the ModelAdmin
 The maximum number of items to display in a QuerySet.__repr__
@@ -12252,7 +12078,6 @@ The maximum value of the first level index for supp tables.
 The md5 checksum changes
 The md5 checksum changes on each download
 The mechanism for getting at the related model is slightly odd - ideally, we'd just ask for field.related_model.
-The memory address is the instruction pointer or 'ip'.
 The mesh should be smooth and soft.
 The message is optional, in which case None is stored for each rule source.
 The missing MOCK_METHOD is usually one or two lines back, so scan back one or two lines.
@@ -12328,7 +12153,6 @@ The ordering of model fields might vary depending on several factors (version of
 The ordering of the zip calls matter - zip throws StopIteration when an iter throws it.
 The ordering required to allow for monkeypatching causes the warning "I100 Import statements are in the wrong order." when linting using flake8-import-order.
 The ordering we really want is objects, mgr1, mgr2
-The original binary format is a packed list of le32 values.
 The original parent had a sourceTree set, use it.
 The original problem was that the inner queries weren't relabeled correctly.
 The original query still works correctly
@@ -12339,7 +12163,6 @@ The other project reports its path as relative to the same directory that this p
 The other project's path is not necessarily already relative to this project.
 The other way is to subclass the original lookup and register the subclassed lookup instead of the original.
 The outermost takes precedence.
-The output is a single html file which can be viewed in firefox or chrome.
 The output of virtinfo is different whether we are on a machine with logical domains ('LDoms') on a T-series or domains ('Domains') on a M-series.
 The page shouldn't display a link to the nonexistent change page
 The paper size ('letterpaper' or 'a4paper').
@@ -12370,7 +12193,6 @@ The prerequisites for this rule are the rule source itself and the set of additi
 The previous changes shouldn't affect nullable foreign key joins.
 The previous technique dealt with "hard-coded" initial data, but it's also possible to specify initial data after you've already created the Form class (i.e., at runtime).
 The previous technique dealt with raw values as initial data, but it's also possible to specify callable data.
-The primary data should be taken from dmesg, and this ftrace is used only for callgraph data or custom actions in the timeline.
 The primary key can be accessed via the pk property on the model.
 The primary key must also obviously be unique, so trying to create a new object with the same primary key will fail.
 The primary key must be specified, so an error is raised if you try to create an object without it.
@@ -12412,7 +12234,6 @@ The resources phase should come before the sources and frameworks phases, if any
 The response also converts unicode or bytes keys to strings, but requires them to contain ASCII
 The rest of the exception message differs between Python 2 and 3.
 The rest of the tokens
-The result is a GUI window with a tree representing a context-sensitive call-graph.
 The result of the lookup should be translated at rendering time.
 The resulting form subclass will have all of the fields of the parent Form, plus whichever fields you define in the subclass.
 The results will be correct but this creates too many joins.
@@ -12441,7 +12262,6 @@ The save method is a raw base model save, to make sure that the data in the data
 The save_as_new parameter lets you re-associate the data to a new instance.
 The saved stack will allow us to restore the parsing state in the #else case.
 The savepoint won't be reused.
-The script assumes postgresql is running on the local machine and that the user has postgresql permissions to create databases.
 The script wrapper of the library is for testing purpose.
 The second argument is an addition that causes a pylint warning.
 The second block has a savepoint and must roll back.
@@ -12505,7 +12325,6 @@ The sysroot directory should match the one specified in build/common.gypi.
 The sysroot image could be constructed from scratch based on the current state or Debian Wheezy but for consistency we currently use a pre-built root image.
 The sysroot is needed to make Chrome work for Debian Wheezy.
 The table is manually created by the test method.
-The tables largely correspond to perf tools' data structures.
 The tablespaces to use for each model when not specified otherwise.
 The target doesn't contain the source, but the dependent targets have not yet been visited to determine a more specific status yet.
 The target has a dependency on another target that contains one of the supplied paths.
@@ -12635,7 +12454,6 @@ There is currently no logic on deciding what these nontrivial things are, so thi
 There is no Express edition for 2015.
 There is no one endpoint for album metadata - instead it is included/repeated in each song's metadata Therefore we don't know how many songs the album has and must infi-loop until failure
 There is nothing we can do about this.
-There is one for each test run.
 There is only the base table in use in the query.
 There isn't a generic way to test that cursors are closed, but psycopg2 offers us a way to check that by closed attribute.
 There isn't any object on the remote side of the fk_rel relation.
@@ -12761,7 +12579,6 @@ These options could affect the commands that are available, so they must be proc
 These parameters are passed in order (as opposed to by key) because ActivePython cannot handle key parameters to __import__.
 These pass with a proper proxy setup, which our build machines don't seem to have.
 These per-process dictionaries are used to cache build file data when loading in parallel mode.
-These perf imports are not used at present from perf_trace_context import * from Core import *
 These plugins are called directly by action plugins (not going through a strategy).
 These queries combine results from the m2m and the m2o relationships.
 These relationships should not exist, but they've only been observed to be harmful with the Xcode generator.
@@ -12790,7 +12607,6 @@ These will load using the 'default' database identifier implicitly
 They affect the size of the lookup tables (and thus, lookup time), but do not change the overall structure of the trie.
 They are copied after the builtin static files, so a file named "default.css" will overwrite the builtin "default.css".
 They are ignored by default.
-They are largely self-explanatory.
 They are meaningless for type mh_bundle.
 They are overridden on each GoogleMap instance in the set so that only the loading JavaScript (and not the header variables) is used with the generated DOM ids.
 They can be extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
@@ -12821,12 +12637,9 @@ Thirty-two bit signed integer
 Thirty-two bit unsigned integer
 This (target include directories) is what requires CMake 2.8.8
 This AST node is only formed if full location information is requested.
-This Baseconv distribution contains no GNU General Public Licensed (GPLed) code so it may be used in proprietary projects just like prior ``baseconv`` distributions.
 This DataSource object is not accessible outside this scope.
 This Experiment is only included in the test data when the DB supports microsecond precision.
 This LayerMapping should work b/c `strict` is not set.
-This License Agreement does not grant permission to use PSF trademarks or trade name in a trademark sense to endorse or promote products or services of Licensee, or any third party.
-This License Agreement will automatically terminate upon a material breach of its terms and conditions.
 This Price instance generated by this form is not valid because the quantity field is required, but the form is valid because the field is excluded from the form.
 This RE is a little bit more complicated than one might expect, because we have to take care of space removals tools so we can handle comments inside statements better.
 This URLs file is used to provide a reliable view deployment for test purposes.
@@ -12872,7 +12685,6 @@ This cache exists so that the database isn't queried for SRID info each time a d
 This caches the preamble (included files at top of source file).
 This callback is an example of per hosts logging for those that want it.
 This can also crop up outside of tests - see #15346.
-This can be a dpm_run_callback, dpm_prepare, or dpm_complete callgraph Each instance is tied to a single device in a single phase, and is comprised of an ordered list of FTraceLine objects
 This can be an ISBN number or the project homepage.
 This can be removed if shutil.which() is backported, or if the Swift build toolchain migrates completely to Python 3.3+.
 This can be understood through the POSTGIS_HEADER_STRUCTURE constant definition in the const module.
@@ -12907,7 +12719,6 @@ This cleanup is necessary because contrib.sites cache makes tests interfere with
 This code checks if value maches the IP version the user wants, ie.
 This code is at the end of this module to speed up module loading.
 This code is part of Ansible, but is an independent component.
-This code is public domain - there is no license except that you must leave this header.
 This coding header is significant for tests, as the debug view is parsing files to search for such a header to decode the source file content
 This combination actually never happens.
 This combines the Extent and Union aggregates into one query
@@ -12924,7 +12735,6 @@ This could be further improved by inspecting the java file for the package name 
 This could be optimized with a cache at the expense of RAM.
 This creates an interface with the same name as a builtin, which hphpc doesn't correctly support AttrUnique flags on.
 This custom encoder looks for instances of NoIndent or ChunkedIndent.
-This data is transformed into a device timeline and a callgraph to give a quick and detailed view of which devices and callbacks are taking the most time in suspend/resume.
 This defaults to 'epub', a theme designed to save visual space.
 This delays the instantiation of the objects to the moment of evaluation of the raster attribute.
 This deletes the existing categories.
@@ -12973,8 +12783,6 @@ This file has a file path that we can move.
 This file has a literal with plural forms.
 This file invokes the runner after parsing arguments.
 This file is deprecated and will be removed in a future service pack or release.
-This file is distributed under the University of Illinois Open Source License.
-This file is distributed under the same license as the Django package.
 This file is execfile()d with the current directory set to its containing dir.
 This file is part of Ansible
 This file is part of Ansible,
@@ -12997,7 +12805,6 @@ This function is called a lot so for maximum performance, avoid involving regexp
 This function is considered a friend of XcodeSettings, so let it reach into its implementation details.
 This function is only needed to help with the deprecations above and can be removed in Django 2.0, RemovedInDjango20Warning.
 This function is only useful to get children that have names but no paths, which is rare.
-This function just shows the basic info, and we could do more with the data in the tables, like checking the function parameters when some big latency events happen.
 This function might benefit from a dict optimization as GetChildByPath for some workloads, but profiling shows that it's not currently a problem.
 This function ported from the logic in Homebrew's CLT version check
 This function resolves a target into a canonical form: - a fully defined build file, either absolute or relative to the current directory - a target name - a toolset
@@ -13038,7 +12845,6 @@ This is a custom FieldListFilter class for a given field.
 This is a file, use the handler...
 This is a for-else: http://bit.ly/1ElPkyg Use Windows version of ping module to check module paths when using a connection that supports .ps1 suffixes.
 This is a hook for data_types_reverse to return a tuple of (field_type, field_params_dict).
-This is a library defining some events types classes, which could be used by other scripts to analyzing the perf samples.
 This is a list of all standard c++ header files, except those already checked for above.
 This is a low-prioroty problem and is not a show-stopper.
 This is a minimal valid WSGI environ dictionary, plus: - HTTP_COOKIE: for cookie support, - REMOTE_ADDR: often useful, see #8551.
@@ -13121,7 +12927,6 @@ This is meant to silence warnings for conditional includes.
 This is necessary as someone may be using PSQL without extensions installed but be using other features of contrib.postgres.
 This is necessary as the other dependencies on them may be static libraries themselves, which are not compile time dependencies.
 This is necessary as the shareability is disabled by default in pysqlite and it cannot be changed once a connection is opened.
-This is necessary as there could be more than one, and they need to be separate.
 This is necessary because the tag lets the length of loopvars differ to the length of each set of items and we don't want to leave any vars from the previous loop on the context.
 This is needed because bisect does not take a comparison function.
 This is needed on the Ansible control machine to be reasonably efficient with connections.
@@ -13308,8 +13113,6 @@ This option is not thread safe.
 This page will redirect with code 301, not 302
 This pair of tests relies upon the alphabetical ordering of test execution.
 This parameter is set by the handler.
-This particular file snippet, and this file snippet only, is BSD licensed.
-This particular file snippet, and this file snippet only, is based on Lib/posixpath.py of cpython It is licensed under the PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
 This particularly prevents that an empty value is cached while cloning.
 This pattern is used to determine when a string can be printed unquoted.
 This pattern should match any character that needs to be escaped by XCObject._EncodeString.
@@ -13347,11 +13150,9 @@ This restriction should remain in place until it's possible to load multiple YAM
 This returns a different result each time, to make sure it only gets called once.
 This saves bandwidth but slows down performance.
 This script can be run manually but is more often run as part of gclient hooks.
-This script checks the unwind info of each function in file FILE and verifies that the sum of the region-lengths matches the total length of the function.
 This script creates the .pak files under locales directory, it is used to fool the ResourcesBundle that the locale is available.
 This script requires the ``keyring`` python module
 This script runs and kills db_stress multiple times.
-This script tests basic functionality such as flag and symbol strings, common_xxx() calls back into perf, begin, end, unhandled events, etc.
 This script works by starting with the unity build file and recursively expanding include directives.
 This seems an acceptable compromise considering `runserver` runs indefinitely.
 This seems to be needed
@@ -13399,11 +13200,6 @@ This simulates primary/replica - the objects exist on both database, but the _st
 This simulates what a template tag might do with the user from the context.
 This slightly horrific process is so people who are testing on databases without transactions or who are using a TransactionTestCase still get a clean database on every test run.
 This slightly odd comparison works around the fact that PostgreSQL will return 'one' and 'two' as strings, not Unicode objects.
-This software is distributed under the terms of the GNU General Public License ("GPL") version 2 as published by the Free Software Foundation.
-This software may be distributed under the terms of the GNU General Public License ("GPL") version 2 as published by the Free Software Foundation.
-This source code is licensed under the BSD-style license found in the LICENSE file in the "hack" directory of this source tree.
-This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
-This source code is licensed under the license found in the LICENSE file in the root directory of this source tree.
 This source file is part of the Swift.org open source project
 This special case is considered in _check_id_field and here we ignore it.
 This specifically tests that #6302 is fixed for both file fields and image fields.
@@ -13502,7 +13298,6 @@ This won't work because the Place we select is not a Restaurant (it's a Supplier
 This won't work during DST change, but we can't do much about it, so we let the exceptions percolate up the call stack.
 This won't work on Powershell as-is, so we'll just completely skip until we have a need for it, at which point we'll have to do something different.
 This won't, however, break any of the admin widgets or media.
-This work is licensed under the terms of the GNU GPL version 2.
 This works around actions/rules which have more inputs than will fit on the command line.
 This works as many levels deep as you want.
 This works more or less because most programs (including the compiler, etc.) use that function to handle command line arguments.
@@ -13572,7 +13367,6 @@ To avoid this problem, we mark the models as unmanaged, and temporarily revert t
 To avoid unnecessary changes to the project file after Xcode opens it, don't write comments for remoteGlobalIDString.
 To avoid unnecessary persistent storage accesses, we set up the internals directly (loading data wastes time, since we are going to set it to an empty dict anyway).
 To be threadsafe, updates/inserts are allowed to fail silently
-To browse the database, psql can be used e.g.
 To check the memcached backend, the test settings file will need to contain at least one cache backend setting that points at your memcache server.
 To deal with that we make the property name field the first positional argument and self the second arg.
 To delete something, we just need to set that form's special delete field to 'on'.
@@ -13595,7 +13389,6 @@ To prevent infinite recursion
 To prevent overconsumption of server resources, reject any base36 string that is long than 13 base36 digits (13 digits is sufficient to base36-encode any 64-bit integer)
 To prevent recalculating image dimensions when we are instantiating an object from the database (bug #11084), only update dimensions if the field had a value before this assignment.
 To prevent this rule from executing on every build (expensive, especially with postbuilds), expliclity update the time on the framework directory.
-To print a call stack requires walking the call_paths table.
 To print out auto-adjustable column, we need to know the longest length of file names.
 To properly test for the warning not happening unless we tell it to explicitly, we remove the project directory and will add back a conflicting file later.
 To re-use the many-to-many intermediate table, we need to manually set up things up.
@@ -13613,8 +13406,6 @@ To test pickling we need a class that isn't defined on module, but is still avai
 To test, we want just one video
 To transmit to the database, we need Unicode if supported To get size right, we must consider bytes.
 To use fulltext indexes on MySQL either version 5.6 is needed, or one must use MyISAM tables.
-To use this script you will need to have exported data using the export-to-postgresql.py script.
-To use this script you will need to have installed package python-pyside which provides LGPL-licensed Python bindings for Qt.
 To verify that the login form rejects inactive users, use an authentication backend that allows them.
 To work around that bug, on SQLite, 'atomic' starts a transaction explicitly rather than simply disable autocommit.
 To work around this the result of the `map` is explicitly converted to a `list`.
@@ -13623,12 +13414,7 @@ To work around, the type of the "target" property is reset below, after XCTarget
 Tolerance has to be lower for Oracle
 Too many params (4 in this case) should raise a ValueError.
 Too much foreign keys to Person.
-Tool for analyzing suspend/resume timing Copyright (c) 2013, Intel Corporation.
 Tool name mapping from MSVS to MSBuild.
-Top 10 function calls (aggregated by symbol):
-Top 10 function calls (not aggregated by symbol):
-Top 10 function calls for a specific symbol (e.g. whose symbol_id is 187):
-Top level does not have time or branch count, so fix that here
 Top level, the list of objects to decorate is the result cache from the primary QuerySet.
 Top tracks, they can also include dots
 Topologically sort, and then reverse, because we used an edge definition that's inverted from the expected result of this function (see comment above).
@@ -13649,7 +13435,6 @@ Trailing junk does not take forever to reject
 Trailing junk is uncommon and can point to things the user might want to change.
 Trailing newlines in username or domain not allowed
 Trailing newlines not accepted
-Transaction aborts have branch_type_name 'transaction abort'
 Transaction related attributes.
 Transaction support should be properly initialized for the 'other' DB
 Transfer values across
@@ -13943,13 +13728,11 @@ Upload the SHASUMS.txt.
 Upload the index.json.
 UploadedFile objects should have name and size attributes.
 Usage of PCH must only be for the same language (i.e. C vs.
-Usage: unwcheck.py FILE
 Use '.' for the current directory '', so that the error messages make more sense.
 Use .lower() here so we treat headers as case-insensitive.
 Use 0 for linenum since outputting only one error for potentially several lines.
 Use 3D variants of perimeter and length routines on supported backends.
 Use CONCAT_WS with an empty separator so that NULLs are ignored.
-Use COPY FROM STDIN because security may prevent postgres from accessing the files directly
 Use FORCE_DO_CMD to force a target to run.
 Use HTTP responses different from the defaults
 Use JS strings to represent Python Decimal instances (ticket #16850)
@@ -14009,8 +13792,6 @@ Use manager.set() to allocate ForeignKey.
 Use native strings for better compatibility
 Use of callable defaults (see bug #7975).
 Use of native strings in all versions of Python
-Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
-Use of this source code is governed by the MIT license that can be found in the LICENSE file.
 Use only the first item in list_display as link
 Use parent.key instead of parent to speed up the frequent hashing in ensure_not_cyclic
 Use pg_get_serial_sequence to get the underlying sequence name from the table name and column name (available since PostgreSQL 8)
@@ -14067,7 +13848,6 @@ Use this when raising exceptions and wanting to get the string representation of
 Use type(self), not self.__class__, because the latter is proxied.
 Use unzip command on Mac to keep symbol links in zip file work.
 Use with partial to ensure that a filter will return unicode values.
-Used by Data.deviceTopology()
 Used by SourceTreeAndPathFromPath
 Used by _AdjustLibrary to match .a and .dylib entries in libraries.
 Used by _run() to kill processes on failures
@@ -14088,7 +13868,6 @@ Used to keep flaky tests in flaky/.
 Used to retain order.
 Used to store the current state in set_available_apps and set_installed_apps.
 Used to test URL namespaces
-Used when the ftrace log is the primary data source and includes the suspend_resume and device_pm_callback trace events The ftrace filename is taken from sysvals Output: An array of Data objects
 Used with /Yc and /Yu
 Useful for testing redirects
 Useful for very coarse version differentiation.
@@ -14129,7 +13908,6 @@ Using `fields` and `exclude`.
 Using a cache in order to prevent template calls with already templated variables
 Using a filter that forces a string back to unsafe:
 Using a filter that forces safeness does not lead to double-escaping
-Using a kernel image built with a few extra options enabled, the tool will execute a suspend and will capture dmesg and ftrace data until resume is complete.
 Using a list to get ordered output and a set to do fast "is it already added" checks.
 Using a simple top down parser, as described here: http://effbot.org/zone/simple-top-down-parsing.htm.
 Using a srid, a SpatialReference object, and a CoordTransform object for transformations.
@@ -14232,7 +14010,6 @@ Version number with only 2 parts (#23788)
 Video JSON does not provide enough meta data We will extract some from the video web page instead
 Video URL construction algorithm is reverse-engineered from cwhplayer.swf
 Video from senate.gov
-Video licensed under Creative Commons
 Video wasn't found in the collections, let's try `slugged_video`.
 Video with only one format
 Video with two formats
@@ -14275,7 +14052,6 @@ Warn of ignored settings
 Warn the user as soon as possible if they are trying to apply a bilateral transformation on a nested QuerySet: that won't work.
 Warning if video is unavailable
 Warning: This would effectively fail if the TIME_ZONE defined in the settings has the same UTC offset as "Asia/Singapore" because the mismatch warning would be rightfully missing from the page.
-Warning: cxacru-cf.bin with MD5 hash cdbac2689969d5ed5d4850f117702110 contains mis-aligned values which will stop the modem from being able to make a connection.
 Warp the raster into new srid
 We (possibly) need to convert object IDs to the type of the instances' PK in order to match up instances:
 We *could* pass in a queryset to restrict the Author objects we edit, but in this case we'll use it to display them in alphabetical order by name.
@@ -14658,7 +14434,6 @@ We should never be asking for the build_dir if we've provided a VM path.
 We shouldn't be able to render yet
 We shouldn't have faked that one
 We shouldn't raise a further exception.
-We show the basic info for the 2 type of event classes
 We simplify things by making Oracle identifiers always uppercase.
 We simply find the first C++ file and use that extension.
 We skip this handler due to the fact that it may be using a variable in the name that was conditionally included via set_fact or some other method, and we don't want to error out unnecessarily
@@ -14885,7 +14660,6 @@ Why do we need to null out user.avatar if we are going to delete the user immedi
 Widthratio with variable assignment
 Will be appended to the start of most "choices" lists.
 Will convert POLYGON features into MULTIPOLYGONS.
-Will create several tables at the start, pebs_ll is for PEBS data with load latency info, while gen_events is for general event.
 Will inherit managers from AbstractBase1, but not Child4.
 Will not inherit default manager from parent.
 Windows NT shared libraries
@@ -15003,7 +14777,6 @@ XXX The low precision is for SpatiaLite
 XXX The low precision tolerance is for SpatiaLite
 XXX according to RFC 2818, the most specific Common Name must be used.
 XXX callproc isn't instrumented at this time.
-XXX trace_end callback could be used as an alternative place to compute same values as in the script above:
 XXX(TooTallNate): disabling this code since we don't want this behavior...
 XXX: The UX does not support multiple selected values.
 XXX: The deletion UX can be confusing when dealing with cascading deletion.
@@ -15096,14 +14869,7 @@ You have to call save() explicitly.
 You may want to create a separate settings file for each of the backends you test against.
 You should always have a space after a comma (either as fn arg or operator)
 You should always have whitespace around binary operators.
-You should have received a copy of the GNU General Public License
-You should have received a copy of the GNU General Public License Make coding more python3-ish
-You should have received a copy of the GNU General Public License along with Ansible.
-You should have received a copy of the GNU General Public License along with this program.
-You should have received a copy of the GNU General Public License along with this software.
-You should have received a copy of the GNU General Public License alongwith Ansible.
 You shouldn't have a space before a semicolon at the end of the line.
-You will also need the package libqt4-sql-psql for Qt postgresql support.
 You'll lose microsecond-level precision once the data is saved.
 YouTube may often return 404 HTTP error for a fragment causing the whole download to fail.
 YouTube sets the expire time to about two months
@@ -15175,7 +14941,6 @@ a dictionary of variables to use if we have to create a new host below we set th
 a file descriptor to be used during locking operations
 a formset for a Model that has a custom primary key that still needs to be added to the formset automatically
 a list of host(names) to contain current inquiries to
-a list which include a sequence of receive events
 a new process can crop up
 a plugin that set self.disabled to True will not be called see osx_say.py example for such a plugin
 a previous keydir was already successful, stop looking for keys
@@ -15191,7 +14956,6 @@ a view that raises an exception for the debug view
 a::b for various lengths of a,b
 absorb one trailing newline Substitutions
 ac130 #killcam #angelofdeath',
-action table (expected events that occur and show up in dmesg)
 action, cd_action, and mkdirs get written to a toplevel variable called cmd_foo.
 actions run on the host, so they should in theory only use host libraries, but until everything is made cross-compile safe, also use target libraries.
 actions_depends is the dependencies this target depends on before running any of its action/rule/copy steps.
@@ -15214,13 +14978,8 @@ add it to the group if that was specified
 add output line after this line to fix bug
 add preparation steps to one ssh roundtrip executing the script
 add remaining fields in original order
-add source files that do not match the ignore pattern
-add the callgraph data to the device hierarchy
-add the code which will manipulate the data in the browser
 add the custom agent header, to help prevent issues with sites that block the default urllib agent string
 add the remaining fragments, ignore any wildcards
-add the time in between the tests as a new phase so we can see it
-add the traceevent data to the device hierarchy
 add this host to the group cache
 add this secondary IP to the main device
 add to our list of addresses
@@ -15273,7 +15032,6 @@ always run the accelerate module as the user specified in the play, not the sudo
 amalgamate.py creates an amalgamation from a unity build.
 an 'almost right' datetime should work with configured NLS parameters as per #18465.
 an old school 'action' statement
-analyze the data and create the html output
 and FILES should be MultiValueDict
 and add the group to the proper hierarchy
 and assign the massaged value back to the attribute field
@@ -15291,7 +15049,6 @@ and pull it out via the other set.
 and return the cleaned-up data structure
 and run the play using the strategy and cleanup on way out
 and should work fine with the unicode that comes out of forms.Form.cleaned_data
-and the Swift project authors Licensed under Apache License v2.0 with Runtime Library Exception
 and the foreign key on rider points to pony, not shetland pony
 and the formset isn't valid
 and the other direction
@@ -15376,7 +15133,6 @@ auto_now, auto_now_add, and default are mutually exclusive options.
 available without pluralsight account
 avoid cache interference
 avoid circular import
-avoid false positives for kernel modules
 avoid logging extraneous data
 avoid race with multiple forks trying to create key but limit when locking is needed to creation only
 avoid race with multiple forks trying to create paths on host but limit when locking is needed to creation only
@@ -15465,18 +15221,13 @@ calculate checksum for the remote file, don't bother if using become as slurp wi
 calculate new length and dimensions
 calculate the destination name
 calculate the network
-calculate the timeline height and create bounding box, add buttons
 call a dedicated function for parsing the file content
 call connection reset between runs if it's there
 call test code that consumes from sys.stdin
 call the preprocess_data() function to massage the data into something we can more easily parse, and then call the validation function on it to ensure there are no incorrect key values
-call-graph-from-postgresql.py: create call-graph from postgresql database Copyright (c) 2014, Intel Corporation.
-call/return processing
 callable returning a namespace hint
 callable_obj was a documented kwarg in Django 1.8 and older.
 callables display the callable name.
-called from perf, when it finds a correspoinding event
-calls_view call_paths_view comm_threads_view dsos_view machines_view samples_view symbols_view threads_view
 can annotate an existing values with a new field
 can't end with a dash
 can't start with a dash
@@ -15508,9 +15259,7 @@ check for common dictionary mistakes
 check for common unquoted colon mistakes
 check for optional flags in third term
 check how the old one exited
-check if adb is connected to a device
 check if child of new group is already known as a child
-check if ftrace is available
 check if new group is already known as a group
 check if parent of new group is already known as a parent
 check if path points to an executable source: http://stackoverflow.com/a/377028
@@ -15521,15 +15270,10 @@ check if the cache is filled correctly as expected
 check if the password would get updated to the new count.
 check if the password would get updated to the new iteration count.
 check if the returned error classes are correct note: formset.errors returns a list as documented
-check if the tool can unlock the device
 check if there are funny path extensions for executables, e.g. Windows
-check if there are new files that reference the undefined feature
-check if this hunk should be showed
 check if we find the command on PATH
 check if we have exactly 1 parameter.
 check lookup terms - check number of terms
-check sysfs is mounted
-check target mode is a valid mode
 check that it behaves like a property when there's no instance
 check that it is cached
 check that it returns the right thing
@@ -15541,13 +15285,10 @@ check that we can safely iterate choices repeatedly
 check the number of failures here, to see if they're above the maximum failure percentage allowed, or if any errors are fatal.
 check the templates and vars directories too,if they exist
 check to ensure if there are multiple email addresses a user doesn't get a 500
-check to see if all the tests have the same value
-check to see if the display is currently off
 check to see if the serial number was specified as a percentage, and convert it to an integer value based on the number of hosts
 check to see if this host is blocked (still executing a previous task)
 check to see if this include is dynamic or static: 1.
 check to see if this task should be skipped, due to it being a member of a role which has already run (and whether that role allows duplicate execution)
-check we have root access
 check whether seconds have a fractional part
 check-filelist-abc.py - Fake build to test driver-produced -filelists.
 check_ouput is not available in Python 2.6.
@@ -15580,7 +15321,6 @@ cleanup and save some information restore the old settings for the duped stdin f
 cleanup the temp file created, don't worry if it fails for some reason
 cleanup will happen by 'rm' of tempdir copy2 will preserve some metadata
 clear all parts of the self.vw
-clear all rows and set them to undefined
 clear any filters which may have been applied to the inventory
 clear out any premature input on sys.stdin
 clear out cached serializers to clean out BadSerializer instances
@@ -15589,9 +15329,7 @@ clear out things for this iteration
 clear pattern caching completely since it's unpredictable what patterns may have referenced the group
 clear the cache here, which is only useful if more than one Inventory objects are created when using the API directly
 clear the failed hosts dictionaires in the TQM for the next batch
-clear the kernel ring buffer just as we start
 clear the pending setup flag, since we're past that and it didn't fail
-clear the trace buffer
 clearing the cache to make sure we re-set it correctly in the url method
 cli option handling is responsible for making roles_path a list
 close stdin after process is terminated and stdout/stderr are read completely (see also issue #848)
@@ -15663,7 +15401,6 @@ control frames cannot be fragmented
 convert a variable to a list
 convert content into an email.Message first
 convert inventory to json
-convert the duration to seconds
 convert the version names to LooseVersion objects and sort them to get the latest version.
 convert warnings and fatal from the user level error strings to system level error strings
 copied from utils, avoid circular reference fun :)
@@ -15682,22 +15419,17 @@ count() returns the number of objects matching search criteria.
 count() should respect sliced query sets.
 coveplayer from http://www.pbs.org/wgbh/frontline/film/real-csi/
 cpn generation algorithm is reverse engineered from base.js.
-cpus that triggered the event
 crash if module is missing documentation and not explicitly hidden from docs index
 create 2 Person objects
-create TestRun vessels for ftrace parsing
 create a block containing a single flush handlers meta task, so we can be sure to run handlers at certain points of the playbook execution
-create a callgraph object for the data
 create a dummy class for Python 3.5+ where it's been removed
 create a dummy object with plugin loaders set as an easier way to share them with the forked processes
 create a mock connection, so we don't actually try and connect to things
 create a mock shared loader object
-create a new list entry
 create a printable version of the command for use in reporting later, which strips out things like passwords from the args list
 create a set of temporary vars here, which incorporate the extra and magic vars so we can properly template the vars_files entries
 create a templar class to template the dependency names, in case they contain variables
 create an Author instance to add to the meeting.
-create an array in javascript memory with the device details
 create an object with this name so we don't have failing imports
 create data dict with all fields marked for deletion
 create default .travis.yml
@@ -15707,7 +15439,6 @@ create inventory and pass to var manager
 create outside the loop
 create parser for CLI options
 create play with tasks
-create separate colors based on the name
 create some data that will exhibit the issue
 create tar file from scm url
 create tests/inventory
@@ -15747,12 +15478,9 @@ cx_Oracle, for some reason, doubles percent signs.
 d is in the future compared to now, stop processing.
 dSYMs need to build before stripping happens.
 data URLs as specified in RFC 2397.
-data for kernels 3.15 or newer is entirely in ftrace
-data for kernels older than 3.15 is primarily in dmesg
 data is going to be stored eventually by SimpleCookie, which adds its own overhead, which we must account for.
 data-playable with video vpid in settings.playlistObject.items (e.g. http://www.bbc.com/news/world-us-canada-34473351)
 data-playable without vpid but with a playlist.sxml URLs in otherSettings.playlist (e.g. http://www.bbc.com/turkce/multimedya/2015/10/151010_vid_ankara_patlama_ani)
-data.end is the end of post_resume
 date_interval_sql can properly handle mixed Date/DateTime fields and timedeltas
 datetime is a subclass of date
 db connection state is managed similarly to the wsgi handler as mod_wsgi may call these functions outside of a request/response cycle
@@ -15779,7 +15507,6 @@ default ordering is ('name',)
 default plural function
 default serializable on Python 3 only
 default to Lambert Material if the current Material type cannot be handeled
-default to check the entire tree
 default to exernal IP unless user has specified they prefer internal
 default to index zero if there's a bad material
 default value is None
@@ -15798,17 +15525,12 @@ desktop_advert_config contains complex Javascripts and we don't need it
 dest missing, selinux enabled
 dest_is_local tells us if the host rsync runs on is the same as the host rsync puts the files on.
 determine group from guest description
-determine the maximum number of rows we need to draw
-determine the trace data type (required for further parsing)
 determine video id from url
-device callback finish
-device callback start
 device must have mtu attribute in ODM
 dict with existing child groups:
 dict with existing groups:
 dict with existing parent groups:
 dictionaries to keep track of failed/unreachable hosts
-dictionary of (un)defined symbols
 dicts are never strong.
 different QUERY_STRING, cache must be empty
 different indentation
@@ -15824,8 +15546,6 @@ disable some webkit features we do not need
 disable unnecessary Qt features
 disabled -- Boolean that specifies whether the field is disabled, that is its widget is shown in the form but not editable.
 disconnect all signal handlers
-display receive hunks
-display transmit hunks
 distfunc return False if parsing failed break only if parsing was succesful otherwise continue with other distributions
 distinct + aggregate not allowed
 distinct + annotate not allowed
@@ -15836,16 +15556,12 @@ django.utils.functional
 django.views.decorators.cache
 django.views.decorators.http
 django.views.decorators.vary
-dmesg phase match table
-dmesg text file in memory
 do actual work thorugh copy
 do not allow direct references to .py(c) files, or indirect references to __init__.py
 do not allow method calls to modules
-do not collect references for files that match the ignore pattern
 do not parse hidden files or dirs, e.g. .svn/
 do something with connection
 do the cert validation
-do the expectation - results matching - both ways
 do the final update of the local variables here, for both registered values and any facts which may have been created
 do the whole thing in one shot if no limit was provided.
 do_cmd: run a command via the above cmd_foo names, if necessary.
@@ -15879,12 +15595,6 @@ don't use the internet in tests...
 done in the Polygon test too.
 done with main user -- test user and tablespaces created
 downloads the file and returns the path
-draw a legend which describes the phases by color
-draw any trace events found
-draw the colored boxes for each of the phases
-draw the colored boxes for the device detail section
-draw the time scale, try to make the number of labels readable
-drop all current symbols and reload vmlinux
 drop the user into an editor on the tmp file
 dt and naive_now should be the same effective time.
 dt and now should be the same effective time.
@@ -15926,19 +15636,15 @@ empty might be matched, 1 should never match, also backwards compatible
 empty synopsis and missing episodes (see https://github.com/rg3/youtube-dl/issues/6275) best format available nettv
 empty the oldest link and make it the new root
 empty the skipif file so we can run all the tests again without skipping them
-enable callgraph ftrace only for the second run
 enable sourcemaps support
 encode() and decode() expect the charset to be a native string.
 encodestring is a deprecated alias on Python 3
 encrypt new data and write out to tmp
 encrypted m3u8 streams, georestricted
 end measuring of one loop run
-end of a cpu resume, start of the next
-end of a cpu suspend, start of the next
 endif is non-standard.
 endif is not allowed.
 enforce no newline chars at the end of passwords
-enforce update if object file is not found
 ensure all external dependencies are complete before internal dependencies extra_deps currently only depend on their own deps, so otherwise run early
 ensure changelist contains only valid objects
 ensure filedata can be decrypted, is 1.1 and is AES256
@@ -15976,12 +15682,9 @@ exclude some required field from the forms
 exclude() is the opposite of filter() when doing lookups:
 excluded from test discovery.
 excludes silenced warnings
-execute however many s/r runs requested
 execute permission bits
 execute the task and build a TaskResult from the result
 execute the unarchive module now, with the updated args
-execution will pause here
-execution will pause here, then adb will exit
 exercises ForeignKey.get_db_prep_value()
 existing implementation below:
 exit loop when download is finished
@@ -16001,7 +15704,6 @@ extract morph vertices
 extract non rtmp videos
 extract only the formats that we know that they will be available as http format.
 extract simple title (uploader + slug of song title)
-extract the callgraph and traceevent data
 extract unique frames
 extract unique vertex / normal / uv indices used per chunk
 extract uploader (which is in the url)
@@ -16039,7 +15741,6 @@ fallback to iterative dfs
 fallback to legacy playlist
 fallback to the 'C' locale, which may cause unicode issues but is preferable to simply failing because of an unknown locale
 false_dict is merged into the_dict if cond_expr evaluates to false.
-feature has not been undefined before
 feed id usually locates in the last script.
 fetch the file and check for changes
 fetch the file name from the first line of the report.
@@ -16061,16 +15762,11 @@ file_ext includes the dot.
 file_move_safe should raise an IOError exception if destination file exists and allow_overwrite is False
 filename, actual mimetype
 files are saved in dest dir, with a subdir for each host, then the filename
-files needed for any trace data
-files needed for callgraph trace data
-fill in any actions we've found
-fill in any missing phases
 fill in the birth date.
 fill the template cache
 filter options by current input
 filter out previously specified options from available options
 filter refs the annotated value
-filter some false positives
 final args are the ones we'll eventually return, so first update them with any additional args specified, which have lower priority than those which may be parsed/normalized next
 finally - if you want you can use it, in place to replace first_available_file: you simply cannot use the - files, path or skip options.
 finally go through all of the hosts and append the accumulated blocks to their list of tasks
@@ -16095,9 +15791,7 @@ find the first occurrence of #ifndef and #define, save arg
 find the host we're actually refering too here, which may be a host that is not really in inventory at all
 find the last occurrence of #endif, save entire line
 finding more than one module name is a problem
-finish off matching trace event in ttemp
 fireball mode is an implementation of ansible firing up zeromq via SSH to use no persistent daemons or key management
-firmware line: pull out any firmware data
 first access, cache must return None
 first check if LocaleMiddleware or another middleware added LANGUAGE_CODE to request, then fall back to the active language which in turn can also fall back to settings.LANGUAGE_CODE
 first check private headers
@@ -16106,7 +15800,6 @@ first grab the file and save it to a temp location
 first make a copy of the including task, so that each has a unique copy to modify
 first open the old file, so that it won't go away
 first term should be a list (or dict), second a string holding the subkey
-first trim out any standby or freeze clock time
 first two asserts are just sanity checks, this is the kicker:
 first two asserts just sanity checks, this is the kicker:
 first we assert that the defaults as viewed as a whole are the merged results of the defaults from each role, with the last role defined "winning" when there is a variable naming conflict
@@ -16117,8 +15810,6 @@ first we test with a bad errno to verify it bombs out
 first, we use the original parent method to correctly load the object via the load_data/preprocess_data system we normally use for other playbook objects
 first_found loops are special.
 fix file permissions when the copy is done as a different user
-fix lines with same timestamp/function with the call and return swapped
-fixed list of 10 phases
 fixme.py -- Adds HH_FIXME annotations in your code to clean up after a new check in the typechecker or after an upgrade.
 flag set if task is set to any_errors_fatal
 flags to determine whether certain failures during templating should result in fatal errors being raised
@@ -16127,8 +15818,6 @@ flat_list is the sorted list of dependencies - actually, the list items are the 
 flush after each message
 flush cache or test will be useless
 flush the buffer to make sure no previous key presses are read in below
-flush the data to file
-focus only on device suspend and resume
 follow the redirect and test results.
 followed by a port number
 foo.mp3, then don't delete foo.mp3, silly.
@@ -16184,17 +15873,10 @@ from https://www.youtube.com/user/DeusExOfficial
 from: https://mail.python.org/pipermail/python-list/2009-September/551880.html which is essentially a cut/paste from an earlier (2.6) version of python's ast.py
 frontline video embed
 fs acls failed -- do things this insecure way only if the user opted in in the config file
-ftrace line: parse only valid lines
-function call with children
-function call with no children (leaf)
 function parameter list
-function_graph format trace event
 functions/classes for complex data type tests
 gMock methods are defined using some variant of MOCK_METHODx(name, type) where type may be float(), int(string), etc.
 gather information about the current key file, so we can ensure the new file has the correct mode/owner
-gather the basic message data from the line
-gdb helper commands and functions for Linux kernel debugging
-general trace events have two types, begin and end
 generate all materials for this scene
 generate an empty migration
 generate an initial migration
@@ -16216,7 +15898,6 @@ geo-restricted, player v5
 geometry_field is considered even if not in fields (#26138).
 ger/jap, Dub/OmU, account required
 get VMs for requested resource groups
-get a list of ftrace output files
 get a random chunk of data, each pass with other length
 get all VMs within the subscription
 get all the ssh configs for all boxes in an array of dictionaries.
@@ -16233,15 +15914,12 @@ get rid of comments and strings Don't try to do spacing checks for operator meth
 get ssh options FIXME: make these common to all connections
 get the connection and the handler for this execution
 get the current host state and copy it so we can mutate it
-get the current time from hardware
 get the filename from the last item in the stack
 get the most specific superclass for this platform
 get the next task recursively
 get the ssh config for a single box
 get the tag info from options, converting a comma-separated list of values into a proper list if need be.
 get the username, password, etc.
-get undefined items before the commit
-get undefined items for the commit
 get video information from dict
 get_action might have returned None, so filter any of those out.
 get_compiler is likely a Query instance, _as_sql QuerySet and as_sql just something with as_sql.
@@ -16263,11 +15941,8 @@ getting the ordinal from the character
 give the BMW and Toyota some doors as well
 give the self.vw some optional parts (second relation to same model)
 global count of reported errors filters to apply when emitting error messages
-global events (outside device calls) are simply graphed
 go through all the possible textures types
 go to next host/task group
-grab a copy of the dmesg output
-grab the time stamp first (signifies the start of the test run)
 gross, but technically legal
 group child membership relation
 group does not exist yet in self, import him
@@ -16285,7 +15960,6 @@ gyp-mac-tool is written next to the root Makefile by gyp.
 gypd doesn't define a default value for OS like many other generator modules.
 gypd supports multiple toolsets
 gzip causes trouble on the server side
-hack for determining resume_machine end for freeze
 hack to import SwiftBuildSupport and swift_build_support
 hack to keep --verbose from showing all the setup module results
 hack: retrieve underlying results pointer
@@ -16315,8 +15989,6 @@ hashlib is supplied as of Python 2.5 as the replacement interface for md5 and ot
 hashlib is supplied as of Python 2.5 as the replacement interface for sha and other secure hashes.
 have always_run override check mode
 have to check this manually rather than with assert_called_with()
-height of each row in percent of the timeline height
-height of the row as a percent of the timeline height
 help_text -- An optional string to use as "help text" for this Field.
 help_text is not displayed for hidden fields.
 helper methods for use below in evaluating changed/failed_when
@@ -16340,7 +16012,6 @@ hostname is often empty for non-static IP hosts
 hosts list (host objects are by now already added to self.hosts)
 hours, minutes, seconds
 how we normalize depends if we figured out what the module name is yet.
-html function templates
 http(s):// or protocol-independent URL
 http://bugs.python.org/issue13943
 http://bugs.python.org/issue2193 is fixed in Python 3.3+.
@@ -16361,7 +16032,6 @@ http://netnebraska.org
 http://nezzen.net/2008/06/23/colored-text-in-python-using-ansi-escape-sequences/
 http://nose.readthedocs.org/en/latest/writing_tests.html#test-generators
 http://python3porting.com/differences.html
-http://sourceware.org/systemtap/wiki/WSFutexContention
 http://stackoverflow.com/questions/1189781/using-make-dir-or-notdir-on-a-path-with-spaces
 http://tools.ietf.org/html/draft-josefsson-pbkdf2-test-vectors-06
 http://will.illinois.edu/
@@ -16408,7 +16078,6 @@ https://bugs.python.org/issue6202 Python2 hardcodes an obsolete value on Mac.
 https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/unit-tests/
 https://docs.python.org/2/library/logging.handlers.html#logging.handlers.BufferingHandler
 https://github.com/andymccurdy/redis-py/
-https://github.com/google/ipaddr-py Licensed under the Apache License, Version 2.0 (the "License").
 https://github.com/rg3/youtube-dl/issues/1930
 https://github.com/rg3/youtube-dl/issues/2253
 https://github.com/rg3/youtube-dl/issues/2350
@@ -16443,9 +16112,6 @@ if a module name was not specified for this execution, use the action from the t
 if alias is null, set to first 5 lower characters of the name
 if all dependencies are done, we can build it, otherwise we try to build the dependency.
 if allowempty is set, we only check for file existance but not content
-if an antry exists, assume this is its end
-if an irq doesn't include NET_RX softirq, drop.
-if any calls never returned, clip them at system resume end
 if any hosts are in ITERATING_ALWAYS, return the next always task for these hosts, while all other hosts get a noop
 if any hosts are in ITERATING_RESCUE, return the next rescue task for these hosts, while all other hosts get a noop
 if any hosts are in ITERATING_SETUP, return the setup task while all other hosts get a noop
@@ -16458,16 +16124,12 @@ if connection is reused, its _play_context is no longer valid and needs to be re
 if delegation task ONLY use delegated host vars, avoid delegated FOR host vars
 if dest does not start with "/", we'll assume a relative path
 if doing buffer geometry it is imperative to triangulate the mesh
-if event ends after timeline end, expand the timeline
-if event starts before timeline start, expand timeline
 if exclude is an empty list we pass None to be consistent with the default on modelform_factory
 if facter is installed, and we can use --json because ruby-json is ALSO installed, include facter data in the JSON
 if found in the first line, adjust the end column to account for the extra text
 if fr-fr is not supported, try fr-ca.
 if geo-restricted, m3u8 is inaccessible, but mp4 is okay
-if hardware time fails, use the software time
 if initial was provided, it should override the values from instance
-if instructed, re-analyze existing data files
 if it wasn't found and we are looking for a HEAD, try looking just for that
 if it's a date lookup we need to get the data for all the fields
 if it's a list, check recursively for items that are a list
@@ -16492,7 +16154,6 @@ if result is false and default is not None
 if results is not str/unicode type, raise an exception
 if rtmpdump is not called with "--live" argument, the download is blocked and can be completed
 if showing diffs, we need to get the remote value
-if so we need to turn it on so we can issue a new suspend
 if some directory is given, make sure it's nicely expanded
 if someone really insists on a visible node not being exportable
 if something above set the task, break out of the loop now
@@ -16527,7 +16188,6 @@ if there's no IP address, we can't reach it
 if there's no control flow construct, look at whole line
 if this evaluated to the omit value, set the value back to the default specified in the FieldAttribute and move on
 if this is an extra form and hasn't changed, don't consider it
-if this is test2 and there's a delay, start here
 if this looks like a dictionary or list, convert it to such using the safe_eval method
 if this task is a TaskInclude, we just return now with a success code so the main thread can expand the task list for the given host
 if this task is notifying a handler, do it now
@@ -16550,7 +16210,6 @@ if we have a task and we're delegating to another host, figure out the variables
 if we have a task in this context, and that task has a role, make sure it sees its defaults above any other roles, as we previously (v1) made sure each task had a copy of its roles default vars
 if we have first_available_file in our vars look up the files and use the first one we find as src
 if we have the required datastructures, and if the role_name contains a variable, try and template it now
-if we havent found a test time stamp yet keep spinning til we do
 if we hit a line continuation character, but we're not inside quotes, ignore it and continue on to the next token while setting a flag
 if we need to exclude hosts that match a pattern, skip those
 if we only want to include hosts that match a pattern, skip those that don't
@@ -16568,11 +16227,9 @@ if we've looped around back to the start, break out
 ifndef header guard is present.
 ignore any negative checks here, this is handled elsewhere
 ignore connection password cause we are local
-ignore content of help messages
 ignore decode error in SSL/TLS connection tests as we only care whether the connection attempt was made
 ignore errors as some jails/containers might have readable permissions but not allow reads to proc done in 2 blocks for 2.4 compat
 ignore files with extensions
-ignore numeric values
 ignore proxy settings for this host request
 ignore trailing whitespace
 ignore undefined items
@@ -16582,7 +16239,6 @@ implement specific and obviously wrong escaping in order to be able to tell for 
 implicit meta: flush_handlers
 import here to avoid a dependency loop
 import is here to avoid import loops from ansible.playbook.task_include import TaskInclude
-import sys from PySide.QtSql import *
 importing Python response hooks works correctly.
 in --check mode, always skip this module execution
 in Ansible 1.3 and later, a "_meta" subelement may contain a variable "hostvars" which contains a hash for each host if this "hostvars" exists at all then do not call --host for each host.
@@ -16603,25 +16259,20 @@ include lines in CheckLanguage must be put here.
 include_state is modified during iteration, so we iterate over a copy of the keys.
 included hosts get the task list while those excluded get an equal-length list of noop tasks, to make sure that they continue running in lock-step
 included_file is relative to the current directory, but it needs to be made relative to build_file_path's directory.
-includes comment with function name
 index now identifies the next item to examine.
 index where the decimal is Maximum amount of precision, or digits to the left of the decimal.
-indices of event_info tuple
 indirect access can only be prevented by regular php code, we cannot detect it and throw errors.
 ini import InventoryIniParser from .
 initial -- A value to use in this Field's initial display.
 initial error check, to make sure all specified playbooks are accessible before we start running anything through the playbook executor
 initialize by pointing to self
-initialize data start to first line time
 initialize for empty file case
 initialize needed objects
-initialize the callgraph trace, unless this is an x2 run
 initialize the data loader and variable manager, which will be provided later when the object is actually loaded
 initialize the shared dictionary containing the notified handlers
 initialize the vault stuff with an empty password
 initially, no db assigned
 inner's __exit__ should have restored the settings of the outer context manager, not those when the class was instantiated
-insert all tracepoint event related with this script
 insert shared code and arguments into the module
 inspired by http://mail.python.org/pipermail/xml-sig/2005-March/011022.html
 install dependencies, if we want them
@@ -16644,11 +16295,8 @@ invalid hashed host key, skip it
 invalid labels, 360p is better that 480p
 invalid literal for int()
 iptv-all mediaset fails with geolocation however there is no geo restriction for this programme at all
-is firmware data available
 is it a role and if so make sure you get correct base path
 is not those subkeys, then simplified syntax, host with vars
-is this a trace event
-is this trace event outside of the devices calls
 is_active is true by default
 isatty is not always implemented, #6223.
 isinstance checks that lazy MultiValueDicts will have a return value.
@@ -16684,7 +16332,6 @@ just ignore any errors during task name templating, we don't care if it just sho
 just in case any were added recently
 just in case the file descriptor was reused we actually check the instance (well, this might also have been reused...)
 just remove them as now they get handled by individual callbacks
-just run a utility command and exit
 just using the special char
 just verifying the parent form failed validation, as expected -- this isn't the regression test
 just want to ensure it doesn't blow up during rendering
@@ -16694,9 +16341,6 @@ keep module tests out of becoming module docs
 keep remote files is enabled FIXME: implement the become method is 'su'
 keep the diff friendly - remove 'POT-Creation-Date'
 keep the list ordered
-kernel log buffer dump
-key is cpu and value include time of NET_RX softirq-entry and a list which stacks receive
-key is cpu and value is a list which stacks irqs which raise NET_RX softirq
 key not found in user provided parameters
 key should be one of all_dependent_settings, direct_dependent_settings, or link_settings.
 key_suffixes is a list of key suffixes that might appear on key names.
@@ -16708,7 +16352,6 @@ label tag is correctly associated with month dropdown
 label_suffix -- Suffix to be added to the label.
 lambdas display as "lambda" + index that they appear in list_display.
 language from outside of the supported LANGUAGES list
-last line: test average
 last_name isn't given, but it will be retrieved on demand
 launch the accelerated daemon here
 lead: Current punctuation trimmed from the beginning of the word.
@@ -16733,23 +16376,16 @@ line is a bytes string literal in Python 3.
 line number is inconsistent on stack overflow
 line number of the token in the whole text
 line number where we started tokenizing
-link to the output html
 links with trailing slash
 links without trailing slash and multi-page
 linux-armv6* is canonicalized to 'linux-armv6'
 linux-armv7* is canonicalized to 'linux-armv7'
-linux_banner should contain a newline
 list all the running boxes
 list all the running instances in the fleet
 list index out of range
 list of all deprecation messages to prevent duplicate display
-list of devices graphed
 list of directories to check for ssh keys used in the order listed here, the first one with keys is used
 list of lists isn't hashable, for example
-list of packets which is freed options
-list of packets which pass through dev_hard_start_xmit
-list of packets which pass through dev_queue_xmit
-list of top-most root devices
 list version comparison
 list with group's host objects:
 list with group's parent group objects:
@@ -16759,8 +16395,6 @@ literals and symbols get batched together
 lldb.eTypeClassReference,
 lldb.frame is supposed to contain the right frame, but it doesnt :/ so do the dance
 load data path for resource usage
-load events expectation for the test
-load kernel and module symbols
 load the role's other files, if they exist
 load the shell plugin for this action/connection
 load the specified strategy (or the default linear one)
@@ -16775,12 +16409,8 @@ localize the global len() function
 lockf seems to be FreeBSD specific.
 log adds this journal field
 logging config prior to using filter with mail_admins
-long-lived pid-to-execname mapping
-long-lived stats on (tid,lock) blockage elapsed time
 look for any plugins installed in the package subtree
-look for known actions
 look for the distribution string in the data and replace according to RELEASE_NAME_MAP only the distribution name is set, the version is assumed to be correct from platform.dist()
-look for the suspend start marker
 look in any configured plugin paths, allow one level deep for subcategories
 look in both the inventory base directory and the playbook base directory unless we do an update for a new playbook base dir
 look in role's tasks dir w/o dirname
@@ -16794,12 +16424,9 @@ loop is really with_ for users
 loop on a copy of all's  child groups, as we want to change that list
 loop on a copy of ungrouped hosts, as we want to change that list
 loop through a subset of attributes on the task object and set connection fields based on their values
-loop through the command line arguments
 loop through the item results, and remember the changed/failed result flags based on any item there.
 lovesicktheseries  #lovesickseason2',
 low quality mp4 is best
-low-level resume start
-low-level suspend start
 lowercase data-contentid
 m3u8 served with Content-Type: text/plain
 m3u8 streams are encrypted and may not be handled properly by older ffmpeg/avconv.
@@ -16887,7 +16514,6 @@ max_num with initial data When not passed, max_num will take a high default valu
 may have a trailing dot
 md5 constantly changes
 md5 fails in Python 2.6 due to buggy server response and wrong handling of urllib2
-means no copyright line was found
 measure time over whole while-loop, so slow_down() and best_block_size() work together properly
 media line is different to the default FreeBSD one
 media playlist, return as is
@@ -16898,7 +16524,6 @@ memcached does not allow whitespace or control characters in keys
 memcached doesn't support a negative delta
 memcached limits key length to 250
 memoryview and buffer are not strictly equivalent, but should be fine for django core usage (mainly BinaryField).
-merge information realted to a NET_RX softirq
 merge those dicts recursively
 message/rfc822 attachments must be ASCII
 metadata (all data is little-endian)
@@ -16945,7 +16570,6 @@ msgcat to wrap lines and msgfmt for compilation of .mo file
 msgfmt output stats on stderr
 mt.exe sometimes removes whitespace, and sometimes doesn't unfortunately.
 mult3__div3 always leads to 0
-multi-line statements
 multiple formats via video_materials.json API
 must be brace after if
 must be killed on another thread, or else deadlock
@@ -16971,7 +16595,6 @@ needed when logging_config doesn't start with logging.config
 needs to be in here, because the import fails with python3 still
 negated is False by default
 neither a callable nor a string
-new device callback for a specific phase
 new membership, add host to group from self group from self will also be added again to host.groups, but as different object
 new shell is still accessible
 news article with multiple videos embedded with data-playable
@@ -17033,7 +16656,6 @@ non-original (dubbed) version in requested language, without subtitles
 non-space, non-identifier: begins an operator name
 non_token_view_using_request_processor does not call get_token(), but does use the csrf request processor.
 none() returns a QuerySet that behaves like any other QuerySet object
-nop format trace event
 noqa (E402 module level import not at top of file)
 noqa (E402 module level import not at top of file) TODO: This should not be hard coded.
 noqa (E402) FIXME: This doesn't work on non-Darwin platforms.
@@ -17065,7 +16687,6 @@ not valid json, lets try to capture error
 note the lack of an explicit GenericRelation here...
 note the missing comma
 note: we must switch out dashes for underscores since js functions are created using the module variable
-nothing to do, really
 now actually test the lower-level method that does the work
 now add self to child's parent_groups list, but only if there isn't already a group with the same name
 now associate the extracted mesh node with all the objects that are instancing it
@@ -17075,7 +16696,6 @@ now determine whether or not to export using the geometry type set globally from
 now generate a unique name
 now iterate over all the extracted mesh nodes and parse each one
 now iterate through the possible paths and return the first one we find
-now look for CPU on/off events
 now make an invalid one with a ForeignKey
 now need to write this to disk as (oldname).new and inform the user
 now open the new file, not forgetting allow_overwrite
@@ -17154,7 +16774,6 @@ only hooks registered during successful savepoints execute
 only in AuthenticateVideo videoVersions
 only internal variables can start with an underscore, so we don't allow users to set them directy in arguments
 only one query is required to pull the model from DB
-only parse the ftrace data during suspend/resume
 only pass the profile name if it's set (as it is not supported by older boto versions)
 only set profile_name if passed as an argument
 only thing left should be host pattern
@@ -17187,13 +16806,11 @@ or handle the case in which neither processing nor a change to the original file
 or just somewhat reasonably fair selection amongst available mirrors
 or we list all groups and systems:
 or zwearz.com/watch/xxxx
-order all events in time
 order is important, must match order in JSONLoader face type vertex indices material index face uvs index face vertex uvs indices face color index face vertex colors indices
 order of choices depends on User model, which has no order
 order_with_respect_and ordering are mutually exclusive.
 order_with_respect_to being unset for a field
 order_with_respect_to points to a model with a OneToOneField primary key.
-ordered list of phases
 ordinary_targets are ordinary targets that are already in the project file.
 original version in different language, with partial subtitles in different language
 original version in different language, with partial subtitles in requested language
@@ -17211,7 +16828,6 @@ os.path.basename returns a bytes object, but NamedTemporaryFile will fail if the
 os.read() is returning 'bytes', not strings
 other possible values: "CLIP", "EXTEND", "CLIP_CUBE", "CHECKER", best match CLAMP behavior
 other sql_flush() implementations).
-other than to add MIT license header (as specified on page, but not in code).
 otherwise assume this is a dotted quad
 otherwise do some bookkeeping to return exactly enough of the stream and stashing any extra content we get from the producer
 otherwise it's just the attribute on the date/datetime object
@@ -17242,7 +16858,6 @@ parse Akamai Adaptive Media Player feed
 parse OBJ / MTL files
 parse command line arguments and return the result
 parse just stderr from CLIXML output
-parse only valid lines, if this isnt one move on
 parse the main result
 parse_cookie() has historically kept only the last cookie with the same name.
 parser.__loaded_blocks isn't a list yet
@@ -17261,7 +16876,6 @@ paths of requested packages
 pause briefly so we don't spin lock
 peek at the next task for the host, to see if there's anything to do do for this host
 per playbook send the stats callback for this playbook
-perf script event handlers have been generated by perf script -g python
 perform checks and collect `errors` ...
 perhaps from os.urandom(4)
 php coderz are so l33t
@@ -17294,8 +16908,6 @@ pop the task, mark the host blocked, and queue it
 populate() might be called by two threads in parallel on servers that create threads before initializing the WSGI callable.
 port is unused, this go on func
 possibly just being used as a controller
-post resume events can just have ends
-post resume time line: did this test run include post-resume data
 postgres uses 1-indexing
 powershell requires that script files end with .ps1
 pre-2.6 versions of python cannot use the custom https handler, since the socket class is lacking create_connection.
@@ -17313,9 +16925,6 @@ prevent paramiko warning noise -- see http://stackoverflow.com/questions/3920502
 prevent warnings from appearing as errors
 primary_key must be True.
 prime the models.SITE_CACHE
-print "fabric_ops: " + fo
-print out the basic summary of all the tests
-print trace fields not included in handler args
 print( src ) print( url ) print( saveFilename )
 print(json.dumps(groups))
 print(self) print(other)
@@ -17324,7 +16933,6 @@ private link (alt format)
 privilege escalation fields
 proc_stderr_closed is True
 process command line module list
-process the files in order and get an array of data objects
 process_response must not be called until after response is rendered, otherwise some decorators like csrf_protect and gzip_page will not work correctly.
 process_template_response must not be called for HttpResponse
 process_view shouldn't raise any exceptions, so we'll ignore and serve the user a 403 (assuming they're still listening, which they probably aren't because of the error).
@@ -17332,7 +16940,6 @@ prompt should be encoded in Python 2.
 provide closest available three.js behavior.
 provided unknown key was cycled, not reused
 public key extracted from http://static.iqiyi.com/js/qiyiV2/20160129180840/jobs/i18n/i18nIndex.js
-pull out any firmware data
 pull out the one matched key (ignoring internal patterns starting with _)
 put file in read-only mode
 put it in a list to prevent descriptor lookups in test
@@ -17344,7 +16951,6 @@ python 2 fails when it tries converting from str to unicode (via ASCII).
 python 2.4 (likely rhel5 which doesn't have tls1.1 support in its openssl)
 python 2.x tries to encode unicode strings with ascii (see the XMLParser._fixtext method)
 python not found or module uncaught exception
-python tools/perf/scripts/python/call-graph-from-postgresql.py pt_example
 python-2.6's json encoder is buggy (can't encode hostvars)
 python-memcache responds to incr on non-existent keys by raising a ValueError, pylibmc by raising a pylibmc.NotFound and Cmemcache returns None.
 python2 will not cast pc (type void*) to an int cleanly instead python2 and python3 work with the hex string representation of the void pointer which we can parse back into an int.
@@ -17380,7 +16986,6 @@ read() should return a GEOSGeometry on either a hex string or a WKB buffer.
 real children of all have just 1 parent, all this one has more, so not a direct child of all anymore
 rebaking doesn't change the rendered content
 recalculate the normals to face outwards, this is usually best after applying a modifiers, especialy for something like the mirror
-received packet list for matching skb_copy_datagram_iovec
 recombine the free-form params, if any were found, and assign them to a special option for use later by the shell/command module
 reconstruct url without credentials
 record recent use of the key by moving it to the front of the list
@@ -17409,8 +17014,6 @@ reloading user to purge the _perm_cache
 remember language choice saved to session
 remote_file does not exist so continue to next iteration.
 remove airbag from the self.vw (reverse relation with custom related_name)
-remove all by the relatives of the filter devnames
-remove any latent carriage returns
 remove as modules might hide due to nolog
 remove diff information from screen output
 remove invocation unless specifically wanting it
@@ -17433,7 +17036,6 @@ replace '0metadata' with metadata
 replace 'zchildren' with children
 replace : by _ in interface name since they are hard to use in template
 replace object ids in var_dumps with the string ID
-report cases that are present for the commit but not before
 represents a playbook where a play entry is mis-formatted
 represents a playbook which is not a list of plays
 request.get_host() includes the port.
@@ -17448,7 +17050,6 @@ reset permissions if needed
 reset the port back to the default if none was specified, to prevent the delegated host from inheriting the original host's setting
 reset the stream pointer to the beginning
 reshape() needs a reshape parameter with the height first.
-resolve group_fd to event names
 resolve the url so that we can check availability and detect the correct extension
 resolve the url so that we can detect the correct extension
 resolved base role/play path + templates/files/vars + relative filename
@@ -17459,13 +17060,11 @@ response must have a key named "error" if there was a failure of any kind.
 response must not be rendered yet.
 response should be an non-zero integer
 rest of operator name
-restore pagination state
 restore the UUID field
 restore to original frame TODO: remove duplicated key frames
 restored by override_settings
 restrict the inventory to the hosts in the serialized batch
 results implementation for tasks with loops should be cleaned up better than this
-resume complete start
 retrieve all groups and hosts form the parser and add them to self, don't look at group lists yet, to avoid recursion trouble, but just make sure all objects exist in self
 retrieve the content from cache
 retrieving language information
@@ -17504,14 +17103,11 @@ run git clean in the specified path
 run individual tests via generator set nicer stdout output for nosetest
 run it try to read it as json first if that fails read it with ConfigParser if that fails, skip it
 run make, nmake or jom in the specified path
-run multiple tests in a separte subdirectory
 run qmake in the specified path
-run test on android device
 run the 'package' module
 run the base class run() method, which executes the cleanup function and runs any outstanding handlers which have been triggered
 run the given command in the given working directory
 run the module and store the result
-run the test in the current directory
 run validator only if present
 run with kill_random_test, with three modes.
 run_test_targets are the targets that run unittests and should be used for the Run All Tests target.
@@ -17544,7 +17140,6 @@ school report article with single video
 scp and sftp require square brackets for IPv6 addresses, but accept them for hostnames and IPv4 addresses too.
 script content will be parsed to text
 script import InventoryScriptParser
-scrollable drawing area
 search again, with the same query parameters, in reverse order
 search for call to ocw_embed_chapter_media(container_id, media_url, provider, page_url, image_url, captions_file)
 search for call to ocw_embed_chapter_media(container_id, media_url, provider, page_url, image_url, start, stop, captions_file)
@@ -17566,7 +17161,6 @@ see https://github.com/ansible/ansible/issues/14837
 see https://github.com/rg3/youtube-dl/issues/8227
 see if SSH can support ControlPersist if not use paramiko
 see if hash is supported
-see if there's firmware timing data to be had
 see if we have data for both fields
 see if we need to inject a line marker
 seems to be more reliable
@@ -17598,7 +17192,6 @@ send callbacks for 'non final' results
 send callbacks, execute other options based on the result status TODO: this should all be cleaned up and probably moved to a sub-function.
 send pre_delete signals
 send stderr to /dev/null to ignore messages when linking directories.
-send the KEYPAD_POWER keyevent to wake it up
 sentinel node for doubly linked list
 serialize the uuid field
 session should be flushed
@@ -17621,17 +17214,13 @@ set no_log to default if it was not previouslly set
 set of dotted paths to all functions and classes that are used in urlpatterns
 set of modules that we haven't added to the zipfile
 set options before play to allow play to override them
-set scale for timeline
 set the failed property if the result has a non-zero rc.
 set the flag on the filter for FilterExpression.resolve
 set the flag on the innermost decorated function for decorators that need it, e.g. stringfilter
 set the flag so the outer loop knows we've still found some work which needs to be done
 set the loaders basedir
 set the role name in the new ds
-set the trace clock to global
 set the vars for this task from those specified as params to the include
-set trace buffer to a huge value
-set trace format options
 setUpTestData() should call _rollback_atomics() so that the transaction doesn't leak.
 set_many takes a second ``timeout`` parameter
 sets the module_utils/urls.py req parameters
@@ -17649,7 +17238,6 @@ sha1 hex digeset of string
 shahid plus subscriber only
 shall we add the org_id as prefix to the group name:
 shell modules require special handling
-shift the timeline so that tZero is the new 0
 shlex.split() wants Unicode (i.e. ``str``) input on Python 3
 shlex.split() wants bytes (i.e. ``str``) input on Python 2
 short name of targets that were skipped because they didn't contain anything interesting.
@@ -17737,7 +17325,6 @@ some songs in an album are not playable
 some squashed results (eg, yum) are not dicts and can't be skipped individually
 someone fiddles with the mgmt form data...
 someone is using a closed file descriptor as stdin
-something else (possibly a trace marker)
 songs don't store any useful info in the 'context' variable
 sort faces by materials
 sort instance collections
@@ -17752,7 +17339,6 @@ special handling for accelerated mode, as it is set in a separate play option fr
 special handling for syntax errors, we just return the expression string back as-is
 special options for all files in this dir
 special overrides for the connection setting
-special processing for trace events
 special urls for auth test cases
 special urls for flatpage test cases
 speed up common case w/o wildcards
@@ -17766,12 +17352,9 @@ sqlite3's internal default is ''.
 srs/srid may be assigned their own values, even when srs is None.
 ssh checking is harder as the heuristic is overzealous in many cases.
 ssh paramiko and local are fully supported transports.
-stamp line: each stamp means a new test run
 standard host file entry
 standard transformation nodes are inferred
 start a new category file
-start of first cpu resume
-start of first cpu suspend
 start with the easy ones
 start with the same children of node1 then add an item
 start_pattern not found in text.
@@ -17781,7 +17364,6 @@ stdout and stderr may be either a file-like or a bytes object.
 stdout was empty or just space, set to / to trigger error in next if
 still need to check InventoryParser per host vars which actually means InventoryScript per host, which is not performant
 still test bulk_create()
-store each trace event in ttemp
 store the hashed name if there was a miss, e.g. when the files are still processed
 store the module invocation details into the results
 store the previous quoting state for checking later
@@ -17813,12 +17395,8 @@ subtitles download errors are already managed as troubles in relevant IE that wa
 sudo usually requires a PTY (cf.
 support use_tls option in docker_image.py.
 support_targets are the action/rule targets used by GYP file targets, just kept for the assert check.
-suspend_machine start
-suspend_machine/resume_machine
-suspend_resume trace events have two types, begin and end
 swap to be able to add the shape keys
 swift_build_support/toolchain.py - Detect host machine's versioned executables
-switch off several checks (need to be at the end of cflags list)
 sys.path.append(os.path.abspath('some/directory'))
 sys.setrecursionlimit(1000)
 system-installed ones
@@ -17849,7 +17427,6 @@ test changing the dict and delegating
 test comparing RequestContext to prevent problems if somebody adds __eq__ in the future
 test completely changing how the output is rendered
 test content via property
-test data, 1 row per test
 test environment with a variable in it
 test examining output for become failure
 test examining output for become prompt
@@ -17933,7 +17510,6 @@ the actual value depends on the system time zone of the host
 the argnum count must be bigger then 2, index 0 for self, index 1 for SEL
 the async_wrapper module returns dumped JSON via its stdout response, so we parse it here and replace the result
 the attribute is always true for newly retrieved instance
-the budget of rx_skb_list, tx_queue_list and tx_xmit_list
 the capture group for the port will include the ':', so remove it and convert the port to an integer
 the certificates are misconfigured (see https://github.com/rg3/youtube-dl/issues/8665)
 the char before the current one, used to see if the current character is escaped
@@ -17963,13 +17539,11 @@ the gcov report follows certain pattern.
 the goal scheme is https
 the host file file, or script path, or list of hosts if a list, inventory data will NOT be loaded
 the host here is from the executor side, which means it was a serialized/cloned copy and we'll need to look up the proper host object from the master inventory
-the indentation determines the depth
 the inventory object holds a list of groups
 the is_active attr is provided by AbstractBaseUser
 the is_active flag is saved
 the last host to be given a task
 the line number where the previous token has ended (plus empty lines) Add one so that the first line is line 1 rather than line 0
-the line should be a call, return, or event
 the list of params parsed out of the arg string this is going to be the result value when we are done
 the list of params parsed out of the arg string this is going to be the result value when we are donei
 the magic variable mapping dictionary below is used to translate host/inventory variables to fields in the PlayContext object.
@@ -18022,7 +17596,6 @@ then test with it creating a temp file
 then we create a temporary set of vars to ensure the variable reference is unique
 then we merge in vars from the host specified in the inventory (INI or script)
 then we use the object to load a Playbook
-there can be multiple test runs in a single file delineated by stamps
 there doesn't appear to be a real limit, for example if you search for 'python' you get more than 8.000.000 results
 there is no title in database, give one here or formset will fail.
 there is one user on each database
@@ -18096,7 +17669,6 @@ this should show if systemd is the boot init system, if checking init faild to m
 this should start a new server
 this should work as if blocktrans was not there (#19915)
 this should work by default but doesn't, so we fix it
-this shouldn't happen, but JIC, ignore callgraph data post-res
 this sometimes happens and retrying helps
 this task added a new group (group_by module)
 this task added a new host (add_host module)
@@ -18116,10 +17688,6 @@ through is provided so that you have easy access to the through model (Book.auth
 thumbnail image We try first to get a high quality image:
 ticket 21147 - avoid time.time() related precision issues
 time for one db_stress instance to run
-time scale for potentially multiple datasets
-time spent in firmware resume
-time spent in firmware suspend
-time spent in low-level suspend (standby/freeze)
 time to stabilize after a kill
 time to stabilize before the next run we need to clean up after ourselves -- only do this on test success
 timestamp field has different value if logged in
@@ -18130,7 +17698,6 @@ tmp is necessary to store the module source code or we want to keep the files on
 to be set by calling set_playbook_basedir by playbook code
 to build the "_meta"-Group with hostvars first create dictionary for later use
 to get well defined color order for debug colors default materials with debug colors for when there is no specified MTL / MTL loading failed, or if there were no materials / null materials
-to perf python scripting.
 to resolve to and empty list if undefined.
 to work around basic.py reading stdin
 to_field_name should also work on ModelMultipleChoiceField ##################
@@ -18144,9 +17711,6 @@ toolset is the default toolset for that target.
 total time for this script to test db_stress
 totally ignores privlege escalation
 touch.py - /bin/touch that writes the LLVM epoch -*- python -*-
-trace event processing
-tracer type line: determine the trace data type
-traces drawing and overview.
 track if all items have a lastmod
 tracks dictionary shipped with playlist.jsx API is limited to 150 tracks, missing tracks should be retrieved manually.
 trail: Current punctuation trimmed from the end of the word.
@@ -18168,7 +17732,6 @@ try to find out which linux distribution this is
 try to find v2 method, fallback to v1 method, ignore callback if no method found
 try to get network info
 try to get the current block from the list of blocks, and if we run past the end of the list we know we're done with this block
-try to pack each row with as many ranges as possible
 try to unencrypt data
 try updating the cache
 try: do_something() except Exception as e: display.warn(to_unicode(e))
@@ -18227,12 +17790,10 @@ urlparse.urlsplit can raise a ValueError with some misformatted URLs.
 urlsafe_base64_decode() decodes to bytestring on Python 3
 urlsplit on Python 2.6.1 is broken.
 use '.' in case relative_path is empty.
-use 'git ls-files' to get the worklist
 use a non-default name for the default manager
 use a temp directory and rename to ensure the directory searched for only appears after permissions applied.
 use ansible core library to parse out doc metadata YAML and plaintext examples
 use default definition
-use full paths with source files
 use hosts from config file
 use large ops per thread since we will kill it anyway
 use new AES keys every 2 hours, which means fireball must not allow running for longer either
@@ -18293,7 +17854,6 @@ verify decrypted content
 verify if its type is django.database.db.IntegrityError.
 verify no "odd" PKs left
 verify that qmake was properly built
-verify that we can run a test
 verify the password is cleansed
 verify the remoteuser middleware will not remove a user authenticated via another backend
 verify the role's meta file
@@ -18316,7 +17876,6 @@ videoInfo API may not work for some videos
 video_info is None (https://github.com/rg3/youtube-dl/issues/4421)
 vimeo only supports https now, but the user can give an http url
 w2 ought to be independent of w1, since MultiWidget ought to make a copy of its sub-widgets when it is copied.
-wait a few seconds so the user can see the device wake up
 wait for Hack to catch up with file system changes
 wait for logs to be written
 walk all fields in the object
@@ -18338,11 +17897,9 @@ we can't use .assertRaises, since we want to inspect the exception
 we continue on loader failures
 we create a new data structure here, using the same object used internally by the YAML parsing code so we can preserve file:line:column information if it exists
 we create the state in a different dir from the one we run our tests on, to verify that the saved state does not depend on any absolute paths
-we did not any matching event - fail
 we do not have a full context here, and the missing variable could be because of that, so just show a warning and continue
 we do not want to include the u"" or u'' prefix so we build the string rather than interpolate the tuple
 we don't care about nonzero exit codes...
-we don't care about originators of WAKE events
 we don't care here, because the action may simply not have a corresponding action plugin
 we don't create repo_dir using mkdtemp() because we want to create it with copytree().
 we don't currently care about this final response, we just receive it and drop it.
@@ -18399,7 +17956,6 @@ we're using a real play context here
 we've moved the module_common relative to the snippets, so fix the path
 week starts on Monday
 week starts on Sunday
-what data source are we using
 what to report as the origin for templates that come from non-loader sources (e.g. strings)
 what was used for the assignment is still accessible
 whatever happens, destroy the decrypted file
@@ -18408,13 +17964,11 @@ when inherited model, its PK is also fetched, hence '4' deferred fields.
 when multiple file are assigned as content, make sure they are all closed with the response.
 when piping to "head -n1"
 when testing deprecation warnings, it's useful to run just one test since the message won't be displayed multiple times
-when the call is finished, see which device matches it
 when used directly, this class needs a loader, but we want to make sure we don't trample on the existing one if this class is used as a mix-in with a playbook base class
 when using private_networking, the API reports the private one in "ip_address".
 where it will sit under local facts
 where the F() is pushed into the HAVING clause
 where to store the new paths
-which phase is this device callback or action "in"
 widget -- A Widget class, or instance of a Widget class, that should be used for this Field when displaying it.
 will be overwritten later
 will fire request_finished
@@ -18437,13 +17991,7 @@ works in interp but fails in JIT
 worst-to-best ordering
 would be 5 if prefetch is ignored
 wrap the concat in something else to ensure that we're still getting text rather than bytes
-write out the ftrace data converted to html
 write out the install info file for later use
-write the device timeline
-write the footer and close
-write the ftrace data (callgraph)
-write the html header first (html head, css code, up to body start)
-write the test title and general info header
 wvm are drm-protected files
 x and y are PBXReferenceProxy objects.
 xcode passes mdynamic-no-pic by default for executable and possibly static lib according to mento

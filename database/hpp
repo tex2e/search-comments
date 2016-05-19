@@ -1,5 +1,3 @@
 A Bison parser, made by GNU Bison 2.4.1.
 Put the tokens into the symbol table, so that GDB and other debuggers know about them.
-See the GNU General Public License for more details.
 This special exception was added by the Free Software Foundation in version 2.2 of Bison.
-You should have received a copy of the GNU General Public License along with this program.

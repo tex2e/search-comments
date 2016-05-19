@@ -350,7 +350,6 @@
 - Check if we are handling user exception in an eagerly executed async function.
 - Check that each block handling a given case tag of a switch_enum only produces an integer value and does not have any side-effects.
 - Check that each one stems directly or indirectly from the same switch_enum instruction.
-- Copyright (c) 2008 Christos Zoulas All rights reserved.
 - Could the base be something (regardless of type) that is inside one of the things we're tracking.
 - Discard all evaluation stack temporaries (including pre-live activation records).
 - Each fault funclet is a contiguous region of bytecode that does not jump into other fault funclets or into the primary function body.
@@ -4494,7 +4493,6 @@ But only do this if tvRef was used in this iteration, otherwise we may wipe out 
 But only if the lowered type matches exactly.
 But only when the repl_set_name in the server definition struct is actually *set*.
 But our memory is not infinite.
-But please keep this copyright notice.
 But propagate the error bit.
 But silence the warning if the base was explicitly qualified.
 But since requests are still coming in, it may not be very useful, and has some performance penalties.
@@ -7152,23 +7150,6 @@ Copy-initialize with the new value.
 CopyForwarding will be reapplied after the transparent function is inlined at which point global hoisting will be done.
 CopyOnSuccess values should not have / attached cleanups.
 Copying the block will create an independent reference.
-Copyright (C) 1991-2, RSA Data Security, Inc.
-Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura, Copyright (C) 2000 - 2003, Richard J.
-Copyright (C) 2012 execjosh, http://execjosh.blogspot.com Copyright (C) 2012 James M.
-Copyright (c) 1988, 1993 The Regents of the University of California.
-Copyright (c) 1997-1998 Sun Microsystems, Inc.
-Copyright (c) 1998 Todd C.
-Copyright (c) 2003 Constantin S.
-Copyright (c) 2005-2014 Rich Felker, et al.
-Copyright (c) 2009 Keynetics Inc.
-Copyright (c) 2012 Bryan Davis All rights reserved.
-Copyright (c) 2014 - present Adobe Systems Incorporated.
-Copyright (c) 2015-present, Facebook, Inc.
-Copyright (c) 2016-present, Facebook, Inc.
-Copyright (c) Christos Zoulas 2003.
-Copyright 2010-present, Facebook, Inc.
-Copyright 2013-present, Facebook, Inc.
-Copyright 2015-present, Facebook, Inc.
 Correct for over-counting in TC-stats.
 Correctness checks are normally done before adding function to scope.
 Could be a decimal now...
@@ -13031,7 +13012,6 @@ Free the response node.
 Free the self value in convenience initializers, otherwise there's nothing to do.
 Free the variable metadata.
 Free this cursor/link pair
-FreeSec: libcrypt for NetBSD  Copyright (c) 1994 David Burren All rights reserved.
 Freetype 2.1 or better
 Freetype 2.1.3 or better
 Freeze epilogue release or not.
@@ -13875,7 +13855,6 @@ Go with PHP5 default behavior of allowing all
 Goes through the buffer sending 4K byte batches.
 Good, they have migrated already
 Got an ExitException during exception handling, handle similarly to the case below but don't call obEndAll().
-Government and others acting in its behalf permission to use and distribute the software in accordance with the terms specified in this license.
 Grab AI's operands and the relevant types from the ConvertFunction function type and AI.
 Grab Target and find the RC identity root of its operand.
 Grab a chunk of the mask.
@@ -15639,7 +15618,6 @@ If the C type of the argument is a const pointer, but the Swift type isn't, trea
 If the Clang declaration is from a protocol but was mirrored into class or extension thereof, treat it as an override.
 If the Clang module is null, use the bridging header lookup table.
 If the Class is unique but not persistent, it's safe to use it as a const after the LdClsCached, which will throw if the class can't be defined.
-If the EULA control exists, show it only if a license URL is provided as well.
 If the Enum only contains two cases, test for the non-payload case and invert the result.
 If the Node is not complete, then we have reached a dead lock.
 If the Objective-C selectors match, always call it exact.
@@ -21494,10 +21472,6 @@ Lex any digits after the decimal point.
 Lex things like 4.x as '4' followed by a tok::period.
 Lex tokens until we find the token that contains the source location.
 Libraries are not sorted in the topological order of dependencies, and we don't know the dependencies in advance.
-License is also granted to make and use derivative works provided that such works are identified as "derived from the RSA Data Security, Inc.
-License to copy and use this software is granted provided that it is identified as the "RSA Data Security, Inc.
-Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements.
-Licensed under MIT License https://github.com/phidelta/fsevents.git
 Life would be much easier if we could just use a FixedTypeRepr for the parent.
 Lifetime continuity resolution.
 Lifetime endpoints that don't allow the address to escape.
@@ -22901,7 +22875,6 @@ Methods need to be collected into the appropriate methods list.
 Methods of non-final classes can only contain a covariant 'Self' as a function result type.
 Methods returning bool/UChar32 and taking a single UChar32 argument
 Methods with unique signatures
-Michael's regex carries this copyright:  Copyright Michael Rushton 2009-10 http://squiloople.com/ Feel free to use and redistribute this code.
 Might as well create the error-limiting table too.
 Might as well spill on a block boundary, as early as possible.
 Might as well store it as a map
@@ -23410,8 +23383,6 @@ No conversion needed.
 No conversion: re-use the original parameter info.
 No conversion: re-use the original result info.
 No cookie name provided: delete all the cookies visible by this URL
-No copyright info was found in the original bdf.
-No copyright is claimed, and the software is hereby placed in the public domain.
 No data before the label means we just go right to ST_END_HEREDOC without forming a new token.
 No data is always more general.
 No debug info is emitted for refcounts.
@@ -23520,7 +23491,6 @@ No warning takes precedence over nullsafe.
 No witness for typealiases.
 No witness necessary for type aliases
 No witness table for AnyObject
-No written agreement, license, or royalty fee is required for any of the authorized uses.
 No zero digits have been scanned.
 No, so try to allocate it
 No-escaping stored declarations are captured as the address of the value.
@@ -24637,7 +24607,6 @@ OnApply - apply the packages.
 OnChangeState - change state.
 OnClickAcceptCheckbox - allow the install to continue.
 OnClickCloseButton - close the application.
-OnClickEulaLink - show the end user license agreement.
 OnClickInstallPostgressCheckbox - we will set defaults value and disable controls if checkbox was checked.
 OnClickInstallScope - allow user to choose between a perMachine and perUser install
 OnClickLaunchButton - launch the app from the success page.
@@ -26370,7 +26339,6 @@ Perhaps the caller will want to call strcmp to break the tie.
 Perhaps this is something that shouldn't be done, and is a bandaid over some other lower-level architecture issue that I'm missing.
 Perhaps we should just compute leading 28 bits of S once and for all and pass them and a shift to quorem, so it can do shifts and ors to compute the numerator for q.
 Perl compatible options
-Permission granted to use, copy, modify, distribute and sell so long as the above copyright and this permission statement are retained in all copies.
 Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions: 1.
 Permit '()' when this method overrides a method with a foreign error convention that replaces NSErrorPointer with () and this is the replaced parameter.
 Persistent font cache until explicitly cleared
@@ -26740,7 +26708,6 @@ Proactively set the destination metatype so that we can tail-recur, unless we've
 Probably not actually autoreleased.
 Probably only useful when the def instruction only has a single dst, but that's all we need right now.
 Probably we don't have the right abstraction boundaries.
-Probe for localised license file
 Problem is, we don't have a ZendResourceData handy, as we should only get here if they've all been released.
 Problem reported by Andreas Pfaller.
 Proceed only if we were able to read the "Content-Length"
@@ -27598,8 +27565,6 @@ Redirect the outgoing defer edges, which may also trigger other node merges.
 Redirect the terminator of the current loop iteration's latch to the next / iterations header or if this is the last iteration remove the backedge to / the header.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:  1.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1.
-Redistributions of source code must retain the above copyright notice immediately at the beginning of the file, without modification, this list of conditions, and the following disclaimer.
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 Reduce conventions for trivial types to an unowned convention.
 Reduce the available values into a single SILValue we can use to forward
 Reduce the available values into a single SILValue we can use to forward.
@@ -29419,7 +29384,6 @@ See how many bytes we need to cover all the empty cases.
 See how many consecutive bits we have.
 See how much of the value we can fit here.
 See http://curl.haxx.se/lxr/source/docs/libcurl/symbols-in-versions or curl src/docs/libcurl/symbols-in-versions for a (almost) complete list of options and which version they were introduced
-See http://swift.org/LICENSE.txt for license information See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
 See https://github.com/webscalesql/webscalesql-5.6/issues/23
 See icu/Tokenizer.cpp for definition of types.
 See if Continue has a release on self as the instruction right after the apply.
@@ -29473,11 +29437,7 @@ See readLongString for more details.
 See swift::performTypeChecking for TopLevelCodeDecl handling.
 See task description for further details.
 See task description for more details.
-See the GNU General Public License for more details.
-See the GNU Library General Public License for more details.
 See the IJG JPEG library documentation for more details.
-See the License for the specific language governing permissions and limitations under the License.
-See the NOTICE file distributed with this work for additional information regarding copyright ownership.
 See the TBAA section / in the SIL reference manual.
 See the TODO in computeSubSeqRelation.
 See the code in utf8ToModifiedUTF8 for what's happening here.
@@ -29493,7 +29453,6 @@ See the disjoint data function objects above.
 See the docs above in "Effects of Pure Stores on Memory Support" for an explanation.
 See the documentation for exceptionStackBoundary in the header for more information.
 See the extern "C" declaration of this function, above.
-See the file "license.terms" for information on usage and redistribution of this file, and for a DISCLAIMER OF ALL WARRANTIES.
 See the implementation note below.
 See the long comment beginning "From RFC 3986, Appendix A Collected ABNF for URI" in qurl.cpp for rationale for the exclude strings used here.
 See the related issue https://github.com/facebook/hhvm/issues/5244
@@ -32257,7 +32216,6 @@ The FileScope maintains a stack of attributes, so that it correctly handles each
 The GeneralEffects should already contain AHeapAny in both loads and stores if it affects those locations for reasons other than re-entry, but does not need to if it doesn't.
 The GenericTypeParamDecls might be from a different module file.
 The GlobalPropertyOpt performs an analysis on the whole module to determine / the values of high-level properties.
-The Graphics Interchange Format(c) is the Copyright property of CompuServe Incorporated.
 The Gregorian calendar was not instituted until October 15, 1582 (or October 5, 1582 in the Julian calendar).
 The HHAS systemlib functions are not currently visible to hhbbc, but we know they can't return references.
 The HHIRLICM runtime option is all capitals, so separation cannot be determined.
@@ -33000,7 +32958,6 @@ The following have the old CRc flag, but don't observe or consume from this modu
 The following instructions are used for debugging memory optimizations.
 The following kinds correspond to SIL non-address values.
 The following libraries are required to build a satisfactory static program
-The following license applies:
 The following mappings are used if this is a compilation in scripting mode and global variables are accessed without addressors.
 The following may re-enter, and also deal with a stack slot.
 The following methods should only be attempted if we can sink to our successor.
@@ -33236,8 +33193,6 @@ The level is a number we have to keep the lower_bound above to avoid changing pr
 The level of 'switch' nesting.
 The lexer likes null-terminated data.
 The libxml_streams_IO_nop_close callback does nothing.
-The license and further copyright text can be found in the file LICENSE.TXT at the root directory of the distribution.
-The licensing information for MurmurHash as specified on its website, http://sites.google.com/site/murmurhash/, is as follows: "For business purposes, Murmurhash is under the MIT license.
 The lifetime ends if we have a live block and a not-live successor.
 The limit for passing a list of files on the command line.
 The limit is just there to not run into an infinite loop in case of an unreachable CFG cycle.
@@ -36614,9 +36569,7 @@ This situation most commonly happens when we interpOne a RetC due to having a Va
 This slightly reduces the number of wasted vtable vector entries at runtime.
 This software is based in part on the work of the Independent JPEG Group.
 This software is provided "as is" without express or implied warranty.
-This software is released under Microsoft Reciprocal License (MS-RL).
 This solution might be worse than the best solution found so far.
-This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
 This source file is part of the Swift.org open source project
 This special exception was added by the Free Software Foundation in version 2.2 of Bison.
 This speeds things up.
@@ -41247,7 +41200,6 @@ XenonForceAlwaysOn is active - it doesn't need a timer, it is always on.
 Xml encode the passed string.
 Y if followed by a vowel
 Y, U, V: the input data buffers 4.
-YAML parser and emitter PHP extension  Copyright (c) 2007 Ryusuke SEKIYAMA.
 YUV420toRGBA: Converts from YUV (with color subsampling) such as produced by the WebPDecode routine into 32 bits per pixel RGBA data array.
 YYCHAR is either YYEMPTY or YYEOF or a valid lookahead symbol.
 YYFINAL -- State number of the termination state.
@@ -41277,7 +41229,6 @@ You can set it afterwards.
 You can specify a range like 'a..z', it needs to be incrementing.
 You can't call this function from MINIT, sorry
 You need ToMixedCopy in cases where the old array needs to remain un-modified (usually if `copy' is true).
-You should have received a copy of the GNU General Public License along with this program.
 You should have to opt into this, since they are even less namespaced than usual.
 You will notice that the lengths alternate between 30 and 31 days, except for three anomalies: both July and August have 31 days, both December and January have 31, and February is less than 30.
 ZF, SF, PF set accordingly
@@ -41514,7 +41465,6 @@ and replace its uses with
 and return true so that we can stop the epilogue walking sequence.
 and set endHighlightLine/Column so that it is just past the end of the spew, and all code up to the truncation will be highlighted.
 and shrink back if that was incorrect
-and the Swift project authors Licensed under Apache License v2.0 with Runtime Library Exception
 and the last inliner.
 and then any putenv() changes take precedence
 and then pass this to abi::__cxa_demangle to get the demanged name: HPHP::jit::interpOneIterInit()
@@ -42742,7 +42692,6 @@ gd_getin -------- Wrapper around gdGetC for use with readwbmp
 gd_jpeg.c: Read and write JPEG (JFIF) format image files using the gd graphics library (http://www.boutell.com/gd/).
 gd_putout --------- Wrapper around gdPutC for use with writewbmp
 gd_security.c  Implements buffer overflow check routines.
-gd_topal, adapted from jquant2.c  Copyright (C) 1991-1996, Thomas G.
 gdcache.c  Caches of pointers to user structs in which the least-recently-used element is replaced in the event of a cache miss after the cache has reached a given size.
 gdkanji.c (Kanji code converter)
 generally not thread safe, but it *is* thread safe under win32

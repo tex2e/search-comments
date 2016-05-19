@@ -669,10 +669,6 @@ Converts JS resize modes into Android-specific scale type.
 Cookie handler that forwards all cookies to the WebView CookieManager.
 Coordinates in the ViewTag coordinate space
 Copy from an inputstream to a named filesystem file.
-Copyright (C) 2011 the original author or authors.
-Copyright (c) 2011 The LevelDB Authors.
-Copyright (c) 2014-present, Facebook, Inc.
-Copyright (c) 2015-present, Facebook, Inc.
 Crashy crashy exception handler.
 Create Error object to be passed back to the JS callback.
 Create a factory for disk-based file items
@@ -1719,9 +1715,7 @@ See specification at http://www.sco.com/developers/gabi/latest/contents.html.
 See specs: http://www.w3.org/TR/2012/CR-css3-flexbox-20120918/#layout-algorithm section 9.4
 See that class for more details.
 See the AUTHORS file for names of contributors.
-See the License for the specific language governing permissions and limitations under the License.
 See the documentation of needsOffscreenAlphaCompositing in View.js.
-See the notice.md file distributed with this work for additional information regarding copyright ownership.
 See: http://developer.android.com/reference/android/view/Display.html#getRealMetrics(android.util.DisplayMetrics)
 See: http://stackoverflow.com/questions/14341041/how-to-get-real-screen-height-and-width/23861333#23861333
 Semi-randomly return the next unique key.
@@ -2285,7 +2279,6 @@ This should only be called the first time the application is set up, which is en
 This should return bubbling directly-dispatched event types and specify what names should be used to subscribe to either form (bubbling/capturing).
 This should return non-bubbling directly-dispatched event types.
 This should throw a "NoSuchWindowException": the Driver is still running, but no Session/Window are left
-This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
 This specifies the absolute dir path for write-ahead logs (WAL).
 This specifies the info LOG dir.
 This starts all markers
@@ -2380,7 +2373,6 @@ Use a separate inner class to isolate the version-dependent call where it won't 
 Use adaptive mutex, which spins in the user space before resorting to kernel.
 Use android View id field to store React tag.
 Use instead size of text content within EditText when available
-Use of this source code is governed by a BSD-style license that can be found in the LICENSE file.
 Use reactTagForTouch() to get its tag.
 Use the initial line loop to position children in the cross axis for as long as they are relatively positioned with alignment STRETCH or FLEX_START.
 Use the line loop to position children in the main axis for as long as they are using a simple stacking behaviour.
