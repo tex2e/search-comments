@@ -4,7 +4,7 @@ def comment_reject_filter(comment)
   return (
     comment.length <=  20 ||  # comment's length is less than 10
     comment.length >= 200 ||
-    comment.match(/Copyright/i) ||
+    comment.match(/Copyright|license/i) ||
     !comment.match(/\A@?[-a-zA-Z0-9_ ,.:`'"\/*+()#]++\z/) ||  # comments isn't composed of
     comment.count("-0-9_ ,.: `'\"\/") / comment.length.to_f >= 0.4  # more than 40% symbols
   )
