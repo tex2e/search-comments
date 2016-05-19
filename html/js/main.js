@@ -43,15 +43,15 @@ var CommentRow = React.createClass({
   }
 });
 
-function isMatched(str, words) {
-  var currentPos = 0;
-  for (var i = 0; i < words.length; i++) {
-    var pos = str.toLowerCase().indexOf(words[i], currentPos);
-    if (pos === -1) return false;
-    currentPos = pos + words[i].length; // update currentPos
-  }
-  return true;
-}
+// function isMatched(str, words) {
+//   var currentPos = 0;
+//   for (var i = 0; i < words.length; i++) {
+//     var pos = str.toLowerCase().indexOf(words[i], currentPos);
+//     if (pos === -1) return false;
+//     currentPos = pos + words[i].length; // update currentPos
+//   }
+//   return true;
+// }
 
 // CommentTable
 var CommentTable = React.createClass({
@@ -67,10 +67,34 @@ var CommentTable = React.createClass({
     if (filterText.length < MIN_SEARCH_CHARS) return (<table></table>);
 
     var searchWords = filterText.split(" ");
+    // Make a regex for filtering comments.
+    // Example:
+    //
+    //     when searchWords === ["return"]
+    //       searchRegex = /\breturn/
+    //     when searchWords === ["return", "if"]
+    //       searchRegex = /\breturn\b.+?\bif/
+    //     when searchWords === ["return", "if", "true"]
+    //       searchRegex = /\breturn\b.+?\bif\b.+?\btrue/
+    //
+    var searchRegex;
+    if (searchWords.length === 1) {
+      searchRegex = new RegExp(
+        "\\b" + searchWords[0]
+      );
+    } else if (searchWords.length >= 2) {
+      searchRegex = new RegExp(
+        "\\b" + searchWords.slice(0, searchWords.length-1).join("\\b.+?\\b") +
+        "\\b.+?\\b" + searchWords.slice(-1).join("")
+      );
+    }
+    //console.log(searchWords, searchRegex);
+
     var maxRowNum = this.props.maxRowNum;
     var rows =
       this.props.comments.filter(function (comment) {
-        return isMatched(comment, searchWords);
+        // return isMatched(comment, searchRegex);
+        return comment.match(searchRegex);
       })
       .slice(0, maxRowNum)
       .map(function (comment) {
