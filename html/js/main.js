@@ -135,6 +135,7 @@ var SearchBar = React.createClass({
     { key: "java",  value: "Java"},
     { key: "sh",  value: "Shell"},
     { key: "py",  value: "Python"},
+    { key: "go",  value: "Golang"},
   ],
   render: function () {
     var lang = this.props.lang;
