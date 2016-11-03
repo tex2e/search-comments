@@ -9,6 +9,7 @@
 - the logger ignores messages of this level
 2.11 won't apply an implicit conversion targeting Object, but we can manually invoke the converter provided by the view bound.
 @note Mesos doesn't gate traffic on /health so all pre-bind warmup needs to happen in `prebindWarmup()`
+@note package protected for testing
 @param baseDirectory     The base directory for the directory resolver.
 @param baseDirectory  The base directory (either absolute or relative to the process's working directory) to which to the requested resource path should be appended.
 @param baseRequestPath     The base uri path handled by this handler (e.g. /admin/).
@@ -21,6 +22,7 @@
 @param includeInIndex Indicates whether the route is included as part of the admin server index.
 @param localFilePath       The directory from which this handler will serve resources.
 @param path The path used to access the route.
+@param stackReg Registry used to search for duplicates.
 @param statScope The finagle StatsReceiver scope with which the entries stats are exported.
 @param statsReceiver typically scoped to /jvm/gc/
 @param status The HTTP status code.
@@ -39,10 +41,11 @@ A logging event in suspension.
 A serializer and deserializer for sinks.
 A simple http service for serving up information pulled from a build.properties file.
 Add the following to the `onExit` hook to export the Sink to a file when the server exits, or place it behind an endpoint to be triggered by request.
+Admin UI for seeing and modifying the server's `com.twitter.finagle.toggle.Toggles`.
 An HTTP server is bound to a configurable port (default: 9900) to which commands can be sent and information queried.
 An admin http server which serves requests outside the default finagle worker pool.
 An entry is a 3-tuple of Logger, Level and message.
-As an admin endpoint, it displays the entire registry in JSON.
+As an admin endpoint, it displays the `GlobalRegistry` in JSON format.
 Attach the handlers with the sink and capture specification.
 Both ostrich and metrics export a `HttpMuxHandler`
 Called InternalResolverTest to avoid conflict with twitter-server
@@ -51,6 +54,7 @@ Called before the `main` method.
 Called prior to application exiting.
 Called prior to application initialization.
 Captures events from a logger.
+Check that the server is still up
 Clients can be queried by passing in the client name as part of the uri (ex. "/admin/clients/myclient").
 Compute a profile for each client that includes the success rate and the availability of endpoints the client connects to.
 Configuration for the EventSink.
@@ -58,7 +62,6 @@ Constants for Admin endpoints.
 Constructs a ResourceHandler which tries to read resources from disk on every request, falling back to resources from the jar if needed.
 Convenience wrapper around Event.Type that preserves type information for objectVal -- we need this to deserialize.
 Create a Route using a Finagle service interface
-Create a Route using a Finagle service interface and a service using finagle-http
 Create a new hook for the given App.
 Create an http response with the give params.
 Define LogRecord equality.
@@ -78,6 +81,8 @@ Factored out for testing.
 Finagle's StatFilter usually reports to the root of the `clientScope`.
 Find an Event.Type for this id.
 For DI (Dependency Injection) Twitter Server uses self-typed Scala traits that might be mixed in the `TwitterServer` trait.
+For create and update, and an additional "fraction" request parameter must be set as well.
+For each `Toggle` the "current" hash shows the current configuration while the "components" array has a hash per `ToggleMap` source.
 For each key return a cumulative percentage
 For each key return a percentage
 For example, if it's a request from a browser and the content is an html fragment.
@@ -89,6 +94,7 @@ Generates html for visualizing histograms
 Give the application control over when to present to Mesos as being ready for traffic.
 Given a list of loggers, we can generate a list of captures by sequencing the actions to generate arbitrary Levels.
 Helps make early gc pauses more consistent.
+How a `Toggle` is currently configured and in use.
 However, the ClientBuilder API provides an easy to install retry filter with a separate StatsFilter that reports to "tries".
 However, then we may choose to add a `System.promoteAllLiveObjects()` hook.
 Ideally this runs in the moments right before your service starts accepting traffic.
@@ -108,17 +114,22 @@ Interpret the journal by running each entry through the logger.
 It makes sense to define it within an inner class `Main` as shown below.
 It may miss allocations where large objects are eagerly allocated into the old generation along with some other cases.
 It provides common application components such as an administrative HTTP server, tracing, stats, etc.
+It takes an optional HTTP request parameter, "filter", which allows for simple filtering of the returned data.
 It's a pprof "raw" profile.
-It's intended to be used as a handler for TwitterServer, and doesn't take any arguments yet.
+It's intended to be used as a handler for TwitterServer.
 Line-buffered reader, where lines are delimited by a configurable separator.
+Lint rule for code that is blocking the `Scheduler`.
 Loads resources relative to the given baseDirectory.
 Make some effort to demangle scala names.
 Make the "test" command run both, test and doctest:test
+Memcache clients with the same name are common due to the sharding of Memcache servers, and so are excluded.
 Mesos/Aurora lifecycle endpoints
 Mix-in to include service-loaded hooks.
+NOTE: these tests assume a specific iteration order over the registries and HashMaps which IS NOT a guarantee.
 Namer records weights as Doubles, so this should never happen.
 Necessary for controller to determine that this is a request for HTML.
 NewHooks are service-loaded.
+Note that the library name and toggle id components are optional but do allow for filtering the output on those constraints.
 Note that this method simply checks if the given `contentType` is a substring of the "Accept" header.
 Note, don't use `scala.sys.props` until we are on 2.12: https://github.com/scala/scala/pull/4372
 Note, unnamed clients are ignored as we can't dissambiguate their stats.
@@ -126,6 +137,7 @@ Note, unnamed servers are ignored as we can't dissambiguate their stats.
 Note, we don't serve all of /admin on a separate worker pool because it's important to serve certain admin endpoints in-band with the server.
 Note: The events iterator can be potentially large, so to avoid fully buffering a big HTML document, we stream it as soon as it's ready.
 Note: due to race conditions, the number reported is NOT a monotonically increasing value.
+PUT requests allow for update/create of the mutable Toggles while DELETE requests allow for removal.
 Parse a byte stream into a list of events.
 Parse uri into (path, params)
 Prevent the root logger from writing to stdout.
@@ -140,6 +152,7 @@ Represents an element which can be routed to via the admin http server.
 Resolvers are discovered via the com.twitter.server.resolverMap
 Returns a new 200 OK with contents set to `msg`
 Returns a new 404 with contents set to `msg`
+Returns any error messages, or an empty `Seq` if successful.
 Returns the entry for `key` if it exists
 Returns the set of stat keys.
 Returns true if the map contains `key` and false otherwise.
@@ -155,6 +168,7 @@ Some of the headers like content length are inferred.
 Special case and group them here.
 Stat libraries join the global muxer namespace.
 Stores histogram bucket and a percentage.
+Successful executions will be a `Some` of `(libraryName, id)`.
 Supports the specification of a default close grace period from a flag.
 TODO Near replica of other Event.Type constructions, making Event.Type more generic could help factor out the boiler plate.
 TODO Report these errors somehow.
@@ -164,15 +178,20 @@ TODO: remove routes, have all routes be added via addAdminRoutes For now these r
 Test Configuration for running tests on doc sources
 Test class name parameters, which were previously mangled
 The Event.Types the parser can construct.
+The `TwitterServer` trait exposes an `adminHttpServer` that serve all routes registered in the HttpMuxer object, we just have to add our own.
 The `main` method of this server.
 The address to which the Admin HTTP server is bound.
+The components that compose the "current" `Toggle`.
 The name used for the finagle server.
-The percentage is either the density or a cumulative density for the bucket
+The percentage is either the density or a cumulative distribution for the bucket
 The service is bound to a port and warmed up, announce health.
+The specific amount for the minumum is semi-arbitrary, but this allows for minimal blocking in services, such as during startup, without triggering this lint rule.
 The success rate represents the health of the client on the request path while availability is a measure of session health.
+These are ordered by evaluation order and as such, sources earlier in a component array are used first.
 These entries are "run" by invoking log with the tuple arguments.
 These features are wired in correctly for use in production at Twitter.
 This can be overridden in the super class or set on the command line with -admin.port.
+This handler should be available at "/admin/toggles".
 This is bad news for things like com.twitter.util.Time
 This is intended for use in situations in local development (e.g. so one can save a resource, refresh the browser, and see the change immediately).
 This is ok, this Future is still useful for the assertion that `sink` and Response reader are connected.
@@ -185,17 +204,25 @@ This server shadows vital endpoints (ex. stats) that are useful for diagnostics 
 Threads that say they are runnable, but are actually doing nothing.
 Together, these describe how to bind a path to an Addr.
 Tries to load resources using directoryResolver in baseDirectory, and if that fails, tries jarResolver in baseResourcePath.
+Try to close the server with a GET
 Twitter Server defines a template from which servers at Twitter are built.
 Used for warmup tasks that we want to run before we accept traffic.
 Useful to check cluster consistency.
+We could create a new http server but in this case we use the one already started for /admin/* endpoints.
 We have to run this in a pool or Reader.read ends up blocking, because we call Await.result in the sink events iterator.
 We require an annotation here, because for small numbers, this gets deserialized with a runtime type of int.
 When the method `warmupComplete()` is invoked, the application is considered ready.
 Wraps content returned from the underlying service with a view of the index. Note, the view is wrapped around the underlying service selectively.
 Write out the profile verbatim.
 a logger used to log all sync and async exceptions that occur in the admin server.
+basic sanity check that we have all toggles, before doing a deep equality comparison
+check the empty ToggleMap
+check the populated ToggleMap
+check we have all the library names
 checks for non-exceptional
 convert local routes into the IndexView data model
+create a map of id to metadata for faster lookups
+create a mapping of id to a seq of its components.
 create a service which multiplexes across all endpoints.
 create index with both the local and global muxer namespaces and server/client registries.
 disable admission control, since we want the server to report stats especially when it's in a bad state.
@@ -203,20 +230,28 @@ first, gather the data
 first, run the rules.
 for java + backwards compatibility
 in the interest of keeping this simple, if the eden's current used is less than the last edenAllocated we will only return the number of bytes we have gc-ed from the eden.
+initialize some state
 note, these could be -1 if the collector doesn't have support for it.
+note, toLibraryToggles does not impose an ordering, so we cannot do a simple equality comparison.
 note: contentType must be explicit here because of `IndexView.isFragment`
+package private for testing purposes
+package protected for testing
 pretty obvious they are idle
 render the ui and respond
+return ms from ns while retaining precision
 root has no level set
 same logic as org.slf4j.LoggerFactory
 set used for keeping track of jvm gauges (otherwise only weakly referenced)
+should these tests begin to fail due to that, we will need a more robust approach to validation.
 skip CMS because it does not collect objects from the eden
 so `edenAllocated` has not yet been updated which in turn means our math is off.
+sort the errors to make the response more deterministic.
 the Hotspot JVM exposes the full size that the metaspace can grow to which differs from the value exposed by `MemoryUsage.getMax` from above
 the Notification's userData correspond to `com.sun.management.GarbageCollectionNotificationInfo`s.
 there is a race here, where a gc has completed but we have not yet been notified.
 this is a snapshot, we can't reuse the value
 throws if adminHttpServer does not exit before the grace period, which indicates that we have not closed it properly.
 todo: see if we can support the g1 collector
+used for testing filtering
 user-defined properties
 we acquired a snapshot of keys above, but `key` could have since been removed.

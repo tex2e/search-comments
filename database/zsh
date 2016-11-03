@@ -1,4 +1,4 @@
-"colorls"   will be installed on purpose and can't be pulled in by installing  coreutils, so prefer it to "gls".
+"colorls" will be installed on purpose and can't be pulled in by installing coreutils, so prefer it to "gls".
 # Complete with gruntfile.
 # Complete without gruntfile.
 # Function definitions
@@ -9,9 +9,9 @@
 # allow custom function override
 # args: (exit_status, command, elapsed_seconds)
 # args: (title, subtitle)
-# case-insensitive (all),partial-word and then substring completion
 # more intelligent acking for ubuntu users
 # only enable if a local (non-ssh) connection
+## Functions fixperms - fix permissions on files and directories, with confirmation Returns 0 on success, nonzero if any errors occurred
 ########################## Alias CAT, GREP, CURL, WGET
 ########################## Impl
 ################################# Init
@@ -39,7 +39,10 @@
 - You can share opened buffered across opened frames.
 - https://github.com/gruntjs/grunt - https://github.com/gruntjs/grunt-cli
 -- Some other invocation of nroff
+-T, --nameddirs  Substitute named directories as well.
 -V    Reduce the verbosity of the dump output.
+-l, --last       Print the last directory's full name.
+-s, --short      Truncate directory names to the first character.
 -v    Increase the verbosity of the dump output.
 15 char left truncated PWD
 @github.com/mfaerevaag/wd
@@ -52,10 +55,12 @@ Activate the environment only if it is not already active
 Actually don't autostart if we already did and multiple autostarts are disabled.
 Add Composer's global binaries to PATH
 Add a nifty symlink for screen/tmux if agent forwarding
+Add a package to this project.
+Add a platform to this project.
 Adds a kapow command that will restart an app
 Adds command line aliases useful for dealing with JSON
 Adds handy command line aliases useful for dealing with URLs
-Agent forwarding support based on ideas from Florent Thoumie and Jonas Pfenniger
+Administrative commands.
 Algorithm borrowed from http://wiki.rtorrent.org/MagnetUri and adapted to work with zsh.
 Alias tmux to our wrapper function.
 Aliases ################################################################### These are for more obscure uses of apt-get and aptitude that aren't covered below.
@@ -80,12 +85,11 @@ Autocompletion for your gulp.js tasks
 Automatically activate Git projects or other customized virtualenvwrapper projects based on the directory name of the project.
 Automatically close the terminal when tmux exits
 Automatically connect to a previous session if it exists
-Automatically jump to last working directory unless this isn't the first time this plugin has been loaded.
 Automatically start tmux
 Autostart if not already in tmux and enabled.
 Avoid duplication of directory in terminals with independent dir display
-Based on code from Joseph M.
 Basic system and zsh information
+Because this requires confirmation, bail in noninteractive shells
 Before filtering set the locale to C, so invalid characters won't break some sed implementations
 Being able to switch between global and directory histories on the fly is a novel feature as far as I am aware.
 Below are some useful Perl-related aliases/functions that I use with zsh.
@@ -94,15 +98,18 @@ Bind keys to history navigation
 Bind terminal-specific up and down keys
 Bind terminal-specific up and down keys Bind in both emacs and vi modes so it works in both, and is not sensitive to whether this is loaded before or after the vi-mode plugin
 Both file and parent dir are versioned.
+Build this project for all platforms.
+Builds an already-published package for a new platform.
 Builtin widget: override and make it call the builtin ".widget".
 But when HIST_IGNORE_ALL_DUPS is set, ZSH already ensures a unique history.
 By default, reserved characters and unreserved "mark" characters are not escaped by this function.
 Cache policy: The cache file name: grunt The cache variable name: __grunt_version __grunt_gruntfile __grunt_opts __grunt_tasks
 Call it with `zsh update-from-upstream.zsh` from the command line, running it from within the plugin directory.
 Called by zsh when directory changes
-Changes directory to the last working directory.
+Changes directory to the last working directory
 Check _grunt version.
 Check all of the plugins directories, if they exist
+Check for random 2 files if they exist This will shift 0 - 7 elements
 Check for virtualenv name override
 Check if the DOWN arrow was pressed to move the cursor within a multi-line buffer.
 Check if the UP arrow was pressed to move the cursor within a multi-line buffer.
@@ -110,9 +117,11 @@ Check if this is a Git repo
 Check if we are on the first line of the current multi-line buffer.
 Check if we are on the last line of the current multi-line buffer.
 Check no_update_options option.
+Check package versions
 Check show_path option.
 Check which npm modules are outdated
 Checks if working tree is dirty
+Claim a site deployed with an old Meteor version.
 Clean up crashed zeus instances.
 Clean up the namespace slightly by removing the checker function
 Clear zombie processes
@@ -124,9 +133,12 @@ Completion script for grunt.
 Completion widget: override and rebind old one with prefix "orig-".
 Configuration file info
 Configuration variables
+Connect to the Mongo database for the specified site.
+Copies the current song URL to the clipboard."
 Copy the files over, using the OMZ plugin's names where needed
 Core command definitions
 Create a basic .deb package
+Create a new project.
 Create, migrate and prepare database
 Created by Eduardo San Martin Morote aka Posva http://posva.github.io Sun Jun 09 10:59:36 CEST 2013  Don't remove this header, thank you Usage: quote
 Created by the blogger at the URL below...I don't know where to find his/her name Original found at http://www.shellperson.net/sprunge-pastebin-script/
@@ -141,34 +153,33 @@ Defaults to the current application, and will walk up the tree to find a config.
 Defaults to toggling when no options are given.
 Defines path as current directory
 Defines path as parent directory and keeps looking for :)
+Deploy this project to Meteor.
 Determine if the terminal supports 256 colors
 Diagnostic and debugging support for oh-my-zsh omz_diagnostic_dump()
 Discarding stdout to quash "tab N of window id XXX" output
-Display information about a given package in the local database
-Display information about a given package in the repositories
 Displays a listing of emoji with their names
 Do OMZ-specific edits
 Do not edit it manually.
 Does not enforce that the input is a valid URL-encoded string.
 Don't complete uninteresting users
-Don't leave positional parameters being set
 Don't try to basename ()
 Easier access to skin tone modifiers
 Emits the control sequence to notify Terminal.app of the cwd Identifies the directory using a file: URI scheme, including the host name to disambiguate local vs.
 Emoji combining and auxiliary characters "Variation Selectors" for controlling text vs emoji style presentation These apply to the immediately preceding character
+Empty buffer, because it contains items that are not tasks
+Empty buffer, because we are done with the tasks
 Empty functions so we don't cause errors in prompts
 End Functions #############################################################
 Ensure that the prompt is redrawn when the terminal size changes.
 Enumerate all of the Groovy files
 Erase current line in buffer
+Erases the local database.
 Except for --help options.
 Execute command from node_modules folder based on current directory i.e npmE gulp
 FILE:  compleat.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
 FILE:  composer.plugin.zsh DESCRIPTION:  oh-my-zsh composer plugin file.
-FILE:  extract.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
 FILE:  fastfile.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
 FILE:  gnu-utils.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
-FILE:  osx.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
 FILE:  sbt.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
 FILE:  singlechar.plugin.zsh DESCRIPTION:  oh-my-zsh plugin file.
 FILE: emoji-clock.plugin.zsh DESCRIPTION: The current time with half hour accuracy as an emoji symbol.
@@ -179,23 +190,23 @@ Faster alternative to the current SVN plugin implementation.
 Fedora command-not-found support
 Feel free to report any portability issues as bugs.
 Figure out what we're pulling in
+Files on the custom/ directory will be automatically loaded by the init script, in alphabetical order.
 Filter mvn output using sed.
 Find all occurrences of the search query in the history file.
-Find the option for using colors in ls, depending on the version: Linux or BSD
-Fix all configuration files with vimdiff Pacman - https://wiki.archlinux.org/index.php/Pacman_Tips
-Flag indicating if we've previously jumped to last directory.
+Find the option for using colors in ls, depending on the version
+For GNU ls, we use the default ls color theme.
+For a fish-style working directory in your command prompt, add the following to your theme or zshrc:
+For example: add yourself some shortcuts to projects you often work on.
 For example: https://rails.lighthouseapp.com/projects/8994 Example usage: http://screencast.com/t/ZDgwNDUwNT
 For safety, move rather than permanently remove such files.
 For some reason, Cygwin puts strfile in /usr/sbin, which is not on the path by default
 For the purpose of highlighting we will also keep a version without doubly-escaped meta characters.
-Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
 Formats prompt string for current git commit long SHA
 Formats prompt string for current git commit short SHA
 Functions ################################################################# create a simple script that can be used to 'duplicate' a system
 Generate metadata cache
 Generate the aliases for the shortcuts
 Get absolute path, resolving symlinks
-Get all keys for developers and trusted users
 Get current gruntfile.
 Get the absolute path to the current directory
 Get the filename to store/lookup the environment from
@@ -204,6 +215,7 @@ Get the status of the working tree
 Get the value of an alias.
 Gets the difference between the local and remote branches
 Gets the number of commits ahead from remote
+Gets the number of commits behind remote
 Grabs all available tasks from the `gulpfile.js` in the current directory.
 Grep exits with 0 when "One or more lines were selected", return "dirty".
 HISTORY_BASE a global variable that defines the base directory in which the directory histories are stored
@@ -212,6 +224,8 @@ Highlight the next match:
 Highlights the currently active ruby version and aliases.
 I've already got two problems
 If DIRHISTORY_CD is not set...
+If a newline is found, send the buffer to .gradletasknamecache
+If and when gradle adds support for listing tasks for programmatic parsing, this method can be deprecated.
 If marked is called without an argument, open Marked If marked is passed a file, open it in Marked
 If no highlighting method supported for given extension then it tries  guess it by looking for file content.
 If no such directories exist, get us out of here.
@@ -220,6 +234,7 @@ If one of your indexes are bogus you won't get any kind of error message, pip wi
 If set to false, tmux will attempt to autostart every time your zsh configs are reloaded.
 If so, pressing DOWN would amount to leaving the multi-line buffer.
 If so, pressing UP would amount to leaving the multi-line buffer.
+If that happens, just rerun this a few times.
 If the bb command is called without an argument, launch BBEdit If bb is passed a directory, cd to it and open it in BBEdit If bb is passed a file, open it in BBEdit
 If the tt command is called without an argument, launch Textastic If tt is passed a directory, cd to it and open it in Textastic If tt is passed a file, open it in Textastic
 If they are not set yet, they will be overwritten with their default values
@@ -242,11 +257,9 @@ Install all .deb files in the current directory.
 Install all packages given on the command line while using only the first word of each line: acs ...
 Install and save to dev-dependencies in your package.json npmd is used by https://github.com/dominictarr/npmd
 Install dependencies globally
-Install given package(s) as dependencies of another package
 Install n98-magerun into the current directory
 Install package group
-Install specific package not from the repositories but from a file
-Install specific package(s) from the repositories
+Installs SDKs for a platform.
 Internal: Print ruby version details, if it's currently active etc.
 Invalid cache because gruntfile is old.
 Invalid naming pattern
@@ -266,23 +279,31 @@ Just bail on any error so we don't have to do extra checking.
 Just run tmux, fixing the TERM variable if requested.
 Kate Start kate always silent
 Keep Apple Terminal.app's current working directory updated Based on this answer: http://superuser.com/a/315029 With extra fixes to handle multibyte chars and non-UTF-8 locales
-Keeps track of the last used working directory and automatically jumps into it for new shells.
 Kernel-package building shortcut
 Key binding and terminal info
+Keywords: prompt directory truncate shrink collapse fish
 Kills any process that matches a regexp passed to it
 Last element in dirhistory_past is the cwd.
+Launch a Node REPL for interactively evaluating server-side code.
 Lets you work with pipes or files.
 List directory contents
 List installed packages
-List installed packages, even those installed from AUR (they're tagged as "local")
 List of the absolute paths of all unique existing completion caches.
 List of the absolute paths of all unique insecure directories, split on newline from compaudit()'s output resembling:
 List ownership and permissions of all insecure directories.
 List packages by size
+List sites for which you are authorized.
 List such files first.
+List the packages explicitly used by your project.
+List the platforms added to your project.
 Load ZSH module zsh/zleparameter, needed to override user defined widgets.
+Load first found file
+Load nvm if it exists
 Locally enable the "NULL_GLOB" option, thus removing unmatched filename globs from argument lists *AND* printing no warning when doing so.
 Locates all the installed versions of Xcode on this system, for this plugin's internal use.
+Log in to your Meteor developer account.
+Log out of your Meteor developer account.
+Mac Homebrew installs the completion in a different location
 Make optioins completion.
 Make sure formatting is reset
 Make tasks completion.
@@ -304,13 +325,14 @@ Not for rxvt-unicode, but it doesn't seem differentiate Ctrl-Shift-Arrow from pl
 Not options completions.
 Not part of either coreutils or findutils, installed separately.
 Note that if you change the zstyle settings, you should delete the cache file and restart zsh.
+Note: Directory names containing two or more consecutive spaces are not yet supported.
 Notes: It assumes Shift+Cmd+G launches go to folder panel and Cmd+N opens new app window.
 Now we have a UTF-8 encoded string in the variable.
 OMZ binds the keys as part of the plugin loading
 OSX command-not-found support https://github.com/Homebrew/homebrew-command-not-found
 Oh-my-zsh installation
 On OS X and Windows, the main system clipboard or "pasteboard" is used.
-On OpenBSD, "gls" (ls from GNU coreutils) and "colorls" (ls from base,  with color and multibyte support) are available from ports.
+On OpenBSD, "gls" (ls from GNU coreutils) and "colorls" (ls from base, with color and multibyte support) are available from ports.
 On and off use the menu bar items.
 On other Unix-like OSes, this considers the X Windows CLIPBOARD selection to be the "system clipboard", and the X Windows `xclip` command must be installed.
 On the connected IP sorted by the number of connections
@@ -319,7 +341,6 @@ Only run if tmux is actually installed
 Opens specified directory or current working directory in ForkLift.app
 Or, use this file as a oh-my-zsh plugin.
 Or, use this file as an oh-my-zsh plugin.
-Original idea by DefV (Jan De Poorter) Source: https://gist.github.com/pjaspers/368394#comment-1016
 Otherwise, it will do a clean checkout of upstream's HEAD to a temporary local repo and use that.
 Otherwise, no lines were found, or an error occurred.
 Outputs a bunch of information about the state and configuration of oh-my-zsh, zsh, and the user's system.
@@ -338,6 +359,7 @@ Perl ############ perldoc`
 Perl grep, because 'grep -P' is terrible.
 Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
 Place it in your .zshrc:
+Plain cask installation location (for Cask 0.7.2 and earlier)
 Plugin creators, please add your *_prompt_info function to the list of dummy implementations to help theme creators not receiving errors without the need of implementing conditional clauses.
 Plugin highlights file content based on the filename extension.
 Pop the last element of dirhistory_past.
@@ -346,22 +368,26 @@ Print the active version, using xcselv's notion of versions
 Printing process according to the port number
 Prints a random emoji character
 Prints the encoded string on stdout.
+Prints the username of your Meteor developer account.
+Process directories first so non-traversable ones are fixed as we go
 Protect other escapes to pass through the printf unchanged
 Public: Create rvm_prompt_info command for themes compatibility, unless it has already been defined.
 Public: Provide a list with all available rubies, this basically depends on `ls -1` and .rfbu/rubies.
+Publish a new meteor release to the package server.
+Publish a new version of a package to the package server.
 Push a new element onto the end of dirhistory_past.
 Push and pop directories on directory stack
-Reagle http://www.cygwin.com/ml/cygwin/2001-06/msg00537.html
 Rebuild if .agignore more recent than cache.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+Ref: http://www.zsh.org/mla/workers/2009/msg00415.html http://www.zsh.org/mla/workers/2009/msg00419.html
 Remove ALL kernel images and headers EXCEPT the one in use
-Remove orphans using yaourt Additional yaourt alias examples
+Remove a package from this project.
+Remove a platform from this project.
 Remove python compiled byte-code in either current directory or in a list of specified directories
-Remove the specified package(s), its configuration(s) and unneeded dependencies
-Remove the specified package(s), retaining its configuration(s) and required dependencies
 Repeat the current search so that a different (unique) match is found.
 Requires http://www.bruji.com/bwana/
 Requires xterm, urxvt, iTerm2 or any other terminal that supports bracketed paste mode as documented: http://www.xfree86.org/current/ctlseqs.html create a new keymap to use while pasting
+Reset the project state.
 Restart pow process taken from http://www.matthewratzloff.com/blog/2011/12/23/restarting-pow-when-dns-stops-responding
 Return value: 0 if the alias was found, 1 if it does not exist
 Return value: Always 0
@@ -371,21 +397,24 @@ Returns the element if the array was not empty, otherwise returns empty string.
 Rewrite Role Scaffold Search-Replace Shell Sidebar
 Run once to get initial cwd set
 Run sudo gem on the system ruby, not the active ruby.
+Run the Android configuration tool from Meteor's ADK environment.
+Run the project, but suspend the server process for debugging.
 Runs before executing the command
 Runs before showing the prompt
-Same as yaupg, but without confirmation
-Search for package(s) in the local database
-Search for package(s) in the local database Additional pacman alias examples
-Search for package(s) in the repositories
+Search through the package server database.
 See README.md for details
 See the README for documentation.
 See: https://www.ietf.org/rfc/rfc2396.txt
 Set '-CC' option for iTerm2 tmux integration
+Set all directories' permissions to 755 recursively in a directory
 Set term to screen or screen-256color based on current terminal support
 Set the correct local config file to use.
 Show all 256 colors where the background is set to specific color
 Show all 256 colors with color number
+Show detailed information about a release or package.
+Show logs for specified site.
 Show package information
+Show/hide hidden files in the Finder
 Simple definition completer for ruby-build
 Since any of these caches may have been generated from insecure directories, they are all suspect now.
 Since the ignorable first line is printed to stderr and thus not captured, stderr is squelched to prevent this output from leaking to the user.
@@ -394,15 +423,17 @@ Some files for bash that zsh does not use are intentionally included to help wit
 Some of which come from http://justinlilly.com/dotfiles/zsh.html
 Some self-explanatory aliases
 Someone overwrote our variable.
+Something changed - examine every file
 Sort connection state
 Source SSH settings, if applicable
 Source: http://aur.archlinux.org/packages/lolbash/lolbash/lolbash.sh
 Special format for colums
+Spotify control function
 Statistical connections 404
 Statistical http status.
+Stop trying if there are no more directories in the dir stack
 Supports command completion.
-Synchronize with repositories before upgrading packages (AUR packages too) that are out of date on the local system.
-Synchronize with repositories before upgrading packages that are out of date on the local system.
+TODO organise this chaotic logic
 TODO: * Multi-file capture * Add automatic gist uploading * Consider whether to move default output file location to TMPDIR.
 TODO: Make the section part easier to use.
 TODO: Make this usable w/o rvm.
@@ -410,26 +441,32 @@ TODO: Should combine the two instead of either or.
 Tack OMZ-specific notes on to readme
 Taken from: http://ruslanspivak.com/2010/06/02/urlencode-and-urldecode-from-a-command-line/
 Tell terminal to send escape codes around pastes.
-Text to display if the branch is clean Setup the prompt with pretty colors
+Test one or more packages.
+Text to display if the branch is clean
 Text to display if the branch is dirty
 The TERM to use for 256 color terminals.
 The TERM to use for non-256 color terminals.
 The extra spaces in output here are a hack for readability, since some terminals treat these emoji chars as single-width.
 The following constants have been initialized in _history-substring-search-up/down-search():
+The following options are available:
 The following snippet was taken from the zsh-syntax-highlighting project:
 The implementation is by Jim Hester in September 2012.
 The keys are the group names, and the values are whitespace-separated lists of emoji character names.
-The lifetime may be specified in seconds or as described in sshd_config(5) (see TIME FORMATS) If left unspecified, the default lifetime is forever.
+The long options can also be set via zstyle, like zstyle :prompt:shrink_path fish yes
 The official upstream repo is zsh-users/zsh-history-substring-search https://github.com/zsh-users/zsh-history-substring-search
 The output is human-readable and its format may change over time.
 The shuffle property of current playlist can't be changed in iTunes 12, so this workaround uses AppleScript to simulate user input instead.
 The terminalapp plugin is deprecated and may be removed in a future release.
 The toggle option depends on the shuffle button being visible in the Now playing area.
+The tool is invoked with: Ctrl+b h
 The use_env call below is a reusable command to activate/create a new Python virtualenv, requiring only a single declarative line of code in your .env files.
+There are additional arguments, so find out how many
 There are insecure directories: /usr/share/zsh/site-functions /usr/share/zsh/5.0.6/functions /usr/share/zsh /usr/share/zsh/5.0.6
 These are apt-get only
 These sequences work for xterm, Apple Terminal.app, and probably others.
+They can later be overwritten by themes.
 This allows the common usage of passing an entire URL in, and encoding just special characters in it, with the expectation that reserved and mark characters are used appropriately.
+This allows to use local history on remote machines.
 This amounts to three tests:
 This depends on and reuses some of the internals of the _git completion function that ships with zsh itself.
 This effectively speeds up Rails' boot process to under 1 sec.
@@ -452,7 +489,7 @@ This notice may not be removed or altered from any source distribution..
 This plugin adds single char shortcuts (and combinations) for some commands.
 This plugin adds the ability to on the fly generate and access file shortcuts.
 This requires updating the PYTHONPATH to ensure that the full set of code can be located.
-This script intercepts calls to the brew plugin and adds autocompletion for the cask subcommand.
+This script opens a new, temporary tmux pane and runs n-history.
 This script updates the Oh My Zsh version of the zsh-history-substring-search plugin from the independent upstream repo.
 This software is provided 'as-is', without any express or implied warranty.
 This value is set in _history-substring-search-begin().
@@ -463,24 +500,17 @@ Tmux states this should be screen, but you may need to change it on systems with
 Tmux states this should be screen-256color, but you may need to change it on systems without the proper terminfo
 To achieve git-flow completion nirvana:
 To achieve git-hubflow completion nirvana:
-To enable agent forwarding support add the following to your .zshrc file:
 To enable simpler handeling of spaces in file names
-To load multiple identities use the identities style, For example:
-To set the maximum lifetime of the identities, use the lifetime style.
 Try to connect to an existing session.
 Try to get the value of an alias, otherwise return the input.
 Try to use terminfo to set the title If the feature is available set title
 Undocumented Terminal.app-specific control sequence
 Unversioned "default" installation location
-Update and refresh the local package and ABS databases against repositories
-Update and refresh the local package and AUR databases against repositories
-Update and refresh the local package database against repositories
-Update and refresh the local package, ABS and AUR databases against repositories
 Update your zsh's git-completion module to the newest verion.
 Update your zsh's git-completion module to the newest version.
 Update youtube-dl (and all other antigen bundles): antigen update The antigen command will download the git repository to a folder and then execute an enabling script (this file).
-Updates the last directory once directory is changed.
-Usage is also described at https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins Look for yaourt, and add some useful functions if we have it.
+Updates the last directory once directory is changed
+Upgrade this project's dependencies to their latest versions.
 Use `svn_prompt_info` method to enquire the svn data.
 Use a precmd hook instead of a chpwd hook to avoid contaminating output
 Use as a drop-in replacement of the svn plugin not as complementary plugin
@@ -496,6 +526,7 @@ User defined widget: override and rebind old one with prefix "orig-".
 Various other combining characters.
 Verbosity levels: 0 - Basic info, shell state, omz configuration, git state 1 - (default) Adds key binding info and configuration file contents 2 - Adds zcompdump file contents
 View all 80 Port Connections
+View or change authorized users and organizations for a site.
 View the standard out (puts) from any pow app
 Virtual environment name can be overridden by placing a .venv file in the project root with a virtualenv name in it.
 Visit http://www.ember-cli.com/ to view user guide
@@ -503,6 +534,7 @@ Warn if the current branch is a WIP
 Warning: you will need to put the glob in single quotes if you use: glob_subst
 We are at the beginning of history and there are no further matches.
 We are at the end of history and there are no further matches.
+We found a missing directory: pop it out of the dir stack
 We have other arguments, just run them
 We have to "override" some keys and widgets if the zsh-syntax-highlighting plugin has not been loaded:
 We need to re-encode it if caller is in a non-UTF-8 locale.
@@ -510,9 +542,11 @@ We will miss you dearly.
 We've just left the repo, deactivate the environment Note: this only happens if the virtualenv was activated automatically
 Website traffic statistics (G)
 When HIST_FIND_NO_DUPS is set, meaning that only unique command lines from history should be matched, make sure the new and old results are different.
+When a selection is made, the result (history entry) is pasted back into original tmux pane, and the temporary pane is closed.
 While current path is not root path
 Will Detect if a app does not exist in pow and print a (slightly) helpful error message
 With either a manual or brew installed chruby things should just work.
+Without -s, names are truncated without making them ambiguous.
 Work bytewise, since URLs escape UTF-8 octets
 Wrapper function for Maven's mvn command.
 Wrapper function for tmux.
@@ -528,8 +562,11 @@ add all non-dot files
 add functions to the exec list for chpwd and zshaddhistory
 adds a service specified by URI to the system
 age - but without sudo
+allow ctrl-a and ctrl-e to move to beginning/end of line
 allow ctrl-p, ctrl-n for navigate history (standard behaviour)
+allow ctrl-r to perform backward search in history
 allow v to edit the command line (standard behaviour)
+allows square brackets for pip command invocation
 allows square brackts for rake task invocation
 another manual user-local installation
 another rotation to match qwerty
@@ -542,6 +579,7 @@ build search url: join arguments passed with '+', then append to search engine U
 called by zsh before executing a command
 called by zsh before showing the prompt
 capture stdout and stderr
+case insensitive (all), partial-word and substring completion
 check again if another agent is running using the newly sourced settings
 check for existing ssh-agent
 check if another agent is running
@@ -559,6 +597,8 @@ compile a string of coffeescript and print to output
 compile from clipboard and copy to clipboard
 complete on installed rubies
 consider emacs keybindings: bindkey -e  ## emacs key bindings
+control-space to make a normal space
+create a new window in the active session and call it znt-hist
 debian and ubuntu package
 default 10 seconds definitions ##
 define right prompt, if it wasn't defined by a theme
@@ -581,6 +621,7 @@ emoji-char-definitions.zsh - Emoji character definitions for oh-my-zsh emoji plu
 execute the bundled rake gem
 gather external ip address
 generate-complete-function/ruby/optparse COMMAND1 generate-complete-function/ruby/optparse COMMAND2
+get and save the current active tmux pane id
 get top process eating memory
 git theming default: Variables for theming the git info prompt
 go back to our normal keymap, and insert all the pasted text in the command line.
@@ -596,6 +637,7 @@ http://zsh.sourceforge.net/Doc/Release/Zsh-Modules.html#The-zsh_002fcap-Module
 https://github.com/AlexBio https://github.com/dbb https://github.com/Mappleconfusers
 https://github.com/AlexBio https://github.com/dbb https://github.com/Mappleconfusers Nicolas Jonas nextgenthemes.com https://github.com/loctauxphilippe
 https://github.com/nicoulaj/zsh-syntax-highlighting
+https://github.com/tristola
 https://github.com/zsh-users/zsh-syntax-highlighting/blob/56b134f5d62ae3d4e66c7f52bd0cc2595f9b305b/zsh-syntax-highlighting.zsh#L126-161
 https://raw.githubusercontent.com/zsh-users/zsh/master/Completion/Unix/Command/_git
 iTunes control function
@@ -628,7 +670,6 @@ make sure minutes and hours don't exceed 60 nor 12 respectively
 man will be inserted before the command
 manual user-local installation
 maybe you want to track if you were in ins or cmd mode and restore the right one.
-might be possible to improve this using glob, without the basename trick
 modify properties of specified services
 name - The env variable to set 2.
 name - The name of the shortcut (default: name of the file) 2.
@@ -636,14 +677,18 @@ name - The name of the shortcut STDOUT: Name and value of the shortcut
 name - The name of the shortcut STDOUT: The path
 name - The variable to set 2.
 noglob must come before sudo
+normal space during searches
 npm package names are lowercase Thus, we've used camelCase for the following aliases: Install and save to dependencies in your package.json npms is used by https://www.npmjs.com/package/npms
 of the tab window should be.
 oh-my-zsh supports an rvm prompt by default get the name of the rvm ruby version
 only define LC_CTYPE if undefined
+onto the system clipboard (requires clipcopy plugin)
 open a zypper shell session
+open terminal emacsclient
 otherwise start gpg-agent with ssh support
 paths are for osx installation via macports
 pick the first entry from LANG
+play is the only param
 print all installed packages
 print help for the search command
 read history in new file
@@ -664,6 +709,7 @@ second arg: remote branch name
 servers using CNAMES via whois.geek.nz
 set EDITOR if not already defined.
 set screen hardstatus
+set variables for upcoming window
 share command history data
 show completion menu on succesive tab press
 show help for command list
@@ -672,10 +718,11 @@ shows  the  ID string of the target operating system
 size,show type,human readable
 sorted by date,recursive,show type,human readable
 source settings of old agent, if applicable
+space expands all aliases, including global
 ssh-agent running, start gpg-agent without ssh support
 start in directory mode
 start ssh-agent and setup environment
-sudo will be inserted before the command
+sudo or sudoedit will be inserted before the command
 superuser operations ######################################################
 switch the active keymap to paste mode
 tell whether version1 is older or newer than version2 Packages commands
@@ -684,10 +731,10 @@ test if agent-forwarding is enabled
 the search was succesful so display the result properly by clearing away existing highlights and moving the cursor to the end of the result buffer
 these are the codes sent around the pasted text in bracketed paste mode.
 third arg: remote name
+this gives immunity to functionargzero being unset
 this has the nice effect of making the whole paste be a single undo/redo event.
 this shows up in the .deb file name
 tidy up after ourselves
-to code all night long
 toggle line-wrapping off and back on again
 top10 of gain access to the ip address
 top100 of Page lists the most time-consuming (more than 60 seconds) as well as the corresponding page number of occurrences
@@ -697,6 +744,7 @@ top20 of Find time_wait connection
 top20 of Most Visited file or page
 top20 of Using tcpdump port 80 access to view
 unless we really want to.
+unset the variables, so only above single window has them
 update-from-upstream.zsh
 use bindkey -v here with vi mode probably.
 use perl like awk/sed
@@ -710,9 +758,7 @@ we have reached the absolute top of history
 when at the shell prompt, use the shell name (truncated to remove the path to the shell) as the rest of the title
 when running a command, show the command name and arguments as the rest of the title
 when running a command, show the title of the command as the rest of the title (truncate to drop the path to the command)
+will be ignored by git.
 zsh is able to auto-do some kungfoo depends on the SUFFIX :)
 zstyle ':completion:*' use-cache yes
 zstyle ':completion::complete:grunt::options:' no_update_options yes
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa id_rsa2 id_github
-zstyle :omz:plugins:ssh-agent lifetime 4h
