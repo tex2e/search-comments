@@ -20,6 +20,7 @@
 ##-end-npm-completion-###
 (Can't strip too much because we do need node to be able to load objects like fibers.node.)
 (Expression based on build.js in fibers source.)
+(See gh-2765, gh-2768.)  Using 'pip install' also has the advantage that it tests that numpy is 'pip install' compatible, see e.g. gh-2766...
 (optional) move to a new line
 * Private attributes of other objects are not: self.other._private
 * `atom-args`: A space-separated list of positional arguments to pass to Atom.
@@ -94,12 +95,14 @@ An image on top of the base containing clones of repos we want to use for testin
 An integer is greater than a fraction.
 Any other switches will be passed through to `Atom`.
 Anything else should be a program.
+Appears we had some issues with certificates on Travis.
 Append the command to create the export file.
 Append the name of the PIC object to the libtool object file.
 Append the name of the non-PIC object the libtool object file.
 Assume this is the tagged configuration we want.
 Assumes GNU versions of utilities in PATH.
 Assumes old tracelogs are in *.log.old and new ones are in *.log.
+At the moment a cython generated code produces a warning about '-2147483648L', but the code seems to compile OK.
 Avoid inline document here, it may be left over
 BEGIN LIBTOOL TAG CONFIG: disable-shared
 Backslashes separate directories on plain windows
@@ -110,6 +113,7 @@ Be nice, post SIGTERM first.
 Blanks in the command may have been stripped by the calling shell, but not from the CC environment variable when configure was run.
 Break out early, otherwise skipped_export may be set to false by a later but shorter cmd.
 Build fails on mac right now with C++11
+Build into own virtualenv We therefore control our own environment, avoid travis' numpy
 Build only for release (no debugging support)
 Building a libtool convenience library.
 Building outside of a git repo, use system time instead.
@@ -140,6 +144,7 @@ Change the help message to a mode-specific one.
 Check access to the bucket.
 Check argparse, a library that clang-format-diff.py requires.
 Check clang-format-diff.py
+Check for an acceptable number of warnings.
 Check for lsb_release command existence, it usually exists in forked distros
 Check if any of the arguments is a wrapper script.
 Check if the `-u` option is supported
@@ -456,6 +461,7 @@ It is also expected to be safe to use the system libjpeg on non-Darwin.
 It is needed because there is some dependency between the generated code and the other classes.
 It is not bundled and links with the system freetype, so it is useless to avoid the system freetype or its dependencies.
 It is still crash safe and the client can discover where to restart a load after a crash.
+It looks like bumping to 14.0.6 will help.
 It must work everywhere, including on systems that lack a /bin/bash, map 'sh' to ksh, ksh97, bash, ash, or zsh, and potentially have either a posix shell or bourne shell living at /bin/sh.
 It then changes to that directory and creates subdirectories for each locale_dir passed on the command line.
 It uses the latest g++ compiler and also uses jemalloc
@@ -494,6 +500,7 @@ Make a backup of the uninstalled library when relinking
 Make a local copy of the built binary and ensure that is first in our path
 Make a new Linenoise source directory
 Make a new name for the extract_expsyms_cmds to use
+Make another virtualenv to install into
 Make executables depend on our current version.
 Make it easier to run only the compaction test.
 Make sure IFS has a sensible default
@@ -525,6 +532,7 @@ Maybe install the static library, too.
 Maybe just do a dry run.
 Maybe we'll need to selectively blacklist modules so that we can work on this a piece at a time.
 Mksyscall reads those comments to generate the stubs.
+Move out of source directory to avoid finding local numpy
 My, what an old awk you have, Mr.
 NKEYS         - number of key/value pairs to load BG_MBWRITEPERSEC - write rate limit in MB/second for tests in which there is one thread doing writes and stats are reported for read threads.
 NO color option unless in PROMPT_COMMAND mode
@@ -559,6 +567,7 @@ Now prepare to actually exec the command.
 Now set the variables for building old libraries.
 Now, install the npm modules which are the dependencies of the command-line tool.
 Nullify the symbol file.
+NumPy may not distinguish between 64 and 32 bit ATLAS in the configuration stage.
 ORIG_BUILDFLAGS is necessary for the cross target which cannot always build with options like -race.
 Objects from convenience libraries.
 Obviously it's not best practice to ever run as local system...
@@ -725,11 +734,14 @@ Since it's a grep and append that *might* actually be safe (whether the extra li
 Skip --install_dir and --fbcode_dir.
 Skip directories that are in the system default run-time search path.
 Skip this library if it cannot be dlopened.
+So, we have pinned `virtualenv` to the last known working version to avoid this failure.
 Some C libraries present alternate versions for binary compatibility and translate them on the way in and out of system calls, but there is almost always a #define that can get the real ones.
 Some PHP constructs modify whole-process state or are not well-suited to be tested in a webserver.
+Some change in virtualenv 14.0.5 caused `test_f2py` to fail.
 Some compilers have problems with a `.al' extension so convenience libraries should have the same extension an archive normally would.
 Some other compiler argument.
 Some other compiler flag.
+Some warnings are out of our control, so adjust the number as needed.
 Sort the filelist so that directories appear before files.
 Speed up build times by skipping the creation of the offline package for debug builds on the simulator since the packager is supposed to be running anyways.
 Split v1 and v2 into their leading digit string components d1 and d2, and advance v1 and v2 past the leading digit strings.
@@ -922,6 +934,7 @@ Transform all the library objects into standard objects.
 Transform arg to wrapped name.
 Transform deplibs into only deplibs that can be linked in shared.
 Transform the symbol file into the correct name.
+Travis legacy boxes give you 1.5 CPUs, container-based boxes give you 2 CPUs
 Try creating the bucket.
 Try looking first in the location we're being installed to.
 Try sorting and uniquifying the output.
@@ -973,6 +986,7 @@ We also need to preload any dependent libraries so libltdl's deplib preloader do
 We also redirect TEMP to not use the environment TEMP as when running as a standard user (not local system), it otherwise exposes a bug in posix tar which will cause CI to fail from Windows to Linux.
 We also tag the uploaded files with the proper Surrogate-Key, which we will later purge in our API call to Fastly.
 We cannot seem to hardcode it, guess we'll fake it.
+We change directories to make sure that python won't find the copy of numpy in the source directory.
 We compile a program, linking it against the deplibs as a proxy for the library.
 We don't need to create a wrapper script.
 We don't strip on Mac because we don't know a safe command.
@@ -1120,12 +1134,14 @@ endif if defined (S_IXGRP)
 endif ifdef __cplusplus
 ensure GIT_CONFIG is unset as we need to operate on .git/config
 ensure OS ABI compatibility
+ensure that the pip / setuptools versions deployed inside the venv are recent enough
 ensure we don't munge line endings on checkout
 exit if any command fails
 export path again with our temporary npm3 directory first, so we can use npm 3 during builds
 export path so we use our new node for later builds
 export path so we use the downloaded node and npm
 fast_install is set to needless
+faster operation with preloaded eatmydata
 fbconfig passes a couple --foo arguments.
 figure out the soname
 fill up the db for readrandom benchmark (1GB total size)
@@ -1191,6 +1207,7 @@ install apparmor utils if they're missing and apparmor is enabled in the kernel 
 install experimental packages from OBS://Virtualization:containers
 install gcc/g++ 4.8.2 via CERN (http://linux.web.cern.ch/linux/devtoolset/)
 install mode needs the following variable:
+install needed packages
 install npm 3 in a temporary directory
 intentionally undocumented for now
 it may work, but I only see pain this route and don't want to support it
@@ -1213,6 +1230,7 @@ logrus is a common dependency among multiple deps
 look for old 0.x cruft, and get rid of it.
 maintain the data file
 maintains a jump-list of the directories you actually use
+make some warnings fatal, mostly to match windows compilers
 make sure /etc/resolv.conf has something useful in it
 make sure our packages lists are as up to date as we can get them
 make sure that node exists
@@ -1234,6 +1252,7 @@ measure readrandom with 8k data in memtable
 measure readwhilewriting after load with filluniquerandom with 6GB block cache
 move library search paths that coincide with paths to not yet installed libraries to the beginning of the library search list
 move the files from the build
+much faster package installation
 need to echo "" after, because Posix sed doesn't treat EOF as an implied end of line.
 need to make sure these kills take effect
 need to switch lsb_dist to match yum repo URL
@@ -1284,6 +1303,7 @@ pulled from https://gist.github.com/cdown/1163649
 push the tag deletion to github
 push the tag to github
 push to csp branch on github
+put the numpy repo in the chroot directory
 relate frequency and time
 relink executable if necessary
 remove .exe since cygwin /usr/bin/install will append another one anyway
@@ -1300,6 +1320,7 @@ required for bind-mounting /dev/mqueue into containers
 required for containerd and runc clone
 rinse fails a little at setting up /dev, so we'll just wipe it out and create our own
 rm -f *_generated_test.go
+run again in chroot with this time testing
 run different jobs based on CicleCI parallel container index
 run tests and check output
 running on devbox, just print out the values
@@ -1312,6 +1333,7 @@ see also rudimentary platform detection in hack/install.sh
 see https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 see symlink-check above in file_magic test
 set java home so we can build rocksdb jars
+set up repos in the chroot directory for installing packages
 should download the headers file
 skip empty lines and comments
 skip files that aren't of the format xxxx.N.md (like README.md)
@@ -1353,6 +1375,7 @@ this should match the name found at http://releases.tanglu.org/
 this should match the name found at http://releases.ubuntu.com/
 to restore locales later: yum reinstall glibc-common
 together with all shared library dependencies to that folder.
+travis venv tests override python
 try without the -e arg to sed.
 udev doesn't work in containers, rebuild /dev
 undef DEBUG if defined DEBUGWRAPPER define DEBUG(format, ...) fprintf(stderr, format, __VA_ARGS__) else define DEBUG(format, ...) endif
@@ -1362,6 +1385,7 @@ usage: just run this script (after having run build.sh) and deploy the created t
 use "env -i" to tightly control the environment variables that bleed into the tests
 use Intel SSE support for checksum calculations
 use a copy to escape special characters, as we want to return the original.
+use an up-to-date pip / setuptools inside the venv
 use dlname if we got it.
 use the github repo as it is more up to date than the svn repo
 used as fallback echo
