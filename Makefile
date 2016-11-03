@@ -79,7 +79,7 @@ install:
 update:
 	@$(foreach repo, $(target_repo), \
 		if [ -d $(target_dir)/$(notdir $(repo)) ]; then \
-			cd $(target_dir)/$(notdir $(repo)) && git pull origin master; \
+			cd $(target_dir)/$(notdir $(repo)) && git pull origin $(git symbolic-ref --short HEAD) && cd ../..; \
 		fi; \
 	)
 
