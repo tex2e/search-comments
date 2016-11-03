@@ -47,18 +47,20 @@ target_repo := \
 	https://github.com/mitchellh/vagrant \
 	https://github.com/Microsoft/TypeScript \
 	https://github.com/pugjs/pug \
-	https://github.com/github/hubot
+	https://github.com/github/hubot \
+	https://github.com/matplotlib/matplotlib \
+	https://github.com/numpy/numpy
 target_name := $(notdir $(target_repo))
 database_dir := database
 
 .PHONY: FORCE test install
-FORCE:
 
 all:
 	@$(MAKE) install
 	@$(MAKE) -j 10 comments
 	@$(MAKE) database
 
+FORCE:
 
 # make install
 #
@@ -66,11 +68,20 @@ all:
 install:
 	@mkdir -p $(target_dir)
 	@$(foreach repo, $(target_repo), \
-		if [ ! -d             $(target_dir)/$(notdir $(repo)) ]; then \
+		if [ ! -d $(target_dir)/$(notdir $(repo)) ]; then \
 			git clone $(repo) $(target_dir)/$(notdir $(repo)); \
 		fi; \
 	)
 
+# make update
+#
+# cd repositories && git pull origin master
+update:
+	@$(foreach repo, $(target_repo), \
+		if [ -d $(target_dir)/$(notdir $(repo)) ]; then \
+			cd $(target_dir)/$(notdir $(repo)) && git pull origin master; \
+		fi; \
+	)
 
 # make comment-<reponame>
 #
